@@ -1,98 +1,29 @@
 <!DOCTYPE html>
-<html lang="zh-han">
-<style>
-    @keyframes fade-in {
-        0% {
-            opacity: 0;
-        }
-
-        /*初始状态 透明度为0*/
-        40% {
-            opacity: 0;
-        }
-
-        /*过渡状态 透明度为0*/
-        100% {
-            opacity: 1;
-        }
-
-        /*结束状态 透明度为1*/
-    }
-
-    @-webkit-keyframes fade-in {
-
-        /*针对webkit内核*/
-        0% {
-            opacity: 0;
-        }
-
-        40% {
-            opacity: 0;
-        }
-
-        100% {
-            opacity: 1;
-        }
-    }
-
-    .tags-container {
-        min-height: 100vh;
-        background: white;
-        position: absolute;
-        padding-bottom: 70px;
-        animation: fade-in;
-        /*动画名称*/
-        animation-duration: 1s;
-        /*动画持续时间*/
-        -webkit-animation: fade-in 1s;
-        /*针对webkit内核*/
-    }
-
-    .tagintro {
-        padding-top: 2%;
-        padding-left: 5%;
-        font-size: 2em;
-        font-weight: bold;
-        text-align: left;
-    }
-
-    .tag {
-        display: inline;
-        float: left;
-        width: 15%;
-        margin-left: 2%;
-        margin-top: 5%;
-        margin-right: 2%;
-        border: solid;
-        border-radius: 7px;
-        padding: 5px;
-        color: #3cdc82;
-        font-size: 1.2em;
-    }
-
-    .tagsimg {
-        width: 100%;
-    }
-
-    @media screen and (max-width: 1300px) {
-        .tag {
-            width: 80%;
-        }
-    }
-</style>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://m5s4qq.coding-pages.com/media/css/live2d.css">
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="https://m5s4qq.coding-pages.com/media/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://m5s4qq.coding-pages.com/media/css/live2d.css">
     <link rel="stylesheet" href="https://m5s4qq.coding-pages.com/styles/main.css">
+    <meta name="description" content="温故而知新" />
     <title>Gridea</title>
 </head>
+<style>
+    @media screen and (max-width: 1300px) {
+        .archives-content ul li>span {
+            display: none;
+        }
 
+        .archives-content ul {
+            padding: 0px;
+        }
+    }
+</style>
 
 <body>
     <!-- 响应式布局，针对PC端内容显示 -->
@@ -242,28 +173,34 @@
             alert("博主暂未设置QQ联系方式");
     }
 </script></div>
-                
-                <div id="main" class="col-xs-12 col-sm-7" style="width:50%;margin-top:50px;left:27%">
-                    <div class="tags-container">
-                        
-                        <img class="tagsimg" src="" alt="">
-                        
-                                
-                        <a class="tag" href="https://m5s4qq.coding-pages.com/tag/6Gd6aLsYJ/"># Gridea</a>
-                        
+                <div id="main" class="col-xs-12 col-sm-7" style="z-index: 999;">
+                    
+                    <body>
+    <div id="friendscontainermobile">
+        
+    </div>
+
+    <div id="friendscontainer">
+        
+    </div>
+</body>
+                    <div name="comment" style="background: white">
+                        <div class="commentcontainer">
+                            
+                            <p>请到客户端“主题--自定义配置--valine”中填入ID和KEY</p>
+                            
+                        </div>
                     </div>
                 </div>
-                
                 <div class="col-xs-6 col-sm-2"></div>
             </div>
         </div>
         <div id="bg">
         </div>
-        <div id="bgchoice" style="display: none">
-            </div>
-            
-            <div id="bgurl" style="display:none"></div>
-               
+        <div id="bgchoice" style="display: none"></div>
+        
+        <div id="bgurl" style="display:none"></div>
+           
     </div>
 
     <!-- 响应式布局，针对手机端内容显示 -->
@@ -362,30 +299,33 @@
   }
   </script> 
 </body>
-            <div style="margin-top:50px"></div>
-            <div class="tags-container">
+        <div style="margin-top:60px"></div>
+        <body>
+    <div id="friendscontainermobile">
+        
+    </div>
+
+    <div id="friendscontainer">
+        
+    </div>
+</body>
+        <div style="margin-bottom:60px">&nbsp;</div>
+        <div name="comment" style="background: white">
+            <div class="commentcontainer">
                 
-                <img class="tagsimg" src="" alt="">
-                
-            
-                <a class="tag" href="https://m5s4qq.coding-pages.com/tag/6Gd6aLsYJ/"># Gridea</a>
+                <p>请到客户端“主题--自定义配置--valine”中填入ID和KEY</p>
                 
             </div>
         </div>
-        <div id="landlord">
-            <div class="message" style="opacity:0"></div>
-            <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
-        </div>
-        <div id="domainname" style="display:none">https://m5s4qq.coding-pages.com</div>
+    </div>
+    <div id="landlord">
+        <div class="message" style="opacity:0"></div>
+        <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
+    </div>
+    <div id="domainname" style="display:none">https://m5s4qq.coding-pages.com</div>
 </body>
 
 </html>
-<script>
-    $(".tag").each(function () {
-        var rgb = '#' + Math.floor(Math.random() * 0xffffff).toString(16);;
-        $(this).css('color', rgb);
-    });
-</script>
 
 
 <script>
