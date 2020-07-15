@@ -2195,7 +2195,7 @@ pre > span.copy-code:hover {
     .mist .site-title i {
       background: #FFFFFFcc;
     }.bg-img img {
-        filter: blur(5px)
+        filter: blur(4px)
       }.box-shadow-wrapper {
       box-shadow: none !important;
     }body {
