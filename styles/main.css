@@ -2137,8 +2137,8 @@ p > code {
       transition-duration: 59s;
       transition-timing-function: cubic-bezier(.34,0,.84,1);
     }.markdownIt-TOC a {
-      color: #eee;
-      border-bottom-color: #eee;
+      color: #1c7ed6;
+      border-bottom-color: #1c7ed6;
     }.markdownIt-TOC a:hover {
       color: #fff;
       border-bottom-color: #fff;

@@ -10,7 +10,7 @@
 ——上海文旅融合线路优化设计研究
 ">
 <meta name="theme-color" content="#000">
-<title>遗迹导览 | 上海考古地图</title>
+<title>如何订阅最新文章 | 上海考古地图</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1594880508771">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -50,7 +50,7 @@
 </script>
 
 
-  <meta name="description" content="遗迹导览" />
+  <meta name="description" content="如何订阅最新文章" />
   <meta name="keywords" content="" />
 </head>
 
@@ -215,7 +215,8 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            
+            <div class="post-side-meta" id="post_side_meta">
+              
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -282,6 +283,199 @@
   </div>
 
 </div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number no_compress"
+    id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%89%8D%E8%A8%80">前言</a></li>
+<li><a href="#chrome-%E5%86%85%E6%A0%B8%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6">Chrome 内核浏览器插件</a></li>
+<li><a href="#%E5%85%B6%E5%AE%83%E6%B5%8F%E8%A7%88%E5%99%A8">其它浏览器</a></li>
+<li><a href="#%E6%89%8B%E6%9C%BA">手机</a></li>
+<li><a href="#%E7%BB%93%E8%AF%AD">结语</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
+  let active = 'active-show', activeClass = 'active-current';
+  let tocWrapper = document.querySelector('#toc_wrapper');
+  let tocContent = tocWrapper.children[0];
+  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
+
+  function addTocNumber(elem, deep) {
+    if (!elem) {
+      return;
+    }
+    let prop = elem.__proto__;
+
+    if (prop === HTMLUListElement.prototype) {
+      for (let i = 0; i < elem.children.length; i++) {
+        addTocNumber(elem.children[i], deep + (i + 1) + '.');
+      }
+    } else if (prop === HTMLLIElement.prototype) {
+      // 保存li元素
+      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+        lList.push(elem);
+      }
+      for (let i = 0; i < elem.children.length; i++) {
+        let cur = elem.children[i];
+        if (cur.__proto__ === HTMLAnchorElement.prototype) {
+          if (autoNumber) {
+            cur.text = deep + ' ' + cur.text;
+          }
+        } else if (cur.__proto__ === HTMLUListElement.prototype) {
+          addTocNumber(cur, deep);
+        }
+      }
+    }
+  }
+
+  function removeParentActiveClass() {
+    let parents = tocContent.querySelectorAll('.' + active)
+    parents.forEach(function (elem) {
+      elem.classList.remove(active);
+    });
+  }
+
+  function addActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.add(activeClass);
+    }
+  }
+
+  function removeActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.remove(activeClass);
+    }
+  }
+
+  function addActiveLiElemment(elem, parent) {
+    if (!elem || elem === parent) {
+      return;
+    } else {
+      if (elem.__proto__ === HTMLLIElement.prototype) {
+        elem.classList.add(active);
+      }
+      addActiveLiElemment(elem.parentElement, parent);
+    }
+  }
+
+  function showToc() {
+    if (tocWrapper) {
+      postBody = document.querySelector('#post_body');
+      for (let i = 0; i < postBody.children.length; i++) {
+        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+          hList.push(postBody.children[i]);
+        }
+      }
+      if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+      } else if (tocWrapper.classList.contains('no_compress')) {
+        tocContent.classList.add('expanded');
+      } else {
+        if (hList.length > 10) {
+          active = 'active-hidden'
+          tocContent.classList.add('closed');
+        } else {
+          tocContent.classList.add('expanded');
+        }
+      }
+    }
+  }
+
+  (function () {
+    // 处理不是从#一级标题开始目录
+    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+      let con = tocContent.children[0].children[0];
+      tocContent.innerHTML = con.innerHTML;
+    }
+    let markdownItTOC = document.querySelector('.markdownIt-TOC');
+    let innerHeight = window.innerHeight;
+    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
+    addTocNumber(tocContent, '');
+  })();
+
+  document.addEventListener('scroll', function (e) {
+    if (lList.length <= 0) {
+      return;
+    }
+    let scrollTop = document.scrollingElement.scrollTop + 10;
+    let dir;
+
+    if (lastTop - scrollTop > 0) {
+      dir = 'up';
+    } else {
+      dir = 'down';
+    }
+
+    lastTop = scrollTop;
+    if (scrollTop <= 0) {
+      if (lastIndex >= 0 && lastIndex < hList.length) {
+        lList[lastIndex].classList.remove(activeClass);
+      }
+      return;
+    }
+
+    let current = 0, hasFind = false;
+    for (let i = 0; i < hList.length; i++) {
+      if (hList[i].offsetTop > scrollTop) {
+        current = i;
+        hasFind = true;
+        break;
+      }
+    }
+    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+      current = hList.length - 1;
+    } else {
+      current--;
+    }
+    if (dir === 'down') {
+      if (current > lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex)
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    } else {
+      if (current < lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex);
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    }
+  });
+
+
+  window.addEventListener('load', function () {
+    showToc();
+    document.querySelector('#sidebar').style = 'display: block;';
+    tocWrapper.classList.add('toc-active');
+    setTimeout(function () {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
+  })
+
+</script>
+            </div>
           
         
       </div>
@@ -369,38 +563,32 @@
           <div class="section bg-color post post-page">
             <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://m5s4qq.coding-pages.com/post/yi-ji-dao-hang/">
-      遗迹导览
+    <a class="post-title-link" href="https://m5s4qq.coding-pages.com/post/ru-he-ding-yue-zui-xin-wen-zhang/">
+      如何订阅最新文章
     </a>
   </h1>
   <div class="post-meta">
     
-    <span class="meta-item">
-      <i class="fa fa-thumb-tack"></i>
-      <span class="language" data-lan="top">置顶</span>
-      <span class="post-meta-divider">|</span>
-    </span>
-    
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2020-07-15 20:21:30">2020-07-15</span>
+      <span class="publish-time" data-t="2020-07-16 13:57:42">2020-07-16</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>1<span class="language" data-lan="minute">分钟</span></span>
+      <span>2<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>173<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>428<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/post/yi-ji-dao-hang/" data-flag-title="遗迹导览" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/ru-he-ding-yue-zui-xin-wen-zhang/" data-flag-title="如何订阅最新文章" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -409,39 +597,37 @@
   </div>
 </section>
             <div class="post-body next-md-body" id="post_body">
-              <p>在这里，通往上海遗迹的详细信息，包括位置、游览建议、旅游路线。欢迎大家利用RSS订阅来关注本网站（设置RSS订阅有一定的技术要求，后续会转载一些教程），也可以关注我们的<a href="https://shkgdt.lofter.com/">LOFTER主页</a>~https://shkgdt.lofter.com/</p>
+              <p>RSS！💡</p>
 <!-- more -->
-<ul>
-<li>
-<p>新石器时代</p>
-</li>
-<li>
-<p>夏商周时期</p>
-</li>
-<li>
-<p>汉代至南朝</p>
-</li>
-<li>
-<p>唐代<br>
-<a href="https://www.lofter.com/lpost/4b4127b1_1c9c42845">青龙镇【今青浦区白鹤镇青龙村】</a><br>
-<a href="https://www.lofter.com/lpost/4b4127b1_1c9ed560c">南翔唐经幢【嘉定南翔古漪园内】</a><br>
-<a href="https://www.lofter.com/lpost/4b4127b1_1c9e317dc">泖塔【青浦区朱家角镇张马村沈太路2588号】</a><br>
-<a href="https://www.lofter.com/lpost/4b4127b1_1c9e13f3a">松江唐经幢【松江城区中山小学内】</a></p>
-</li>
-<li>
-<p>宋代<br>
-<a href="https://www.lofter.com/lpost/4b4127b1_1c9ed68a7">松江兴圣教寺塔【松江方塔园内】</a></p>
-</li>
-<li>
-<p>元代</p>
-</li>
-<li>
-<p>明代</p>
-</li>
-<li>
-<p>清代</p>
-</li>
-</ul>
+<h2 id="前言">前言</h2>
+<p>本项目制作内容需要时间，每天都更新有难度😅<br>
+如果每天让各位看官过来刷新一下，实在过于麻烦😁<br>
+那么使用 RSS 订阅本网站则是一种很好的解决方法，它能够在我们更新文章的时候第一时间提醒你😉</p>
+<h2 id="chrome-内核浏览器插件">Chrome 内核浏览器插件</h2>
+<p>如果你使用的是 Chrome 浏览器或者基于 Chrome 内核的浏览器（例如 360、QQ、搜狗），那么直接安装 RSS 插件即可</p>
+<p>可以到浏览器官方的插件中心直接搜索 RSS，或者使用 Feeder<br>
+这里以 Feeder 为例：</p>
+<p><strong>1. 安装插件</strong><br>
+打开网址：<a href="https://chrome.google.com/webstore/detail/rss-feed-reader/pnjaodmkngahhkoihejjehlcdlnohgmp?hl=zh-CN">https://chrome.google.com/webstore/detail/rss-feed-reader/pnjaodmkngahhkoihejjehlcdlnohgmp?hl=zh-CN</a><br>
+进行安装（可能需要某些特殊方式才能打开这个网站）<br>
+<img src="https://cdn.jsdelivr.net/gh/jer0y/CDN/uploads/2020/04/20200407164349.png" alt="" loading="lazy"><br>
+当然，如果你没有“特殊方式”，可以去其他的插件商店，比如，极简插件：<a href="https://chrome.zzzmh.cn/">极简插件_Chrome扩展插件商店_优质crx应用</a></p>
+<p><strong>2. 配置插件</strong><br>
+这一步选择不注册<br>
+<img src="https://cdn.jsdelivr.net/gh/jer0y/CDN/uploads/2020/04/20200407164532.png" alt="" loading="lazy"></p>
+<p><strong>3. 添加订阅</strong><br>
+在浏览器中打开本站的 feed 网址：<a href="https://sh.kgdt.work/atom.xml">https://sh.kgdt.work/atom.xml</a></p>
+<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/jer0y/CDN/uploads/2020/04/20200407164717.png" alt="" loading="lazy"></figure>
+<p>点击 Subscribe 即可添加订阅</p>
+<h2 id="其它浏览器">其它浏览器</h2>
+<p>其它浏览器亦可在插件中心找到 RSS 插件</p>
+<h2 id="手机">手机</h2>
+<p>直接在手机的应用商店中搜索 RSS 即可找到类似软件<br>
+然后将：<a href="https://sh.kgdt.work/atom.xml">https://sh.kgdt.work/atom.xml</a><br>
+添加到订阅即可</p>
+<h2 id="结语">结语</h2>
+<p>添加订阅成功后，RSS 软件将会自动刷新订阅地址的最新文章，当我们更新文章后，你就能第一时间收到通知啦！<br>
+PS:本文基于<a href="https://www.jiyiblog.com/archives/0407140.html">如何订阅本博客的最新文章 - 极一's Blog</a>修改，特此感谢</p>
 
             </div>
             
@@ -458,7 +644,7 @@
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://m5s4qq.coding-pages.com/post/yi-ji-dao-hang/" title="遗迹导览">https://m5s4qq.coding-pages.com/post/yi-ji-dao-hang/</a>
+      <a href="https://m5s4qq.coding-pages.com/post/ru-he-ding-yue-zui-xin-wen-zhang/" title="如何订阅最新文章">https://m5s4qq.coding-pages.com/post/ru-he-ding-yue-zui-xin-wen-zhang/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -471,15 +657,11 @@
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title=" 古迹逸闻|松江唐经幢" href="https://m5s4qq.coding-pages.com/post/gu-ji-yi-wen-orsong-jiang-tang-jing-chuang/"> 古迹逸闻|松江唐经幢</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title=" 古迹逸闻|松江唐经幢" href="https://m5s4qq.coding-pages.com/post/gu-ji-yi-wen-orsong-jiang-tang-jing-chuang/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="青龙镇" href="https://m5s4qq.coding-pages.com/post/qing-long-zhen/">青龙镇</a>
-        <a class="nav-mobile-next" title="青龙镇" href="https://m5s4qq.coding-pages.com/post/qing-long-zhen/">下一篇</a>
+        <a class="nav-pc-next" title=" 古迹逸闻|松江唐经幢" href="https://m5s4qq.coding-pages.com/post/gu-ji-yi-wen-orsong-jiang-tang-jing-chuang/"> 古迹逸闻|松江唐经幢</a>
+        <a class="nav-mobile-next" title=" 古迹逸闻|松江唐经幢" href="https://m5s4qq.coding-pages.com/post/gu-ji-yi-wen-orsong-jiang-tang-jing-chuang/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
