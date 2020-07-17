@@ -10,7 +10,7 @@
 ——上海文旅融合线路优化设计研究
 ">
 <meta name="theme-color" content="#000">
-<title>上海考古地图</title>
+<title>嘉定县故城【嘉定区嘉定镇】 | 上海考古地图</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1595012012578">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -50,6 +50,8 @@
 </script>
 
 
+  <meta name="description" content="嘉定县故城【嘉定区嘉定镇】" />
+  <meta name="keywords" content="" />
 </head>
 
 <body>
@@ -195,10 +197,25 @@
   <div class="main-continer">
     
     <div
-      class="section-layout  gemini">
+      class="section-layout gemini ">
       <div class="section-layout-wrapper">
-        <div id="sidebarMeta" class="sidebar">
-    
+        
+
+<div class="sidebar">
+  
+    <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
+      
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active language" data-lan="index">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item language" data-lan="preview">站点概览</span>
+          </div>
+        </div>
+      
+      <div class="sidebar-body gemini" id="sidebar_body">
+        
+          
+            
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -265,68 +282,217 @@
   </div>
 
 </div>
+          
+        
+      </div>
+    </div>
+  
 </div>
 <script>
-  let sidebarMeta = document.querySelector('#sidebarMeta');
-  let scheme = 'gemini';
-  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
-  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
-    document.addEventListener('scroll', function(e) {
-      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
-        sidebarWrapper.classList.add('home-sidebar-fixed')
-      } else {
-        sidebarWrapper.classList.remove('home-sidebar-fixed')
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
       }
-    });
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
   }
-  </script>
-        <div class="section-box tag-line box-shadow-wrapper">
-          <section class="section tags-section posts-expand bg-color">
-            <div class="padding-wrapper">
-  <div class="tag-timeline-box">
-    <div class="tag-timeline-wrapper">
-      <div class="tag-timeline-title">
-        <h2>
-          上海古镇
-          <small class="language" data-lan="tag">标签</small>
-        </h2>
-      </div>
+
+  postToc && postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+  if (sidebarBody) {
+    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+      let hasFix = false;
+      let scrollEl = document.querySelector('.main-continer');
+      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+      window.addEventListener('scroll', function(e) {
+        if (document.scrollingElement.scrollTop >= limitTop) {
+          if (!hasFix) {
+            sidebar.classList.add('sidebar-fixed');
+            hasFix = true;
+          }
+        } else {
+          if (hasFix) {
+            sidebar.classList.remove('sidebar-fixed');
+            hasFix = false;
+          }
+        }
+      });
+    }
+  }
+  
+</script>
+        <div class="section-box box-shadow-wrapper">
+          <div class="section bg-color post post-page">
+            <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://m5s4qq.coding-pages.com/post/jia-ding-xian-gu-cheng-jia-ding-qu-jia-ding-zhen/">
+      嘉定县故城【嘉定区嘉定镇】
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2020-07-18 02:50:47">2020-07-18</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>3<span class="language" data-lan="minute">分钟</span></span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>780<span class="pc-show language" data-lan="words">字数</span></span>
+    </span>
+    
+    
+    
+    <span id="/post/jia-ding-xian-gu-cheng-jia-ding-qu-jia-ding-zhen/" data-flag-title="嘉定县故城【嘉定区嘉定镇】" class="meta-item pc-show leancloud_visitors">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-eye"></i>
+      <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
+    </span>
+    
+  </div>
+</section>
+            <div class="post-body next-md-body" id="post_body">
+              <p>2000 年，被公布为区文物保护单位 嘉定最早的城墙 2014 年 4 月，嘉定城墙遗址（包括南城墙、南水关、西城墙、西水关、北水关遗址），被上海市人民政府公布为上海市文物保护单位。</p>
+<!-- more -->
+<p><strong>遗迹简介</strong></p>
+<ul>
+<li>
+<p>南宋嘉定十年十二月（1218 年 1 月）嘉定设县，1218 年 5 月首任知县高衍孙到任</p>
+</li>
+<li>
+<p>嘉定县故城始建于南宋嘉定十二年（1219），初为土城</p>
+</li>
+<li>
+<p>元至正十八年（1358）甃砖石。农民起义领袖<strong>张士诚</strong>特派善战的宿将<strong>吕珍</strong>在嘉定把土城 “改甃砖石，广濠堑”，以巩固嘉定城池。经这次改建加固后的嘉定城池，“周一千六百九十四丈，崇一丈五尺，基广四丈，面广三丈，设四门，同时设东、西、南三水关”</p>
+</li>
+<li>
+<p>明代多次增筑：</p>
+</li>
+</ul>
+<p>正德七年（1512）知县王应鹏重筑土墙。</p>
+<p>明嘉靖三十二年（1553）知县方思谦改甃砖堞，“周二千二百六十六丈六尺，崇二丈六尺，基广五丈，面广三丈”。</p>
+<p>1554 年知县杨旦 “重甃东南隅，改置雉堞，浚外濠…… 重甃并置雉堞二千三百六十九垛，加崇四尺，分甃敌台十六座，守铺三十四舍，四门各建楼一座。又广东、北二水关、修南、西；北三门子城，增筑东门子城，甃石为堤，裹铁为门，重浚外濠……”</p>
+<p>城平面略呈圆形，周长约 7250 米，城墙高 9 米、基广 16 米、顶宽 9 米余，设敌台 33 座，雉堞 2513 垛，守铺 36** 座**。有东、西、南、北四<strong>座</strong>城门，东、西、南、北四水关，以及外堑、外濠护城河。</p>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2020/07/18/HFlPUe564EvQCDq.jpg" alt="OXhyQXFPelBhdjRPekhHOXlSMEVDYmF5bnJKWXdROE5jZWVrNThFVW9qcXR1Q1BqR0R1Wm9nPT0" loading="lazy"></figure>
+<p>（1867 年  嘉定县城西门城墙  亨利 · 坎米奇摄）</p>
+<ul>
+<li>民国后城墙逐渐被炸毁</li>
+</ul>
+<p><a href="https://map.baidu.com/poi/%E5%98%89%E5%AE%9A%E5%9F%8E%E5%A2%99%E9%81%97%E5%9D%80(%E8%A5%BF%E6%B0%B4%E5%85%B3)/@13497417.475897158,3660339.013797377,21z?uid=fe23fd810c0d3b60e21103b3&amp;ugc_type=3&amp;ugc_ver=1&amp;device_ratio=2&amp;compat=1&amp;querytype=detailConInfo&amp;da_src=shareurl">到这去！</a></p>
+<p><strong>遗迹看点</strong></p>
+<p>现存西城墙、南城墙的数处残墙和墙基，西门、南门两座水关，以及环城周围的护城河。城墙夯筑，下部以 9 层条石作基础，上包砖，厚近 1 米，西城墙还存敌台一座，南城墙发现明嘉靖 “金砖” 一块。水关下部为花岗岩拱券，上青砖城墙压顶，里外双孔，内孔净跨 7 米，矢高 4.5 米。护城河基本保存完好。</p>
+<p>1、南水关，目前可见 2 曾小型城门水楼（呈南北走向，横跨沥河而建）</p>
+<p><a href="https://map.baidu.com/poi/%E5%8D%97%E6%B0%B4%E5%85%B3%E5%85%AC%E5%9B%AD/@13498988.629794093,3660051.0807651966,18.72z?uid=1020060f6f72febf1994c69b&amp;ugc_type=3&amp;ugc_ver=1&amp;device_ratio=2&amp;compat=1&amp;querytype=detailConInfo&amp;da_src=shareurl">到这去！</a></p>
+<figure data-type="image" tabindex="2"><img src="https://i.loli.net/2020/07/18/nDOtweuWQqCGRz2.jpg" alt="OXhyQXFPelBhdjRPekhHOXlSMEVDWmhGNXRzVStEaE52aE5pUEJueHpESGtwbmttWGRINUpnPT0" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://i.loli.net/2020/07/18/1Jsax6g2PMfEcou.jpg" alt="100e13000000uvb7a4CAF_D_640_10000" loading="lazy"></figure>
+<p>南水关公园东面相邻紫藤公园，西面就是南城墙公园</p>
+<p>2、南门老城墙： 南门古城墙位于嘉定南大街古城墙公园内。西段残长 100 余米，残高 5 米，宽近 6 米。古城墙前有名 “疁城’的青石鼎，另有石亭一座，沿河建有水榭。</p>
+<p><a href="https://map.baidu.com/poi/%E5%8D%97%E5%9F%8E%E5%A2%99%E5%85%AC%E5%9B%AD/@13498824.333038585,3659940.145,19z?uid=060f5e539f3bb4ce091cc79b&amp;ugc_type=3&amp;ugc_ver=1&amp;device_ratio=2&amp;compat=1&amp;querytype=detailConInfo&amp;da_src=shareurl">到这去！</a></p>
+<p>tip：在南城墙公园乘坐嘉定 9 路可前往杜公馆，用时约 6 分钟</p>
+<p><a href="https://map.baidu.com/dir/%E6%9D%9C%E5%85%AC%E9%A6%86/%E5%8D%97%E5%9F%8E%E5%A2%99%E5%85%AC%E5%9B%AD/@13498432.603266932,3658772.1,15.75z?querytype=bt&amp;da_src=shareurl&amp;bttp=4&amp;c=289&amp;sc=289&amp;ec=289&amp;sn=1$$undefined$$13499508.32,3657608.13$$%E6%9D%9C%E5%85%AC%E9%A6%86$$$$$$&amp;en=1$$060f5e539f3bb4ce091cc79b$$13498921.7446,3659971.55034$$%E5%8D%97%E5%9F%8E%E5%A2%99%E5%85%AC%E5%9B%AD$$$$$$&amp;sq=%E6%9D%9C%E5%85%AC%E9%A6%86&amp;eq=%E5%8D%97%E5%9F%8E%E5%A2%99%E5%85%AC%E5%9B%AD&amp;exptype=dep&amp;version=100">去看看！</a></p>
+<p>3、西水关（练祈河和护城河的交汇处）：水关全长约 7.7 米，高约为 5.7 米</p>
+<figure data-type="image" tabindex="4"><img src="https://i.loli.net/2020/07/18/Jbyxz7KW43l8p29.jpg" alt="22d09e80-1281-11ea-94ae-fd6020a72340" loading="lazy"></figure>
+<p><a href="https://map.baidu.com/poi/%E5%98%89%E5%AE%9A%E5%9F%8E%E5%A2%99%E9%81%97%E5%9D%80(%E8%A5%BF%E6%B0%B4%E5%85%B3)/@13497424.202313166,3663567.4819395016,12.26z?uid=fe23fd810c0d3b60e21103b3&amp;ugc_type=3&amp;ugc_ver=1&amp;device_ratio=2&amp;compat=1&amp;querytype=detailConInfo&amp;da_src=shareurl">到这去！</a></p>
+<figure data-type="image" tabindex="5"><img src="https://i.loli.net/2020/07/18/znjIBhUcfMLTD8Z.jpg" alt="OXhyQXFPelBhdjRPekhHOXlSMEVDUjVkSVB2eGVaeW81djBGdzNuRno4OGdHWlkvV2JBeEJnPT0" loading="lazy"></figure>
+<p>（ 西水关现貌）</p>
+<figure data-type="image" tabindex="6"><img src="https://i.loli.net/2020/07/18/wtfAkTxNJDyCeZX.jpg" alt="OXhyQXFPelBhdjRPekhHOXlSMEVDYTBkTEpIbkZ0WHhQcEJXcTFXNFVUQTh0TTFyL0J5ZU9RPT0" loading="lazy"></figure>
+<p>相关报道</p>
+<p><a href="https://www.jiading.gov.cn/zwpd/zwdt/content_358578">嘉定城墙根下埋着的故事</a></p>
+
+            </div>
+            
+              <div class="reward-btn">
+                <div class="reward-btn-text">赞赏</div>
+              </div>
+            
+            
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong class="language" data-lan="author">本文作者：</strong>
+      项目组
+    </li>
+    <li class="post-copyright-link">
+      <strong class="language" data-lan="link">本文链接：</strong>
+      <a href="https://m5s4qq.coding-pages.com/post/jia-ding-xian-gu-cheng-jia-ding-qu-jia-ding-zhen/" title="嘉定县故城【嘉定区嘉定镇】">https://m5s4qq.coding-pages.com/post/jia-ding-xian-gu-cheng-jia-ding-qu-jia-ding-zhen/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong class="language" data-lan="copyright">版权声明： </strong>
+      本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+  <div class="tags">
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
       
+    </div>
+    <div class="nav-next">
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      <a href="https://m5s4qq.coding-pages.com/post/qing-long-zhen/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              07-15
-              <small>青龙镇</small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      
-      
-      
+        <a class="nav-pc-next" title=" 古迹逸闻|松江唐经幢" href="https://m5s4qq.coding-pages.com/post/gu-ji-yi-wen-orsong-jiang-tang-jing-chuang/"> 古迹逸闻|松江唐经幢</a>
+        <a class="nav-mobile-next" title=" 古迹逸闻|松江唐经幢" href="https://m5s4qq.coding-pages.com/post/gu-ji-yi-wen-orsong-jiang-tang-jing-chuang/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
       
     </div>
   </div>
 </div>
-          </section>
+            
+            
+  
+
+          </div>
         </div>
       </div>
     </div>
@@ -520,6 +686,265 @@
   }
 
 </script>
+    <div class="light-box" id="light_box"></div>
+<script>
+  let imgs = document.querySelectorAll('.post-body img');
+  let lightBox = document.querySelector('#light_box');
+  lightBox.addEventListener('mousedown', (e) => {
+    e.preventDefault()
+  })
+  lightBox.addEventListener('mousewheel', (e) => {
+    e.preventDefault()
+  })
+  let width = window.innerWidth * 0.8;
+  lightBox.onclick = () => {
+    let img = lightBox.querySelector('img');
+    lightBox.style = '';
+    img && img.remove();
+  }
+  imgs.forEach(item => {
+    item.onclick = function (e) {
+      let lightImg = document.createElement('img');
+      lightImg.src = this.src;
+      lightBox.style = `height: 100%; opacity: 1; background-color: rgba(0, 0, 0, 0.5);cursor: zoom-out;`;
+      lightImg.style = `width: ${width}px;border-radius: 2px;`;
+      lightImg.onclick = function () {
+        lightBox.style = '';
+        this.remove();
+      }
+      lightBox.append(lightImg);
+    }
+  })
+</script>
+    <div class="reward-mask" style="display: none;">
+  <div class="reward-relative">
+    <span class="close" aria-hidden="true">x</span>
+    <div class="reward-body">
+      <h2>感谢您的支持，我会继续努力的!</h2>
+      <div class="reward-img-box">
+        <div style="position: relative; width: 140px; height: 140px;">
+          
+          
+            <img id="zfb" class="reward-img" src="https://imgkr.cn-bj.ufileos.com/335b1d50-93cb-495c-8aa8-e597211439d1.jpg" alt="赞赏码">
+          
+          
+            <img id="wx" class="reward-img" src="https://imgkr.cn-bj.ufileos.com/6d6b4d4c-859c-4415-8e5c-323b09afda6e.jpg" alt="赞赏码">
+          
+        </div>
+      </div>
+      <p class="reward-word">扫码打赏，感谢支持~</p>
+      <p class="reward-tip">打开微信/支付宝扫一扫，即可进行打赏哦</p>
+    </div>
+    <div class="bottom">
+      
+      <div id="zfbBtn" class="pay-text">
+        支付宝
+      </div>
+      
+      
+      <div id="wxBtn" class="pay-text">
+        微信支付
+      </div>
+      
+    </div>
+  </div>
+</div>
+<style>
+  .reward-mask {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #00000054;
+  }
+
+  .reward-relative {
+    position: relative;
+    width: 480px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #fff;
+    top: 50%;
+    margin-top: -205px;
+  }
+
+  .reward-relative .close {
+    position: absolute;
+    right: 10px;
+    font-weight: normal;
+    font-size: 16px;
+    color: #929292;
+  }
+
+  .reward-body {
+    padding: 40px 20px 20px;
+  }
+
+  .bottom {
+    display: flex;
+  }
+
+  .reward-btn {
+    text-align: center;
+  }
+
+  .reward-btn-text {
+    display: inline-block;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: #ff9734;
+    color: #FFF;
+    margin-top: 20px;
+  }
+
+  .pay-text {
+    margin-top: 10px;
+    padding: 10px;
+    flex: 1;
+    transition: all .2s linear;
+  }
+
+  .pay-text:hover {
+    background-color: #a5a5a536;
+  }
+
+  .reward-body h2 {
+    padding-top: 10px;
+    text-align: center;
+    color: #a3a3a3;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 0 20px;
+  }
+
+  .reward-body h2:after,
+  .reward-body h2:before {
+    font-family: Arial, Helvetica, sans-serif;
+    background: 0 0;
+    width: 0;
+    height: 0;
+    font-style: normal;
+    color: #eee;
+    font-size: 80px;
+    position: absolute;
+    top: 20px;
+  }
+
+  .reward-body h2:before {
+    content: '\201c';
+    left: 50px;
+  }
+
+  .reward-body h2:after {
+    content: '\201d';
+    right: 80px;
+  }
+
+  .reward-img-box {
+    display: inline-block;
+    padding: 10px;
+    border: 6px solid #ea5f00;
+    margin: 0 auto;
+    border-radius: 3px;
+    position: relative;
+  }
+
+  .reward-img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 767px) {
+    .reward-relative {
+      height: 100%;
+      top: 0px;
+      margin-top: 0;
+      width: auto;
+    }
+
+    .reward-relative .bottom {
+      flex-direction: column;
+    }
+
+    .reward-relative .pay-text {
+      width: 80%;
+      margin: 5px auto;
+      border: 1px solid silver;
+      padding: 6px;
+      border-radius: 4px;
+    }
+
+    .reward-body h2:after {
+      right: 40px;
+    }
+
+    .reward-body h2:after,
+    .reward-body h2:before {
+      font-size: 60px;
+    }
+
+    .reward-body h2:before {
+      left: 20px;
+    }
+  }
+</style>
+<script>
+  !function () {
+    var mask = document.querySelector('.reward-mask');
+    let close = document.querySelector('.reward-relative .close');
+    let rewardBtn = document.querySelector('.reward-btn');
+
+    let zfb = document.querySelector('#zfb'),
+      wx = document.querySelector('#wx'),
+      zfbBtn = document.querySelector('#zfbBtn'),
+      wxBtn = document.querySelector('#wxBtn');
+
+    if (zfbBtn && wxBtn) {
+      zfbBtn.addEventListener('click', () => {
+        window.Velocity(zfb, 'transition.slideLeftIn', {
+          duration: 400
+        });
+        window.Velocity(wx, 'transition.slideRightOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+
+      wxBtn.addEventListener('click', () => {
+        window.Velocity(wx, 'transition.slideRightIn', {
+          duration: 400
+        });
+        window.Velocity(zfb, 'transition.slideLeftOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+    }
+
+    rewardBtn.addEventListener('click', (e) => {
+      window.Velocity(mask, 'transition.slideDownIn', {
+        duration: 400
+      })
+    });
+
+    close.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.Velocity(mask, 'transition.slideUpOut', {
+        duration: 400
+      })
+    })
+  }()
+</script>
+
   </div>
 </body>
 
@@ -1050,7 +1475,6 @@ PS:本文基于&lt;a href=&#34;https://www.jiyiblog.com/archives/0407140.html&#3
 
 
 <script src="/media/js/cool.js"></script>
-
 
 
 
