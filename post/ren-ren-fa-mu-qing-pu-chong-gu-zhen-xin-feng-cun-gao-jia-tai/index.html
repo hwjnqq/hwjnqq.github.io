@@ -10,7 +10,7 @@
 ——上海文旅融合线路优化设计研究
 ">
 <meta name="theme-color" content="#000">
-<title>上海考古地图</title>
+<title>任仁发墓【青浦重固镇新丰村高家台】 | 上海考古地图</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1595134885041">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -50,6 +50,8 @@
 </script>
 
 
+  <meta name="description" content="任仁发墓【青浦重固镇新丰村高家台】" />
+  <meta name="keywords" content="" />
 </head>
 
 <body>
@@ -197,8 +199,23 @@
     <div
       class="section-layout gemini ">
       <div class="section-layout-wrapper">
-        <div id="sidebarMeta" class="sidebar">
-    
+        
+
+<div class="sidebar">
+  
+    <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
+      
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active language" data-lan="index">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item language" data-lan="preview">站点概览</span>
+          </div>
+        </div>
+      
+      <div class="sidebar-body gemini" id="sidebar_body">
+        
+          
+            
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -265,71 +282,187 @@
   </div>
 
 </div>
+          
+        
+      </div>
+    </div>
+  
 </div>
 <script>
-  let sidebarMeta = document.querySelector('#sidebarMeta');
-  let scheme = 'gemini';
-  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
-  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
-    document.addEventListener('scroll', function(e) {
-      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
-        sidebarWrapper.classList.add('home-sidebar-fixed')
-      } else {
-        sidebarWrapper.classList.remove('home-sidebar-fixed')
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
       }
-    });
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
   }
-  </script>
-        <div class="section-box gemini box-shadow-wrapper">
-          <section class="friends-section bg-color slide-down-in">
-            <div class="firends-box">
-              <h1 class="firends-title" itemprop="name headline">友情链接</h1>
-              
-              
-              <a href="https://shkgdt.lofter.com/" target="_blank">
-                <div class="firends-item">
-                  <img src="https://imgkr.cn-bj.ufileos.com/67130985-1113-42bd-89cd-7ffa6c52e12c.jpg" />
-                  <div class="right">
-                    <div class="top">
-                      上海考古地图LOFTER主页
-                    </div>
-                    <div class="bottom">
-                      
-                    </div>
-                  </div>
-                </div>
-              </a>
-              
-              
+
+  postToc && postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+  if (sidebarBody) {
+    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+      let hasFix = false;
+      let scrollEl = document.querySelector('.main-continer');
+      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+      window.addEventListener('scroll', function(e) {
+        if (document.scrollingElement.scrollTop >= limitTop) {
+          if (!hasFix) {
+            sidebar.classList.add('sidebar-fixed');
+            hasFix = true;
+          }
+        } else {
+          if (hasFix) {
+            sidebar.classList.remove('sidebar-fixed');
+            hasFix = false;
+          }
+        }
+      });
+    }
+  }
+  
+</script>
+        <div class="section-box box-shadow-wrapper">
+          <div class="section bg-color post post-page">
+            <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://m5s4qq.coding-pages.com/post/ren-ren-fa-mu-qing-pu-chong-gu-zhen-xin-feng-cun-gao-jia-tai/">
+      任仁发墓【青浦重固镇新丰村高家台】
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2020-07-19 12:37:35">2020-07-19</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>2<span class="language" data-lan="minute">分钟</span></span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>429<span class="pc-show language" data-lan="words">字数</span></span>
+    </span>
+    
+    
+    
+    <span id="/post/ren-ren-fa-mu-qing-pu-chong-gu-zhen-xin-feng-cun-gao-jia-tai/" data-flag-title="任仁发墓【青浦重固镇新丰村高家台】" class="meta-item pc-show leancloud_visitors">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-eye"></i>
+      <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
+    </span>
+    
+  </div>
+</section>
+            <div class="post-body next-md-body" id="post_body">
+              <p>任仁发（1255-1327），字子明，号月山，青龙镇人，著名水利专家和画家，以治水升都水少监，累官浙江道宣慰副使。</p>
+<!-- more -->
+<p>任仁发在书画上颇有造诣，书学李北海，画学李公麟。他的<strong>五王</strong>醉归图在2016年12月4日的保利秋拍“中国古代书画夜场”中以3.306亿元成交。五王分别是唐代临淄王李隆基（即唐玄宗）与他的四个兄弟宋王李成器、申王李成礼和岐王李范、薛王李业。</p>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2020/07/19/5PKHwzLc9hUOJlD.jpg" alt="img" loading="lazy"></figure>
+<hr>
+<p>遗迹简介</p>
+<p>家族墓地位于<strong>青浦区重固镇新丰村高家台</strong>。<a href="https://map.baidu.com/poi/%E9%AB%98%E5%AE%B6%E5%8F%B0/@13490706.704354396,3640672.207079225,16.9z?uid=d219bb1d2f849a88f50e7742&amp;ugc_type=3&amp;ugc_ver=1&amp;device_ratio=2&amp;compat=1&amp;querytype=detailConInfo&amp;da_src=shareurl">到这去！</a> 家族墓地面积约5000平方米，有封土堆三四座，高出地面2米余，分别称“王坟”“小王坟”和“小娘坟”</p>
+<p>1952年发现，已遭村民<strong>非法</strong>破坏，清理出墓葬6座，墓主分别是任仁发及其儿子任贤能、任贤德和孙媳钦察台守贞（任仁发孙媳，任士文妻。任士文为任贤德得次子。生于元仁宗延祐三年（1316），卒于元至正十三年（1353），享年37岁。），以及侄子任良辅、任明。详细信息可参<a href="https://mp.weixin.qq.com/s/QXDlsOKjxvRgFpdl0uBaYA">“上海青浦任仁发家族墓”</a>  <a href="https://mp.weixin.qq.com/s/wdcMofO7hV-zTPXufle08A">这些国宝级文物从哪里来？ | 元代任仁发家族墓发现记</a></p>
+<p>出土墓志六方，以及瓷器、漆器、铜器、金银器、玉器、铜镜、烟台、木梳等71件，瓷器中的南宋官窑长颈贯耳瓶、垂胆瓶、景德镇枢府釉高足碗等，均为宋元瓷器上乘之作，漆器中的陶渊明东篱赏菊图盒（下图，现藏于上海博物馆）亦为元代漆雕精品。</p>
+<figure data-type="image" tabindex="2"><img src="https://i.loli.net/2020/07/19/MWfSw7cLdzgJxVm.jpg" alt="img" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://i.loli.net/2020/07/19/noLmPy5vQiD321H.jpg" alt="img" loading="lazy"></figure>
+<hr>
+
             </div>
-            <hr>
-            <div style="text-align:center">
-              <span class="with-love">
-                <i class="fa fa-heart"></i>
-              </span>
-              <span class="language" data-lan="leave-message">留言添加友链</span>
-              <span class="with-love">
-                <i class="fa fa-heart"></i>
-              </span>
-            </div>
-            <hr>
-            <div class="friends-note">
-              <p><strong class="language" data-lan="format">友链格式：</strong></p>
-              <ul>
-                <li><span class="language" data-lan="site-name">网站名称：</span>上海考古地图</li>
-                <li><span class="language" data-lan="site-link">网站地址：</span><a href="https://m5s4qq.coding-pages.com" data-pjax-state="">https://m5s4qq.coding-pages.com</a></li>
-                <li><span class="language" data-lan="site-desc">网站描述：</span>上海考古地图
-——上海文旅融合线路优化设计研究
-</li>
-                <li><span class="language" data-lan="site-img">网站头像：</span>
-                  <a href="https://m5s4qq.coding-pages.com/images/avatar.png">https://m5s4qq.coding-pages.com/images/avatar.png</a>
-                </li>
-              </ul>
-            </div>
+            
+              <div class="reward-btn">
+                <div class="reward-btn-text">赞赏</div>
+              </div>
+            
+            
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong class="language" data-lan="author">本文作者：</strong>
+      项目组
+    </li>
+    <li class="post-copyright-link">
+      <strong class="language" data-lan="link">本文链接：</strong>
+      <a href="https://m5s4qq.coding-pages.com/post/ren-ren-fa-mu-qing-pu-chong-gu-zhen-xin-feng-cun-gao-jia-tai/" title="任仁发墓【青浦重固镇新丰村高家台】">https://m5s4qq.coding-pages.com/post/ren-ren-fa-mu-qing-pu-chong-gu-zhen-xin-feng-cun-gao-jia-tai/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong class="language" data-lan="copyright">版权声明： </strong>
+      本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+  <div class="tags">
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
+      
+        <i class="fa fa-chevron-left"></i>
+        <a class="nav-pc-next" title="松江兴圣教寺塔【松江方塔园内】" href="https://m5s4qq.coding-pages.com/post/song-jiang-xing-sheng-jiao-si-ta-song-jiang-fang-ta-yuan-nei/">松江兴圣教寺塔【松江方塔园内】</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="松江兴圣教寺塔【松江方塔园内】" href="https://m5s4qq.coding-pages.com/post/song-jiang-xing-sheng-jiao-si-ta-song-jiang-fang-ta-yuan-nei/">上一篇</a>
+      
+    </div>
+    <div class="nav-next">
+      
+        <a class="nav-pc-next" title="真如寺大殿【普陀区真如镇后山门5号】" href="https://m5s4qq.coding-pages.com/post/zhen-ru-si-da-dian-pu-tuo-qu-zhen-ru-zhen-hou-shan-men-5-hao/">真如寺大殿【普陀区真如镇后山门5号】</a>
+        <a class="nav-mobile-next" title="真如寺大殿【普陀区真如镇后山门5号】" href="https://m5s4qq.coding-pages.com/post/zhen-ru-si-da-dian-pu-tuo-qu-zhen-ru-zhen-hou-shan-men-5-hao/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
+      
+    </div>
+  </div>
+</div>
+            
             
   
 
-          </section>
+          </div>
         </div>
       </div>
     </div>
@@ -523,6 +656,265 @@
   }
 
 </script>
+    <div class="light-box" id="light_box"></div>
+<script>
+  let imgs = document.querySelectorAll('.post-body img');
+  let lightBox = document.querySelector('#light_box');
+  lightBox.addEventListener('mousedown', (e) => {
+    e.preventDefault()
+  })
+  lightBox.addEventListener('mousewheel', (e) => {
+    e.preventDefault()
+  })
+  let width = window.innerWidth * 0.8;
+  lightBox.onclick = () => {
+    let img = lightBox.querySelector('img');
+    lightBox.style = '';
+    img && img.remove();
+  }
+  imgs.forEach(item => {
+    item.onclick = function (e) {
+      let lightImg = document.createElement('img');
+      lightImg.src = this.src;
+      lightBox.style = `height: 100%; opacity: 1; background-color: rgba(0, 0, 0, 0.5);cursor: zoom-out;`;
+      lightImg.style = `width: ${width}px;border-radius: 2px;`;
+      lightImg.onclick = function () {
+        lightBox.style = '';
+        this.remove();
+      }
+      lightBox.append(lightImg);
+    }
+  })
+</script>
+    <div class="reward-mask" style="display: none;">
+  <div class="reward-relative">
+    <span class="close" aria-hidden="true">x</span>
+    <div class="reward-body">
+      <h2>感谢您的支持，我会继续努力的!</h2>
+      <div class="reward-img-box">
+        <div style="position: relative; width: 140px; height: 140px;">
+          
+          
+            <img id="zfb" class="reward-img" src="https://imgkr.cn-bj.ufileos.com/335b1d50-93cb-495c-8aa8-e597211439d1.jpg" alt="赞赏码">
+          
+          
+            <img id="wx" class="reward-img" src="https://imgkr.cn-bj.ufileos.com/6d6b4d4c-859c-4415-8e5c-323b09afda6e.jpg" alt="赞赏码">
+          
+        </div>
+      </div>
+      <p class="reward-word">扫码打赏，感谢支持~</p>
+      <p class="reward-tip">打开微信/支付宝扫一扫，即可进行打赏哦</p>
+    </div>
+    <div class="bottom">
+      
+      <div id="zfbBtn" class="pay-text">
+        支付宝
+      </div>
+      
+      
+      <div id="wxBtn" class="pay-text">
+        微信支付
+      </div>
+      
+    </div>
+  </div>
+</div>
+<style>
+  .reward-mask {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #00000054;
+  }
+
+  .reward-relative {
+    position: relative;
+    width: 480px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #fff;
+    top: 50%;
+    margin-top: -205px;
+  }
+
+  .reward-relative .close {
+    position: absolute;
+    right: 10px;
+    font-weight: normal;
+    font-size: 16px;
+    color: #929292;
+  }
+
+  .reward-body {
+    padding: 40px 20px 20px;
+  }
+
+  .bottom {
+    display: flex;
+  }
+
+  .reward-btn {
+    text-align: center;
+  }
+
+  .reward-btn-text {
+    display: inline-block;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: #ff9734;
+    color: #FFF;
+    margin-top: 20px;
+  }
+
+  .pay-text {
+    margin-top: 10px;
+    padding: 10px;
+    flex: 1;
+    transition: all .2s linear;
+  }
+
+  .pay-text:hover {
+    background-color: #a5a5a536;
+  }
+
+  .reward-body h2 {
+    padding-top: 10px;
+    text-align: center;
+    color: #a3a3a3;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 0 20px;
+  }
+
+  .reward-body h2:after,
+  .reward-body h2:before {
+    font-family: Arial, Helvetica, sans-serif;
+    background: 0 0;
+    width: 0;
+    height: 0;
+    font-style: normal;
+    color: #eee;
+    font-size: 80px;
+    position: absolute;
+    top: 20px;
+  }
+
+  .reward-body h2:before {
+    content: '\201c';
+    left: 50px;
+  }
+
+  .reward-body h2:after {
+    content: '\201d';
+    right: 80px;
+  }
+
+  .reward-img-box {
+    display: inline-block;
+    padding: 10px;
+    border: 6px solid #ea5f00;
+    margin: 0 auto;
+    border-radius: 3px;
+    position: relative;
+  }
+
+  .reward-img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 767px) {
+    .reward-relative {
+      height: 100%;
+      top: 0px;
+      margin-top: 0;
+      width: auto;
+    }
+
+    .reward-relative .bottom {
+      flex-direction: column;
+    }
+
+    .reward-relative .pay-text {
+      width: 80%;
+      margin: 5px auto;
+      border: 1px solid silver;
+      padding: 6px;
+      border-radius: 4px;
+    }
+
+    .reward-body h2:after {
+      right: 40px;
+    }
+
+    .reward-body h2:after,
+    .reward-body h2:before {
+      font-size: 60px;
+    }
+
+    .reward-body h2:before {
+      left: 20px;
+    }
+  }
+</style>
+<script>
+  !function () {
+    var mask = document.querySelector('.reward-mask');
+    let close = document.querySelector('.reward-relative .close');
+    let rewardBtn = document.querySelector('.reward-btn');
+
+    let zfb = document.querySelector('#zfb'),
+      wx = document.querySelector('#wx'),
+      zfbBtn = document.querySelector('#zfbBtn'),
+      wxBtn = document.querySelector('#wxBtn');
+
+    if (zfbBtn && wxBtn) {
+      zfbBtn.addEventListener('click', () => {
+        window.Velocity(zfb, 'transition.slideLeftIn', {
+          duration: 400
+        });
+        window.Velocity(wx, 'transition.slideRightOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+
+      wxBtn.addEventListener('click', () => {
+        window.Velocity(wx, 'transition.slideRightIn', {
+          duration: 400
+        });
+        window.Velocity(zfb, 'transition.slideLeftOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+    }
+
+    rewardBtn.addEventListener('click', (e) => {
+      window.Velocity(mask, 'transition.slideDownIn', {
+        duration: 400
+      })
+    });
+
+    close.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.Velocity(mask, 'transition.slideUpOut', {
+        duration: 400
+      })
+    })
+  }()
+</script>
+
   </div>
 </body>
 
@@ -1165,7 +1557,6 @@ PS:本文基于&lt;a href=&#34;https://www.jiyiblog.com/archives/0407140.html&#3
 
 
 <script src="/media/js/cool.js"></script>
-
 
 
 
