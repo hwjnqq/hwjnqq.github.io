@@ -10,7 +10,7 @@
 ——上海文旅融合线路优化设计研究
 ">
 <meta name="theme-color" content="#000">
-<title>上海考古地图</title>
+<title>上海仍待探索的沧海桑田时期 | 上海考古地图</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1595168940837">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -50,6 +50,8 @@
 </script>
 
 
+  <meta name="description" content="上海仍待探索的沧海桑田时期" />
+  <meta name="keywords" content="" />
 </head>
 
 <body>
@@ -195,10 +197,26 @@
   <div class="main-continer">
     
     <div
-      class="section-layout  gemini">
+      class="section-layout gemini ">
       <div class="section-layout-wrapper">
-        <div id="sidebarMeta" class="sidebar">
-    
+        
+
+<div class="sidebar">
+  
+    <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
+      
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active language" data-lan="index">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item language" data-lan="preview">站点概览</span>
+          </div>
+        </div>
+      
+      <div class="sidebar-body gemini" id="sidebar_body">
+        
+          
+            <div class="post-side-meta" id="post_side_meta">
+              
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -265,84 +283,402 @@
   </div>
 
 </div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number no_compress"
+    id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E7%94%9F%E5%91%BD%E7%9A%84%E8%90%8C%E8%8A%BD">生命的萌芽</a></li>
+<li><a href="#%E5%BC%82%E5%BD%A2%E7%94%9F%E7%89%A9%E7%9A%84%E5%87%BA%E7%8E%B0">异形生物的出现</a></li>
+<li><a href="#%E4%BB%8E%E9%9C%87%E6%97%A6%E7%BA%AA%E5%88%B0%E5%9F%83%E8%BF%AA%E5%8D%A1%E6%8B%89%E7%BA%AA">从“震旦纪”到“埃迪卡拉纪”</a></li>
+<li><a href="#%E4%B8%8A%E6%B5%B7%E6%88%90%E9%99%86%E8%BF%87%E7%A8%8B%E7%9A%84%E7%9B%B8%E5%85%B3%E7%A0%94%E7%A9%B6">上海成陆过程的相关研究</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
 </div>
+
 <script>
-  let sidebarMeta = document.querySelector('#sidebarMeta');
-  let scheme = 'gemini';
-  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
-  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
-    document.addEventListener('scroll', function(e) {
-      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
-        sidebarWrapper.classList.add('home-sidebar-fixed')
-      } else {
-        sidebarWrapper.classList.remove('home-sidebar-fixed')
+
+  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
+  let active = 'active-show', activeClass = 'active-current';
+  let tocWrapper = document.querySelector('#toc_wrapper');
+  let tocContent = tocWrapper.children[0];
+  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
+
+  function addTocNumber(elem, deep) {
+    if (!elem) {
+      return;
+    }
+    let prop = elem.__proto__;
+
+    if (prop === HTMLUListElement.prototype) {
+      for (let i = 0; i < elem.children.length; i++) {
+        addTocNumber(elem.children[i], deep + (i + 1) + '.');
       }
+    } else if (prop === HTMLLIElement.prototype) {
+      // 保存li元素
+      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+        lList.push(elem);
+      }
+      for (let i = 0; i < elem.children.length; i++) {
+        let cur = elem.children[i];
+        if (cur.__proto__ === HTMLAnchorElement.prototype) {
+          if (autoNumber) {
+            cur.text = deep + ' ' + cur.text;
+          }
+        } else if (cur.__proto__ === HTMLUListElement.prototype) {
+          addTocNumber(cur, deep);
+        }
+      }
+    }
+  }
+
+  function removeParentActiveClass() {
+    let parents = tocContent.querySelectorAll('.' + active)
+    parents.forEach(function (elem) {
+      elem.classList.remove(active);
     });
   }
-  </script>
-        <div class="section-box tag-line box-shadow-wrapper">
-          <section class="section tags-section posts-expand bg-color">
-            <div class="padding-wrapper">
-  <div class="tag-timeline-box">
-    <div class="tag-timeline-wrapper">
-      <div class="tag-timeline-title">
-        <h2>
-          上海古镇
-          <small class="language" data-lan="tag">标签</small>
-        </h2>
+
+  function addActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.add(activeClass);
+    }
+  }
+
+  function removeActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.remove(activeClass);
+    }
+  }
+
+  function addActiveLiElemment(elem, parent) {
+    if (!elem || elem === parent) {
+      return;
+    } else {
+      if (elem.__proto__ === HTMLLIElement.prototype) {
+        elem.classList.add(active);
+      }
+      addActiveLiElemment(elem.parentElement, parent);
+    }
+  }
+
+  function showToc() {
+    if (tocWrapper) {
+      postBody = document.querySelector('#post_body');
+      for (let i = 0; i < postBody.children.length; i++) {
+        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+          hList.push(postBody.children[i]);
+        }
+      }
+      if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+      } else if (tocWrapper.classList.contains('no_compress')) {
+        tocContent.classList.add('expanded');
+      } else {
+        if (hList.length > 10) {
+          active = 'active-hidden'
+          tocContent.classList.add('closed');
+        } else {
+          tocContent.classList.add('expanded');
+        }
+      }
+    }
+  }
+
+  (function () {
+    // 处理不是从#一级标题开始目录
+    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+      let con = tocContent.children[0].children[0];
+      tocContent.innerHTML = con.innerHTML;
+    }
+    let markdownItTOC = document.querySelector('.markdownIt-TOC');
+    let innerHeight = window.innerHeight;
+    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
+    addTocNumber(tocContent, '');
+  })();
+
+  document.addEventListener('scroll', function (e) {
+    if (lList.length <= 0) {
+      return;
+    }
+    let scrollTop = document.scrollingElement.scrollTop + 10;
+    let dir;
+
+    if (lastTop - scrollTop > 0) {
+      dir = 'up';
+    } else {
+      dir = 'down';
+    }
+
+    lastTop = scrollTop;
+    if (scrollTop <= 0) {
+      if (lastIndex >= 0 && lastIndex < hList.length) {
+        lList[lastIndex].classList.remove(activeClass);
+      }
+      return;
+    }
+
+    let current = 0, hasFind = false;
+    for (let i = 0; i < hList.length; i++) {
+      if (hList[i].offsetTop > scrollTop) {
+        current = i;
+        hasFind = true;
+        break;
+      }
+    }
+    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+      current = hList.length - 1;
+    } else {
+      current--;
+    }
+    if (dir === 'down') {
+      if (current > lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex)
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    } else {
+      if (current < lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex);
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    }
+  });
+
+
+  window.addEventListener('load', function () {
+    showToc();
+    document.querySelector('#sidebar').style = 'display: block;';
+    tocWrapper.classList.add('toc-active');
+    setTimeout(function () {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
+  })
+
+</script>
+            </div>
+          
+        
       </div>
+    </div>
+  
+</div>
+<script>
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
+      }
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
+  }
+
+  postToc && postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+  if (sidebarBody) {
+    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+      let hasFix = false;
+      let scrollEl = document.querySelector('.main-continer');
+      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+      window.addEventListener('scroll', function(e) {
+        if (document.scrollingElement.scrollTop >= limitTop) {
+          if (!hasFix) {
+            sidebar.classList.add('sidebar-fixed');
+            hasFix = true;
+          }
+        } else {
+          if (hasFix) {
+            sidebar.classList.remove('sidebar-fixed');
+            hasFix = false;
+          }
+        }
+      });
+    }
+  }
+  
+</script>
+        <div class="section-box box-shadow-wrapper">
+          <div class="section bg-color post post-page">
+            <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://m5s4qq.coding-pages.com/post/shang-hai-reng-dai-tan-suo-de-cang-hai-sang-tian-shi-qi/">
+      上海仍待探索的沧海桑田时期
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2020-07-19 22:02:29">2020-07-19</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>8<span class="language" data-lan="minute">分钟</span></span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>2123<span class="pc-show language" data-lan="words">字数</span></span>
+    </span>
+    
+    
+    
+    <span id="/post/shang-hai-reng-dai-tan-suo-de-cang-hai-sang-tian-shi-qi/" data-flag-title="上海仍待探索的沧海桑田时期" class="meta-item pc-show leancloud_visitors">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-eye"></i>
+      <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
+    </span>
+    
+  </div>
+</section>
+            <div class="post-body next-md-body" id="post_body">
+              <p>可能大家都听过这样的说法，如果把地球诞生至今的46亿年时间压缩成一天24小时，那么我们智人这个物种直到23时59分56秒才出现，而人类的文明史只有0.1秒.....</p>
+<!-- more -->
+<p>在地质学尺度上，哪怕几十万年也只是一段短暂时光。为了既涵盖46亿年的悠久历史，又细分各个时期的地球面貌，地质学家们建立了一套地质时代体系，从大到小分为宙、代、纪、世。（见下表）</p>
+<p>上海考古地图既然与考古相关，必然要进入古地理部分。然而上海地区的成陆过程至今仍未有一致的结论。文末列举了一些大家的研究或可参考。为便于大家后续阅读文献，本文简单介绍一些地质学的基本概念。</p>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2020/07/19/JPGsAWEfVXg7mF1.png" alt="地质年代简表" title="地质年代简表" loading="lazy"></figure>
+<p><strong>宙</strong>：最大的地质年代单位，有冥古宙、太古宙、元古宙和显生宙4个。其中前三个时期又合称“隐生宙”，因为当时的生命还很原始，直到元古宙晚期才有肉眼明显可见的多细胞生物。而距今5.41亿年前的寒武纪大爆发，标志着“显生宙”的来临。</p>
+<p><strong>代</strong>：每个“宙”下的各大时期，时间可达数亿年。经常说的古生代、中生代、新生代，就是显生宙的三个大时期，从大约6500万年前恐龙灭绝至今，都处于新生代。</p>
+<p><strong>纪</strong>：每个“代”的进一步细分，时间一般为数千万年到1亿多年。如古生代分为寒武纪、奥陶纪、志留纪、泥盆纪、石炭纪、二叠纪；中生代分为三叠纪、侏罗纪和白垩纪；新生代分为古近纪、新近纪和第四纪，从大约距今200万年前地球进入冰期至今，都处于第四纪。由于每个“纪”的生物化石都大不相同，而化石又是识别地层的头号指标，因此“纪“是最常用的一级地质时代单位，尤其是在显生宙。而从地球诞生到寒武纪之前的40多亿年时间，又经常被称为”前寒武纪“。</p>
+<p><strong>世</strong>：每个“纪”的进一步细分，时间一般为数百万年到上千万年。从距今1万年前最近一次冰期至今，都处于全新世。</p>
+<p>如果专业研究的话，每个“世”可以进一步细分为时间为数十万年的<strong>期</strong>。</p>
+<hr>
+<h2 id="生命的萌芽">生命的萌芽</h2>
+<p>在地球诞生初期的“冥古宙”，地球由一团星尘凝聚而成、到处流淌岩浆。还经常被小行星和彗星撞击。后来岩浆平静了、撞击也减少了，地球表面形成了还算稳定的海洋和大气层。</p>
+<p>进入“太古宙”后，距今约<strong>38亿年前，最早的地球生命在海底热液喷口附近产生</strong>（冒出的来自地壳深处的矿物热液，形成了无需依赖阳光的微型生态系统。近年来，许多科学家认为，最早的地球生命，就诞生在这种环境里。）这就是单细胞、无细胞核的原核生物——细菌和古细菌，它们的细胞体积很小，结构简单，直到今天都没太大变化。</p>
+<p>大约<strong>距今21亿年前的“元古宙”期间，一个细菌突然钻到了另一个细菌内部，产生了细胞核，形成了“真核细胞”。<strong>细胞核里的遗传物质相对独立，能形成结构、功能更加复杂的细胞。之后不久，由真核细胞组成的多细胞生物终于问世......早期的多细胞生命主要是藻类和原始动物，它们都很小，只有几毫米到几厘米。然而到了</strong>新元古代</strong>，地球进入了一次史无前例的超级冰川期。浩劫过后冰雪消融，温度回暖，为幸存的生命提供了适宜的生活环境。多细胞生物的个头也突破限制，越长越大，著名的“埃迪卡拉生物群”闪亮登场。</p>
+<hr>
+<h2 id="异形生物的出现">异形生物的出现</h2>
+<p>在元古宙末期的埃迪卡拉纪，出现了一些异形生物。如澳大利亚海沙上发现的<strong>狄更逊水母</strong>——身体轻薄柔软，超过1米长，表面有左右对称的肋状突起。但它其实不是真正的水母，没有在水中漂浮的能力，只能静静地趴在海底。</p>
+<figure data-type="image" tabindex="2"><img src="https://i.loli.net/2020/07/19/m1jfudLy8H3EPGb.jpg" alt="" title="狄更逊水母" loading="lazy"></figure>
+<p>在那个时候，类似这样的海洋生物还有很多，统称**”埃迪卡拉生物群“**。这是因为这类化石最早发现与澳大利亚的埃迪卡拉山，”埃迪卡拉生物“大都身体柔软，没有骨骼或甲壳，都努力摊平身体，获得更大的表面积（为了获得更多的氧气）。没有嘴巴、消化系统和排泄口，没有眼睛和腿。他们的生存状态就是&quot;葛优躺&quot;，从海水和沉积物中一点一滴吸食藻类、细菌，以及生物遗骸等有机物质。</p>
+<p>这些“圆饼”们繁荣了5000多万年，它们的灭绝并非因为彗星撞地球、超级大冰期、火山大爆发之类的不可抗力因素。在埃迪卡拉纪末期，含氧量、营养物质继续增加。能够支撑更加复杂的生命形态，出现了身体覆盖硬壳的”小壳生物群“。海洋里开始有了捕食者。就这样，吃货推动了历史恶进程，埃迪卡拉纪的历史也随着这些典型生物的消失而结束。</p>
+<hr>
+<h2 id="从震旦纪到埃迪卡拉纪">从“震旦纪”到“埃迪卡拉纪”</h2>
+<p>从前文可以看出：元古宙的最后几亿年，地球发生了一系列大事件，生物也变得愈发丰富多彩，看成“寒武纪大爆发”的前奏曲，为了给这一段特殊时光命名，地质学家提出了很多命名方式。其中在我国用得较多的是“震旦纪”。</p>
+<p>“震旦”是古印度人对中国的称呼。1922年，担任北京大学教授的美国学者葛利普，在考察长江流域的相关地层之后，起了这个名字。<strong>而上海迄今发现的最古老的地层，距今约19-18亿年，就属于前震旦纪。</strong></p>
+<p>然而由于震旦纪时间跨度太大，岩层划分不够精确，并未得到国际学术界的工人。2004年，国际地质委员会和国际地质科学联合会宣布，前寒武纪的最后一个纪元被正式定名为“埃迪卡拉纪”。</p>
+<p>根据考古研究，上海的基岩大多埋藏在地表以下约300米左右，只有在上海西部和西南部有零星基岩地表出露，形成了低山残丘，如佘山、天马山等。在这些基岩剥蚀面上，直接覆盖的是由砂砾、淤泥等构成的第四纪疏松沉积层。</p>
+<hr>
+<h2 id="上海成陆过程的相关研究">上海成陆过程的相关研究</h2>
+<p>关于这个问题，学术界至今没有明确的结论。早在20世纪初，上海工部局曾邀请英国人Heidenstan测算了长江从上挟带到入海口的泥沙量，他推算长江三角洲每37年向东伸展1公里。</p>
+<p>我国的丁文江先生，从历史学的角度，以江苏沿海海塘修筑的时间和东南各县成立的年代为依据得出结论：每40年向东海伸展1公里。</p>
+<p>然而考古发现证明，距今6000多年前上海青浦、金山等地已经有人居住。按照丁先生的结论推算，现在的海岸线至少应该距离青浦、金山等地150公里。实际上，青浦金山距海最远不过70公里.....由此可见，这些地点的成陆要比按Hediensatn和丁文江先生所推算的年代早得多。</p>
+<p>相关的研究有：</p>
+<p>谭其骧先生：《关于上海地区的成陆年代》、《再论上海地区的成陆年代——答丘祖铭先生》、《上海市大陆部分的海陆变迁和开发过程》（可在中国知网检索）</p>
+<p>《从严桥遗址推断上海唐代海岸的位置》、《从考古发现谈上海成陆年代及港口发展》</p>
+
+            </div>
+            
+              <div class="reward-btn">
+                <div class="reward-btn-text">赞赏</div>
+              </div>
+            
+            
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong class="language" data-lan="author">本文作者：</strong>
+      项目组
+    </li>
+    <li class="post-copyright-link">
+      <strong class="language" data-lan="link">本文链接：</strong>
+      <a href="https://m5s4qq.coding-pages.com/post/shang-hai-reng-dai-tan-suo-de-cang-hai-sang-tian-shi-qi/" title="上海仍待探索的沧海桑田时期">https://m5s4qq.coding-pages.com/post/shang-hai-reng-dai-tan-suo-de-cang-hai-sang-tian-shi-qi/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong class="language" data-lan="copyright">版权声明： </strong>
+      本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+  <div class="tags">
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
       
+        <i class="fa fa-chevron-left"></i>
+        <a class="nav-pc-next" title="谭其骧先生关于上海地区成陆的理论 " href="https://m5s4qq.coding-pages.com/post/tan-qi-xiang-xian-sheng-guan-yu-shang-hai-di-qu-cheng-lu-de-li-lun/">谭其骧先生关于上海地区成陆的理论 </a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="谭其骧先生关于上海地区成陆的理论 " href="https://m5s4qq.coding-pages.com/post/tan-qi-xiang-xian-sheng-guan-yu-shang-hai-di-qu-cheng-lu-de-li-lun/">上一篇</a>
       
+    </div>
+    <div class="nav-next">
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      <a href="https://m5s4qq.coding-pages.com/post/qing-long-zhen/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              07-15
-              <small>青龙镇</small>
-            </h1>
-          </div>
-        </div>
-      </a>
-      
-      
-      
-      
-      
-      
-      
-      
+        <a class="nav-pc-next" title="松江唐经幢【松江城区中山小学内】" href="https://m5s4qq.coding-pages.com/post/song-jiang-tang-jing-chuang-song-jiang-cheng-qu-zhong-shan-xiao-xue-nei/">松江唐经幢【松江城区中山小学内】</a>
+        <a class="nav-mobile-next" title="松江唐经幢【松江城区中山小学内】" href="https://m5s4qq.coding-pages.com/post/song-jiang-tang-jing-chuang-song-jiang-cheng-qu-zhong-shan-xiao-xue-nei/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
       
     </div>
   </div>
 </div>
-          </section>
+            
+            
+  
+
+          </div>
         </div>
       </div>
     </div>
@@ -536,6 +872,265 @@
   }
 
 </script>
+    <div class="light-box" id="light_box"></div>
+<script>
+  let imgs = document.querySelectorAll('.post-body img');
+  let lightBox = document.querySelector('#light_box');
+  lightBox.addEventListener('mousedown', (e) => {
+    e.preventDefault()
+  })
+  lightBox.addEventListener('mousewheel', (e) => {
+    e.preventDefault()
+  })
+  let width = window.innerWidth * 0.8;
+  lightBox.onclick = () => {
+    let img = lightBox.querySelector('img');
+    lightBox.style = '';
+    img && img.remove();
+  }
+  imgs.forEach(item => {
+    item.onclick = function (e) {
+      let lightImg = document.createElement('img');
+      lightImg.src = this.src;
+      lightBox.style = `height: 100%; opacity: 1; background-color: rgba(0, 0, 0, 0.5);cursor: zoom-out;`;
+      lightImg.style = `width: ${width}px;border-radius: 2px;`;
+      lightImg.onclick = function () {
+        lightBox.style = '';
+        this.remove();
+      }
+      lightBox.append(lightImg);
+    }
+  })
+</script>
+    <div class="reward-mask" style="display: none;">
+  <div class="reward-relative">
+    <span class="close" aria-hidden="true">x</span>
+    <div class="reward-body">
+      <h2>感谢您的支持，我会继续努力的!</h2>
+      <div class="reward-img-box">
+        <div style="position: relative; width: 140px; height: 140px;">
+          
+          
+            <img id="zfb" class="reward-img" src="https://imgkr.cn-bj.ufileos.com/335b1d50-93cb-495c-8aa8-e597211439d1.jpg" alt="赞赏码">
+          
+          
+            <img id="wx" class="reward-img" src="https://imgkr.cn-bj.ufileos.com/6d6b4d4c-859c-4415-8e5c-323b09afda6e.jpg" alt="赞赏码">
+          
+        </div>
+      </div>
+      <p class="reward-word">扫码打赏，感谢支持~</p>
+      <p class="reward-tip">打开微信/支付宝扫一扫，即可进行打赏哦</p>
+    </div>
+    <div class="bottom">
+      
+      <div id="zfbBtn" class="pay-text">
+        支付宝
+      </div>
+      
+      
+      <div id="wxBtn" class="pay-text">
+        微信支付
+      </div>
+      
+    </div>
+  </div>
+</div>
+<style>
+  .reward-mask {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #00000054;
+  }
+
+  .reward-relative {
+    position: relative;
+    width: 480px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #fff;
+    top: 50%;
+    margin-top: -205px;
+  }
+
+  .reward-relative .close {
+    position: absolute;
+    right: 10px;
+    font-weight: normal;
+    font-size: 16px;
+    color: #929292;
+  }
+
+  .reward-body {
+    padding: 40px 20px 20px;
+  }
+
+  .bottom {
+    display: flex;
+  }
+
+  .reward-btn {
+    text-align: center;
+  }
+
+  .reward-btn-text {
+    display: inline-block;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: #ff9734;
+    color: #FFF;
+    margin-top: 20px;
+  }
+
+  .pay-text {
+    margin-top: 10px;
+    padding: 10px;
+    flex: 1;
+    transition: all .2s linear;
+  }
+
+  .pay-text:hover {
+    background-color: #a5a5a536;
+  }
+
+  .reward-body h2 {
+    padding-top: 10px;
+    text-align: center;
+    color: #a3a3a3;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 0 20px;
+  }
+
+  .reward-body h2:after,
+  .reward-body h2:before {
+    font-family: Arial, Helvetica, sans-serif;
+    background: 0 0;
+    width: 0;
+    height: 0;
+    font-style: normal;
+    color: #eee;
+    font-size: 80px;
+    position: absolute;
+    top: 20px;
+  }
+
+  .reward-body h2:before {
+    content: '\201c';
+    left: 50px;
+  }
+
+  .reward-body h2:after {
+    content: '\201d';
+    right: 80px;
+  }
+
+  .reward-img-box {
+    display: inline-block;
+    padding: 10px;
+    border: 6px solid #ea5f00;
+    margin: 0 auto;
+    border-radius: 3px;
+    position: relative;
+  }
+
+  .reward-img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 767px) {
+    .reward-relative {
+      height: 100%;
+      top: 0px;
+      margin-top: 0;
+      width: auto;
+    }
+
+    .reward-relative .bottom {
+      flex-direction: column;
+    }
+
+    .reward-relative .pay-text {
+      width: 80%;
+      margin: 5px auto;
+      border: 1px solid silver;
+      padding: 6px;
+      border-radius: 4px;
+    }
+
+    .reward-body h2:after {
+      right: 40px;
+    }
+
+    .reward-body h2:after,
+    .reward-body h2:before {
+      font-size: 60px;
+    }
+
+    .reward-body h2:before {
+      left: 20px;
+    }
+  }
+</style>
+<script>
+  !function () {
+    var mask = document.querySelector('.reward-mask');
+    let close = document.querySelector('.reward-relative .close');
+    let rewardBtn = document.querySelector('.reward-btn');
+
+    let zfb = document.querySelector('#zfb'),
+      wx = document.querySelector('#wx'),
+      zfbBtn = document.querySelector('#zfbBtn'),
+      wxBtn = document.querySelector('#wxBtn');
+
+    if (zfbBtn && wxBtn) {
+      zfbBtn.addEventListener('click', () => {
+        window.Velocity(zfb, 'transition.slideLeftIn', {
+          duration: 400
+        });
+        window.Velocity(wx, 'transition.slideRightOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+
+      wxBtn.addEventListener('click', () => {
+        window.Velocity(wx, 'transition.slideRightIn', {
+          duration: 400
+        });
+        window.Velocity(zfb, 'transition.slideLeftOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+    }
+
+    rewardBtn.addEventListener('click', (e) => {
+      window.Velocity(mask, 'transition.slideDownIn', {
+        duration: 400
+      })
+    });
+
+    close.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.Velocity(mask, 'transition.slideUpOut', {
+        duration: 400
+      })
+    })
+  }()
+</script>
+
   </div>
 </body>
 
@@ -1270,7 +1865,6 @@ PS:本文基于&lt;a href=&#34;https://www.jiyiblog.com/archives/0407140.html&#3
 
 
 <script src="/media/js/cool.js"></script>
-
 
 
 
