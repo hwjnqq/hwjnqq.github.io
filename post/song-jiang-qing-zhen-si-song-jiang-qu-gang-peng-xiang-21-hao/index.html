@@ -10,7 +10,7 @@
 ——上海文旅融合线路优化设计研究
 ">
 <meta name="theme-color" content="#000">
-<title>上海考古地图</title>
+<title>松江清真寺【松江区缸甏巷21号】 | 上海考古地图</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1595420132338">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -50,6 +50,8 @@
 </script>
 
 
+  <meta name="description" content="松江清真寺【松江区缸甏巷21号】" />
+  <meta name="keywords" content="元代" />
 </head>
 
 <body>
@@ -182,10 +184,26 @@
   <div class="main-continer">
     
     <div
-      class="section-layout  gemini">
+      class="section-layout gemini ">
       <div class="section-layout-wrapper">
-        <div id="sidebarMeta" class="sidebar">
-    
+        
+
+<div class="sidebar">
+  
+    <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
+      
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active language" data-lan="index">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item language" data-lan="preview">站点概览</span>
+          </div>
+        </div>
+      
+      <div class="sidebar-body gemini" id="sidebar_body">
+        
+          
+            <div class="post-side-meta" id="post_side_meta">
+              
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -252,124 +270,466 @@
   </div>
 
 </div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto"
+    id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E6%9D%BE%E6%B1%9F%E5%BA%9C%E9%A6%96%E4%BB%BB%E8%BE%BE%E9%B2%81%E8%8A%B1%E8%B5%A4">松江府首任达鲁花赤</a></li>
+<li><a href="#%E9%81%97%E8%BF%B9%E7%AE%80%E4%BB%8B">遗迹简介</a>
+<ul>
+<li><a href="#%E7%AA%91%E6%AE%BF">窑殿</a></li>
+<li><a href="#%E9%82%A6%E5%85%8B%E6%A5%BC">邦克楼</a></li>
+<li><a href="#%E7%A4%BC%E6%8B%9C%E6%AE%BF">礼拜殿</a></li>
+<li><a href="#%E5%8D%97%E5%8C%97%E8%AE%B2%E5%A0%82">南北讲堂</a></li>
+</ul>
+</li>
+<li><a href="#%E5%88%B0%E8%BF%99%E5%8E%BB">到这去！！</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
 </div>
+
 <script>
-  let sidebarMeta = document.querySelector('#sidebarMeta');
-  let scheme = 'gemini';
-  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
-  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
-    document.addEventListener('scroll', function(e) {
-      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
-        sidebarWrapper.classList.add('home-sidebar-fixed')
-      } else {
-        sidebarWrapper.classList.remove('home-sidebar-fixed')
+
+  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
+  let active = 'active-show', activeClass = 'active-current';
+  let tocWrapper = document.querySelector('#toc_wrapper');
+  let tocContent = tocWrapper.children[0];
+  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
+
+  function addTocNumber(elem, deep) {
+    if (!elem) {
+      return;
+    }
+    let prop = elem.__proto__;
+
+    if (prop === HTMLUListElement.prototype) {
+      for (let i = 0; i < elem.children.length; i++) {
+        addTocNumber(elem.children[i], deep + (i + 1) + '.');
       }
+    } else if (prop === HTMLLIElement.prototype) {
+      // 保存li元素
+      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+        lList.push(elem);
+      }
+      for (let i = 0; i < elem.children.length; i++) {
+        let cur = elem.children[i];
+        if (cur.__proto__ === HTMLAnchorElement.prototype) {
+          if (autoNumber) {
+            cur.text = deep + ' ' + cur.text;
+          }
+        } else if (cur.__proto__ === HTMLUListElement.prototype) {
+          addTocNumber(cur, deep);
+        }
+      }
+    }
+  }
+
+  function removeParentActiveClass() {
+    let parents = tocContent.querySelectorAll('.' + active)
+    parents.forEach(function (elem) {
+      elem.classList.remove(active);
     });
   }
-  </script>
-        <div class="section-box tag-line box-shadow-wrapper">
-          <section class="section tags-section posts-expand bg-color">
-            <div class="padding-wrapper">
-  <div class="tag-timeline-box">
-    <div class="tag-timeline-wrapper">
-      <div class="tag-timeline-title">
-        <h2>
-          Gridea
-          <small class="language" data-lan="tag">标签</small>
-        </h2>
+
+  function addActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.add(activeClass);
+    }
+  }
+
+  function removeActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.remove(activeClass);
+    }
+  }
+
+  function addActiveLiElemment(elem, parent) {
+    if (!elem || elem === parent) {
+      return;
+    } else {
+      if (elem.__proto__ === HTMLLIElement.prototype) {
+        elem.classList.add(active);
+      }
+      addActiveLiElemment(elem.parentElement, parent);
+    }
+  }
+
+  function showToc() {
+    if (tocWrapper) {
+      postBody = document.querySelector('#post_body');
+      for (let i = 0; i < postBody.children.length; i++) {
+        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+          hList.push(postBody.children[i]);
+        }
+      }
+      if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+      } else if (tocWrapper.classList.contains('no_compress')) {
+        tocContent.classList.add('expanded');
+      } else {
+        if (hList.length > 10) {
+          active = 'active-hidden'
+          tocContent.classList.add('closed');
+        } else {
+          tocContent.classList.add('expanded');
+        }
+      }
+    }
+  }
+
+  (function () {
+    // 处理不是从#一级标题开始目录
+    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+      let con = tocContent.children[0].children[0];
+      tocContent.innerHTML = con.innerHTML;
+    }
+    let markdownItTOC = document.querySelector('.markdownIt-TOC');
+    let innerHeight = window.innerHeight;
+    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
+    addTocNumber(tocContent, '');
+  })();
+
+  document.addEventListener('scroll', function (e) {
+    if (lList.length <= 0) {
+      return;
+    }
+    let scrollTop = document.scrollingElement.scrollTop + 10;
+    let dir;
+
+    if (lastTop - scrollTop > 0) {
+      dir = 'up';
+    } else {
+      dir = 'down';
+    }
+
+    lastTop = scrollTop;
+    if (scrollTop <= 0) {
+      if (lastIndex >= 0 && lastIndex < hList.length) {
+        lList[lastIndex].classList.remove(activeClass);
+      }
+      return;
+    }
+
+    let current = 0, hasFind = false;
+    for (let i = 0; i < hList.length; i++) {
+      if (hList[i].offsetTop > scrollTop) {
+        current = i;
+        hasFind = true;
+        break;
+      }
+    }
+    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+      current = hList.length - 1;
+    } else {
+      current--;
+    }
+    if (dir === 'down') {
+      if (current > lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex)
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    } else {
+      if (current < lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex);
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    }
+  });
+
+
+  window.addEventListener('load', function () {
+    showToc();
+    document.querySelector('#sidebar').style = 'display: block;';
+    tocWrapper.classList.add('toc-active');
+    setTimeout(function () {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
+  })
+
+</script>
+            </div>
+          
+        
       </div>
+    </div>
+  
+</div>
+<script>
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
+      }
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
+  }
+
+  postToc && postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+  if (sidebarBody) {
+    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+      let hasFix = false;
+      let scrollEl = document.querySelector('.main-continer');
+      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+      window.addEventListener('scroll', function(e) {
+        if (document.scrollingElement.scrollTop >= limitTop) {
+          if (!hasFix) {
+            sidebar.classList.add('sidebar-fixed');
+            hasFix = true;
+          }
+        } else {
+          if (hasFix) {
+            sidebar.classList.remove('sidebar-fixed');
+            hasFix = false;
+          }
+        }
+      });
+    }
+  }
+  
+</script>
+        <div class="section-box box-shadow-wrapper">
+          <div class="section bg-color post post-page">
+            <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://m5s4qq.coding-pages.com/post/song-jiang-qing-zhen-si-song-jiang-qu-gang-peng-xiang-21-hao/">
+      松江清真寺【松江区缸甏巷21号】
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2020-07-22 20:12:24">2020-07-22</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">分类于</span>
+      
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      <a href="https://m5s4qq.coding-pages.com/post/hello-gridea/">
-        <div class="motion-warpper">
-          <div class="tag-post-node">
-            <h1>
-              12-12
-              <small>Hello Gridea</small>
-            </h1>
-          </div>
-        </div>
+      <a href="https://m5s4qq.coding-pages.com/tag/fBInvq6WS/">
+        <span>元代</span>
       </a>
       
       
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>5<span class="language" data-lan="minute">分钟</span></span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>1328<span class="pc-show language" data-lan="words">字数</span></span>
+    </span>
+    
+    
+    
+    <span id="/post/song-jiang-qing-zhen-si-song-jiang-qu-gang-peng-xiang-21-hao/" data-flag-title="松江清真寺【松江区缸甏巷21号】" class="meta-item pc-show leancloud_visitors">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-eye"></i>
+      <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
+    </span>
+    
+  </div>
+</section>
+            <div class="post-body next-md-body" id="post_body">
+              <p>松江清真寺是上海最古老的伊斯兰寺院，始建于<strong>至正年间</strong>（1341-1368年），也是元代松江府达鲁花赤的墓地所在。像这样中国与阿拉伯建筑风格融为一体的古代建筑，除了松江清真寺和杭州凤凰寺外再难觅踪影。</p>
+<!-- more -->
+<p>元代曾发动了大规模的对外西征，先后征服了中亚和西亚信仰伊斯兰教的各个国家。这些国家的一部分人被征调到中国，参加了蒙古征服和统一中国的战争。被蒙古人称之<strong>色目人</strong>或者用**”回回”**代称。元代统一全国后将民族分为四等：蒙古、色目、汉人、南人。可见色目人的地位。</p>
+<hr>
+<h2 id="松江府首任达鲁花赤">松江府首任达鲁花赤</h2>
+<p>达鲁花赤是元朝的官名，为所在地方的军队和官衙的最大监治长官，虽然品秩同各级知府、县令等相同。但实权更大。各级达鲁花赤由蒙古人充任，在缺少蒙古人时，允许由色目人充任。</p>
+<p>松江府的首任达鲁花赤是色目人沙全。《元史》中记载，在元军南下战争中，沙全屡建战功。至元十二年（1275年），沙全随军征战至华亭，下令士卒严禁杀掠，迫使守军头像，因功被授华亭县达鲁花赤。沙全留守华亭以后，随从的官兵及家属便定居上海。其中就有许多与沙全一样信奉伊斯兰教的回族人。为了便于宗教活动，至正年间（1341-1368年），在松江府西景家堰北与“回回坟”接壤处，建立了上海地区第一座清真寺——松江清真寺。</p>
+<hr>
+<h2 id="遗迹简介">遗迹简介</h2>
+<p>明代永乐年间，政府扩建松江清真寺为真教寺，因此它又名松江真教寺。清真寺坐南朝北，建筑风格既保持阿拉伯圆柱拱顶状，又有中国建筑风貌。</p>
+<img src="https://i.loli.net/2020/07/22/ZrkOU73J2mKlTy9.png" alt="image-20200722193320359" style="zoom:80%;" />
+<hr>
+<h3 id="窑殿">窑殿</h3>
+<p>始建于元代，无梁无柱，俗称窑殿。后多次返修，该殿南北东三处辟门，南北两侧拱门外筑有披屋。建筑面积共48平方米。顶部为重檐十字脊，采用了透空花筒做法，玲珑剔透。翼角的起翘部分无角梁结构。上下檐之间的四周壁面原绘有山水画草题材的壁画。</p>
+<p>窑殿内部为阿拉伯式砖拱形圆顶，高达4米。</p>
+<hr>
+<h3 id="邦克楼">邦克楼</h3>
+<p>邦克楼是清真寺召唤穆斯林来礼拜而建的塔楼。位于窑殿东侧，是<strong>砖构有门无楼</strong>的建筑。屋面为十字脊，内壁为砖拱球顶，下辟门洞作为出入道口。门楼上砖雕精细，其西面门额上嵌有经文：“安拉授意世间建造的第一座清真寺，是麦加的克白尔清真寺。<strong>”是松江清真寺现存最早的遗物</strong>。<sub>(寺内保存历代碑刻4块，其中有康熙十六年的《重修真教寺碑记》与道光元年的《清真寺捐输碑记》，详细记载了松江清真寺创建和整修的经过，可知其为至正年间的达鲁花赤所建)</sub></p>
+<p>松江清真寺的邦克楼建筑面积12平方米，高约4米。</p>
+<p>民间有传说邦克楼的屋顶看似白鹤的外形，也许正是白鹤寺的说法来源。</p>
+<img src="https://i.loli.net/2020/07/22/LsUjDZOFAqNJl9C.png" alt="image-20200722192441351" style="zoom: 50%;" />
+<hr>
+<h3 id="礼拜殿">礼拜殿</h3>
+<p>礼拜殿在窑殿和邦克楼的中间，砖木结构，<strong>是寺内规模最大的建筑</strong>.其形质为松江地区典型的明代厅堂式**。建筑面积为130平方米。大殿以川廊与尽头的窑殿相接。</p>
+<p>前殿为明代建筑，内部空间开敞，穆斯林沐浴脱鞋后进入此殿聚礼朝拜真主。后殿为元代建筑，屋顶施重檐十字，内部为砖拱球顶，三面设门，西侧为礼拜朝向之凹壁，由于酷似砖窑，故俗称窑殿，又称无梁殿。</p>
+<img src="https://i.loli.net/2020/07/22/6Kx7sVmRNoHtr9f.png" alt="image-20200722194234087" style="zoom:67%;" />
+<img src="https://i.loli.net/2020/07/22/PQTSoZ3Ky9qxv2g.png" alt="image-20200722193635204" style="zoom:50%;" />
+<p>礼拜大殿南北两侧分别为古墓园和古柏园。<strong>古墓园</strong>为历代松江回民坟墓。寺内现存有“元郡守达鲁花赤”墓，旁立有康熙十四年墓碑。近年来，在寺院周围，考古人员还发现了100余座穆斯林墓葬，以明清时期墓葬为主。<strong>古柏园</strong>则以其北侧一株枝叶繁茂的明代古桧柏为核心，配以竹林小径，颇具江南气质。并有古井一口。</p>
+<hr>
+<h3 id="南北讲堂">南北讲堂</h3>
+<p>讲经堂位于北侧，建于明代，为明代穆斯林少宗伯马自强捐金缩造。咨议堂位于南侧，建于清代，与讲经堂同为松江清真寺历代阿訇向海里发或穆斯林乡老讲授经文、研究教义的场所，亦作为本地穆斯林议事之用。古代穆斯林在清真寺周围聚族而居，讲堂在他们的宗教生活中有重要的作用。</p>
+<p>南讲堂现已辟为展厅，内设**《松江清真寺与上海伊斯兰教》展览**，以图文并茂的形式介绍松江清真寺的历史以及上海地区伊斯兰教的概况。</p>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2020/07/22/U2VzmHQ5kYt4aql.png" alt="image-20200722194427765" loading="lazy"></figure>
+<hr>
+<h2 id="到这去"><a href="%5Bhttps://map.baidu.com/poi/%E6%9D%BE%E6%B1%9F%E6%B8%85%E7%9C%9F%E5%AF%BA/@13495826.712322878,3612101.228065,19z?uid=1eeed54653afc8f1b5147f4b&amp;ugc_type=3&amp;ugc_ver=1&amp;device_ratio=2&amp;compat=1&amp;querytype=detailConInfo&amp;da_src=shareurl%5D(https://map.baidu.com/poi/%E6%9D%BE%E6%B1%9F%E6%B8%85%E7%9C%9F%E5%AF%BA/@13495826.712322878,3612101.228065,19z?uid=1eeed54653afc8f1b5147f4b&amp;ugc_type=3&amp;ugc_ver=1&amp;device_ratio=2&amp;compat=1&amp;querytype=detailConInfo&amp;da_src=shareurl)">到这去！！</a></h2>
+
+            </div>
+            
+              <div class="reward-btn">
+                <div class="reward-btn-text">赞赏</div>
+              </div>
+            
+            
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong class="language" data-lan="author">本文作者：</strong>
+      项目组
+    </li>
+    <li class="post-copyright-link">
+      <strong class="language" data-lan="link">本文链接：</strong>
+      <a href="https://m5s4qq.coding-pages.com/post/song-jiang-qing-zhen-si-song-jiang-qu-gang-peng-xiang-21-hao/" title="松江清真寺【松江区缸甏巷21号】">https://m5s4qq.coding-pages.com/post/song-jiang-qing-zhen-si-song-jiang-qu-gang-peng-xiang-21-hao/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong class="language" data-lan="copyright">版权声明： </strong>
+      本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+  <div class="tags">
+    
+      <a href="https://m5s4qq.coding-pages.com/tag/fBInvq6WS/"># 元代</a>
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
+      
+    </div>
+    <div class="nav-next">
+      
+        <a class="nav-pc-next" title="护珠塔【松江区刘家山村460号】" href="https://m5s4qq.coding-pages.com/post/hu-zhu-ta-song-jiang-qu-liu-jia-shan-cun-460-hao/">护珠塔【松江区刘家山村460号】</a>
+        <a class="nav-mobile-next" title="护珠塔【松江区刘家山村460号】" href="https://m5s4qq.coding-pages.com/post/hu-zhu-ta-song-jiang-qu-liu-jia-shan-cun-460-hao/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
       
     </div>
   </div>
 </div>
-          </section>
+            
+            
+  <script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<div id="vcomments" style="padding: 10px 0px 0px 0px"></div>
+
+<style>
+  .v .veditor {
+    min-height: 10rem;
+    background-image: url('');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: rgba(255, 255, 255, 0);
+    resize: none;
+  }
+
+  .v .vwrap {
+    border: 1px solid #000 !important;
+  }
+
+  .v .vbtn {
+    padding: .4rem 1.2rem !important;
+    border-color: #fff !important;
+    background-color: #49b1f5 !important;
+    color: #fff !important;
+    font-size: .7rem !important;
+  }
+
+  .v .vcards .vcard .vh .vmeta .vat {
+    padding: 0 .8rem !important;
+    border: 1px solid #00c4b6 !important;
+    border-radius: 5px !important;
+    color: #00c4b6 !important;
+  }
+</style>
+<script>
+  new Valine({
+    el: '#vcomments',
+    appId: '0acN7LHig95xUamw45EKDH8v-gzGzoHsz',
+    appKey: '9o00XozUXsDEWJyhNwD3LSco',
+    avatar: '',
+    placeholder: '输入评论~',
+    pageSize: '',
+    lang: 'zh-cn',
+    enableQQ: 'true' === 'true',
+    visitor: 'true' === 'true',
+    highlight: 'true' === 'true',
+    avatarForce: 'true' === 'false',
+  });
+</script>
+
+          </div>
         </div>
       </div>
     </div>
@@ -563,6 +923,265 @@
   }
 
 </script>
+    <div class="light-box" id="light_box"></div>
+<script>
+  let imgs = document.querySelectorAll('.post-body img');
+  let lightBox = document.querySelector('#light_box');
+  lightBox.addEventListener('mousedown', (e) => {
+    e.preventDefault()
+  })
+  lightBox.addEventListener('mousewheel', (e) => {
+    e.preventDefault()
+  })
+  let width = window.innerWidth * 0.8;
+  lightBox.onclick = () => {
+    let img = lightBox.querySelector('img');
+    lightBox.style = '';
+    img && img.remove();
+  }
+  imgs.forEach(item => {
+    item.onclick = function (e) {
+      let lightImg = document.createElement('img');
+      lightImg.src = this.src;
+      lightBox.style = `height: 100%; opacity: 1; background-color: rgba(0, 0, 0, 0.5);cursor: zoom-out;`;
+      lightImg.style = `width: ${width}px;border-radius: 2px;`;
+      lightImg.onclick = function () {
+        lightBox.style = '';
+        this.remove();
+      }
+      lightBox.append(lightImg);
+    }
+  })
+</script>
+    <div class="reward-mask" style="display: none;">
+  <div class="reward-relative">
+    <span class="close" aria-hidden="true">x</span>
+    <div class="reward-body">
+      <h2>感谢您的支持，我会继续努力的!</h2>
+      <div class="reward-img-box">
+        <div style="position: relative; width: 140px; height: 140px;">
+          
+          
+            <img id="zfb" class="reward-img" src="https://imgkr.cn-bj.ufileos.com/335b1d50-93cb-495c-8aa8-e597211439d1.jpg" alt="赞赏码">
+          
+          
+            <img id="wx" class="reward-img" src="https://imgkr.cn-bj.ufileos.com/6d6b4d4c-859c-4415-8e5c-323b09afda6e.jpg" alt="赞赏码">
+          
+        </div>
+      </div>
+      <p class="reward-word">扫码打赏，感谢支持~</p>
+      <p class="reward-tip">打开微信/支付宝扫一扫，即可进行打赏哦</p>
+    </div>
+    <div class="bottom">
+      
+      <div id="zfbBtn" class="pay-text">
+        支付宝
+      </div>
+      
+      
+      <div id="wxBtn" class="pay-text">
+        微信支付
+      </div>
+      
+    </div>
+  </div>
+</div>
+<style>
+  .reward-mask {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #00000054;
+  }
+
+  .reward-relative {
+    position: relative;
+    width: 480px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #fff;
+    top: 50%;
+    margin-top: -205px;
+  }
+
+  .reward-relative .close {
+    position: absolute;
+    right: 10px;
+    font-weight: normal;
+    font-size: 16px;
+    color: #929292;
+  }
+
+  .reward-body {
+    padding: 40px 20px 20px;
+  }
+
+  .bottom {
+    display: flex;
+  }
+
+  .reward-btn {
+    text-align: center;
+  }
+
+  .reward-btn-text {
+    display: inline-block;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: #ff9734;
+    color: #FFF;
+    margin-top: 20px;
+  }
+
+  .pay-text {
+    margin-top: 10px;
+    padding: 10px;
+    flex: 1;
+    transition: all .2s linear;
+  }
+
+  .pay-text:hover {
+    background-color: #a5a5a536;
+  }
+
+  .reward-body h2 {
+    padding-top: 10px;
+    text-align: center;
+    color: #a3a3a3;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 0 20px;
+  }
+
+  .reward-body h2:after,
+  .reward-body h2:before {
+    font-family: Arial, Helvetica, sans-serif;
+    background: 0 0;
+    width: 0;
+    height: 0;
+    font-style: normal;
+    color: #eee;
+    font-size: 80px;
+    position: absolute;
+    top: 20px;
+  }
+
+  .reward-body h2:before {
+    content: '\201c';
+    left: 50px;
+  }
+
+  .reward-body h2:after {
+    content: '\201d';
+    right: 80px;
+  }
+
+  .reward-img-box {
+    display: inline-block;
+    padding: 10px;
+    border: 6px solid #ea5f00;
+    margin: 0 auto;
+    border-radius: 3px;
+    position: relative;
+  }
+
+  .reward-img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 767px) {
+    .reward-relative {
+      height: 100%;
+      top: 0px;
+      margin-top: 0;
+      width: auto;
+    }
+
+    .reward-relative .bottom {
+      flex-direction: column;
+    }
+
+    .reward-relative .pay-text {
+      width: 80%;
+      margin: 5px auto;
+      border: 1px solid silver;
+      padding: 6px;
+      border-radius: 4px;
+    }
+
+    .reward-body h2:after {
+      right: 40px;
+    }
+
+    .reward-body h2:after,
+    .reward-body h2:before {
+      font-size: 60px;
+    }
+
+    .reward-body h2:before {
+      left: 20px;
+    }
+  }
+</style>
+<script>
+  !function () {
+    var mask = document.querySelector('.reward-mask');
+    let close = document.querySelector('.reward-relative .close');
+    let rewardBtn = document.querySelector('.reward-btn');
+
+    let zfb = document.querySelector('#zfb'),
+      wx = document.querySelector('#wx'),
+      zfbBtn = document.querySelector('#zfbBtn'),
+      wxBtn = document.querySelector('#wxBtn');
+
+    if (zfbBtn && wxBtn) {
+      zfbBtn.addEventListener('click', () => {
+        window.Velocity(zfb, 'transition.slideLeftIn', {
+          duration: 400
+        });
+        window.Velocity(wx, 'transition.slideRightOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+
+      wxBtn.addEventListener('click', () => {
+        window.Velocity(wx, 'transition.slideRightIn', {
+          duration: 400
+        });
+        window.Velocity(zfb, 'transition.slideLeftOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+    }
+
+    rewardBtn.addEventListener('click', (e) => {
+      window.Velocity(mask, 'transition.slideDownIn', {
+        duration: 400
+      })
+    });
+
+    close.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.Velocity(mask, 'transition.slideUpOut', {
+        duration: 400
+      })
+    })
+  }()
+</script>
+
   </div>
 </body>
 
@@ -1525,6 +2144,5 @@ PS:本文基于&lt;a href=&#34;https://www.jiyiblog.com/archives/0407140.html&#3
 
 
 <script src="https://cdn.jsdelivr.net/gh/lete114/CDN/Sum/sakura.js"></script>
-
 
 </html>

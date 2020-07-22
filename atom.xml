@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://m5s4qq.coding-pages.com</id>
     <title>上海考古地图</title>
-    <updated>2020-07-22T12:11:35.042Z</updated>
+    <updated>2020-07-22T12:15:36.880Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://m5s4qq.coding-pages.com"/>
     <link rel="self" href="https://m5s4qq.coding-pages.com/atom.xml"/>
@@ -12,6 +12,17 @@
     <logo>https://m5s4qq.coding-pages.com/images/avatar.png</logo>
     <icon>https://m5s4qq.coding-pages.com/favicon.ico</icon>
     <rights>All rights reserved 2020, 上海考古地图</rights>
+    <entry>
+        <title type="html"><![CDATA[松江清真寺【松江区缸甏巷21号】]]></title>
+        <id>https://m5s4qq.coding-pages.com/post/song-jiang-qing-zhen-si-song-jiang-qu-gang-peng-xiang-21-hao/</id>
+        <link href="https://m5s4qq.coding-pages.com/post/song-jiang-qing-zhen-si-song-jiang-qu-gang-peng-xiang-21-hao/">
+        </link>
+        <updated>2020-07-22T12:12:24.000Z</updated>
+        <summary type="html"><![CDATA[<p>松江清真寺是上海最古老的伊斯兰寺院，始建于<strong>至正年间</strong>（1341-1368年），也是元代松江府达鲁花赤的墓地所在。像这样中国与阿拉伯建筑风格融为一体的古代建筑，除了松江清真寺和杭州凤凰寺外再难觅踪影。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>松江清真寺是上海最古老的伊斯兰寺院，始建于<strong>至正年间</strong>（1341-1368年），也是元代松江府达鲁花赤的墓地所在。像这样中国与阿拉伯建筑风格融为一体的古代建筑，除了松江清真寺和杭州凤凰寺外再难觅踪影。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[护珠塔【松江区刘家山村460号】]]></title>
         <id>https://m5s4qq.coding-pages.com/post/hu-zhu-ta-song-jiang-qu-liu-jia-shan-cun-460-hao/</id>
@@ -104,12 +115,5 @@
 ]]></summary>
         <content type="html"><![CDATA[<p>松江兴圣教寺塔始建于北宋。1996年被公布为全国重点文物保护单位。</p>
 ]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[任仁发墓【青浦重固镇新丰村高家台】]]></title>
-        <id>https://m5s4qq.coding-pages.com/post/ren-ren-fa-mu-qing-pu-chong-gu-zhen-xin-feng-cun-gao-jia-tai/</id>
-        <link href="https://m5s4qq.coding-pages.com/post/ren-ren-fa-mu-qing-pu-chong-gu-zhen-xin-feng-cun-gao-jia-tai/">
-        </link>
-        <updated>2020-07-19T04:37:35.000Z</updated>
     </entry>
 </feed>
