@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://m5s4qq.coding-pages.com</id>
     <title>上海考古地图</title>
-    <updated>2020-07-23T04:57:21.495Z</updated>
+    <updated>2020-07-23T09:59:13.951Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://m5s4qq.coding-pages.com"/>
     <link rel="self" href="https://m5s4qq.coding-pages.com/atom.xml"/>
@@ -12,6 +12,28 @@
     <logo>https://m5s4qq.coding-pages.com/images/avatar.png</logo>
     <icon>https://m5s4qq.coding-pages.com/favicon.ico</icon>
     <rights>All rights reserved 2020, 上海考古地图</rights>
+    <entry>
+        <title type="html"><![CDATA[西林禅寺塔(圆应塔）【华亭老街西林禅寺】]]></title>
+        <id>https://m5s4qq.coding-pages.com/post/xi-lin-shan-si-ta-yuan-ying-ta-hua-ting-lao-jie-xi-lin-shan-si/</id>
+        <link href="https://m5s4qq.coding-pages.com/post/xi-lin-shan-si-ta-yuan-ying-ta-hua-ting-lao-jie-xi-lin-shan-si/">
+        </link>
+        <updated>2020-07-23T09:57:01.000Z</updated>
+        <summary type="html"><![CDATA[<p>​    西林禅寺塔是<strong>上海现存最高的古代建筑。****建于南宋咸淳年间，距今约七百余年历史，始称崇恩塔,为云间接待院的一部分。明洪武年间重建时，为纪念南宋云间接待院开山祖师园应禅师，改名</strong>圆应塔**。至明正统年间又进行迁建，迁建后为今天看到的西林禅寺塔。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>​    西林禅寺塔是<strong>上海现存最高的古代建筑。****建于南宋咸淳年间，距今约七百余年历史，始称崇恩塔,为云间接待院的一部分。明洪武年间重建时，为纪念南宋云间接待院开山祖师园应禅师，改名</strong>圆应塔**。至明正统年间又进行迁建，迁建后为今天看到的西林禅寺塔。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[秋霞圃【嘉定城东大街】]]></title>
+        <id>https://m5s4qq.coding-pages.com/post/qiu-xia-pu-jia-ding-cheng-dong-da-jie/</id>
+        <link href="https://m5s4qq.coding-pages.com/post/qiu-xia-pu-jia-ding-cheng-dong-da-jie/">
+        </link>
+        <updated>2020-07-23T09:55:51.000Z</updated>
+        <summary type="html"><![CDATA[<p>秋霞圃是上海四大古典园林之一，是由始建于明代的<strong>龚氏园、沈氏园、金氏园和城隍庙的遗迹</strong>合成一园。秋霞圃小巧、精致、秀丽。虽然占地近47亩，但人文景点和文物古迹十分丰富。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>秋霞圃是上海四大古典园林之一，是由始建于明代的<strong>龚氏园、沈氏园、金氏园和城隍庙的遗迹</strong>合成一园。秋霞圃小巧、精致、秀丽。虽然占地近47亩，但人文景点和文物古迹十分丰富。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[李塔【松江区塔汇乡】]]></title>
         <id>https://m5s4qq.coding-pages.com/post/li-ta-song-jiang-qu-ta-hui-xiang/</id>
@@ -93,19 +115,5 @@
         <content type="html"><![CDATA[<h2 id="遗迹简介">遗迹简介</h2>
 <p>相传，龙华寺始建于吴赤乌五年至十年（242-247），北宋太平兴国二年（977）重建，历代多次修葺。但龙华寺中现存最早的建筑是龙华塔，它的塔身和塔基主题都是<strong>宋代</strong>原物。<sub>塔下曾出土宋代瓦当。</sub></p>
 ]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[国创项目采访|“世间无二繁华处，史上至极昌盛时。”]]></title>
-        <id>https://m5s4qq.coding-pages.com/post/guo-chuang-xiang-mu-cai-fang-orshi-jian-wu-er-fan-hua-chu-shi-shang-zhi-ji-chang-sheng-shi/</id>
-        <link href="https://m5s4qq.coding-pages.com/post/guo-chuang-xiang-mu-cai-fang-orshi-jian-wu-er-fan-hua-chu-shi-shang-zhi-ji-chang-sheng-shi/">
-        </link>
-        <updated>2020-07-22T07:02:58.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[法华塔【嘉定区南大街379号】]]></title>
-        <id>https://m5s4qq.coding-pages.com/post/fa-hua-ta-jia-ding-qu-nan-da-jie-379-hao/</id>
-        <link href="https://m5s4qq.coding-pages.com/post/fa-hua-ta-jia-ding-qu-nan-da-jie-379-hao/">
-        </link>
-        <updated>2020-07-21T12:26:14.000Z</updated>
     </entry>
 </feed>

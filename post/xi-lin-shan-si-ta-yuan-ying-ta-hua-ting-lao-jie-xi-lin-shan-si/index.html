@@ -10,7 +10,7 @@
 ——上海文旅融合线路优化设计研究
 ">
 <meta name="theme-color" content="#000">
-<title>谭其骧先生关于上海地区成陆的理论  | 上海考古地图</title>
+<title>西林禅寺塔(圆应塔）【华亭老街西林禅寺】 | 上海考古地图</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1595498346824">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -50,8 +50,8 @@
 </script>
 
 
-  <meta name="description" content="谭其骧先生关于上海地区成陆的理论 " />
-  <meta name="keywords" content="沧海桑田" />
+  <meta name="description" content="西林禅寺塔(圆应塔）【华亭老街西林禅寺】" />
+  <meta name="keywords" content="宋代" />
 </head>
 
 <body>
@@ -202,8 +202,7 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            <div class="post-side-meta" id="post_side_meta">
-              
+            
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -270,198 +269,6 @@
   </div>
 
 </div>
-            </div>
-            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
-              <div class="toc-box right-motion">
-  <div class="toc-wrapper auto-number auto"
-    id="toc_wrapper">
-    <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E5%86%88%E8%BA%AB%E5%9C%B0%E5%B8%A6">冈身地带</a></li>
-<li><a href="#%E5%86%88%E8%BA%AB%E4%BB%A5%E8%A5%BF%E4%B8%8A%E6%B5%B7%E6%9C%80%E6%97%A9%E6%9C%89%E4%BA%BA%E7%B1%BB%E5%B1%85%E4%BD%8F%E7%9A%84%E9%99%86%E5%9C%B0">冈身以西：上海最早有人类居住的陆地</a></li>
-<li><a href="#%E5%86%88%E8%BA%AB%E4%BB%A5%E4%B8%9C%E8%87%B3%E9%87%8C%E6%8A%A4%E5%A1%98">冈身以东至里护塘</a></li>
-<li><a href="#%E9%87%8C%E6%8A%A4%E5%A1%98%E4%BB%A5%E4%B8%9C">里护塘以东</a></li>
-</ul>
-</li>
-</ul>
-
-  </div>
-</div>
-
-<script>
-
-  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
-  let active = 'active-show', activeClass = 'active-current';
-  let tocWrapper = document.querySelector('#toc_wrapper');
-  let tocContent = tocWrapper.children[0];
-  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
-
-  function addTocNumber(elem, deep) {
-    if (!elem) {
-      return;
-    }
-    let prop = elem.__proto__;
-
-    if (prop === HTMLUListElement.prototype) {
-      for (let i = 0; i < elem.children.length; i++) {
-        addTocNumber(elem.children[i], deep + (i + 1) + '.');
-      }
-    } else if (prop === HTMLLIElement.prototype) {
-      // 保存li元素
-      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
-        lList.push(elem);
-      }
-      for (let i = 0; i < elem.children.length; i++) {
-        let cur = elem.children[i];
-        if (cur.__proto__ === HTMLAnchorElement.prototype) {
-          if (autoNumber) {
-            cur.text = deep + ' ' + cur.text;
-          }
-        } else if (cur.__proto__ === HTMLUListElement.prototype) {
-          addTocNumber(cur, deep);
-        }
-      }
-    }
-  }
-
-  function removeParentActiveClass() {
-    let parents = tocContent.querySelectorAll('.' + active)
-    parents.forEach(function (elem) {
-      elem.classList.remove(active);
-    });
-  }
-
-  function addActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.add(activeClass);
-    }
-  }
-
-  function removeActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.remove(activeClass);
-    }
-  }
-
-  function addActiveLiElemment(elem, parent) {
-    if (!elem || elem === parent) {
-      return;
-    } else {
-      if (elem.__proto__ === HTMLLIElement.prototype) {
-        elem.classList.add(active);
-      }
-      addActiveLiElemment(elem.parentElement, parent);
-    }
-  }
-
-  function showToc() {
-    if (tocWrapper) {
-      postBody = document.querySelector('#post_body');
-      for (let i = 0; i < postBody.children.length; i++) {
-        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
-          hList.push(postBody.children[i]);
-        }
-      }
-      if (tocWrapper.classList.contains('compress')) {
-        tocContent.classList.add('closed');
-      } else if (tocWrapper.classList.contains('no_compress')) {
-        tocContent.classList.add('expanded');
-      } else {
-        if (hList.length > 10) {
-          active = 'active-hidden'
-          tocContent.classList.add('closed');
-        } else {
-          tocContent.classList.add('expanded');
-        }
-      }
-    }
-  }
-
-  (function () {
-    // 处理不是从#一级标题开始目录
-    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
-      let con = tocContent.children[0].children[0];
-      tocContent.innerHTML = con.innerHTML;
-    }
-    let markdownItTOC = document.querySelector('.markdownIt-TOC');
-    let innerHeight = window.innerHeight;
-    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
-    addTocNumber(tocContent, '');
-  })();
-
-  document.addEventListener('scroll', function (e) {
-    if (lList.length <= 0) {
-      return;
-    }
-    let scrollTop = document.scrollingElement.scrollTop + 10;
-    let dir;
-
-    if (lastTop - scrollTop > 0) {
-      dir = 'up';
-    } else {
-      dir = 'down';
-    }
-
-    lastTop = scrollTop;
-    if (scrollTop <= 0) {
-      if (lastIndex >= 0 && lastIndex < hList.length) {
-        lList[lastIndex].classList.remove(activeClass);
-      }
-      return;
-    }
-
-    let current = 0, hasFind = false;
-    for (let i = 0; i < hList.length; i++) {
-      if (hList[i].offsetTop > scrollTop) {
-        current = i;
-        hasFind = true;
-        break;
-      }
-    }
-    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
-      current = hList.length - 1;
-    } else {
-      current--;
-    }
-    if (dir === 'down') {
-      if (current > lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex)
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    } else {
-      if (current < lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex);
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    }
-  });
-
-
-  window.addEventListener('load', function () {
-    showToc();
-    document.querySelector('#sidebar').style = 'display: block;';
-    tocWrapper.classList.add('toc-active');
-    setTimeout(function () {
-      if ("createEvent" in document) {
-        let evt = document.createEvent("HTMLEvents");
-        evt.initEvent("scroll", false, true);
-        document.dispatchEvent(evt);
-      }
-      else {
-        document.fireEvent("scroll");
-      }
-    }, 500)
-  })
-
-</script>
-            </div>
           
         
       </div>
@@ -549,8 +356,8 @@
           <div class="section bg-color post post-page">
             <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://m5s4qq.coding-pages.com/post/tan-qi-xiang-xian-sheng-guan-yu-shang-hai-di-qu-cheng-lu-de-li-lun/">
-      谭其骧先生关于上海地区成陆的理论 
+    <a class="post-title-link" href="https://m5s4qq.coding-pages.com/post/xi-lin-shan-si-ta-yuan-ying-ta-hua-ting-lao-jie-xi-lin-shan-si/">
+      西林禅寺塔(圆应塔）【华亭老街西林禅寺】
     </a>
   </h1>
   <div class="post-meta">
@@ -558,7 +365,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2020-07-19 22:27:08">2020-07-19</span>
+      <span class="publish-time" data-t="2020-07-23 17:57:01">2020-07-23</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -567,8 +374,8 @@
       <span class="pc-show language" data-lan="category-in">分类于</span>
       
       
-      <a href="https://m5s4qq.coding-pages.com/tag/wgshMq0yK/">
-        <span>沧海桑田</span>
+      <a href="https://m5s4qq.coding-pages.com/tag/RFJ9M1OFQ/">
+        <span>宋代</span>
       </a>
       
       
@@ -577,17 +384,17 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>4<span class="language" data-lan="minute">分钟</span></span>
+      <span>1<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>1066<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>218<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/post/tan-qi-xiang-xian-sheng-guan-yu-shang-hai-di-qu-cheng-lu-de-li-lun/" data-flag-title="谭其骧先生关于上海地区成陆的理论 " class="meta-item pc-show leancloud_visitors">
+    <span id="/post/xi-lin-shan-si-ta-yuan-ying-ta-hua-ting-lao-jie-xi-lin-shan-si/" data-flag-title="西林禅寺塔(圆应塔）【华亭老街西林禅寺】" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -596,29 +403,14 @@
   </div>
 </section>
             <div class="post-body next-md-body" id="post_body">
-              <p>根据谭其骧先生的研究，上海市的大陆部分可分为四个成陆过程迥然不同的地区。</p>
+              <p>​    西林禅寺塔是<strong>上海现存最高的古代建筑。****建于南宋咸淳年间，距今约七百余年历史，始称崇恩塔,为云间接待院的一部分。明洪武年间重建时，为纪念南宋云间接待院开山祖师园应禅师，改名</strong>圆应塔**。至明正统年间又进行迁建，迁建后为今天看到的西林禅寺塔。</p>
 <!-- more -->
-<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2020/07/19/nE4Ck2gKbrtYwXp.png" alt="image-20200719172306221" loading="lazy"></figure>
-<h2 id="冈身地带">冈身地带</h2>
-<p>远古时代太湖是一个海湾，长江南岸的沙嘴自西北逐渐向东南伸展，在到达杭州湾后，由于受强潮影响，折而向西南推进和钱塘江口的沙嘴相连。由此将太湖与大海隔开，沙嘴的外缘就成了江南地区第一条基本连续的海岸线。波浪将近海泥沙与介壳动物的残骸堆积在沙嘴的边缘，后人因其高出于附近的底面，称为“冈身”。</p>
-<p>如上图，冈身在松江故道以北并列5条，最西边相当于太仓、外冈、方泰一线，最东一条相当于娄塘、嘉定、马陆、南翔一线。东西距离在太仓境内宽约8公里，逐渐向东南收缩，在嘉定南部减为6公里。</p>
-<p>松江故道以南并列有三条，最西边的一条相当于马桥、邬桥、胡桥、漕泾一线，最东边一条相当于诸翟、新市、柘林一线，宽度一般不过2公里，狭窄处仅1公里半。冈身南端近海处扩展至4公里左右......</p>
-<p>1959年在冈身西侧的马桥发现遗址。马桥遗址共有四层。从上往下分别为：唐宋时期遗存、春战时期遗存、商周文化遗址、新石器时代文化遗存。学者根据考古类型学判断，最下层的新石器时代石器、陶器属于良渚文化类型。即<strong>距今四千多年前。<strong>马桥遗址是在松江古道南三条冈身中的沙冈和紫冈之间，因此谭其骧先生判断：这二冈的形成应该更早，大约在</strong>五六千年前</strong>。</p>
-<p>从现有的考古发现看，冈身以东未发现魏晋以前的遗址，因此这个宽度不过1.5-8公里的冈身区域形成过程长达四千年之久。</p>
+<p><img src="https://i.loli.net/2020/07/23/DjBiOA9SmqldCfK.png" alt="image-20200723164803602" style="zoom: 50%;" /><img src="https://i.loli.net/2020/07/23/CQcWkynK8N7g63S.png" alt="image-20200723165319949" style="zoom:50%;" /></p>
+<img src="https://i.loli.net/2020/07/23/qGLwTYnmUEArbZs.png" alt="image-20200723164930611" style="zoom: 80%;" />
+<p>西林塔为一座<strong>砖木结构</strong>平面八角形七级楼阁式塔，通高达46.5米。由于年久失修，至建国初期木结构及塔刹损毁严重。为加大对古塔的保护力度，1992年政府拨款对西林塔进行了全面整修，并在塔刹、地宫等处出土佛教相关文物、金银玉器五百余件，且有明代重建、迁建碑刻。</p>
+<img src="https://i.loli.net/2020/07/23/cGDIogSwVnt4Wzf.png" alt="image-20200723164506655" style="zoom:67%;" />
 <hr>
-<h2 id="冈身以西上海最早有人类居住的陆地">冈身以西：上海最早有人类居住的陆地</h2>
-<p>如上图，冈身以西的崧泽遗址经放射性碳素测定年代，距今已超过5000年。冈身以西的新石器时代遗址有十余处之多。如西边的淀山湖、金山坟。北侧的福泉山、孔宅。南侧的戚家墩。</p>
-<hr>
-<h2 id="冈身以东至里护塘">冈身以东至里护塘</h2>
-<p>这一区域的墓葬最早的只有一处南朝墓葬。位于举例冈身约一华里的莘庄（大致年代为420-589年）。但从出水城陆到从事生产活动并定居可能需要经历一段相当长的时期。比如位于这一区域的龙华寺，就创立于五代吴越时代。</p>
-<p>唐开元初年在本区兴筑了上海地区第一条海塘——<strong>旧瀚海塘</strong></p>
-<p>从图中可以看出：北蔡、周浦、下砂存在着比较连续的沙带。谭其骧先生认为这条沙带就是弘治《上海志》中提到的**“下砂捍海塘”**故址所在。谭其骧先生推论这条沙带形成于十世纪钱氏吴越王的时代。</p>
-<p>从五世纪到十二世纪，约八百年间，海岸线从冈身侧推向里护塘一线，共达三十余公里，是成陆速度最快的一区。</p>
-<hr>
-<h2 id="里护塘以东">里护塘以东</h2>
-<p>里护塘始建于南宋乾道八年（1172年），<strong>至今大约800年</strong>。由于长江主泓经常由南泓道入海，泥沙主要沉积在北岸或江心，沉积到南岸的较少。如图所示，这一区域距离海岸最远的是打团镇，也不过十六、七公里。</p>
-<p>这块新涨的土地上逐步向外至少增筑了至少四条海塘——钦公塘、老圩塘、陈公塘、新圩塘。土质含盐量较高。</p>
-<p>谭其骧先生同时指出，不光沧海可以变为桑田，桑田同样也可变为沧海。例如在约近四五百年内，长江大溜自太仓至川沙<strong>高桥</strong>港口附近紧迫南岸，流势甚急，这一带江岸收到严重刷汕，反而有所坍进。</p>
+<p><a href="%5Bhttps://map.baidu.com/poi/%E8%A5%BF%E6%9E%97%E7%A6%85%E5%AF%BA/@13495483.863344051,3612280.865,19z?uid=e85e252772e2a55295f08ce4&amp;ugc_type=3&amp;ugc_ver=1&amp;device_ratio=2&amp;compat=1&amp;querytype=detailConInfo&amp;da_src=shareurl%5D(https://map.baidu.com/poi/%E8%A5%BF%E6%9E%97%E7%A6%85%E5%AF%BA/@13495483.863344051,3612280.865,19z?uid=e85e252772e2a55295f08ce4&amp;ugc_type=3&amp;ugc_ver=1&amp;device_ratio=2&amp;compat=1&amp;querytype=detailConInfo&amp;da_src=shareurl)">到这去！！</a></p>
 
             </div>
             
@@ -635,7 +427,7 @@
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://m5s4qq.coding-pages.com/post/tan-qi-xiang-xian-sheng-guan-yu-shang-hai-di-qu-cheng-lu-de-li-lun/" title="谭其骧先生关于上海地区成陆的理论 ">https://m5s4qq.coding-pages.com/post/tan-qi-xiang-xian-sheng-guan-yu-shang-hai-di-qu-cheng-lu-de-li-lun/</a>
+      <a href="https://m5s4qq.coding-pages.com/post/xi-lin-shan-si-ta-yuan-ying-ta-hua-ting-lao-jie-xi-lin-shan-si/" title="西林禅寺塔(圆应塔）【华亭老街西林禅寺】">https://m5s4qq.coding-pages.com/post/xi-lin-shan-si-ta-yuan-ying-ta-hua-ting-lao-jie-xi-lin-shan-si/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -644,21 +436,17 @@
   </ul>
   <div class="tags">
     
-      <a href="https://m5s4qq.coding-pages.com/tag/wgshMq0yK/"># 沧海桑田</a>
+      <a href="https://m5s4qq.coding-pages.com/tag/RFJ9M1OFQ/"># 宋代</a>
     
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="法华塔【嘉定区南大街379号】" href="https://m5s4qq.coding-pages.com/post/fa-hua-ta-jia-ding-qu-nan-da-jie-379-hao/">法华塔【嘉定区南大街379号】</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="法华塔【嘉定区南大街379号】" href="https://m5s4qq.coding-pages.com/post/fa-hua-ta-jia-ding-qu-nan-da-jie-379-hao/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="上海仍待探索的沧海桑田时期" href="https://m5s4qq.coding-pages.com/post/shang-hai-reng-dai-tan-suo-de-cang-hai-sang-tian-shi-qi/">上海仍待探索的沧海桑田时期</a>
-        <a class="nav-mobile-next" title="上海仍待探索的沧海桑田时期" href="https://m5s4qq.coding-pages.com/post/shang-hai-reng-dai-tan-suo-de-cang-hai-sang-tian-shi-qi/">下一篇</a>
+        <a class="nav-pc-next" title="秋霞圃【嘉定城东大街】" href="https://m5s4qq.coding-pages.com/post/qiu-xia-pu-jia-ding-cheng-dong-da-jie/">秋霞圃【嘉定城东大街】</a>
+        <a class="nav-mobile-next" title="秋霞圃【嘉定城东大街】" href="https://m5s4qq.coding-pages.com/post/qiu-xia-pu-jia-ding-cheng-dong-da-jie/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
