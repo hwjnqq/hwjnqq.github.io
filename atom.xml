@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://m5s4qq.coding-pages.com</id>
     <title>上海考古地图</title>
-    <updated>2020-07-23T09:59:13.951Z</updated>
+    <updated>2020-07-23T14:20:48.946Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://m5s4qq.coding-pages.com"/>
     <link rel="self" href="https://m5s4qq.coding-pages.com/atom.xml"/>
@@ -12,6 +12,17 @@
     <logo>https://m5s4qq.coding-pages.com/images/avatar.png</logo>
     <icon>https://m5s4qq.coding-pages.com/favicon.ico</icon>
     <rights>All rights reserved 2020, 上海考古地图</rights>
+    <entry>
+        <title type="html"><![CDATA[华严塔【金山亭林镇九丰村1080号】]]></title>
+        <id>https://m5s4qq.coding-pages.com/post/hua-yan-ta-jin-shan-ting-lin-zhen-jiu-feng-cun-1080-hao/</id>
+        <link href="https://m5s4qq.coding-pages.com/post/hua-yan-ta-jin-shan-ting-lin-zhen-jiu-feng-cun-1080-hao/">
+        </link>
+        <updated>2020-07-23T14:19:03.000Z</updated>
+        <summary type="html"><![CDATA[<p>华严塔位于松隐禅寺圆通宝殿前，是松隐禅寺建筑群一部分。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>华严塔位于松隐禅寺圆通宝殿前，是松隐禅寺建筑群一部分。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[西林禅寺塔(圆应塔）【华亭老街西林禅寺】]]></title>
         <id>https://m5s4qq.coding-pages.com/post/xi-lin-shan-si-ta-yuan-ying-ta-hua-ting-lao-jie-xi-lin-shan-si/</id>
@@ -101,19 +112,6 @@
         <summary type="html"><![CDATA[<p>护珠塔是天马山上的斜塔，是松郡九峰中的一大奇观。沿天马山西面一条缓坡向上，行走约20分钟，即可在天马山半山腰上看见这座斜塔。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>护珠塔是天马山上的斜塔，是松郡九峰中的一大奇观。沿天马山西面一条缓坡向上，行走约20分钟，即可在天马山半山腰上看见这座斜塔。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[龙华寺与龙华塔【徐汇区龙华路、后马路相交处；龙华路2853号】]]></title>
-        <id>https://m5s4qq.coding-pages.com/post/long-hua-si-yu-long-hua-ta-xu-hui-qu-long-hua-lu-hou-ma-lu-xiang-jiao-chu-long-hua-lu-2853-hao/</id>
-        <link href="https://m5s4qq.coding-pages.com/post/long-hua-si-yu-long-hua-ta-xu-hui-qu-long-hua-lu-hou-ma-lu-xiang-jiao-chu-long-hua-lu-2853-hao/">
-        </link>
-        <updated>2020-07-22T10:52:25.000Z</updated>
-        <summary type="html"><![CDATA[<h2 id="遗迹简介">遗迹简介</h2>
-<p>相传，龙华寺始建于吴赤乌五年至十年（242-247），北宋太平兴国二年（977）重建，历代多次修葺。但龙华寺中现存最早的建筑是龙华塔，它的塔身和塔基主题都是<strong>宋代</strong>原物。<sub>塔下曾出土宋代瓦当。</sub></p>
-]]></summary>
-        <content type="html"><![CDATA[<h2 id="遗迹简介">遗迹简介</h2>
-<p>相传，龙华寺始建于吴赤乌五年至十年（242-247），北宋太平兴国二年（977）重建，历代多次修葺。但龙华寺中现存最早的建筑是龙华塔，它的塔身和塔基主题都是<strong>宋代</strong>原物。<sub>塔下曾出土宋代瓦当。</sub></p>
 ]]></content>
     </entry>
 </feed>
