@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://m5s4qq.coding-pages.com</id>
     <title>上海考古地图</title>
-    <updated>2020-07-23T15:45:09.634Z</updated>
+    <updated>2020-07-24T04:43:41.916Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://m5s4qq.coding-pages.com"/>
     <link rel="self" href="https://m5s4qq.coding-pages.com/atom.xml"/>
@@ -12,6 +12,17 @@
     <logo>https://m5s4qq.coding-pages.com/images/avatar.png</logo>
     <icon>https://m5s4qq.coding-pages.com/favicon.ico</icon>
     <rights>All rights reserved 2020, 上海考古地图</rights>
+    <entry>
+        <title type="html"><![CDATA[徐光启墓【徐汇区南丹路17号光启公园内】]]></title>
+        <id>https://m5s4qq.coding-pages.com/post/xu-guang-qi-mu-xu-hui-qu-nan-dan-lu-17-hao-guang-qi-gong-yuan-nei/</id>
+        <link href="https://m5s4qq.coding-pages.com/post/xu-guang-qi-mu-xu-hui-qu-nan-dan-lu-17-hao-guang-qi-gong-yuan-nei/">
+        </link>
+        <updated>2020-07-24T04:41:45.000Z</updated>
+        <summary type="html"><![CDATA[<p>徐光启（1562-1633），上海徐家汇人，明万历三十二年（1604）进士，明代科学家、累官礼部尚书兼文渊阁大学士。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>徐光启（1562-1633），上海徐家汇人，明万历三十二年（1604）进士，明代科学家、累官礼部尚书兼文渊阁大学士。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[颐园【松江古城松汇西路480号上海第四福利院内】]]></title>
         <id>https://m5s4qq.coding-pages.com/post/yi-yuan-song-jiang-gu-cheng-song-hui-xi-lu-480-hao-shang-hai-di-si-fu-li-yuan-nei/</id>
@@ -101,17 +112,6 @@
         <summary type="html"><![CDATA[<p>静安寺位于上海市中心寸土寸金的黄金地段。相传始建于三国吴赤乌十年（247年），初名沪渎重玄寺。当时的寺址位于吴淞江边，唐代该寺名为永泰禅院，宋大中祥符元年（1008年）始名静安寺。从现在的发现来看，静安寺始建于三国时期的说法也还没有确凿的证据。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>静安寺位于上海市中心寸土寸金的黄金地段。相传始建于三国吴赤乌十年（247年），初名沪渎重玄寺。当时的寺址位于吴淞江边，唐代该寺名为永泰禅院，宋大中祥符元年（1008年）始名静安寺。从现在的发现来看，静安寺始建于三国时期的说法也还没有确凿的证据。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[松江清真寺【松江区缸甏巷21号】]]></title>
-        <id>https://m5s4qq.coding-pages.com/post/song-jiang-qing-zhen-si-song-jiang-qu-gang-peng-xiang-21-hao/</id>
-        <link href="https://m5s4qq.coding-pages.com/post/song-jiang-qing-zhen-si-song-jiang-qu-gang-peng-xiang-21-hao/">
-        </link>
-        <updated>2020-07-22T12:12:24.000Z</updated>
-        <summary type="html"><![CDATA[<p>松江清真寺是上海最古老的伊斯兰寺院，始建于<strong>至正年间</strong>（1341-1368年），也是元代松江府达鲁花赤的墓地所在。像这样中国与阿拉伯建筑风格融为一体的古代建筑，除了松江清真寺和杭州凤凰寺外再难觅踪影。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>松江清真寺是上海最古老的伊斯兰寺院，始建于<strong>至正年间</strong>（1341-1368年），也是元代松江府达鲁花赤的墓地所在。像这样中国与阿拉伯建筑风格融为一体的古代建筑，除了松江清真寺和杭州凤凰寺外再难觅踪影。</p>
 ]]></content>
     </entry>
 </feed>
