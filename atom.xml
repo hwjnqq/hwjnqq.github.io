@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://m5s4qq.coding-pages.com</id>
     <title>上海考古地图</title>
-    <updated>2020-07-24T11:35:50.378Z</updated>
+    <updated>2020-07-24T15:42:53.200Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://m5s4qq.coding-pages.com"/>
     <link rel="self" href="https://m5s4qq.coding-pages.com/atom.xml"/>
@@ -12,6 +12,42 @@
     <logo>https://m5s4qq.coding-pages.com/images/avatar.png</logo>
     <icon>https://m5s4qq.coding-pages.com/favicon.ico</icon>
     <rights>All rights reserved 2020, 上海考古地图</rights>
+    <entry>
+        <title type="html"><![CDATA[吴淞炮台遗址【宝山区海滨街道塘后支路3号】]]></title>
+        <id>https://m5s4qq.coding-pages.com/post/wu-song-pao-tai-yi-zhi-bao-shan-qu-hai-bin-jie-dao-tang-hou-zhi-lu-3-hao/</id>
+        <link href="https://m5s4qq.coding-pages.com/post/wu-song-pao-tai-yi-zhi-bao-shan-qu-hai-bin-jie-dao-tang-hou-zhi-lu-3-hao/">
+        </link>
+        <updated>2020-07-24T15:40:17.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[望仙桥【松江区中山东路235号】]]></title>
+        <id>https://m5s4qq.coding-pages.com/post/wang-xian-qiao-song-jiang-qu-zhong-shan-dong-lu-235-hao/</id>
+        <link href="https://m5s4qq.coding-pages.com/post/wang-xian-qiao-song-jiang-qu-zhong-shan-dong-lu-235-hao/">
+        </link>
+        <updated>2020-07-24T15:37:54.000Z</updated>
+        <summary type="html"><![CDATA[<p>根据南宋《云间志》记载，望仙桥是上海地区现存最古老的桥梁之一。传说仙人在桥下救了一位投河少女，少女每年于该日晨曦至桥上时望仙拜谢，故称望仙桥。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>根据南宋《云间志》记载，望仙桥是上海地区现存最古老的桥梁之一。传说仙人在桥下救了一位投河少女，少女每年于该日晨曦至桥上时望仙拜谢，故称望仙桥。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[青浦城隍庙【青浦区城东北隅公园路650号】]]></title>
+        <id>https://m5s4qq.coding-pages.com/post/qing-pu-cheng-huang-miao-qing-pu-qu-cheng-dong-bei-yu-gong-yuan-lu-650-hao/</id>
+        <link href="https://m5s4qq.coding-pages.com/post/qing-pu-cheng-huang-miao-qing-pu-qu-cheng-dong-bei-yu-gong-yuan-lu-650-hao/">
+        </link>
+        <updated>2020-07-24T15:35:49.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[大仓桥【松江中山西路玉树路东】]]></title>
+        <id>https://m5s4qq.coding-pages.com/post/da-cang-qiao-song-jiang-zhong-shan-xi-lu-yu-shu-lu-dong/</id>
+        <link href="https://m5s4qq.coding-pages.com/post/da-cang-qiao-song-jiang-zhong-shan-xi-lu-yu-shu-lu-dong/">
+        </link>
+        <updated>2020-07-24T15:34:32.000Z</updated>
+        <summary type="html"><![CDATA[<p>​    大仓桥于明天启年间（1621-1627年）重建，原名永丰桥，桥额刻**“重建永丰**”五字。因桥南有松江府粮仓水次西仓，故俗称大仓桥、西仓桥。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>​    大仓桥于明天启年间（1621-1627年）重建，原名永丰桥，桥额刻**“重建永丰**”五字。因桥南有松江府粮仓水次西仓，故俗称大仓桥、西仓桥。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[豫园]]></title>
         <id>https://m5s4qq.coding-pages.com/post/yu-yuan/</id>
@@ -77,41 +113,5 @@
 ]]></summary>
         <content type="html"><![CDATA[<p>​    西林禅寺塔是<strong>上海现存最高的古代建筑。****建于南宋咸淳年间，距今约七百余年历史，始称崇恩塔,为云间接待院的一部分。明洪武年间重建时，为纪念南宋云间接待院开山祖师园应禅师，改名</strong>圆应塔**。至明正统年间又进行迁建，迁建后为今天看到的西林禅寺塔。</p>
 ]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[秋霞圃【嘉定城东大街】]]></title>
-        <id>https://m5s4qq.coding-pages.com/post/qiu-xia-pu-jia-ding-cheng-dong-da-jie/</id>
-        <link href="https://m5s4qq.coding-pages.com/post/qiu-xia-pu-jia-ding-cheng-dong-da-jie/">
-        </link>
-        <updated>2020-07-23T09:55:51.000Z</updated>
-        <summary type="html"><![CDATA[<p>秋霞圃是上海四大古典园林之一，是由始建于明代的<strong>龚氏园、沈氏园、金氏园和城隍庙的遗迹</strong>合成一园。秋霞圃小巧、精致、秀丽。虽然占地近47亩，但人文景点和文物古迹十分丰富。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>秋霞圃是上海四大古典园林之一，是由始建于明代的<strong>龚氏园、沈氏园、金氏园和城隍庙的遗迹</strong>合成一园。秋霞圃小巧、精致、秀丽。虽然占地近47亩，但人文景点和文物古迹十分丰富。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[李塔【松江区塔汇乡】]]></title>
-        <id>https://m5s4qq.coding-pages.com/post/li-ta-song-jiang-qu-ta-hui-xiang/</id>
-        <link href="https://m5s4qq.coding-pages.com/post/li-ta-song-jiang-qu-ta-hui-xiang/">
-        </link>
-        <updated>2020-07-23T04:43:12.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[嘉定孔庙【嘉定镇南大街183号】]]></title>
-        <id>https://m5s4qq.coding-pages.com/post/jia-ding-kong-miao-jia-ding-zhen-nan-da-jie-183-hao/</id>
-        <link href="https://m5s4qq.coding-pages.com/post/jia-ding-kong-miao-jia-ding-zhen-nan-da-jie-183-hao/">
-        </link>
-        <updated>2020-07-23T04:40:38.000Z</updated>
-        <summary type="html"><![CDATA[<p>​    其实上海的孔庙应有十多处，遗憾的是松江府城与华亭县、娄县，在历史上所建的很多孔庙，一所也没有留下来。嘉定城中的孔庙就显得弥足珍贵。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>​    其实上海的孔庙应有十多处，遗憾的是松江府城与华亭县、娄县，在历史上所建的很多孔庙，一所也没有留下来。嘉定城中的孔庙就显得弥足珍贵。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[普济桥【青浦金泽镇上塘街】]]></title>
-        <id>https://m5s4qq.coding-pages.com/post/pu-ji-qiao-qing-pu-jin-ze-zhen-shang-tang-jie/</id>
-        <link href="https://m5s4qq.coding-pages.com/post/pu-ji-qiao-qing-pu-jin-ze-zhen-shang-tang-jie/">
-        </link>
-        <updated>2020-07-23T03:19:49.000Z</updated>
     </entry>
 </feed>
