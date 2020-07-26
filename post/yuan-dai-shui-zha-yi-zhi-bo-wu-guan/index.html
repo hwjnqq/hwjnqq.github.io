@@ -10,7 +10,7 @@
 ——上海文旅融合线路优化设计研究
 ">
 <meta name="theme-color" content="#000">
-<title>上海考古地图</title>
+<title>元代水闸遗址博物馆 | 上海考古地图</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1595790001683">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -50,6 +50,8 @@
 </script>
 
 
+  <meta name="description" content="元代水闸遗址博物馆" />
+  <meta name="keywords" content="元代" />
 </head>
 
 <body>
@@ -85,7 +87,7 @@
             
               
             
-            <li class="nav-item nav-item-active">
+            <li class="nav-item ">
               
               
                 <a href="/" target="_self">
@@ -197,8 +199,24 @@
     <div
       class="section-layout gemini ">
       <div class="section-layout-wrapper">
-        <div id="sidebarMeta" class="sidebar">
-    
+        
+
+<div class="sidebar">
+  
+    <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
+      
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active language" data-lan="index">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item language" data-lan="preview">站点概览</span>
+          </div>
+        </div>
+      
+      <div class="sidebar-body gemini" id="sidebar_body">
+        
+          
+            <div class="post-side-meta" id="post_side_meta">
+              
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -252,703 +270,478 @@
   </div>
 
 </div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto"
+    id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E9%81%97%E8%BF%B9%E4%BB%8B%E7%BB%8D">遗迹介绍</a>
+<ul>
+<li><a href="#%E4%B8%BA%E4%BF%9D%E8%AF%81%E5%90%B4%E6%B7%9E%E6%B1%9F%E9%80%9A%E7%95%85%E8%80%8C%E5%BB%BA"><strong>为保证吴淞江通畅而建</strong></a></li>
+<li><a href="#%E6%AF%8F%E5%A4%A9%E6%B4%92%E6%B0%B4%E4%B8%BA%E6%9C%A8%E6%A1%A9%E4%BF%9D%E6%B9%BF"><strong>每天洒水为木桩保湿</strong></a></li>
+<li><a href="#%E4%B8%8A%E6%B5%B7%E5%85%88%E6%B0%91%E8%AE%BE%E8%AE%A1%E7%9A%84%E6%B0%B4%E5%88%A9%E6%9D%B0%E4%BD%9C"><strong>上海先民设计的水利杰作</strong></a></li>
+<li><a href="#%E4%B8%89%E4%B8%AA%E8%B0%9C%E5%9B%A2%E4%BB%8D%E6%9C%89%E5%BE%85%E7%A0%B4%E8%A7%A3"><strong>三个谜团仍有待破解</strong></a></li>
+</ul>
+</li>
+<li><a href="#%E5%88%B0%E8%BF%99%E5%8E%BB">到这去！</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
 </div>
+
 <script>
-  let sidebarMeta = document.querySelector('#sidebarMeta');
-  let scheme = 'gemini';
-  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
-  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
-    document.addEventListener('scroll', function(e) {
-      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
-        sidebarWrapper.classList.add('home-sidebar-fixed')
-      } else {
-        sidebarWrapper.classList.remove('home-sidebar-fixed')
+
+  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
+  let active = 'active-show', activeClass = 'active-current';
+  let tocWrapper = document.querySelector('#toc_wrapper');
+  let tocContent = tocWrapper.children[0];
+  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
+
+  function addTocNumber(elem, deep) {
+    if (!elem) {
+      return;
+    }
+    let prop = elem.__proto__;
+
+    if (prop === HTMLUListElement.prototype) {
+      for (let i = 0; i < elem.children.length; i++) {
+        addTocNumber(elem.children[i], deep + (i + 1) + '.');
       }
+    } else if (prop === HTMLLIElement.prototype) {
+      // 保存li元素
+      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+        lList.push(elem);
+      }
+      for (let i = 0; i < elem.children.length; i++) {
+        let cur = elem.children[i];
+        if (cur.__proto__ === HTMLAnchorElement.prototype) {
+          if (autoNumber) {
+            cur.text = deep + ' ' + cur.text;
+          }
+        } else if (cur.__proto__ === HTMLUListElement.prototype) {
+          addTocNumber(cur, deep);
+        }
+      }
+    }
+  }
+
+  function removeParentActiveClass() {
+    let parents = tocContent.querySelectorAll('.' + active)
+    parents.forEach(function (elem) {
+      elem.classList.remove(active);
     });
   }
-  </script>
-        <div class="section-box gemini">
-          <section class="section  posts-expand slide-down-in">
-            
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://m5s4qq.coding-pages.com/post/tan-qi-xiang-xian-sheng-guan-yu-shang-hai-di-qu-cheng-lu-de-li-lun/">
-      谭其骧先生关于上海地区成陆的理论 
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2020-07-19 22:27:08">2020-07-19</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://m5s4qq.coding-pages.com/tag/wgshMq0yK/">
-        <span>沧海桑田</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>4<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>1066<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          <p>根据谭其骧先生的研究，上海市的大陆部分可分为四个成陆过程迥然不同的地区。</p>
 
+  function addActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.add(activeClass);
+    }
+  }
+
+  function removeActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.remove(activeClass);
+    }
+  }
+
+  function addActiveLiElemment(elem, parent) {
+    if (!elem || elem === parent) {
+      return;
+    } else {
+      if (elem.__proto__ === HTMLLIElement.prototype) {
+        elem.classList.add(active);
+      }
+      addActiveLiElemment(elem.parentElement, parent);
+    }
+  }
+
+  function showToc() {
+    if (tocWrapper) {
+      postBody = document.querySelector('#post_body');
+      for (let i = 0; i < postBody.children.length; i++) {
+        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+          hList.push(postBody.children[i]);
+        }
+      }
+      if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+      } else if (tocWrapper.classList.contains('no_compress')) {
+        tocContent.classList.add('expanded');
+      } else {
+        if (hList.length > 10) {
+          active = 'active-hidden'
+          tocContent.classList.add('closed');
+        } else {
+          tocContent.classList.add('expanded');
+        }
+      }
+    }
+  }
+
+  (function () {
+    // 处理不是从#一级标题开始目录
+    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+      let con = tocContent.children[0].children[0];
+      tocContent.innerHTML = con.innerHTML;
+    }
+    let markdownItTOC = document.querySelector('.markdownIt-TOC');
+    let innerHeight = window.innerHeight;
+    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
+    addTocNumber(tocContent, '');
+  })();
+
+  document.addEventListener('scroll', function (e) {
+    if (lList.length <= 0) {
+      return;
+    }
+    let scrollTop = document.scrollingElement.scrollTop + 10;
+    let dir;
+
+    if (lastTop - scrollTop > 0) {
+      dir = 'up';
+    } else {
+      dir = 'down';
+    }
+
+    lastTop = scrollTop;
+    if (scrollTop <= 0) {
+      if (lastIndex >= 0 && lastIndex < hList.length) {
+        lList[lastIndex].classList.remove(activeClass);
+      }
+      return;
+    }
+
+    let current = 0, hasFind = false;
+    for (let i = 0; i < hList.length; i++) {
+      if (hList[i].offsetTop > scrollTop) {
+        current = i;
+        hasFind = true;
+        break;
+      }
+    }
+    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+      current = hList.length - 1;
+    } else {
+      current--;
+    }
+    if (dir === 'down') {
+      if (current > lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex)
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    } else {
+      if (current < lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex);
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    }
+  });
+
+
+  window.addEventListener('load', function () {
+    showToc();
+    document.querySelector('#sidebar').style = 'display: block;';
+    tocWrapper.classList.add('toc-active');
+    setTimeout(function () {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
+  })
+
+</script>
+            </div>
           
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://m5s4qq.coding-pages.com/post/tan-qi-xiang-xian-sheng-guan-yu-shang-hai-di-qu-cheng-lu-de-li-lun/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
         
       </div>
-      
     </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://m5s4qq.coding-pages.com/post/shang-hai-reng-dai-tan-suo-de-cang-hai-sang-tian-shi-qi/">
-      上海仍待探索的沧海桑田时期
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2020-07-19 22:02:29">2020-07-19</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://m5s4qq.coding-pages.com/tag/wgshMq0yK/">
-        <span>沧海桑田</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>8<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>2123<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          <p>可能大家都听过这样的说法，如果把地球诞生至今的46亿年时间压缩成一天24小时，那么我们智人这个物种直到23时59分56秒才出现，而人类的文明史只有0.1秒.....</p>
-
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://m5s4qq.coding-pages.com/post/shang-hai-reng-dai-tan-suo-de-cang-hai-sang-tian-shi-qi/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://m5s4qq.coding-pages.com/post/song-jiang-tang-jing-chuang-song-jiang-cheng-qu-zhong-shan-xiao-xue-nei/">
-      松江唐经幢【松江城区中山小学内】
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2020-07-19 14:10:28">2020-07-19</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://m5s4qq.coding-pages.com/tag/3Vr5fwDzh/">
-        <span>唐代</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>3<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>822<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          <p>佛教传入上海地区，在传说中可以追随到<strong>三国东吴赤乌年间</strong>（238-251年），相传上海著名寺院<strong>龙华寺</strong>和<strong>静安寺</strong>都创建于这一时期。</p>
-
-          
-            <img src="https://i.loli.net/2020/07/19/ePrhOEqnb39I2o1.jpg" />
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://m5s4qq.coding-pages.com/post/song-jiang-tang-jing-chuang-song-jiang-cheng-qu-zhong-shan-xiao-xue-nei/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://m5s4qq.coding-pages.com/post/mao-ta-qing-pu-qu-zhu-jia-jiao-zhen-zhang-ma-cun-shen-tai-lu-2588-hao/">
-      泖塔【青浦区朱家角镇张马村沈太路2588号】
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2020-07-19 12:45:53">2020-07-19</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://m5s4qq.coding-pages.com/tag/3Vr5fwDzh/">
-        <span>唐代</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>3<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>614<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          <p>现存明万历俞汝为所辑《长水塔院记》、民国曹修伦所辑《长水塔志》，记述澄照禅院沿革、风物、诗文等。1962年，被公布为市文物保护单位。1997年，被国际航标协会列为世界历史文物灯塔</p>
-
-          
-            <img src="https://i.loli.net/2020/07/19/vh7Q2Pt5a8WfpSB.png" />
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://m5s4qq.coding-pages.com/post/mao-ta-qing-pu-qu-zhu-jia-jiao-zhen-zhang-ma-cun-shen-tai-lu-2588-hao/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://m5s4qq.coding-pages.com/post/song-jiang-xing-sheng-jiao-si-ta-song-jiang-fang-ta-yuan-nei/">
-      松江兴圣教寺塔【松江方塔园内】
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2020-07-19 12:42:31">2020-07-19</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://m5s4qq.coding-pages.com/tag/RFJ9M1OFQ/">
-        <span>宋代</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>4<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>892<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          <p>松江兴圣教寺塔始建于北宋。1996年被公布为全国重点文物保护单位。</p>
-
-          
-            <img src="https://i.loli.net/2020/07/19/ZoKfS3lm5147Aeb.jpg" />
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://m5s4qq.coding-pages.com/post/song-jiang-xing-sheng-jiao-si-ta-song-jiang-fang-ta-yuan-nei/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://m5s4qq.coding-pages.com/post/ren-ren-fa-mu-qing-pu-chong-gu-zhen-xin-feng-cun-gao-jia-tai/">
-      任仁发墓【青浦重固镇新丰村高家台】
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2020-07-19 12:37:35">2020-07-19</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://m5s4qq.coding-pages.com/tag/fBInvq6WS/">
-        <span>元代</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>3<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>837<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          
-          
-            <img src="https://i.loli.net/2020/07/19/Dw619vBu32b4gWe.jpg" />
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://m5s4qq.coding-pages.com/post/ren-ren-fa-mu-qing-pu-chong-gu-zhen-xin-feng-cun-gao-jia-tai/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://m5s4qq.coding-pages.com/post/zhen-ru-si-da-dian-pu-tuo-qu-zhen-ru-zhen-hou-shan-men-5-hao/">
-      真如寺大殿【普陀区真如镇后山门5号】
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2020-07-19 12:31:41">2020-07-19</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://m5s4qq.coding-pages.com/tag/fBInvq6WS/">
-        <span>元代</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>2<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>378<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          <p>原名万寿寺，俗称大庙 元、明多次重修、扩建。现仅存大雄宝殿及西配殿3间。 上海现存最早的木构建筑</p>
-
-          
-            <img src="https://i.loli.net/2020/07/19/SECN8ciKVwWfprq.png" />
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://m5s4qq.coding-pages.com/post/zhen-ru-si-da-dian-pu-tuo-qu-zhen-ru-zhen-hou-shan-men-5-hao/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://m5s4qq.coding-pages.com/post/nan-xiang-tang-jing-chuang-jia-ding-nan-xiang-gu-yi-yuan-nei/">
-      南翔唐经幢【嘉定南翔古漪园内】
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2020-07-19 12:23:23">2020-07-19</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://m5s4qq.coding-pages.com/tag/3Vr5fwDzh/">
-        <span>唐代</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>1<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>270<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          <p>建于公元867、875年 区级文物保护单位</p>
-
-          
-            <img src="https://i.loli.net/2020/07/19/BMQv9CJR3Yi78Hp.png" />
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://m5s4qq.coding-pages.com/post/nan-xiang-tang-jing-chuang-jia-ding-nan-xiang-gu-yi-yuan-nei/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://m5s4qq.coding-pages.com/post/jia-ding-xian-gu-cheng-jia-ding-qu-jia-ding-zhen/">
-      嘉定县故城【嘉定区嘉定镇】
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2020-07-18 02:50:47">2020-07-18</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://m5s4qq.coding-pages.com/tag/RFJ9M1OFQ/">
-        <span>宋代</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>3<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>780<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          <p>2000 年，被公布为区文物保护单位 嘉定最早的城墙 2014 年 4 月，嘉定城墙遗址（包括南城墙、南水关、西城墙、西水关、北水关遗址），被上海市人民政府公布为上海市文物保护单位。</p>
-
-          
-            <img src="https://i.loli.net/2020/07/18/RgAJUIr8PHlCvaE.png" />
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://m5s4qq.coding-pages.com/post/jia-ding-xian-gu-cheng-jia-ding-qu-jia-ding-zhen/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://m5s4qq.coding-pages.com/post/gu-ji-yi-wen-orsong-jiang-tang-jing-chuang/">
-       古迹逸闻|松江唐经幢
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2020-07-15 20:50:30">2020-07-15</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://m5s4qq.coding-pages.com/tag/3Vr5fwDzh/">
-        <span>唐代</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>3<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>665<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</section>
-      <div class="post-body">
-        
-        
-          <p>传说底下压着个什么东西，压黑鱼精的</p>
-
-          
-            <img src="https://imgkr.cn-bj.ufileos.com/9b8f60f8-316c-4728-9187-97a0160b67e1.jpg" />
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://m5s4qq.coding-pages.com/post/gu-ji-yi-wen-orsong-jiang-tang-jing-chuang/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
   
-            
-            
-<div class="page bg-color">
-  <ul class="pagination-ul">
-    
-      <li class="pagination-dir">
-        <a href="https://m5s4qq.coding-pages.com/page/3/">
-          <i class="fa fa-angle-left"></i>
-        </a>
-      </li>
-    
-    
-      
-        <li class="pagination-li ">
-            <a href="/page/../">
-              1
-            </a>
-        </li>
-      
-        <li class="pagination-li ">
-            <a href="/page/2">
-              2
-            </a>
-        </li>
-      
-        <li class="pagination-li ">
-            <a href="/page/3">
-              3
-            </a>
-        </li>
-      
-        <li class="pagination-li pagination-active">
-            <a href="/page/4">
-              4
-            </a>
-        </li>
-      
-        <li class="pagination-li ">
-            <a href="/page/5">
-              5
-            </a>
-        </li>
-      
-    
-    
-      <li class="pagination-dir">
-        <a href="/page/5">
-          <i class="fa fa-angle-right"></i>
-        </a>
-      </li>
-    
-  </ul>
 </div>
-          </section>
+<script>
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
+      }
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
+  }
+
+  postToc && postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+  if (sidebarBody) {
+    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+      let hasFix = false;
+      let scrollEl = document.querySelector('.main-continer');
+      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+      window.addEventListener('scroll', function(e) {
+        if (document.scrollingElement.scrollTop >= limitTop) {
+          if (!hasFix) {
+            sidebar.classList.add('sidebar-fixed');
+            hasFix = true;
+          }
+        } else {
+          if (hasFix) {
+            sidebar.classList.remove('sidebar-fixed');
+            hasFix = false;
+          }
+        }
+      });
+    }
+  }
+  
+</script>
+        <div class="section-box box-shadow-wrapper">
+          <div class="section bg-color post post-page">
+            <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://m5s4qq.coding-pages.com/post/yuan-dai-shui-zha-yi-zhi-bo-wu-guan/">
+      元代水闸遗址博物馆
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2020-07-27 02:54:01">2020-07-27</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">分类于</span>
+      
+      
+      <a href="https://m5s4qq.coding-pages.com/tag/fBInvq6WS/">
+        <span>元代</span>
+      </a>
+      
+      
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>10<span class="language" data-lan="minute">分钟</span></span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>2897<span class="pc-show language" data-lan="words">字数</span></span>
+    </span>
+    
+    
+    
+    <span id="/post/yuan-dai-shui-zha-yi-zhi-bo-wu-guan/" data-flag-title="元代水闸遗址博物馆" class="meta-item pc-show leancloud_visitors">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-eye"></i>
+      <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
+    </span>
+    
+  </div>
+</section>
+            <div class="post-body next-md-body" id="post_body">
+              <p>志丹苑遗址创造了上海考古的两个第一：上海城区第一个发掘出土的大型遗址；上海考古史上投资规模第一的发掘项目。同时它也是国内已考古发掘出的规模最大、做工最好、保存最完整的元代水闸。</p>
+<!-- more -->
+<h2 id="遗迹介绍">遗迹介绍</h2>
+<figure data-type="image" tabindex="1"><a href="https://images.shobserver.com/news/news/2017/7/26/95618fdc-1991-4074-b539-398472a7217d.JPG"><img src="https://i.loli.net/2020/07/27/NWPoFg5KTebvQ8m.jpg" alt="img" loading="lazy"></a></figure>
+<p>普陀区延长西路上的志丹苑工地，2001 年打桩打出了 “宝贝”——<strong>两块光洁平整、厚约 25 厘米的青石板，被一块元宝状的铁榫严密合缝 “咬” 在一起，从地下 “强拔” 出来时还连着衬石木板与粗大横梁。</strong></p>
+<p>上海市文管委考古部的初步判断是，地下有一处罕见的水工建筑古址。<strong>经过多次发掘整理，这处遗址终于重见天日，这是迄今为止中国最大的元代水利工程遗址，也是国内已考古发掘出的规模最大、做工最好、保存最完整的元代水闸，占地总面积约 1500 平方米。</strong></p>
+<p>这一发现轰动学界，并被评选为 2006 年度 “中国十大考古新发现”。这就是今天我们所见的国家级文保点上海元代水闸遗址博物馆。</p>
+<p>很难想象，这样的市区地带能藏着这样一处古代遗址。博物馆后方紧贴居民楼，附近就是车来车往的光新路桥。阳光下仰望博物馆，两片 “人” 字形的玻璃顶在钢结构巨型立柱的支撑下，就像正通过水闸、奔流直下的江河水。</p>
+<figure data-type="image" tabindex="2"><a href="https://images.shobserver.com/news/news/2017/7/26/7fad43ed-3fb5-4947-99ab-6e32592c7c28.jpg"><img src="https://i.loli.net/2020/07/27/YARbLixkW9NpCdf.jpg" alt="img" loading="lazy"></a></figure>
+<figure data-type="image" tabindex="3"><a href="https://images.shobserver.com/news/news/2017/7/26/78df54af-cc49-44e2-b2f2-83804e10c9ed.jpg"><img src="https://i.loli.net/2020/07/27/ezugtyKIWmVRn8p.jpg" alt="img" loading="lazy"></a></figure>
+<h3 id="为保证吴淞江通畅而建"><strong>为保证吴淞江通畅而建</strong></h3>
+<p>关于这座元代水闸，我们或许可以从距此一公里多远的苏州河说起。苏州河，是吴淞江流入上海后的俗称，因可溯流到达苏州，故被 19 世纪中叶初到上海的外国移民称为 “苏州河”，并渐渐广为传用。<strong>吴淞江源出太湖瓜泾口，经吴江、吴县、昆山、青龙镇东流入海，是上海明代以前最主要的河道。</strong></p>
+<p>13 世纪末，元朝定都北京后，随着城市扩大，人口增多，江南成为元大都等地赖以生存的粮仓。但太湖因其独特的碟形洼地地貌，容易导致潮水倒灌，泥沙沉积。吴淞江作为太湖东出泄海的最重要干道，从唐宋年间开始，河道逐渐收窄。</p>
+<p><strong>据文献记载，吴淞江唐代宽约 20 里，而至元代江面仅宽 1 里，严重影响了该地区的经济发展。于是，元朝政府把治理吴淞江作为江南地区水利的首要任务，在吴淞江流域建造了许多水闸。</strong></p>
+<p>现在呈现在我们面前的这处元代水闸遗址，主体由闸门、闸墙、底石组成。水闸平面大致呈对称 “八” 字型，东西长 42 米、进水口宽 32 米、出水口宽 33 米，河水由西向东流入闸内。为了建造水闸，工程使用了大量的原木筑建基础。而这些原木直径一般在 30 厘米左右，长约 4 米，<strong>估算这项工程使用了大约 3000 根原木。</strong></p>
+<figure data-type="image" tabindex="4"><a href="https://images.shobserver.com/news/news/2017/7/26/15830a74-6bb3-4b67-a251-467381cbf6b6.jpg"><img src="https://i.loli.net/2020/07/27/JS5Km7X2pNZl3jU.jpg" alt="img" loading="lazy"></a></figure>
+<p><em>水闸遗址博物馆内完整水闸模型</em></p>
+<p><em><a href="https://images.shobserver.com/news/news/2017/7/26/ec2b3294-425f-4fde-bf61-44b3b40758f3.jpg"><img src="https://i.loli.net/2020/07/27/U7RSEOH36GjiqwT.jpg" alt="img" loading="lazy"></a></em></p>
+<p>水闸的主要功能是蓄水挡沙、泄水冲沙、拒咸保淡，以助吴淞江的防淤和疏浚。遗址位于明代之前的吴淞江下游故道范围。当吴淞江涨潮时，水闸会关上闸门蓄水，使泥沙沉积在闸门外。当退潮时，闸门打开，利用水闸内外的水流落差，将沉积在闸门外的泥沙冲走。由此水闸的建造，促进了该地区农业经济及航运事业的发展。</p>
+<h3 id="每天洒水为木桩保湿"><strong>每天洒水为木桩保湿</strong></h3>
+<p>2001 年发现，2006 年完整揭露遗址全貌，2009 年博物馆开工，2012 年正式开馆。<strong>这里历时 12 年才在公众面前撩开神秘面纱。</strong></p>
+<p>上海元代水闸遗址博物馆总面积约 3000 平方米，内部布局紧凑精致。走进场馆，拾级而下，才渐渐靠近这座埋藏于地下 7-12 米的遗址。玻璃天棚下，阳光可以漫射入室，设计上的自然通风又体现了绿色环保。柔和的灯光下，矗立在水闸中心的闸门最为显眼，这是水闸最关键的部分，由两根长方体青石门柱组成，门宽 6.8 米。水闸的底石依然完好，总长 30 米，宽 6.8-16 米。它由一块块青石板平铺而成，石板间嵌地锭榫，防止渗水和石板移位，这样的铁锭有近四百枚。底石下又铺满衬石枋，其下被龙骨承载，龙骨下又有地钉支撑。底石上还有一处巨大的圆孔，这正是 2001 年在志丹苑小区建设工程中，高楼地基打桩留下的钻孔，由此才解开了水闸的面纱。</p>
+<figure data-type="image" tabindex="5"><a href="https://images.shobserver.com/news/news/2017/7/26/4246f739-53ec-4fa9-9e0d-1daf289931e2.jpg"><img src="https://i.loli.net/2020/07/27/XL8vH35CVQlK9Mh.jpg" alt="img" loading="lazy"></a></figure>
+<figure data-type="image" tabindex="6"><a href="https://images.shobserver.com/news/news/2017/7/26/f8a27e30-108f-47be-8d03-94720995ce90.jpg"><img src="https://i.loli.net/2020/07/27/9tfqnTK213gRCdM.jpg" alt="img" loading="lazy"></a></figure>
+<p><em>为了防止木头出土后炭化，许多木桩被塑料布包裹严实，并由工作人员每天喷水保湿</em></p>
+<p>行走在架空的廊道上，俯视遗址，你会看到部分遗址依然浸泡在水中，而许多木桩也被包裹得严严实实。这是为什么？**原来，水闸遗址以石墙、木桩为主，已埋在地底下数百年，暴露在空气中就会氧化，石头会风化，木头会炭化，所以对木桩用塑料布包起来，并对遗址进行 “回填”，进行干保与湿保。**干保，就是在已发掘的文物上填上沙土；湿保，就是在遗址上灌水，恢复水闸当年生存的状态。</p>
+<p>水闸遗址中，木桩随处可见，它们或是缓解水流冲击的擗石桩，或是为水闸地下牢固支撑的地钉。木桩主要有松木和杉木两种，木质湿度一般保持在 20% 至 30%，不会开裂，但太湿也会腐烂。每天，场馆工作人员都会对这些包裹着的木桩进行洒水保湿。</p>
+<h3 id="上海先民设计的水利杰作"><strong>上海先民设计的水利杰作</strong></h3>
+<p>这座水闸到底是如何建立起来的？场馆墙壁上十二组动画投影会向你一一揭开答案。这一系列线描图形象描绘了元代先民们建造水闸的景象，犹如翻开了一本线装书，书中的绣像小人一个个都活动了起来。打地钉、挖底槽、铺石板、嵌铁锭、立闸门柱、砖墙外对垒荒石...... 重现了宋代《营造法式》中兴建水闸的重要工序，动画还辅以劳作的声效，使复杂的建造流程栩栩如生。</p>
+<p>除了展现遗址，你也可以在展馆中看到从考古发掘中出土的文物，<strong>虽然多是些极其平常的坛坛罐罐，但也可窥探到元代上海先民的日常生活。<strong>比如，在闸门底部就发现了当年使用的铁钩、铁钉，另外还有</strong>三只釉陶瓶</strong>。这种瓶子俗称 “韩瓶”，虽是元代形制，但相传南宋抗金名将韩世忠曾用此类瓶子装酒水犒赏将士，而因此得名。</p>
+<figure data-type="image" tabindex="7"><a href="https://images.shobserver.com/news/news/2017/7/26/db101193-aa0d-400e-a299-4891a956ac20.JPG"><img src="https://i.loli.net/2020/07/27/4JTC6ndvQs25qOc.jpg" alt="img" loading="lazy"></a></figure>
+<p>又比如，<strong>一枚青釉八思巴文碗底</strong>。八思巴文是元代至元年间国师八思巴奉诏创制的一种蒙古新文字，并于至元六年（1269 年）颁行全国，称为 “蒙古新字” 或“蒙古字”，而因是八思巴创制，所以也俗称“八思巴文”。自此，元代官方文书包括旨书、牌符、官印、书籍出版等均用此字。元亡后，这一文字才退出使用。而同样，遗址中部分木桩上也留有墨书文字和八思巴文戳印，反应了当时严格的管理制度。</p>
+<figure data-type="image" tabindex="8"><a href="https://images.shobserver.com/news/news/2017/7/26/5fce7341-9a06-42b7-9742-9aa87de62ff3.JPG"><img src="https://i.loli.net/2020/07/27/dPrH6uoFbwkg4yL.jpg" alt="img" loading="lazy"></a></figure>
+<figure data-type="image" tabindex="9"><a href="https://images.shobserver.com/news/news/2017/7/26/3e362142-c672-492b-8d44-2362358d3f87.JPG"><img src="https://i.loli.net/2020/07/27/UifMC5DQ1zB4YOc.jpg" alt="img" loading="lazy"></a></figure>
+<p><em>青釉八思巴文碗底</em></p>
+<figure data-type="image" tabindex="10"><a href="https://images.shobserver.com/news/news/2017/7/26/5bfd3d76-1b21-48c4-88af-c65d5e8293ef.JPG"><img src="https://i.loli.net/2020/07/27/DnhXT4xJWQ6mRNz.jpg" alt="img" loading="lazy"></a></figure>
+<p>浩瀚的历史典籍中，是否有关于这座水闸的记载呢？学者们找到了答案。据文献记载，元泰定二年（1325 年）建石闸赵浦闸，其地理位置正与志丹苑水闸遗址相同。<strong>因此志丹苑水闸就是元泰定二年由任仁发主持建造的赵浦闸。</strong></p>
+<figure data-type="image" tabindex="11"><a href="https://images.shobserver.com/news/news/2017/7/26/7d1716d0-ae12-41d0-92b5-d576502c76ba.JPG"><img src="https://i.loli.net/2020/07/27/26o4H5CaqRgm3Li.jpg" alt="img" loading="lazy"></a></figure>
+<p>任仁发，这可是一位在上海史籍中响当当的人物。他是上海青龙镇人，是元朝著名水利专家和画家，官至浙东道宣慰副使。主要从事水利兴修，曾先后主持过吴淞江、通惠河、会通河、黄河、练湖和海堤等工程。而志丹苑元代水闸遗址正是任仁发于 1324 年在吴淞江上建造的 6 座水闸中的 1 座。任仁发的水利学专著《水利集》中，对建造水闸技术和用材的相关记载也与志丹苑水闸基本相同。建造赵浦闸等水闸的目的，《水利集》中也有较为详细的叙述：吴淞江流域江湖泛涨，海潮带沙入港，易于堙塞，建闸以通泄江水，节泄水势，疏浚吴淞江。</p>
+<h3 id="三个谜团仍有待破解"><strong>三个谜团仍有待破解</strong></h3>
+<p><strong>志丹苑遗址创造了上海考古的两个第一：上海城区第一个发掘出土的大型遗址；上海考古史上投资规模第一的发掘项目。同时它也是国内已考古发掘出的规模最大、做工最好、保存最完整的元代水闸</strong>。它与已发掘的北京金中都水关遗址和广州西汉水闸遗址相比，年代早于北京晚于广州，但规模之大、保存之完好，均是这两个水闸不能相比的。</p>
+<p>它是宋代《营造法式》总结之后的官式工程在长江三角洲特殊地貌环境下水利工程又有较大发展的实例，对研究宋元江南地区的水利工程、吴淞江流域的历史变迁，以及吴淞江对整个长江三角洲经济发展的作用具有非常重要的科学价值，同时也是上海地方史研究中一个标志性的重要物质文化遗产。</p>
+<p>元至正二十八年（1291 年）设上海县，进而推动了上海社会经济、城镇文化的快速发展，志丹苑水闸遗址正是元代上海及江南地区经济发展的一个缩影。</p>
+<p>但是，志丹苑水闸也为我们带来了三个悬而未解的谜团。</p>
+<p><strong>谜团之一</strong>，就是水道的改变。此处元代水闸最重要的功用就是让河道中的淤泥沉淀，净化水质。这里的 “河道”，其实就是苏州河前身吴淞江的一条支流。但是今天的这段河道已经移到了 1 公里开外。也就是说，河道在 800 年之间发生了移位。原因尚不清楚。</p>
+<p><strong>谜团之二</strong>，据考证，这处元代水闸是任仁发设计的，而古书记载，任仁发在上海共设计建造了 10 处水闸，另外 9 处水闸今在何处，尚不明了。</p>
+<p><strong>谜团之三</strong>，上海是个水系发达的城市，由支流到干流，再到海洋，形成了一个完整的航运体系。此处元代水闸与航海到底是何种关系，也有待破解。</p>
+<h2 id="到这去"><a href="https://map.baidu.com/poi/%E5%85%83%E4%BB%A3%E6%B0%B4%E9%97%B8%E9%81%97%E5%9D%80%E5%8D%9A%E7%89%A9%E9%A6%86/@13517068.541938342,3643707.3488328904,13z?uid=5f1e52c83695660d081cc7ff&amp;ugc_type=3&amp;ugc_ver=1&amp;device_ratio=2&amp;compat=1&amp;querytype=detailConInfo&amp;da_src=shareurl">到这去！</a></h2>
+
+            </div>
+            
+              <div class="reward-btn">
+                <div class="reward-btn-text">赞赏</div>
+              </div>
+            
+            
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong class="language" data-lan="author">本文作者：</strong>
+      项目组
+    </li>
+    <li class="post-copyright-link">
+      <strong class="language" data-lan="link">本文链接：</strong>
+      <a href="https://m5s4qq.coding-pages.com/post/yuan-dai-shui-zha-yi-zhi-bo-wu-guan/" title="元代水闸遗址博物馆">https://m5s4qq.coding-pages.com/post/yuan-dai-shui-zha-yi-zhi-bo-wu-guan/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong class="language" data-lan="copyright">版权声明： </strong>
+      本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+  <div class="tags">
+    
+      <a href="https://m5s4qq.coding-pages.com/tag/fBInvq6WS/"># 元代</a>
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
+      
+    </div>
+    <div class="nav-next">
+      
+        <a class="nav-pc-next" title="醉白池" href="https://m5s4qq.coding-pages.com/post/zui-bai-chi/">醉白池</a>
+        <a class="nav-mobile-next" title="醉白池" href="https://m5s4qq.coding-pages.com/post/zui-bai-chi/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
+      
+    </div>
+  </div>
+</div>
+            
+            
+  <script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<div id="vcomments" style="padding: 10px 0px 0px 0px"></div>
+
+<style>
+  .v .veditor {
+    min-height: 10rem;
+    background-image: url('');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: rgba(255, 255, 255, 0);
+    resize: none;
+  }
+
+  .v .vwrap {
+    border: 1px solid #000 !important;
+  }
+
+  .v .vbtn {
+    padding: .4rem 1.2rem !important;
+    border-color: #fff !important;
+    background-color: #49b1f5 !important;
+    color: #fff !important;
+    font-size: .7rem !important;
+  }
+
+  .v .vcards .vcard .vh .vmeta .vat {
+    padding: 0 .8rem !important;
+    border: 1px solid #00c4b6 !important;
+    border-radius: 5px !important;
+    color: #00c4b6 !important;
+  }
+</style>
+<script>
+  new Valine({
+    el: '#vcomments',
+    appId: '0acN7LHig95xUamw45EKDH8v-gzGzoHsz',
+    appKey: '9o00XozUXsDEWJyhNwD3LSco',
+    avatar: '',
+    placeholder: '输入评论~',
+    pageSize: '',
+    lang: 'zh-cn',
+    enableQQ: 'true' === 'true',
+    visitor: 'true' === 'true',
+    highlight: 'true' === 'true',
+    avatarForce: 'true' === 'false',
+  });
+</script>
+
+          </div>
         </div>
       </div>
     </div>
@@ -1172,6 +965,235 @@
     }
   })
 </script>
+    <div class="reward-mask" style="display: none;">
+  <div class="reward-relative">
+    <span class="close" aria-hidden="true">x</span>
+    <div class="reward-body">
+      <h2>感谢您的支持，我会继续努力的!</h2>
+      <div class="reward-img-box">
+        <div style="position: relative; width: 140px; height: 140px;">
+          
+          
+            <img id="zfb" class="reward-img" src="https://imgkr.cn-bj.ufileos.com/335b1d50-93cb-495c-8aa8-e597211439d1.jpg" alt="赞赏码">
+          
+          
+            <img id="wx" class="reward-img" src="https://imgkr.cn-bj.ufileos.com/6d6b4d4c-859c-4415-8e5c-323b09afda6e.jpg" alt="赞赏码">
+          
+        </div>
+      </div>
+      <p class="reward-word">扫码打赏，感谢支持~</p>
+      <p class="reward-tip">打开微信/支付宝扫一扫，即可进行打赏哦</p>
+    </div>
+    <div class="bottom">
+      
+      <div id="zfbBtn" class="pay-text">
+        支付宝
+      </div>
+      
+      
+      <div id="wxBtn" class="pay-text">
+        微信支付
+      </div>
+      
+    </div>
+  </div>
+</div>
+<style>
+  .reward-mask {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #00000054;
+  }
+
+  .reward-relative {
+    position: relative;
+    width: 480px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #fff;
+    top: 50%;
+    margin-top: -205px;
+  }
+
+  .reward-relative .close {
+    position: absolute;
+    right: 10px;
+    font-weight: normal;
+    font-size: 16px;
+    color: #929292;
+  }
+
+  .reward-body {
+    padding: 40px 20px 20px;
+  }
+
+  .bottom {
+    display: flex;
+  }
+
+  .reward-btn {
+    text-align: center;
+  }
+
+  .reward-btn-text {
+    display: inline-block;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: #ff9734;
+    color: #FFF;
+    margin-top: 20px;
+  }
+
+  .pay-text {
+    margin-top: 10px;
+    padding: 10px;
+    flex: 1;
+    transition: all .2s linear;
+  }
+
+  .pay-text:hover {
+    background-color: #a5a5a536;
+  }
+
+  .reward-body h2 {
+    padding-top: 10px;
+    text-align: center;
+    color: #a3a3a3;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 0 20px;
+  }
+
+  .reward-body h2:after,
+  .reward-body h2:before {
+    font-family: Arial, Helvetica, sans-serif;
+    background: 0 0;
+    width: 0;
+    height: 0;
+    font-style: normal;
+    color: #eee;
+    font-size: 80px;
+    position: absolute;
+    top: 20px;
+  }
+
+  .reward-body h2:before {
+    content: '\201c';
+    left: 50px;
+  }
+
+  .reward-body h2:after {
+    content: '\201d';
+    right: 80px;
+  }
+
+  .reward-img-box {
+    display: inline-block;
+    padding: 10px;
+    border: 6px solid #ea5f00;
+    margin: 0 auto;
+    border-radius: 3px;
+    position: relative;
+  }
+
+  .reward-img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 767px) {
+    .reward-relative {
+      height: 100%;
+      top: 0px;
+      margin-top: 0;
+      width: auto;
+    }
+
+    .reward-relative .bottom {
+      flex-direction: column;
+    }
+
+    .reward-relative .pay-text {
+      width: 80%;
+      margin: 5px auto;
+      border: 1px solid silver;
+      padding: 6px;
+      border-radius: 4px;
+    }
+
+    .reward-body h2:after {
+      right: 40px;
+    }
+
+    .reward-body h2:after,
+    .reward-body h2:before {
+      font-size: 60px;
+    }
+
+    .reward-body h2:before {
+      left: 20px;
+    }
+  }
+</style>
+<script>
+  !function () {
+    var mask = document.querySelector('.reward-mask');
+    let close = document.querySelector('.reward-relative .close');
+    let rewardBtn = document.querySelector('.reward-btn');
+
+    let zfb = document.querySelector('#zfb'),
+      wx = document.querySelector('#wx'),
+      zfbBtn = document.querySelector('#zfbBtn'),
+      wxBtn = document.querySelector('#wxBtn');
+
+    if (zfbBtn && wxBtn) {
+      zfbBtn.addEventListener('click', () => {
+        window.Velocity(zfb, 'transition.slideLeftIn', {
+          duration: 400
+        });
+        window.Velocity(wx, 'transition.slideRightOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+
+      wxBtn.addEventListener('click', () => {
+        window.Velocity(wx, 'transition.slideRightIn', {
+          duration: 400
+        });
+        window.Velocity(zfb, 'transition.slideLeftOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+    }
+
+    rewardBtn.addEventListener('click', (e) => {
+      window.Velocity(mask, 'transition.slideDownIn', {
+        duration: 400
+      })
+    });
+
+    close.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.Velocity(mask, 'transition.slideUpOut', {
+        duration: 400
+      })
+    })
+  }()
+</script>
+
   </div>
 </body>
 
@@ -2721,7 +2743,6 @@ PS:本文基于&lt;a href=&#34;https://www.jiyiblog.com/archives/0407140.html&#3
 
 
 <script src="/media/js/cool.js"></script>
-
 
 
 

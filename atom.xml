@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://m5s4qq.coding-pages.com</id>
     <title>上海考古地图</title>
-    <updated>2020-07-26T18:28:27.786Z</updated>
+    <updated>2020-07-26T19:00:08.577Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://m5s4qq.coding-pages.com"/>
     <link rel="self" href="https://m5s4qq.coding-pages.com/atom.xml"/>
@@ -12,6 +12,17 @@
     <logo>https://m5s4qq.coding-pages.com/images/avatar.png</logo>
     <icon>https://m5s4qq.coding-pages.com/favicon.ico</icon>
     <rights>All rights reserved 2020, 上海考古地图</rights>
+    <entry>
+        <title type="html"><![CDATA[元代水闸遗址博物馆]]></title>
+        <id>https://m5s4qq.coding-pages.com/post/yuan-dai-shui-zha-yi-zhi-bo-wu-guan/</id>
+        <link href="https://m5s4qq.coding-pages.com/post/yuan-dai-shui-zha-yi-zhi-bo-wu-guan/">
+        </link>
+        <updated>2020-07-26T18:54:01.000Z</updated>
+        <summary type="html"><![CDATA[<p>志丹苑遗址创造了上海考古的两个第一：上海城区第一个发掘出土的大型遗址；上海考古史上投资规模第一的发掘项目。同时它也是国内已考古发掘出的规模最大、做工最好、保存最完整的元代水闸。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>志丹苑遗址创造了上海考古的两个第一：上海城区第一个发掘出土的大型遗址；上海考古史上投资规模第一的发掘项目。同时它也是国内已考古发掘出的规模最大、做工最好、保存最完整的元代水闸。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[醉白池]]></title>
         <id>https://m5s4qq.coding-pages.com/post/zui-bai-chi/</id>
@@ -96,12 +107,5 @@
 ]]></summary>
         <content type="html"><![CDATA[<p>根据南宋《云间志》记载，望仙桥是上海地区现存最古老的桥梁之一。传说仙人在桥下救了一位投河少女，少女每年于该日晨曦至桥上时望仙拜谢，故称望仙桥。</p>
 ]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[青浦城隍庙【青浦区城东北隅公园路650号】]]></title>
-        <id>https://m5s4qq.coding-pages.com/post/qing-pu-cheng-huang-miao-qing-pu-qu-cheng-dong-bei-yu-gong-yuan-lu-650-hao/</id>
-        <link href="https://m5s4qq.coding-pages.com/post/qing-pu-cheng-huang-miao-qing-pu-qu-cheng-dong-bei-yu-gong-yuan-lu-650-hao/">
-        </link>
-        <updated>2020-07-24T15:35:49.000Z</updated>
     </entry>
 </feed>
