@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://m5s4qq.coding-pages.com</id>
     <title>上海考古地图</title>
-    <updated>2020-07-26T02:13:03.804Z</updated>
+    <updated>2020-07-26T18:25:52.163Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://m5s4qq.coding-pages.com"/>
     <link rel="self" href="https://m5s4qq.coding-pages.com/atom.xml"/>
@@ -12,6 +12,20 @@
     <logo>https://m5s4qq.coding-pages.com/images/avatar.png</logo>
     <icon>https://m5s4qq.coding-pages.com/favicon.ico</icon>
     <rights>All rights reserved 2020, 上海考古地图</rights>
+    <entry>
+        <title type="html"><![CDATA[醉白池]]></title>
+        <id>https://m5s4qq.coding-pages.com/post/zui-bai-chi/</id>
+        <link href="https://m5s4qq.coding-pages.com/post/zui-bai-chi/">
+        </link>
+        <updated>2020-07-26T18:13:05.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[古猗园]]></title>
+        <id>https://m5s4qq.coding-pages.com/post/gu-yi-yuan/</id>
+        <link href="https://m5s4qq.coding-pages.com/post/gu-yi-yuan/">
+        </link>
+        <updated>2020-07-26T18:09:47.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[放生桥【朱家角镇北大街东首】]]></title>
         <id>https://m5s4qq.coding-pages.com/post/fang-sheng-qiao-zhu-jia-jiao-zhen-bei-da-jie-dong-shou/</id>
@@ -89,27 +103,5 @@
         <link href="https://m5s4qq.coding-pages.com/post/qing-pu-cheng-huang-miao-qing-pu-qu-cheng-dong-bei-yu-gong-yuan-lu-650-hao/">
         </link>
         <updated>2020-07-24T15:35:49.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[大仓桥【松江中山西路玉树路东】]]></title>
-        <id>https://m5s4qq.coding-pages.com/post/da-cang-qiao-song-jiang-zhong-shan-xi-lu-yu-shu-lu-dong/</id>
-        <link href="https://m5s4qq.coding-pages.com/post/da-cang-qiao-song-jiang-zhong-shan-xi-lu-yu-shu-lu-dong/">
-        </link>
-        <updated>2020-07-24T15:34:32.000Z</updated>
-        <summary type="html"><![CDATA[<p>​    大仓桥于明天启年间（1621-1627年）重建，原名永丰桥，桥额刻“<strong>重建永丰</strong>”四字。因桥南有松江府粮仓水次西仓，故俗称大仓桥、西仓桥。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>​    大仓桥于明天启年间（1621-1627年）重建，原名永丰桥，桥额刻“<strong>重建永丰</strong>”四字。因桥南有松江府粮仓水次西仓，故俗称大仓桥、西仓桥。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[豫园]]></title>
-        <id>https://m5s4qq.coding-pages.com/post/yu-yuan/</id>
-        <link href="https://m5s4qq.coding-pages.com/post/yu-yuan/">
-        </link>
-        <updated>2020-07-24T11:32:57.000Z</updated>
-        <summary type="html"><![CDATA[<p>豫园与上海老城区的城隍庙为邻，是<strong>上海市区内唯一一处明代园林</strong>，它的建造者是明代上海士绅<strong>潘允端。</strong></p>
-]]></summary>
-        <content type="html"><![CDATA[<p>豫园与上海老城区的城隍庙为邻，是<strong>上海市区内唯一一处明代园林</strong>，它的建造者是明代上海士绅<strong>潘允端。</strong></p>
-]]></content>
     </entry>
 </feed>
