@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://m5s4qq.coding-pages.com</id>
     <title>上海考古地图</title>
-    <updated>2020-07-26T19:00:08.577Z</updated>
+    <updated>2020-07-26T19:15:13.366Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://m5s4qq.coding-pages.com"/>
     <link rel="self" href="https://m5s4qq.coding-pages.com/atom.xml"/>
@@ -13,7 +13,7 @@
     <icon>https://m5s4qq.coding-pages.com/favicon.ico</icon>
     <rights>All rights reserved 2020, 上海考古地图</rights>
     <entry>
-        <title type="html"><![CDATA[元代水闸遗址博物馆]]></title>
+        <title type="html"><![CDATA[元代水闸遗址博物馆【延长西路619号】]]></title>
         <id>https://m5s4qq.coding-pages.com/post/yuan-dai-shui-zha-yi-zhi-bo-wu-guan/</id>
         <link href="https://m5s4qq.coding-pages.com/post/yuan-dai-shui-zha-yi-zhi-bo-wu-guan/">
         </link>
@@ -24,14 +24,14 @@
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[醉白池]]></title>
+        <title type="html"><![CDATA[醉白池【松江区人民南路64号】]]></title>
         <id>https://m5s4qq.coding-pages.com/post/zui-bai-chi/</id>
         <link href="https://m5s4qq.coding-pages.com/post/zui-bai-chi/">
         </link>
         <updated>2020-07-26T18:13:05.000Z</updated>
     </entry>
     <entry>
-        <title type="html"><![CDATA[古猗园]]></title>
+        <title type="html"><![CDATA[古猗园【嘉定区南翔镇沪宜公路218号】]]></title>
         <id>https://m5s4qq.coding-pages.com/post/gu-yi-yuan/</id>
         <link href="https://m5s4qq.coding-pages.com/post/gu-yi-yuan/">
         </link>
