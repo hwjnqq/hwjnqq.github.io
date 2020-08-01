@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://m5s4qq.coding-pages.com</id>
     <title>上海考古地图</title>
-    <updated>2020-08-01T09:00:25.425Z</updated>
+    <updated>2020-08-01T09:35:56.540Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://m5s4qq.coding-pages.com"/>
     <link rel="self" href="https://m5s4qq.coding-pages.com/atom.xml"/>
@@ -12,6 +12,17 @@
     <logo>https://m5s4qq.coding-pages.com/images/avatar.png</logo>
     <icon>https://m5s4qq.coding-pages.com/favicon.ico</icon>
     <rights>All rights reserved 2020, 上海考古地图</rights>
+    <entry>
+        <title type="html"><![CDATA[遗迹导览]]></title>
+        <id>https://m5s4qq.coding-pages.com/post/yi-ji-dao-hang/</id>
+        <link href="https://m5s4qq.coding-pages.com/post/yi-ji-dao-hang/">
+        </link>
+        <updated>2020-08-01T04:21:30.000Z</updated>
+        <summary type="html"><![CDATA[<p>在这里，通往上海遗迹的详细信息，包括位置、游览建议、旅游路线。欢迎大家利用RSS订阅来关注本网站。（设置RSS订阅有一定的技术要求，详见<a href="https://sh.kgdt.work/post/ru-he-ding-yue-zui-xin-wen-zhang/">站内教程</a>）</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>在这里，通往上海遗迹的详细信息，包括位置、游览建议、旅游路线。欢迎大家利用RSS订阅来关注本网站。（设置RSS订阅有一定的技术要求，详见<a href="https://sh.kgdt.work/post/ru-he-ding-yue-zui-xin-wen-zhang/">站内教程</a>）</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[上海古城墙【黄浦区中华路、人民路】]]></title>
         <id>https://m5s4qq.coding-pages.com/post/shang-hai-gu-cheng-qiang-huang-pu-qu-zhong-hua-lu-ren-min-lu/</id>
@@ -105,17 +116,6 @@
         <summary type="html"><![CDATA[<p>黄埔的城隍庙可能是上海地区最著名的城隍庙了**（以下简称上海城隍庙）<strong>，它也是上海的旅游胜地。上海城隍庙</strong>最早建于明代永乐年间**，时任上海县知县张守约把原来的金山神庙改建为城隍庙，由正一派道士管理。金山神庙原来供奉将军霍光，改建之后的城隍庙前殿依然祭祀霍光。后殿才是城隍老爷秦裕伯及三班六房皂隶。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>黄埔的城隍庙可能是上海地区最著名的城隍庙了**（以下简称上海城隍庙）<strong>，它也是上海的旅游胜地。上海城隍庙</strong>最早建于明代永乐年间**，时任上海县知县张守约把原来的金山神庙改建为城隍庙，由正一派道士管理。金山神庙原来供奉将军霍光，改建之后的城隍庙前殿依然祭祀霍光。后殿才是城隍老爷秦裕伯及三班六房皂隶。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[奉贤华亭海塘【奉贤柘林镇淙缺至奉海村】]]></title>
-        <id>https://m5s4qq.coding-pages.com/post/feng-xian-hua-ting-hai-tang-feng-xian-zhe-lin-zhen-cong-que-zhi-feng-hai-cun/</id>
-        <link href="https://m5s4qq.coding-pages.com/post/feng-xian-hua-ting-hai-tang-feng-xian-zhe-lin-zhen-cong-que-zhi-feng-hai-cun/">
-        </link>
-        <updated>2020-07-25T14:49:47.000Z</updated>
-        <summary type="html"><![CDATA[<p>​    奉贤华亭海塘最早可以追溯到宋代修筑的老护塘，自华家角（堰墩湾，今奉海）迤西段，在元大德五年（1301）大潮灾中坍毁，同年后退二里六十步重筑。<strong>清雍正二年（1724）又毁，次年内移并创建石塘，东起奉贤区华家角，西至金山区戚家墩，全长24.07千米。</strong></p>
-]]></summary>
-        <content type="html"><![CDATA[<p>​    奉贤华亭海塘最早可以追溯到宋代修筑的老护塘，自华家角（堰墩湾，今奉海）迤西段，在元大德五年（1301）大潮灾中坍毁，同年后退二里六十步重筑。<strong>清雍正二年（1724）又毁，次年内移并创建石塘，东起奉贤区华家角，西至金山区戚家墩，全长24.07千米。</strong></p>
 ]]></content>
     </entry>
 </feed>
