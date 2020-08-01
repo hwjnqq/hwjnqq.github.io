@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://m5s4qq.coding-pages.com</id>
     <title>上海考古地图</title>
-    <updated>2020-08-01T11:51:58.723Z</updated>
+    <updated>2020-08-01T14:10:27.267Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://m5s4qq.coding-pages.com"/>
     <link rel="self" href="https://m5s4qq.coding-pages.com/atom.xml"/>
@@ -12,6 +12,17 @@
     <logo>https://m5s4qq.coding-pages.com/images/avatar.png</logo>
     <icon>https://m5s4qq.coding-pages.com/favicon.ico</icon>
     <rights>All rights reserved 2020, 上海考古地图</rights>
+    <entry>
+        <title type="html"><![CDATA[小昆山]]></title>
+        <id>https://m5s4qq.coding-pages.com/post/xiao-kun-shan/</id>
+        <link href="https://m5s4qq.coding-pages.com/post/xiao-kun-shan/">
+        </link>
+        <updated>2020-08-01T14:08:40.000Z</updated>
+        <summary type="html"><![CDATA[<p>小昆山高55米，山地面积500亩，地处九峰最南端，有南北两峰，南高北低。晋代著名文学家陆机的《昆山》一诗中有“仿佛谷水阳，婉娈昆山阴”之句，可见昆山之名由来已久。后人因山名与江苏昆山之名重复，故名之日“小昆山”。景区内有九峰禅寺、二陆草堂及读书台、摩崖石刻等景观。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>小昆山高55米，山地面积500亩，地处九峰最南端，有南北两峰，南高北低。晋代著名文学家陆机的《昆山》一诗中有“仿佛谷水阳，婉娈昆山阴”之句，可见昆山之名由来已久。后人因山名与江苏昆山之名重复，故名之日“小昆山”。景区内有九峰禅寺、二陆草堂及读书台、摩崖石刻等景观。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[遗迹导览]]></title>
         <id>https://m5s4qq.coding-pages.com/post/yi-ji-dao-hang/</id>
@@ -105,17 +116,6 @@
         <summary type="html"><![CDATA[<p>​    南翔寺始建于南北朝梁天监年间（502-519），唐开成年间（836-840年）扩建，咸通至乾符年间（860-879）增建尊胜陀罗尼石经幢两座。五代至北宋年间（907-1127）年赐“白鹤南翔”额。明清两代均有修缮。清乾隆年间（1766）毁于南翔寺毁于火灾。<strong>现尊胜陀罗尼经幢和普同塔等均被移建，原地仅存砖塔两座。</strong></p>
 ]]></summary>
         <content type="html"><![CDATA[<p>​    南翔寺始建于南北朝梁天监年间（502-519），唐开成年间（836-840年）扩建，咸通至乾符年间（860-879）增建尊胜陀罗尼石经幢两座。五代至北宋年间（907-1127）年赐“白鹤南翔”额。明清两代均有修缮。清乾隆年间（1766）毁于南翔寺毁于火灾。<strong>现尊胜陀罗尼经幢和普同塔等均被移建，原地仅存砖塔两座。</strong></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[黄浦区城隍庙]]></title>
-        <id>https://m5s4qq.coding-pages.com/post/huang-pu-qu-cheng-huang-miao/</id>
-        <link href="https://m5s4qq.coding-pages.com/post/huang-pu-qu-cheng-huang-miao/">
-        </link>
-        <updated>2020-07-25T14:51:46.000Z</updated>
-        <summary type="html"><![CDATA[<p>黄埔的城隍庙可能是上海地区最著名的城隍庙了**（以下简称上海城隍庙）<strong>，它也是上海的旅游胜地。上海城隍庙</strong>最早建于明代永乐年间**，时任上海县知县张守约把原来的金山神庙改建为城隍庙，由正一派道士管理。金山神庙原来供奉将军霍光，改建之后的城隍庙前殿依然祭祀霍光。后殿才是城隍老爷秦裕伯及三班六房皂隶。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>黄埔的城隍庙可能是上海地区最著名的城隍庙了**（以下简称上海城隍庙）<strong>，它也是上海的旅游胜地。上海城隍庙</strong>最早建于明代永乐年间**，时任上海县知县张守约把原来的金山神庙改建为城隍庙，由正一派道士管理。金山神庙原来供奉将军霍光，改建之后的城隍庙前殿依然祭祀霍光。后殿才是城隍老爷秦裕伯及三班六房皂隶。</p>
 ]]></content>
     </entry>
 </feed>
