@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://m5s4qq.coding-pages.com</id>
     <title>上海考古地图</title>
-    <updated>2020-08-01T14:10:27.267Z</updated>
+    <updated>2020-08-03T05:53:17.065Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://m5s4qq.coding-pages.com"/>
     <link rel="self" href="https://m5s4qq.coding-pages.com/atom.xml"/>
@@ -13,6 +13,73 @@
     <icon>https://m5s4qq.coding-pages.com/favicon.ico</icon>
     <rights>All rights reserved 2020, 上海考古地图</rights>
     <entry>
+        <title type="html"><![CDATA[秀道者塔]]></title>
+        <id>https://m5s4qq.coding-pages.com/post/xiu-dao-zhe-ta/</id>
+        <link href="https://m5s4qq.coding-pages.com/post/xiu-dao-zhe-ta/">
+        </link>
+        <updated>2020-08-03T05:51:56.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[万寿塔]]></title>
+        <id>https://m5s4qq.coding-pages.com/post/wan-shou-ta/</id>
+        <link href="https://m5s4qq.coding-pages.com/post/wan-shou-ta/">
+        </link>
+        <updated>2020-08-03T05:48:41.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[青龙寺塔]]></title>
+        <id>https://m5s4qq.coding-pages.com/post/qing-long-si-ta/</id>
+        <link href="https://m5s4qq.coding-pages.com/post/qing-long-si-ta/">
+        </link>
+        <updated>2020-08-03T05:46:52.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[龙华塔]]></title>
+        <id>https://m5s4qq.coding-pages.com/post/long-hua-ta/</id>
+        <link href="https://m5s4qq.coding-pages.com/post/long-hua-ta/">
+        </link>
+        <updated>2020-08-03T05:44:42.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[韩塔]]></title>
+        <id>https://m5s4qq.coding-pages.com/post/han-ta/</id>
+        <link href="https://m5s4qq.coding-pages.com/post/han-ta/">
+        </link>
+        <updated>2020-08-03T05:38:42.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[当湖书院]]></title>
+        <id>https://m5s4qq.coding-pages.com/post/dang-hu-shu-yuan/</id>
+        <link href="https://m5s4qq.coding-pages.com/post/dang-hu-shu-yuan/">
+        </link>
+        <updated>2020-08-03T05:36:07.000Z</updated>
+        <summary type="html"><![CDATA[<p>当湖书院座落于嘉定孔庙建筑群东首,是上海地区现存<strong>最完整的清代书院建筑</strong>。当湖书院初名兴文书院,<strong>雍正初年创建</strong>。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>当湖书院座落于嘉定孔庙建筑群东首,是上海地区现存<strong>最完整的清代书院建筑</strong>。当湖书院初名兴文书院,<strong>雍正初年创建</strong>。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[古松园【金山区亭林镇复兴东路106号(近豆市街)】]]></title>
+        <id>https://m5s4qq.coding-pages.com/post/gu-song-yuan-jin-shan-qu-ting-lin-zhen-fu-xing-dong-lu-106-hao-jin-dou-shi-jie/</id>
+        <link href="https://m5s4qq.coding-pages.com/post/gu-song-yuan-jin-shan-qu-ting-lin-zhen-fu-xing-dong-lu-106-hao-jin-dou-shi-jie/">
+        </link>
+        <updated>2020-08-03T05:34:35.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[金山三岛]]></title>
+        <id>https://m5s4qq.coding-pages.com/post/jin-shan-san-dao/</id>
+        <link href="https://m5s4qq.coding-pages.com/post/jin-shan-san-dao/">
+        </link>
+        <updated>2020-08-03T05:31:35.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[曲水园【青浦区公园路612号】]]></title>
+        <id>https://m5s4qq.coding-pages.com/post/qu-shui-yuan-qing-pu-qu-gong-yuan-lu-612-hao/</id>
+        <link href="https://m5s4qq.coding-pages.com/post/qu-shui-yuan-qing-pu-qu-gong-yuan-lu-612-hao/">
+        </link>
+        <updated>2020-08-03T05:29:07.000Z</updated>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[小昆山]]></title>
         <id>https://m5s4qq.coding-pages.com/post/xiao-kun-shan/</id>
         <link href="https://m5s4qq.coding-pages.com/post/xiao-kun-shan/">
@@ -21,101 +88,6 @@
         <summary type="html"><![CDATA[<p>小昆山高55米，山地面积500亩，地处九峰最南端，有南北两峰，南高北低。晋代著名文学家陆机的《昆山》一诗中有“仿佛谷水阳，婉娈昆山阴”之句，可见昆山之名由来已久。后人因山名与江苏昆山之名重复，故名之日“小昆山”。景区内有九峰禅寺、二陆草堂及读书台、摩崖石刻等景观。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>小昆山高55米，山地面积500亩，地处九峰最南端，有南北两峰，南高北低。晋代著名文学家陆机的《昆山》一诗中有“仿佛谷水阳，婉娈昆山阴”之句，可见昆山之名由来已久。后人因山名与江苏昆山之名重复，故名之日“小昆山”。景区内有九峰禅寺、二陆草堂及读书台、摩崖石刻等景观。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[遗迹导览]]></title>
-        <id>https://m5s4qq.coding-pages.com/post/yi-ji-dao-hang/</id>
-        <link href="https://m5s4qq.coding-pages.com/post/yi-ji-dao-hang/">
-        </link>
-        <updated>2020-08-01T04:21:30.000Z</updated>
-        <summary type="html"><![CDATA[<p>在这里，通往上海遗迹的详细信息，包括位置、游览建议、旅游路线。欢迎大家利用RSS订阅来关注本网站。（设置RSS订阅有一定的技术要求，详见<a href="https://sh.kgdt.work/post/ru-he-ding-yue-zui-xin-wen-zhang/">站内教程</a>）</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>在这里，通往上海遗迹的详细信息，包括位置、游览建议、旅游路线。欢迎大家利用RSS订阅来关注本网站。（设置RSS订阅有一定的技术要求，详见<a href="https://sh.kgdt.work/post/ru-he-ding-yue-zui-xin-wen-zhang/">站内教程</a>）</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[上海古城墙【黄浦区中华路、人民路】]]></title>
-        <id>https://m5s4qq.coding-pages.com/post/shang-hai-gu-cheng-qiang-huang-pu-qu-zhong-hua-lu-ren-min-lu/</id>
-        <link href="https://m5s4qq.coding-pages.com/post/shang-hai-gu-cheng-qiang-huang-pu-qu-zhong-hua-lu-ren-min-lu/">
-        </link>
-        <updated>2020-07-28T04:18:18.000Z</updated>
-        <summary type="html"><![CDATA[<p>元至元二十九年(1292) 析华亭县，上海古城墙在上海镇基础上置上海县。<strong>明嘉靖三十二年(1553) 筑城</strong>。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>元至元二十九年(1292) 析华亭县，上海古城墙在上海镇基础上置上海县。<strong>明嘉靖三十二年(1553) 筑城</strong>。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[金泽镇]]></title>
-        <id>https://m5s4qq.coding-pages.com/post/jin-ze-zhen/</id>
-        <link href="https://m5s4qq.coding-pages.com/post/jin-ze-zhen/">
-        </link>
-        <updated>2020-07-28T04:16:32.000Z</updated>
-        <summary type="html"><![CDATA[<p>上海市青浦区金泽镇位于320国道与江苏省交界处，因古时在金泽镇1平方公里不到的弹丸之地，曾有过“四十二虹桥”之称，有“庙庙有桥，桥桥有庙”、“庙里有桥，桥里有庙”之俗谚,因而被誉为桥乡。<br>
-据《江南通志》“穑人获泽如金”,这时才有金泽之名。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>上海市青浦区金泽镇位于320国道与江苏省交界处，因古时在金泽镇1平方公里不到的弹丸之地，曾有过“四十二虹桥”之称，有“庙庙有桥，桥桥有庙”、“庙里有桥，桥里有庙”之俗谚,因而被誉为桥乡。<br>
-据《江南通志》“穑人获泽如金”,这时才有金泽之名。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[泗泾镇]]></title>
-        <id>https://m5s4qq.coding-pages.com/post/si-jing-zhen/</id>
-        <link href="https://m5s4qq.coding-pages.com/post/si-jing-zhen/">
-        </link>
-        <updated>2020-07-28T04:05:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>在轨道交通9号线途中,有个<strong>泗泾站</strong>,从徐家汇乘车过去20分钟即可到达。松江在评选新十二景中,给水乡泗泾起了个雅称**“四水会波”<strong>。这是因为这座历史悠久的古镇,相传因</strong>通波泾、外波泾、洞泾、张泾**四泾之水汇集于此而称泗泾塘,泗泾塘简称泗泾,镇名由此而来。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>在轨道交通9号线途中,有个<strong>泗泾站</strong>,从徐家汇乘车过去20分钟即可到达。松江在评选新十二景中,给水乡泗泾起了个雅称**“四水会波”<strong>。这是因为这座历史悠久的古镇,相传因</strong>通波泾、外波泾、洞泾、张泾**四泾之水汇集于此而称泗泾塘,泗泾塘简称泗泾,镇名由此而来。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[元代水闸遗址博物馆【延长西路619号】]]></title>
-        <id>https://m5s4qq.coding-pages.com/post/yuan-dai-shui-zha-yi-zhi-bo-wu-guan/</id>
-        <link href="https://m5s4qq.coding-pages.com/post/yuan-dai-shui-zha-yi-zhi-bo-wu-guan/">
-        </link>
-        <updated>2020-07-26T18:54:01.000Z</updated>
-        <summary type="html"><![CDATA[<p>志丹苑遗址创造了上海考古的两个第一：上海城区第一个发掘出土的大型遗址；上海考古史上投资规模第一的发掘项目。同时它也是国内已考古发掘出的规模最大、做工最好、保存最完整的元代水闸。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>志丹苑遗址创造了上海考古的两个第一：上海城区第一个发掘出土的大型遗址；上海考古史上投资规模第一的发掘项目。同时它也是国内已考古发掘出的规模最大、做工最好、保存最完整的元代水闸。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[醉白池【松江区人民南路64号】]]></title>
-        <id>https://m5s4qq.coding-pages.com/post/zui-bai-chi/</id>
-        <link href="https://m5s4qq.coding-pages.com/post/zui-bai-chi/">
-        </link>
-        <updated>2020-07-26T18:13:05.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[古猗园【嘉定区南翔镇沪宜公路218号】]]></title>
-        <id>https://m5s4qq.coding-pages.com/post/gu-yi-yuan/</id>
-        <link href="https://m5s4qq.coding-pages.com/post/gu-yi-yuan/">
-        </link>
-        <updated>2020-07-26T18:09:47.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[放生桥【朱家角镇北大街东首】]]></title>
-        <id>https://m5s4qq.coding-pages.com/post/fang-sheng-qiao-zhu-jia-jiao-zhen-bei-da-jie-dong-shou/</id>
-        <link href="https://m5s4qq.coding-pages.com/post/fang-sheng-qiao-zhu-jia-jiao-zhen-bei-da-jie-dong-shou/">
-        </link>
-        <updated>2020-07-25T15:00:48.000Z</updated>
-        <summary type="html"><![CDATA[<p>放生桥南北向，跨淀浦河（又名漕港）。明<strong>隆庆五年</strong>（1571）慈门寺僧性潮募建，原南岸有慈门寺，桥下为慈门寺放生之地，故名放生桥。是<strong>沪上现存最大五孔石拱桥</strong>。<br>
-嘉庆十七年（1812年）重建<sub>（由圆津禅院僧觉铭发起重建）</sub>，1998年修缮。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>放生桥南北向，跨淀浦河（又名漕港）。明<strong>隆庆五年</strong>（1571）慈门寺僧性潮募建，原南岸有慈门寺，桥下为慈门寺放生之地，故名放生桥。是<strong>沪上现存最大五孔石拱桥</strong>。<br>
-嘉庆十七年（1812年）重建<sub>（由圆津禅院僧觉铭发起重建）</sub>，1998年修缮。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[南翔寺砖塔【嘉定南翔解放街香花桥北堍】]]></title>
-        <id>https://m5s4qq.coding-pages.com/post/nan-xiang-si-zhuan-ta-jia-ding-nan-xiang-jie-fang-jie-xiang-hua-qiao-bei-tu/</id>
-        <link href="https://m5s4qq.coding-pages.com/post/nan-xiang-si-zhuan-ta-jia-ding-nan-xiang-jie-fang-jie-xiang-hua-qiao-bei-tu/">
-        </link>
-        <updated>2020-07-25T14:52:54.000Z</updated>
-        <summary type="html"><![CDATA[<p>​    南翔寺始建于南北朝梁天监年间（502-519），唐开成年间（836-840年）扩建，咸通至乾符年间（860-879）增建尊胜陀罗尼石经幢两座。五代至北宋年间（907-1127）年赐“白鹤南翔”额。明清两代均有修缮。清乾隆年间（1766）毁于南翔寺毁于火灾。<strong>现尊胜陀罗尼经幢和普同塔等均被移建，原地仅存砖塔两座。</strong></p>
-]]></summary>
-        <content type="html"><![CDATA[<p>​    南翔寺始建于南北朝梁天监年间（502-519），唐开成年间（836-840年）扩建，咸通至乾符年间（860-879）增建尊胜陀罗尼石经幢两座。五代至北宋年间（907-1127）年赐“白鹤南翔”额。明清两代均有修缮。清乾隆年间（1766）毁于南翔寺毁于火灾。<strong>现尊胜陀罗尼经幢和普同塔等均被移建，原地仅存砖塔两座。</strong></p>
 ]]></content>
     </entry>
 </feed>
