@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sh.kgdt.work</id>
     <title>上海考古地图</title>
-    <updated>2020-08-04T04:40:49.682Z</updated>
+    <updated>2020-08-04T05:28:29.669Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sh.kgdt.work"/>
     <link rel="self" href="https://sh.kgdt.work/atom.xml"/>
@@ -12,6 +12,66 @@
     <logo>https://sh.kgdt.work/images/avatar.png</logo>
     <icon>https://sh.kgdt.work/favicon.ico</icon>
     <rights>All rights reserved 2020, 上海考古地图</rights>
+    <entry>
+        <title type="html"><![CDATA[云间第一桥]]></title>
+        <id>https://sh.kgdt.work/post/yun-jian-di-yi-qiao/</id>
+        <link href="https://sh.kgdt.work/post/yun-jian-di-yi-qiao/">
+        </link>
+        <updated>2020-08-04T05:18:53.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[佘山天主教堂]]></title>
+        <id>https://sh.kgdt.work/post/she-shan-tian-zhu-jiao-tang/</id>
+        <link href="https://sh.kgdt.work/post/she-shan-tian-zhu-jiao-tang/">
+        </link>
+        <updated>2020-08-04T05:11:29.000Z</updated>
+        <summary type="html"><![CDATA[<p>座落在松江县西余山之巅,以山取名。清代同治元年(公元1863年)，上海天主教会开始在西余山购地建宇。1866 年8月,在山顶构筑了一座六角亭，因亭内供有圣母像,亦称“圣母亭”。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>座落在松江县西余山之巅,以山取名。清代同治元年(公元1863年)，上海天主教会开始在西余山购地建宇。1866 年8月,在山顶构筑了一座六角亭，因亭内供有圣母像,亦称“圣母亭”。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[梵王宫]]></title>
+        <id>https://sh.kgdt.work/post/fan-wang-gong/</id>
+        <link href="https://sh.kgdt.work/post/fan-wang-gong/">
+        </link>
+        <updated>2020-08-04T05:09:22.000Z</updated>
+        <summary type="html"><![CDATA[<p>罗店梵王宫，位于宝山县罗店乡东部河畔。是上海市郊规模较大的一座古庙。<br>
+梵王宫始建于明朝<strong>正德年间</strong>,迄今已有400多年的历史。初建时是一家姓唐的<strong>私人别墅</strong>。唐氏供佛象于中厅,又供奉道教之神于<strong>真武阁</strong>,并悬挂其先人唐月轩的遗象于阁内。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>罗店梵王宫，位于宝山县罗店乡东部河畔。是上海市郊规模较大的一座古庙。<br>
+梵王宫始建于明朝<strong>正德年间</strong>,迄今已有400多年的历史。初建时是一家姓唐的<strong>私人别墅</strong>。唐氏供佛象于中厅,又供奉道教之神于<strong>真武阁</strong>,并悬挂其先人唐月轩的遗象于阁内。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[关王庙]]></title>
+        <id>https://sh.kgdt.work/post/guan-wang-miao/</id>
+        <link href="https://sh.kgdt.work/post/guan-wang-miao/">
+        </link>
+        <updated>2020-08-04T05:04:44.000Z</updated>
+        <summary type="html"><![CDATA[<p>关王庙,位于风景秀丽的淀山湖畔,明崇祯13年(公元1640年)建造,因祭祀关羽,而得名。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>关王庙,位于风景秀丽的淀山湖畔,明崇祯13年(公元1640年)建造,因祭祀关羽,而得名。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[奉贤月城【奉贤南桥镇十字街口北】]]></title>
+        <id>https://sh.kgdt.work/post/feng-xian-yue-cheng-feng-xian-nan-qiao-zhen-shi-zi-jie-kou-bei/</id>
+        <link href="https://sh.kgdt.work/post/feng-xian-yue-cheng-feng-xian-nan-qiao-zhen-shi-zi-jie-kou-bei/">
+        </link>
+        <updated>2020-08-04T05:01:58.000Z</updated>
+        <summary type="html"><![CDATA[<p>穿过奉贤县南桥镇十字街口,往北而行,只见一座半月形的古城安然地座落在镇之北隅,跨街而立,气势非凡,这就是残留至今的奉贤古月城。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>穿过奉贤县南桥镇十字街口,往北而行,只见一座半月形的古城安然地座落在镇之北隅,跨街而立,气势非凡,这就是残留至今的奉贤古月城。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[川沙古城墙【川沙县城厢镇小学的东南角】]]></title>
+        <id>https://sh.kgdt.work/post/chuan-sha-gu-cheng-qiang-chuan-sha-xian-cheng-xiang-zhen-xiao-xue-de-dong-nan-jiao/</id>
+        <link href="https://sh.kgdt.work/post/chuan-sha-gu-cheng-qiang-chuan-sha-xian-cheng-xiang-zhen-xiao-xue-de-dong-nan-jiao/">
+        </link>
+        <updated>2020-08-04T04:59:10.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[秀道者塔]]></title>
         <id>https://sh.kgdt.work/post/xiu-dao-zhe-ta/</id>
@@ -39,55 +99,5 @@
         <link href="https://sh.kgdt.work/post/long-hua-ta/">
         </link>
         <updated>2020-08-03T05:44:42.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[韩塔]]></title>
-        <id>https://sh.kgdt.work/post/han-ta/</id>
-        <link href="https://sh.kgdt.work/post/han-ta/">
-        </link>
-        <updated>2020-08-03T05:38:42.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[当湖书院]]></title>
-        <id>https://sh.kgdt.work/post/dang-hu-shu-yuan/</id>
-        <link href="https://sh.kgdt.work/post/dang-hu-shu-yuan/">
-        </link>
-        <updated>2020-08-03T05:36:07.000Z</updated>
-        <summary type="html"><![CDATA[<p>当湖书院座落于嘉定孔庙建筑群东首,是上海地区现存<strong>最完整的清代书院建筑</strong>。当湖书院初名兴文书院,<strong>雍正初年创建</strong>。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>当湖书院座落于嘉定孔庙建筑群东首,是上海地区现存<strong>最完整的清代书院建筑</strong>。当湖书院初名兴文书院,<strong>雍正初年创建</strong>。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[古松园【金山区亭林镇复兴东路106号(近豆市街)】]]></title>
-        <id>https://sh.kgdt.work/post/gu-song-yuan-jin-shan-qu-ting-lin-zhen-fu-xing-dong-lu-106-hao-jin-dou-shi-jie/</id>
-        <link href="https://sh.kgdt.work/post/gu-song-yuan-jin-shan-qu-ting-lin-zhen-fu-xing-dong-lu-106-hao-jin-dou-shi-jie/">
-        </link>
-        <updated>2020-08-03T05:34:35.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[金山三岛]]></title>
-        <id>https://sh.kgdt.work/post/jin-shan-san-dao/</id>
-        <link href="https://sh.kgdt.work/post/jin-shan-san-dao/">
-        </link>
-        <updated>2020-08-03T05:31:35.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[曲水园【青浦区公园路612号】]]></title>
-        <id>https://sh.kgdt.work/post/qu-shui-yuan-qing-pu-qu-gong-yuan-lu-612-hao/</id>
-        <link href="https://sh.kgdt.work/post/qu-shui-yuan-qing-pu-qu-gong-yuan-lu-612-hao/">
-        </link>
-        <updated>2020-08-03T05:29:07.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[小昆山]]></title>
-        <id>https://sh.kgdt.work/post/xiao-kun-shan/</id>
-        <link href="https://sh.kgdt.work/post/xiao-kun-shan/">
-        </link>
-        <updated>2020-08-01T14:08:40.000Z</updated>
-        <summary type="html"><![CDATA[<p>小昆山高55米，山地面积500亩，地处九峰最南端，有南北两峰，南高北低。晋代著名文学家陆机的《昆山》一诗中有“仿佛谷水阳，婉娈昆山阴”之句，可见昆山之名由来已久。后人因山名与江苏昆山之名重复，故名之日“小昆山”。景区内有九峰禅寺、二陆草堂及读书台、摩崖石刻等景观。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>小昆山高55米，山地面积500亩，地处九峰最南端，有南北两峰，南高北低。晋代著名文学家陆机的《昆山》一诗中有“仿佛谷水阳，婉娈昆山阴”之句，可见昆山之名由来已久。后人因山名与江苏昆山之名重复，故名之日“小昆山”。景区内有九峰禅寺、二陆草堂及读书台、摩崖石刻等景观。</p>
-]]></content>
     </entry>
 </feed>
