@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sh.kgdt.work</id>
     <title>上海考古地图</title>
-    <updated>2020-08-04T05:28:29.669Z</updated>
+    <updated>2020-08-05T10:57:32.177Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sh.kgdt.work"/>
     <link rel="self" href="https://sh.kgdt.work/atom.xml"/>
@@ -13,91 +13,123 @@
     <icon>https://sh.kgdt.work/favicon.ico</icon>
     <rights>All rights reserved 2020, 上海考古地图</rights>
     <entry>
-        <title type="html"><![CDATA[云间第一桥]]></title>
-        <id>https://sh.kgdt.work/post/yun-jian-di-yi-qiao/</id>
-        <link href="https://sh.kgdt.work/post/yun-jian-di-yi-qiao/">
+        <title type="html"><![CDATA[朱家角]]></title>
+        <id>https://sh.kgdt.work/post/zhu-jia-jiao/</id>
+        <link href="https://sh.kgdt.work/post/zhu-jia-jiao/">
         </link>
-        <updated>2020-08-04T05:18:53.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[佘山天主教堂]]></title>
-        <id>https://sh.kgdt.work/post/she-shan-tian-zhu-jiao-tang/</id>
-        <link href="https://sh.kgdt.work/post/she-shan-tian-zhu-jiao-tang/">
-        </link>
-        <updated>2020-08-04T05:11:29.000Z</updated>
-        <summary type="html"><![CDATA[<p>座落在松江县西余山之巅,以山取名。清代同治元年(公元1863年)，上海天主教会开始在西余山购地建宇。1866 年8月,在山顶构筑了一座六角亭，因亭内供有圣母像,亦称“圣母亭”。</p>
+        <updated>2020-08-05T09:47:00.000Z</updated>
+        <summary type="html"><![CDATA[<center>
+    一角繁华淀水边，当年米业甲江南。 九条巷列前朝铺，五洞桥迎外埠帆。
+<center>
+    谁向北街撑纸伞，我从西井坐游船。课植园里田何在，欲看亭台先付钱。
 ]]></summary>
-        <content type="html"><![CDATA[<p>座落在松江县西余山之巅,以山取名。清代同治元年(公元1863年)，上海天主教会开始在西余山购地建宇。1866 年8月,在山顶构筑了一座六角亭，因亭内供有圣母像,亦称“圣母亭”。</p>
+        <content type="html"><![CDATA[<center>
+    一角繁华淀水边，当年米业甲江南。 九条巷列前朝铺，五洞桥迎外埠帆。
+<center>
+    谁向北街撑纸伞，我从西井坐游船。课植园里田何在，欲看亭台先付钱。
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[梵王宫]]></title>
-        <id>https://sh.kgdt.work/post/fan-wang-gong/</id>
-        <link href="https://sh.kgdt.work/post/fan-wang-gong/">
+        <title type="html"><![CDATA[召稼楼]]></title>
+        <id>https://sh.kgdt.work/post/zhao-jia-lou/</id>
+        <link href="https://sh.kgdt.work/post/zhao-jia-lou/">
         </link>
-        <updated>2020-08-04T05:09:22.000Z</updated>
-        <summary type="html"><![CDATA[<p>罗店梵王宫，位于宝山县罗店乡东部河畔。是上海市郊规模较大的一座古庙。<br>
-梵王宫始建于明朝<strong>正德年间</strong>,迄今已有400多年的历史。初建时是一家姓唐的<strong>私人别墅</strong>。唐氏供佛象于中厅,又供奉道教之神于<strong>真武阁</strong>,并悬挂其先人唐月轩的遗象于阁内。</p>
+        <updated>2020-08-05T09:45:37.000Z</updated>
+        <summary type="html"><![CDATA[<p>位于闵行区浦江镇的召稼楼古镇，源起于元朝初期，横跨元明清三个朝代，现面积达150亩之广。该镇现散落着不少清代建筑，目前规模较大、保存较完整的有“礼耕堂&quot;、“梅园”等。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>罗店梵王宫，位于宝山县罗店乡东部河畔。是上海市郊规模较大的一座古庙。<br>
-梵王宫始建于明朝<strong>正德年间</strong>,迄今已有400多年的历史。初建时是一家姓唐的<strong>私人别墅</strong>。唐氏供佛象于中厅,又供奉道教之神于<strong>真武阁</strong>,并悬挂其先人唐月轩的遗象于阁内。</p>
+        <content type="html"><![CDATA[<p>位于闵行区浦江镇的召稼楼古镇，源起于元朝初期，横跨元明清三个朝代，现面积达150亩之广。该镇现散落着不少清代建筑，目前规模较大、保存较完整的有“礼耕堂&quot;、“梅园”等。</p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[关王庙]]></title>
-        <id>https://sh.kgdt.work/post/guan-wang-miao/</id>
-        <link href="https://sh.kgdt.work/post/guan-wang-miao/">
+        <title type="html"><![CDATA[七宝镇]]></title>
+        <id>https://sh.kgdt.work/post/qi-bao-zhen/</id>
+        <link href="https://sh.kgdt.work/post/qi-bao-zhen/">
         </link>
-        <updated>2020-08-04T05:04:44.000Z</updated>
-        <summary type="html"><![CDATA[<p>关王庙,位于风景秀丽的淀山湖畔,明崇祯13年(公元1640年)建造,因祭祀关羽,而得名。</p>
+        <updated>2020-08-05T09:41:47.000Z</updated>
+        <summary type="html"><![CDATA[<p>古镇七宝，与周庄、西塘、朱家角一样，是江浙沪城市人节假日休闲的又一选择。地理位置优越，游玩花销低廉，人文景观众多,全国土特产、名优小吃集中,各种特色商品琳琅满目。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>关王庙,位于风景秀丽的淀山湖畔,明崇祯13年(公元1640年)建造,因祭祀关羽,而得名。</p>
+        <content type="html"><![CDATA[<p>古镇七宝，与周庄、西塘、朱家角一样，是江浙沪城市人节假日休闲的又一选择。地理位置优越，游玩花销低廉，人文景观众多,全国土特产、名优小吃集中,各种特色商品琳琅满目。</p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[奉贤月城【奉贤南桥镇十字街口北】]]></title>
-        <id>https://sh.kgdt.work/post/feng-xian-yue-cheng-feng-xian-nan-qiao-zhen-shi-zi-jie-kou-bei/</id>
-        <link href="https://sh.kgdt.work/post/feng-xian-yue-cheng-feng-xian-nan-qiao-zhen-shi-zi-jie-kou-bei/">
+        <title type="html"><![CDATA[南翔]]></title>
+        <id>https://sh.kgdt.work/post/nan-xiang/</id>
+        <link href="https://sh.kgdt.work/post/nan-xiang/">
         </link>
-        <updated>2020-08-04T05:01:58.000Z</updated>
-        <summary type="html"><![CDATA[<p>穿过奉贤县南桥镇十字街口,往北而行,只见一座半月形的古城安然地座落在镇之北隅,跨街而立,气势非凡,这就是残留至今的奉贤古月城。</p>
+        <updated>2020-08-05T09:40:20.000Z</updated>
+        <summary type="html"><![CDATA[<p>​    白鹤南翔事已淹，老街双塔证从前。</p>
+<p>​    寺因久远多香客，巷过狭长少画船。</p>
+<p>​    现代生活真很好，中华传统确难堪。</p>
+<p>​    赏梅幸有猗园在，红映亭台绿映轩。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>穿过奉贤县南桥镇十字街口,往北而行,只见一座半月形的古城安然地座落在镇之北隅,跨街而立,气势非凡,这就是残留至今的奉贤古月城。</p>
+        <content type="html"><![CDATA[<p>​    白鹤南翔事已淹，老街双塔证从前。</p>
+<p>​    寺因久远多香客，巷过狭长少画船。</p>
+<p>​    现代生活真很好，中华传统确难堪。</p>
+<p>​    赏梅幸有猗园在，红映亭台绿映轩。</p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[川沙古城墙【川沙县城厢镇小学的东南角】]]></title>
-        <id>https://sh.kgdt.work/post/chuan-sha-gu-cheng-qiang-chuan-sha-xian-cheng-xiang-zhen-xiao-xue-de-dong-nan-jiao/</id>
-        <link href="https://sh.kgdt.work/post/chuan-sha-gu-cheng-qiang-chuan-sha-xian-cheng-xiang-zhen-xiao-xue-de-dong-nan-jiao/">
+        <title type="html"><![CDATA[娄塘镇]]></title>
+        <id>https://sh.kgdt.work/post/lou-tang-zhen/</id>
+        <link href="https://sh.kgdt.work/post/lou-tang-zhen/">
         </link>
-        <updated>2020-08-04T04:59:10.000Z</updated>
+        <updated>2020-08-05T09:38:48.000Z</updated>
     </entry>
     <entry>
-        <title type="html"><![CDATA[秀道者塔]]></title>
-        <id>https://sh.kgdt.work/post/xiu-dao-zhe-ta/</id>
-        <link href="https://sh.kgdt.work/post/xiu-dao-zhe-ta/">
+        <title type="html"><![CDATA[练塘]]></title>
+        <id>https://sh.kgdt.work/post/lian-tang/</id>
+        <link href="https://sh.kgdt.work/post/lian-tang/">
         </link>
-        <updated>2020-08-03T05:51:56.000Z</updated>
+        <updated>2020-08-05T09:38:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>练塘镇历史悠久，民风淳朴。练塘古镇没有朱家角镇的喧闹，石板街上的老房子，既不商铺遍地开花，也不重门深锁，居民完全保持着一种悠然自得的原生态。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>练塘镇历史悠久，民风淳朴。练塘古镇没有朱家角镇的喧闹，石板街上的老房子，既不商铺遍地开花，也不重门深锁，居民完全保持着一种悠然自得的原生态。</p>
+]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[万寿塔]]></title>
-        <id>https://sh.kgdt.work/post/wan-shou-ta/</id>
-        <link href="https://sh.kgdt.work/post/wan-shou-ta/">
+        <title type="html"><![CDATA[嘉定州桥]]></title>
+        <id>https://sh.kgdt.work/post/jia-ding-zhou-qiao/</id>
+        <link href="https://sh.kgdt.work/post/jia-ding-zhou-qiao/">
         </link>
-        <updated>2020-08-03T05:48:41.000Z</updated>
+        <updated>2020-08-05T09:35:26.000Z</updated>
+        <summary type="html"><![CDATA[<p>嘉定州桥景区是国家4A级旅游景区，坐落于中国历史文化名镇——嘉定古镇的中心，是古镇<strong>最繁华、最热闹的地区</strong>，为嘉定人文、特产的聚集地，也是展示嘉定历史文化的核心地区。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>嘉定州桥景区是国家4A级旅游景区，坐落于中国历史文化名镇——嘉定古镇的中心，是古镇<strong>最繁华、最热闹的地区</strong>，为嘉定人文、特产的聚集地，也是展示嘉定历史文化的核心地区。</p>
+]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[青龙寺塔]]></title>
-        <id>https://sh.kgdt.work/post/qing-long-si-ta/</id>
-        <link href="https://sh.kgdt.work/post/qing-long-si-ta/">
+        <title type="html"><![CDATA[高桥镇]]></title>
+        <id>https://sh.kgdt.work/post/gao-qiao-zhen/</id>
+        <link href="https://sh.kgdt.work/post/gao-qiao-zhen/">
         </link>
-        <updated>2020-08-03T05:46:52.000Z</updated>
+        <updated>2020-08-05T09:33:27.000Z</updated>
+        <summary type="html"><![CDATA[<p>​        百年老镇隐江滨，杜氏祠堂何处寻。<br>
+​        南北长街难复古，东西窄巷已翻新。<br>
+​        我非小店原租户，谁是豪门旧主人。<br>
+​        万寿桥边空伫望，濛濛细雨打黄昏。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>​        百年老镇隐江滨，杜氏祠堂何处寻。<br>
+​        南北长街难复古，东西窄巷已翻新。<br>
+​        我非小店原租户，谁是豪门旧主人。<br>
+​        万寿桥边空伫望，濛濛细雨打黄昏。</p>
+]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[龙华塔]]></title>
-        <id>https://sh.kgdt.work/post/long-hua-ta/</id>
-        <link href="https://sh.kgdt.work/post/long-hua-ta/">
+        <title type="html"><![CDATA[新场镇]]></title>
+        <id>https://sh.kgdt.work/post/xin-chang-zhen/</id>
+        <link href="https://sh.kgdt.work/post/xin-chang-zhen/">
         </link>
-        <updated>2020-08-03T05:44:42.000Z</updated>
+        <updated>2020-08-05T09:16:28.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[张堰镇]]></title>
+        <id>https://sh.kgdt.work/post/zhang-yan-zhen/</id>
+        <link href="https://sh.kgdt.work/post/zhang-yan-zhen/">
+        </link>
+        <updated>2020-08-05T09:15:52.000Z</updated>
+        <summary type="html"><![CDATA[<p>张堰镇位于金山区中部，老镇的建筑面貌和街巷格局基本于明清时期，张泾河、牛桥港穿城而过，两岸风貌具有江乡的典型特征。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>张堰镇位于金山区中部，老镇的建筑面貌和街巷格局基本于明清时期，张泾河、牛桥港穿城而过，两岸风貌具有江乡的典型特征。</p>
+]]></content>
     </entry>
 </feed>
