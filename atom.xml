@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sh.kgdt.work</id>
     <title>上海考古地图</title>
-    <updated>2020-08-20T09:44:39.948Z</updated>
+    <updated>2020-08-21T05:02:29.660Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sh.kgdt.work"/>
     <link rel="self" href="https://sh.kgdt.work/atom.xml"/>
@@ -12,6 +12,27 @@
     <logo>https://sh.kgdt.work/images/avatar.png</logo>
     <icon>https://sh.kgdt.work/favicon.ico</icon>
     <rights>All rights reserved 2020, 上海考古地图</rights>
+    <entry>
+        <title type="html"><![CDATA[真如]]></title>
+        <id>https://sh.kgdt.work/post/zhen-ru/</id>
+        <link href="https://sh.kgdt.work/post/zhen-ru/">
+        </link>
+        <updated>2020-08-21T04:54:13.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[罗店]]></title>
+        <id>https://sh.kgdt.work/post/luo-dian/</id>
+        <link href="https://sh.kgdt.work/post/luo-dian/">
+        </link>
+        <updated>2020-08-21T04:49:50.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[老宝山城遗址]]></title>
+        <id>https://sh.kgdt.work/post/lao-bao-shan-cheng-yi-zhi/</id>
+        <link href="https://sh.kgdt.work/post/lao-bao-shan-cheng-yi-zhi/">
+        </link>
+        <updated>2020-08-21T04:45:33.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[圆津禅院【朱家角镇泰安桥西堍漕河街193号】]]></title>
         <id>https://sh.kgdt.work/post/yuan-jin-shan-yuan-zhu-jia-jiao-zhen-tai-an-qiao-xi-tu-cao-he-jie-193-hao/</id>
@@ -32,16 +53,6 @@
         <link href="https://sh.kgdt.work/post/zhu-jia-jiao/">
         </link>
         <updated>2020-08-05T09:47:00.000Z</updated>
-        <summary type="html"><![CDATA[<center>
-    一角繁华淀水边，当年米业甲江南。 九条巷列前朝铺，五洞桥迎外埠帆。
-<center>
-    谁向北街撑纸伞，我从西井坐游船。课植园里田何在，欲看亭台先付钱。
-]]></summary>
-        <content type="html"><![CDATA[<center>
-    一角繁华淀水边，当年米业甲江南。 九条巷列前朝铺，五洞桥迎外埠帆。
-<center>
-    谁向北街撑纸伞，我从西井坐游船。课植园里田何在，欲看亭台先付钱。
-]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[召稼楼]]></title>
@@ -88,44 +99,5 @@
         <link href="https://sh.kgdt.work/post/lou-tang-zhen/">
         </link>
         <updated>2020-08-05T09:38:48.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[练塘]]></title>
-        <id>https://sh.kgdt.work/post/lian-tang/</id>
-        <link href="https://sh.kgdt.work/post/lian-tang/">
-        </link>
-        <updated>2020-08-05T09:38:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>练塘镇历史悠久，民风淳朴。练塘古镇没有朱家角镇的喧闹，石板街上的老房子，既不商铺遍地开花，也不重门深锁，居民完全保持着一种悠然自得的原生态。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>练塘镇历史悠久，民风淳朴。练塘古镇没有朱家角镇的喧闹，石板街上的老房子，既不商铺遍地开花，也不重门深锁，居民完全保持着一种悠然自得的原生态。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[嘉定州桥]]></title>
-        <id>https://sh.kgdt.work/post/jia-ding-zhou-qiao/</id>
-        <link href="https://sh.kgdt.work/post/jia-ding-zhou-qiao/">
-        </link>
-        <updated>2020-08-05T09:35:26.000Z</updated>
-        <summary type="html"><![CDATA[<p>嘉定州桥景区是国家4A级旅游景区，坐落于中国历史文化名镇——嘉定古镇的中心，是古镇<strong>最繁华、最热闹的地区</strong>，为嘉定人文、特产的聚集地，也是展示嘉定历史文化的核心地区。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>嘉定州桥景区是国家4A级旅游景区，坐落于中国历史文化名镇——嘉定古镇的中心，是古镇<strong>最繁华、最热闹的地区</strong>，为嘉定人文、特产的聚集地，也是展示嘉定历史文化的核心地区。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[高桥镇]]></title>
-        <id>https://sh.kgdt.work/post/gao-qiao-zhen/</id>
-        <link href="https://sh.kgdt.work/post/gao-qiao-zhen/">
-        </link>
-        <updated>2020-08-05T09:33:27.000Z</updated>
-        <summary type="html"><![CDATA[<p>​        百年老镇隐江滨，杜氏祠堂何处寻。<br>
-​        南北长街难复古，东西窄巷已翻新。<br>
-​        我非小店原租户，谁是豪门旧主人。<br>
-​        万寿桥边空伫望，濛濛细雨打黄昏。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>​        百年老镇隐江滨，杜氏祠堂何处寻。<br>
-​        南北长街难复古，东西窄巷已翻新。<br>
-​        我非小店原租户，谁是豪门旧主人。<br>
-​        万寿桥边空伫望，濛濛细雨打黄昏。</p>
-]]></content>
     </entry>
 </feed>

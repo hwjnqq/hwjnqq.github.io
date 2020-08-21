@@ -10,7 +10,7 @@
 ——上海文旅融合线路优化设计研究
 ">
 <meta name="theme-color" content="#000">
-<title>青龙寺塔 | 上海考古地图</title>
+<title>老宝山城遗址 | 上海考古地图</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1597986119241">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -50,8 +50,8 @@
 </script>
 
 
-  <meta name="description" content="青龙寺塔" />
-  <meta name="keywords" content="上海古塔" />
+  <meta name="description" content="老宝山城遗址" />
+  <meta name="keywords" content="明代" />
 </head>
 
 <body>
@@ -215,7 +215,8 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            
+            <div class="post-side-meta" id="post_side_meta">
+              
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -269,6 +270,198 @@
   </div>
 
 </div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto"
+    id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%AE%9D%E5%B1%B1%E7%9A%84%E7%94%B1%E6%9D%A5">宝山的由来</a></li>
+<li><a href="#%E5%8E%86%E5%8F%B2%E8%A7%81%E8%AF%81">历史见证</a><br>
+*<br>
+*</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
+  let active = 'active-show', activeClass = 'active-current';
+  let tocWrapper = document.querySelector('#toc_wrapper');
+  let tocContent = tocWrapper.children[0];
+  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
+
+  function addTocNumber(elem, deep) {
+    if (!elem) {
+      return;
+    }
+    let prop = elem.__proto__;
+
+    if (prop === HTMLUListElement.prototype) {
+      for (let i = 0; i < elem.children.length; i++) {
+        addTocNumber(elem.children[i], deep + (i + 1) + '.');
+      }
+    } else if (prop === HTMLLIElement.prototype) {
+      // 保存li元素
+      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+        lList.push(elem);
+      }
+      for (let i = 0; i < elem.children.length; i++) {
+        let cur = elem.children[i];
+        if (cur.__proto__ === HTMLAnchorElement.prototype) {
+          if (autoNumber) {
+            cur.text = deep + ' ' + cur.text;
+          }
+        } else if (cur.__proto__ === HTMLUListElement.prototype) {
+          addTocNumber(cur, deep);
+        }
+      }
+    }
+  }
+
+  function removeParentActiveClass() {
+    let parents = tocContent.querySelectorAll('.' + active)
+    parents.forEach(function (elem) {
+      elem.classList.remove(active);
+    });
+  }
+
+  function addActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.add(activeClass);
+    }
+  }
+
+  function removeActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.remove(activeClass);
+    }
+  }
+
+  function addActiveLiElemment(elem, parent) {
+    if (!elem || elem === parent) {
+      return;
+    } else {
+      if (elem.__proto__ === HTMLLIElement.prototype) {
+        elem.classList.add(active);
+      }
+      addActiveLiElemment(elem.parentElement, parent);
+    }
+  }
+
+  function showToc() {
+    if (tocWrapper) {
+      postBody = document.querySelector('#post_body');
+      for (let i = 0; i < postBody.children.length; i++) {
+        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+          hList.push(postBody.children[i]);
+        }
+      }
+      if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+      } else if (tocWrapper.classList.contains('no_compress')) {
+        tocContent.classList.add('expanded');
+      } else {
+        if (hList.length > 10) {
+          active = 'active-hidden'
+          tocContent.classList.add('closed');
+        } else {
+          tocContent.classList.add('expanded');
+        }
+      }
+    }
+  }
+
+  (function () {
+    // 处理不是从#一级标题开始目录
+    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+      let con = tocContent.children[0].children[0];
+      tocContent.innerHTML = con.innerHTML;
+    }
+    let markdownItTOC = document.querySelector('.markdownIt-TOC');
+    let innerHeight = window.innerHeight;
+    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
+    addTocNumber(tocContent, '');
+  })();
+
+  document.addEventListener('scroll', function (e) {
+    if (lList.length <= 0) {
+      return;
+    }
+    let scrollTop = document.scrollingElement.scrollTop + 10;
+    let dir;
+
+    if (lastTop - scrollTop > 0) {
+      dir = 'up';
+    } else {
+      dir = 'down';
+    }
+
+    lastTop = scrollTop;
+    if (scrollTop <= 0) {
+      if (lastIndex >= 0 && lastIndex < hList.length) {
+        lList[lastIndex].classList.remove(activeClass);
+      }
+      return;
+    }
+
+    let current = 0, hasFind = false;
+    for (let i = 0; i < hList.length; i++) {
+      if (hList[i].offsetTop > scrollTop) {
+        current = i;
+        hasFind = true;
+        break;
+      }
+    }
+    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+      current = hList.length - 1;
+    } else {
+      current--;
+    }
+    if (dir === 'down') {
+      if (current > lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex)
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    } else {
+      if (current < lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex);
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    }
+  });
+
+
+  window.addEventListener('load', function () {
+    showToc();
+    document.querySelector('#sidebar').style = 'display: block;';
+    tocWrapper.classList.add('toc-active');
+    setTimeout(function () {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
+  })
+
+</script>
+            </div>
           
         
       </div>
@@ -356,8 +549,8 @@
           <div class="section bg-color post post-page">
             <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://sh.kgdt.work/post/qing-long-si-ta/">
-      青龙寺塔
+    <a class="post-title-link" href="https://sh.kgdt.work/post/lao-bao-shan-cheng-yi-zhi/">
+      老宝山城遗址
     </a>
   </h1>
   <div class="post-meta">
@@ -365,7 +558,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2020-08-03 13:46:52">2020-08-03</span>
+      <span class="publish-time" data-t="2020-08-21 12:45:33">2020-08-21</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -374,8 +567,8 @@
       <span class="pc-show language" data-lan="category-in">分类于</span>
       
       
-      <a href="https://sh.kgdt.work/tag/G7HVjKTbe/">
-        <span>上海古塔</span>
+      <a href="https://sh.kgdt.work/tag/ikNYuBcJt/">
+        <span>明代</span>
       </a>
       
       
@@ -384,17 +577,17 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>1<span class="language" data-lan="minute">分钟</span></span>
+      <span>5<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>207<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>1263<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/post/qing-long-si-ta/" data-flag-title="青龙寺塔" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/lao-bao-shan-cheng-yi-zhi/" data-flag-title="老宝山城遗址" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -403,9 +596,36 @@
   </div>
 </section>
             <div class="post-body next-md-body" id="post_body">
-              <p>青龙寺塔位于青浦县白鹤乡,距青浦县城13公里。塔原建在青龙寺内，寺建于唐天宝2年(公元743年)。青龙寺初名报德寺,宋时更名隆福寺,康熙赐名“寺云禅寺”。占地4公顷,建筑雄伟,除大雄宝殿、地藏殿、韦驮殿以外,有禅堂、斋堂、揖秀堂、方丈室、两庶、澄怀堂等建筑,过去是钟鼓之声不绝,梵呗之声达旦,有“佛角为天下之雄”之誉。现<strong>寺毁塔存</strong>。<br>
-青龙塔又名青龙雁塔,七级八面，砖木结构，初建于唐长庆年间(公元821年)宋、元、明各朝相继维修,自清以来300多年失修。因此，楼梯尽毁,腰檐无存,塔身倾斜达14度。现在已修建护塔围墙。</p>
-<img src="https://i.loli.net/2020/08/03/xkZopbCHuyOW8Nr.jpg" alt="img" style="zoom:67%;" />
+              <h2 id="宝山的由来">宝山的由来</h2>
+<p>永乐皇帝在准备迁都北京的时候，每年由南向北运输的物资激增，因而从永乐元年(1403年)开始，用海运与河运并柴的办法，以努力满足朝延日益增长的需要。但当时运河尚有几段淤塞不通，还须中转陆运。海运仅靠刘家港(今浏河)一个港口，也感觉非常紧张。</p>
+<p>水乐二年，吴淞江经过夏原吉的治理，已经和黄浦江沟通，吴淞口已变为黄浦江口，习惯称这里为吴淞口。经过疏浚，这条江的航运能力大大加强，为减轻刘家港的压力，一部分粮船开始从吴淞口起运。</p>
+<p>永乐十年，陈瑄到刘家河督办海运事，亲睹附近地区没有大山、凭高屿辨别方向，遇到天晦夜暗、长风巨浪，常常会给往来的船舶进出港口带来很大危险和困难，遂上奏称:“嘉定濒海地，江流冲会。海舟停泊于此，无高山大陵可依。请于青浦筑土山，方百丈，高三十余丈，立堠表识。”这里的“青浦”，即现在浦东新区高桥镇左近。</p>
+<p>永乐皇帝不久便予敕准，陈瑄便调集士兵，开始了在嘉定县青浦寨东北15里许堆筑土山和建造烽堠。是年五月,大功告成，士兵们用泥土堆成的山丘围百丈，高三十余丈，上建烽堠，白天燃烟，夜间点火，作为航海的标志。</p>
+<p>此后，当地官兵在土山四周遍植奇花异草、茂林修竹。土山山顶平旷，官兵们又在这里建造了龙王庙、观音殿。每逢进香时节，土山上游人如织，热闹非凡。永乐皇帝闻报，龙心大悦，遂亲笔撰写《宝山之碑》碑文，并采纳民间传说，命名为**“宝山”**。碑文赞道:“宝山之名万古存，勒石悠久同乾坤。”由于这里地处江海交汇要冲，“宝山”的能见度可达百里之远，大大便利了往来航船，促进了中外贸易的兴盛<br>
+郑和下西洋船队的往返，也多取此“宝山”烽堠为航标。从此，“宝山”随着海运事业的发展而声名远播。</p>
+<p>永乐十三年，运河南北全线疏浚通航，朝廷决定终止海运，而把运河作为漕运的主要渠道。到了嘉靖年间，倭寇在我东南沿海地区侵扰频繁。嘉靖三十四年(15555 年),倭寇把宝山作为巢穴，朝廷调集大量兵力围攻，却久攻不克。后来，嘉定著名的民兵首领<strong>严大邦</strong>从山后潜登，终于消灭了这批顽敌。</p>
+<p>此后，朝廷明令海禁，并三令五申“片板不得入海”，“宝山”的海运航标作用随之功成而退。</p>
+<p>为加强海防，明万历四年(1576年)，朝廷派兵<mark>在“宝山”西麓筑城，作为军事要塞。</mark> 经过2年时间，一座周长495丈，高2.62丈的 “宝山城”终于建成。这是<mark>历史上的第一个“宝山城”</mark>，亦称明代“宝山堡城”。城设四门，皆有城楼。防御设施敌台、窝铺、吊桥、护城壕，一应俱备。驻军2000人，设立宝山守御千户所，隶太仓卫。</p>
+<p>万历十年(1582年)七月十三日夜，大雨滴沱，狂风大作，海潮汹涌，几十里江堤冲毁殆尽。历时170年的“宝山”坍没于滔滔江水之中。</p>
+<p>清雍正二年(1724年) ，朝廷决定在嘉定县东部建立新县。与老县嘉定同城而治，以原有“宝山”之名特旨赐名为“宝山”县。次年分治，置县治于吴淞所城，即1980年以前的城厢镇。</p>
+<p>“宝山” 这一名称具有600年历史的名称，历尽沧桑。宝山建县，至今也已有280多年的历史。</p>
+<hr>
+<h2 id="历史见证">历史见证</h2>
+<p><strong>永乐大帝的《宝山之碑》</strong>，碑高160.5厘米，碑头高47厘米，宽94厘米，厚30厘米，两旁雕有蟠龙，中间有篆书“ 御制”二字，现存浦东高桥中学内的“明御碑亭”。</p>
+<img src="https://i.loli.net/2020/08/20/uYeCW4SiLTMFwOy.png" alt="image-20200820224917947" style="zoom: 50%;" />
+<p>“老宝山城遗址”现为“上海市古文化遗址保护地点”，位于在浦东新区高桥镇的东北处，目前还遗留下一 方以大青砖砌成的城墙的残存。</p>
+<img src="https://i.loli.net/2020/08/20/eI4q5w6v8ZDXFsT.png" alt="image-20200820225353246" style="zoom:67%;" />
+<img src="https://i.loli.net/2020/08/20/mc9wng2SOWoRMfF.png" alt="image-20200820225204872" style="zoom:67%;" />
+<p>为了便于宝山人民铭记历史，2005年4月宝山区人民政府将“宝山之碑”复制安置在临江公园“御碑亭”内。</p>
+<img src="https://i.loli.net/2020/08/20/dtlrsH2k3zUeuIK.png" alt="image-20200820225446958" style="zoom:67%;" />
+<p>今年7月我采访了一位业余从事公众考古的诗人，他和我说起老宝山时谈起了自己曾创作的一首小诗：</p>
+<p>五百年前此筑城，两千户所抗倭兵。</p>
+<p>地洼曾被江潮毁，国弱犹经炮火平。</p>
+<p>淞沪当时何惨烈，池隍今日尚凄清。</p>
+<p>世仇未泯焉成友，狮子林中风正腥。</p>
+<h3 id=""></h3>
+<h3 id="-2"></h3>
+
             </div>
             
               <div class="reward-btn">
@@ -421,7 +641,7 @@
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://sh.kgdt.work/post/qing-long-si-ta/" title="青龙寺塔">https://sh.kgdt.work/post/qing-long-si-ta/</a>
+      <a href="https://sh.kgdt.work/post/lao-bao-shan-cheng-yi-zhi/" title="老宝山城遗址">https://sh.kgdt.work/post/lao-bao-shan-cheng-yi-zhi/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -430,21 +650,21 @@
   </ul>
   <div class="tags">
     
-      <a href="https://sh.kgdt.work/tag/G7HVjKTbe/"># 上海古塔</a>
+      <a href="https://sh.kgdt.work/tag/ikNYuBcJt/"># 明代</a>
     
   </div>
   <div class="nav">
     <div class="nav-prev">
       
         <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="万寿塔" href="https://sh.kgdt.work/post/wan-shou-ta/">万寿塔</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="万寿塔" href="https://sh.kgdt.work/post/wan-shou-ta/">上一篇</a>
+        <a class="nav-pc-next" title="罗店" href="https://sh.kgdt.work/post/luo-dian/">罗店</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="罗店" href="https://sh.kgdt.work/post/luo-dian/">上一篇</a>
       
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="龙华塔" href="https://sh.kgdt.work/post/long-hua-ta/">龙华塔</a>
-        <a class="nav-mobile-next" title="龙华塔" href="https://sh.kgdt.work/post/long-hua-ta/">下一篇</a>
+        <a class="nav-pc-next" title="圆津禅院【朱家角镇泰安桥西堍漕河街193号】" href="https://sh.kgdt.work/post/yuan-jin-shan-yuan-zhu-jia-jiao-zhen-tai-an-qiao-xi-tu-cao-he-jie-193-hao/">圆津禅院【朱家角镇泰安桥西堍漕河街193号】</a>
+        <a class="nav-mobile-next" title="圆津禅院【朱家角镇泰安桥西堍漕河街193号】" href="https://sh.kgdt.work/post/yuan-jin-shan-yuan-zhu-jia-jiao-zhen-tai-an-qiao-xi-tu-cao-he-jie-193-hao/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>

@@ -10,7 +10,7 @@
 ——上海文旅融合线路优化设计研究
 ">
 <meta name="theme-color" content="#000">
-<title>青龙寺塔 | 上海考古地图</title>
+<title>真如 | 上海考古地图</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1597986119241">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -50,8 +50,8 @@
 </script>
 
 
-  <meta name="description" content="青龙寺塔" />
-  <meta name="keywords" content="上海古塔" />
+  <meta name="description" content="真如" />
+  <meta name="keywords" content="上海古镇,明代" />
 </head>
 
 <body>
@@ -215,7 +215,8 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            
+            <div class="post-side-meta" id="post_side_meta">
+              
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -269,6 +270,196 @@
   </div>
 
 </div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto"
+    id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%85%B0%E6%BA%AA%E8%B7%AF%E4%BB%BF%E5%8F%A4%E5%95%86%E4%B8%9A%E8%A1%97">兰溪路仿古商业街</a></li>
+<li><a href="#%E6%B0%91%E4%BF%97%E6%96%87%E8%89%BA">民俗文艺</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
+  let active = 'active-show', activeClass = 'active-current';
+  let tocWrapper = document.querySelector('#toc_wrapper');
+  let tocContent = tocWrapper.children[0];
+  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
+
+  function addTocNumber(elem, deep) {
+    if (!elem) {
+      return;
+    }
+    let prop = elem.__proto__;
+
+    if (prop === HTMLUListElement.prototype) {
+      for (let i = 0; i < elem.children.length; i++) {
+        addTocNumber(elem.children[i], deep + (i + 1) + '.');
+      }
+    } else if (prop === HTMLLIElement.prototype) {
+      // 保存li元素
+      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+        lList.push(elem);
+      }
+      for (let i = 0; i < elem.children.length; i++) {
+        let cur = elem.children[i];
+        if (cur.__proto__ === HTMLAnchorElement.prototype) {
+          if (autoNumber) {
+            cur.text = deep + ' ' + cur.text;
+          }
+        } else if (cur.__proto__ === HTMLUListElement.prototype) {
+          addTocNumber(cur, deep);
+        }
+      }
+    }
+  }
+
+  function removeParentActiveClass() {
+    let parents = tocContent.querySelectorAll('.' + active)
+    parents.forEach(function (elem) {
+      elem.classList.remove(active);
+    });
+  }
+
+  function addActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.add(activeClass);
+    }
+  }
+
+  function removeActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.remove(activeClass);
+    }
+  }
+
+  function addActiveLiElemment(elem, parent) {
+    if (!elem || elem === parent) {
+      return;
+    } else {
+      if (elem.__proto__ === HTMLLIElement.prototype) {
+        elem.classList.add(active);
+      }
+      addActiveLiElemment(elem.parentElement, parent);
+    }
+  }
+
+  function showToc() {
+    if (tocWrapper) {
+      postBody = document.querySelector('#post_body');
+      for (let i = 0; i < postBody.children.length; i++) {
+        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+          hList.push(postBody.children[i]);
+        }
+      }
+      if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+      } else if (tocWrapper.classList.contains('no_compress')) {
+        tocContent.classList.add('expanded');
+      } else {
+        if (hList.length > 10) {
+          active = 'active-hidden'
+          tocContent.classList.add('closed');
+        } else {
+          tocContent.classList.add('expanded');
+        }
+      }
+    }
+  }
+
+  (function () {
+    // 处理不是从#一级标题开始目录
+    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+      let con = tocContent.children[0].children[0];
+      tocContent.innerHTML = con.innerHTML;
+    }
+    let markdownItTOC = document.querySelector('.markdownIt-TOC');
+    let innerHeight = window.innerHeight;
+    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
+    addTocNumber(tocContent, '');
+  })();
+
+  document.addEventListener('scroll', function (e) {
+    if (lList.length <= 0) {
+      return;
+    }
+    let scrollTop = document.scrollingElement.scrollTop + 10;
+    let dir;
+
+    if (lastTop - scrollTop > 0) {
+      dir = 'up';
+    } else {
+      dir = 'down';
+    }
+
+    lastTop = scrollTop;
+    if (scrollTop <= 0) {
+      if (lastIndex >= 0 && lastIndex < hList.length) {
+        lList[lastIndex].classList.remove(activeClass);
+      }
+      return;
+    }
+
+    let current = 0, hasFind = false;
+    for (let i = 0; i < hList.length; i++) {
+      if (hList[i].offsetTop > scrollTop) {
+        current = i;
+        hasFind = true;
+        break;
+      }
+    }
+    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+      current = hList.length - 1;
+    } else {
+      current--;
+    }
+    if (dir === 'down') {
+      if (current > lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex)
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    } else {
+      if (current < lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex);
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    }
+  });
+
+
+  window.addEventListener('load', function () {
+    showToc();
+    document.querySelector('#sidebar').style = 'display: block;';
+    tocWrapper.classList.add('toc-active');
+    setTimeout(function () {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
+  })
+
+</script>
+            </div>
           
         
       </div>
@@ -356,8 +547,8 @@
           <div class="section bg-color post post-page">
             <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://sh.kgdt.work/post/qing-long-si-ta/">
-      青龙寺塔
+    <a class="post-title-link" href="https://sh.kgdt.work/post/zhen-ru/">
+      真如
     </a>
   </h1>
   <div class="post-meta">
@@ -365,7 +556,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2020-08-03 13:46:52">2020-08-03</span>
+      <span class="publish-time" data-t="2020-08-21 12:54:13">2020-08-21</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -374,8 +565,14 @@
       <span class="pc-show language" data-lan="category-in">分类于</span>
       
       
-      <a href="https://sh.kgdt.work/tag/G7HVjKTbe/">
-        <span>上海古塔</span>
+      <a href="https://sh.kgdt.work/tag/kGN39XXIi/">
+        <span>上海古镇</span>
+      </a>、
+      
+      
+      
+      <a href="https://sh.kgdt.work/tag/ikNYuBcJt/">
+        <span>明代</span>
       </a>
       
       
@@ -384,17 +581,17 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>1<span class="language" data-lan="minute">分钟</span></span>
+      <span>2<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>207<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>511<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/post/qing-long-si-ta/" data-flag-title="青龙寺塔" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/zhen-ru/" data-flag-title="真如" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -403,9 +600,17 @@
   </div>
 </section>
             <div class="post-body next-md-body" id="post_body">
-              <p>青龙寺塔位于青浦县白鹤乡,距青浦县城13公里。塔原建在青龙寺内，寺建于唐天宝2年(公元743年)。青龙寺初名报德寺,宋时更名隆福寺,康熙赐名“寺云禅寺”。占地4公顷,建筑雄伟,除大雄宝殿、地藏殿、韦驮殿以外,有禅堂、斋堂、揖秀堂、方丈室、两庶、澄怀堂等建筑,过去是钟鼓之声不绝,梵呗之声达旦,有“佛角为天下之雄”之誉。现<strong>寺毁塔存</strong>。<br>
-青龙塔又名青龙雁塔,七级八面，砖木结构，初建于唐长庆年间(公元821年)宋、元、明各朝相继维修,自清以来300多年失修。因此，楼梯尽毁,腰檐无存,塔身倾斜达14度。现在已修建护塔围墙。</p>
-<img src="https://i.loli.net/2020/08/03/xkZopbCHuyOW8Nr.jpg" alt="img" style="zoom:67%;" />
+              <p>真如古镇的隶属和建制最早可以追溯到唐代武德四年(621年)，时称桃溪，隶属昆山县管辖。元代迁建真如寺，真如寺周边逐渐成为一个“编氓鳞比，商贾麇聚&quot;的商业重镇，缘寺发展，遂名真如。明万历年间称镇。</p>
+<p>真如地处交通要道，商业贸易历史悠久，是周边地区的物资集散地。<strong>布业、米业及蔬菜业</strong>， 曾是真如历史上占据重要地位的三大商业行类。</p>
+<p>改革开放后，古镇商业贸易发展迅速，形成了曹安路农副产品批发市场、利民水果批发市场、铜川路水产批发市场、曹杨路禽蛋市场等一批 专业市场群落，吸引市内外商人纷至沓来。</p>
+<h2 id="兰溪路仿古商业街">兰溪路仿古商业街</h2>
+<p>呈南北走向，按功能分为南北两段。南段入口处竖立着“真如古镇&quot;牌坊。街面铺青石方砖，两边排列明清风格的仿古建筑。商业街北段以休闲、娱乐。餐饮为主。</p>
+<h2 id="民俗文艺">民俗文艺</h2>
+<p>真如镇有丰富的民俗文化和民间文艺资源，主要有真如庙会、元宵灯会、江南丝竹、说书等，地方文献丰富，乾隆三十六年(1771年)的《真如里志》是上海地方文献中的珍本。</p>
+<p>真如庙会，始于元末明初。据《真如里志》记载，农历四月初八佛诞节，真如寺前悬挂灯笼，表演戏剧， 道路上挤满了到真如寺拜佛进香或者经商的乡民，路边摆满了货摊，人群熙熙攘攘。</p>
+<p>中国成立后，真如庙会在内容和形式上几经变化，直到今天，真如庙会以融购物，文化、娱乐于一体而远近闻名。</p>
+<p>1998年，真如镇成功举办“'98上海旅游节真如古镇文化庙会”,是真如历史上规格最高、内容最丰富的一次盛会。</p>
+<img src="https://i.loli.net/2020/08/21/Mnio7rJYj4hApad.jpg" alt="img" style="zoom:50%;" />
             </div>
             
               <div class="reward-btn">
@@ -421,7 +626,7 @@
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://sh.kgdt.work/post/qing-long-si-ta/" title="青龙寺塔">https://sh.kgdt.work/post/qing-long-si-ta/</a>
+      <a href="https://sh.kgdt.work/post/zhen-ru/" title="真如">https://sh.kgdt.work/post/zhen-ru/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -430,21 +635,19 @@
   </ul>
   <div class="tags">
     
-      <a href="https://sh.kgdt.work/tag/G7HVjKTbe/"># 上海古塔</a>
+      <a href="https://sh.kgdt.work/tag/kGN39XXIi/"># 上海古镇</a>
+    
+      <a href="https://sh.kgdt.work/tag/ikNYuBcJt/"># 明代</a>
     
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="万寿塔" href="https://sh.kgdt.work/post/wan-shou-ta/">万寿塔</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="万寿塔" href="https://sh.kgdt.work/post/wan-shou-ta/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="龙华塔" href="https://sh.kgdt.work/post/long-hua-ta/">龙华塔</a>
-        <a class="nav-mobile-next" title="龙华塔" href="https://sh.kgdt.work/post/long-hua-ta/">下一篇</a>
+        <a class="nav-pc-next" title="罗店" href="https://sh.kgdt.work/post/luo-dian/">罗店</a>
+        <a class="nav-mobile-next" title="罗店" href="https://sh.kgdt.work/post/luo-dian/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
