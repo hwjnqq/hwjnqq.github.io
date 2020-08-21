@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sh.kgdt.work</id>
     <title>上海考古地图</title>
-    <updated>2020-08-21T05:02:29.660Z</updated>
+    <updated>2020-08-21T13:53:35.840Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sh.kgdt.work"/>
     <link rel="self" href="https://sh.kgdt.work/atom.xml"/>
@@ -13,7 +13,14 @@
     <icon>https://sh.kgdt.work/favicon.ico</icon>
     <rights>All rights reserved 2020, 上海考古地图</rights>
     <entry>
-        <title type="html"><![CDATA[真如]]></title>
+        <title type="html"><![CDATA[真如寺]]></title>
+        <id>https://sh.kgdt.work/post/zhen-ru-si/</id>
+        <link href="https://sh.kgdt.work/post/zhen-ru-si/">
+        </link>
+        <updated>2020-08-21T13:46:25.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[真如古镇]]></title>
         <id>https://sh.kgdt.work/post/zhen-ru/</id>
         <link href="https://sh.kgdt.work/post/zhen-ru/">
         </link>
@@ -92,12 +99,5 @@
 <p>​    现代生活真很好，中华传统确难堪。</p>
 <p>​    赏梅幸有猗园在，红映亭台绿映轩。</p>
 ]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[娄塘镇]]></title>
-        <id>https://sh.kgdt.work/post/lou-tang-zhen/</id>
-        <link href="https://sh.kgdt.work/post/lou-tang-zhen/">
-        </link>
-        <updated>2020-08-05T09:38:48.000Z</updated>
     </entry>
 </feed>
