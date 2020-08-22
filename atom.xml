@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sh.kgdt.work</id>
     <title>上海考古地图</title>
-    <updated>2020-08-22T19:08:49.538Z</updated>
+    <updated>2020-08-22T19:12:32.952Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sh.kgdt.work"/>
     <link rel="self" href="https://sh.kgdt.work/atom.xml"/>
@@ -12,6 +12,17 @@
     <logo>https://sh.kgdt.work/images/avatar.png</logo>
     <icon>https://sh.kgdt.work/favicon.ico</icon>
     <rights>All rights reserved 2020, 上海考古地图</rights>
+    <entry>
+        <title type="html"><![CDATA[上海文庙]]></title>
+        <id>https://sh.kgdt.work/post/shang-hai-wen-miao/</id>
+        <link href="https://sh.kgdt.work/post/shang-hai-wen-miao/">
+        </link>
+        <updated>2020-08-22T19:11:12.000Z</updated>
+        <summary type="html"><![CDATA[<p>元至正二十八年（1291年）上海设县，3年后建文庙，是古代上海的最高学府。元代始建的上海文庙，位于学宫街( 今大东门聚奎街附近)，后四经迁徒。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>元至正二十八年（1291年）上海设县，3年后建文庙，是古代上海的最高学府。元代始建的上海文庙，位于学宫街( 今大东门聚奎街附近)，后四经迁徒。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[九峰]]></title>
         <id>https://sh.kgdt.work/post/jiu-feng/</id>
@@ -110,12 +121,5 @@
 ]]></summary>
         <content type="html"><![CDATA[<p>辰山,位于天马山东2.5公里许。辰山在**“诸山之东南，次于辰位”**故得名。传说曾有神仙居此,故又称“神山”。</p>
 ]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[葆素堂【松江中山西路150号】]]></title>
-        <id>https://sh.kgdt.work/post/bao-su-tang-song-jiang-zhong-shan-xi-lu-150-hao/</id>
-        <link href="https://sh.kgdt.work/post/bao-su-tang-song-jiang-zhong-shan-xi-lu-150-hao/">
-        </link>
-        <updated>2020-08-22T18:54:54.000Z</updated>
     </entry>
 </feed>
