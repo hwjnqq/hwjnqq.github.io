@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sh.kgdt.work</id>
     <title>上海考古地图</title>
-    <updated>2020-08-22T08:15:15.497Z</updated>
+    <updated>2020-08-22T10:19:56.806Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sh.kgdt.work"/>
     <link rel="self" href="https://sh.kgdt.work/atom.xml"/>
@@ -12,6 +12,75 @@
     <logo>https://sh.kgdt.work/images/avatar.png</logo>
     <icon>https://sh.kgdt.work/favicon.ico</icon>
     <rights>All rights reserved 2020, 上海考古地图</rights>
+    <entry>
+        <title type="html"><![CDATA[性觉寺【金山区枫湾路568号】]]></title>
+        <id>https://sh.kgdt.work/post/xing-jue-si-jin-shan-qu-feng-wan-lu-568-hao/</id>
+        <link href="https://sh.kgdt.work/post/xing-jue-si-jin-shan-qu-feng-wan-lu-568-hao/">
+        </link>
+        <updated>2020-08-22T10:18:18.000Z</updated>
+        <summary type="html"><![CDATA[<p>性觉寺始建于明万历年间(1573- 1620年)，初名月明庵，由法名性本的僧人主持所建。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>性觉寺始建于明万历年间(1573- 1620年)，初名月明庵，由法名性本的僧人主持所建。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[万寿寺]]></title>
+        <id>https://sh.kgdt.work/post/wan-shou-si/</id>
+        <link href="https://sh.kgdt.work/post/wan-shou-si/">
+        </link>
+        <updated>2020-08-22T10:16:05.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[招贤浜遗址]]></title>
+        <id>https://sh.kgdt.work/post/zhao-xian-bang-yi-zhi/</id>
+        <link href="https://sh.kgdt.work/post/zhao-xian-bang-yi-zhi/">
+        </link>
+        <updated>2020-08-22T10:14:45.000Z</updated>
+        <summary type="html"><![CDATA[<p>位于金山区亭林镇，发现于1973年。原名张堰口遗址，确认为新石器时代和商周时期文化遗后因遗址附近新开河招贤浜而更名招贤浜遗址，1984年 被公布为上海市文物保护地点。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>位于金山区亭林镇，发现于1973年。原名张堰口遗址，确认为新石器时代和商周时期文化遗后因遗址附近新开河招贤浜而更名招贤浜遗址，1984年 被公布为上海市文物保护地点。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[亭林遗址]]></title>
+        <id>https://sh.kgdt.work/post/ting-lin-yi-zhi/</id>
+        <link href="https://sh.kgdt.work/post/ting-lin-yi-zhi/">
+        </link>
+        <updated>2020-08-22T10:14:07.000Z</updated>
+        <summary type="html"><![CDATA[<p>亭林古文化遗址主要以良渚文化为主要遗存，标志碑立于上海市金山区亭林镇西、祝家港东岸的亭林公园内，以标志碑为中心、200米半径为保护范围。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>亭林古文化遗址主要以良渚文化为主要遗存，标志碑立于上海市金山区亭林镇西、祝家港东岸的亭林公园内，以标志碑为中心、200米半径为保护范围。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[戚家墩遗址]]></title>
+        <id>https://sh.kgdt.work/post/qi-jia-dun-yi-zhi/</id>
+        <link href="https://sh.kgdt.work/post/qi-jia-dun-yi-zhi/">
+        </link>
+        <updated>2020-08-22T10:13:28.000Z</updated>
+        <summary type="html"><![CDATA[<p>1935年发现的戚家墩古文化遗址，位于上海市金山区山阳镇戚家墩村(今石化临潮三村)，是上海地区最早发现的古文化遗址。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>1935年发现的戚家墩古文化遗址，位于上海市金山区山阳镇戚家墩村(今石化临潮三村)，是上海地区最早发现的古文化遗址。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[查山遗址]]></title>
+        <id>https://sh.kgdt.work/post/cha-shan-yi-zhi/</id>
+        <link href="https://sh.kgdt.work/post/cha-shan-yi-zhi/">
+        </link>
+        <updated>2020-08-22T10:12:42.000Z</updated>
+        <summary type="html"><![CDATA[<p>查山古文化遗址位于金山卫镇查山(松金公路东侧)山脚，是以马家浜文化、早期马桥类型印纹陶文化遗存为主的古文化遗址。保护范围为以标志碑作中心，南北长250米、东西宽60米，包括附近山坡和耕地。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>查山古文化遗址位于金山卫镇查山(松金公路东侧)山脚，是以马家浜文化、早期马桥类型印纹陶文化遗存为主的古文化遗址。保护范围为以标志碑作中心，南北长250米、东西宽60米，包括附近山坡和耕地。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[东林寺]]></title>
+        <id>https://sh.kgdt.work/post/dong-lin-si/</id>
+        <link href="https://sh.kgdt.work/post/dong-lin-si/">
+        </link>
+        <updated>2020-08-22T10:05:06.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[冈身[漕泾镇沙积村3组]]]></title>
         <id>https://sh.kgdt.work/post/gang-shen-cao-jing-zhen-sha-ji-cun-3-zu/</id>
@@ -32,62 +101,5 @@
         <link href="https://sh.kgdt.work/post/zhen-ru/">
         </link>
         <updated>2020-08-21T04:54:13.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[罗店]]></title>
-        <id>https://sh.kgdt.work/post/luo-dian/</id>
-        <link href="https://sh.kgdt.work/post/luo-dian/">
-        </link>
-        <updated>2020-08-21T04:49:50.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[老宝山城遗址]]></title>
-        <id>https://sh.kgdt.work/post/lao-bao-shan-cheng-yi-zhi/</id>
-        <link href="https://sh.kgdt.work/post/lao-bao-shan-cheng-yi-zhi/">
-        </link>
-        <updated>2020-08-21T04:45:33.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[圆津禅院【朱家角镇泰安桥西堍漕河街193号】]]></title>
-        <id>https://sh.kgdt.work/post/yuan-jin-shan-yuan-zhu-jia-jiao-zhen-tai-an-qiao-xi-tu-cao-he-jie-193-hao/</id>
-        <link href="https://sh.kgdt.work/post/yuan-jin-shan-yuan-zhu-jia-jiao-zhen-tai-an-qiao-xi-tu-cao-he-jie-193-hao/">
-        </link>
-        <updated>2020-08-20T09:41:18.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[颐浩禅寺（青浦区迎祥街12号）]]></title>
-        <id>https://sh.kgdt.work/post/yi-hao-shan-si-qing-pu-qu-ying-xiang-jie-12-hao/</id>
-        <link href="https://sh.kgdt.work/post/yi-hao-shan-si-qing-pu-qu-ying-xiang-jie-12-hao/">
-        </link>
-        <updated>2020-08-20T09:33:23.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[朱家角]]></title>
-        <id>https://sh.kgdt.work/post/zhu-jia-jiao/</id>
-        <link href="https://sh.kgdt.work/post/zhu-jia-jiao/">
-        </link>
-        <updated>2020-08-05T09:47:00.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[召稼楼]]></title>
-        <id>https://sh.kgdt.work/post/zhao-jia-lou/</id>
-        <link href="https://sh.kgdt.work/post/zhao-jia-lou/">
-        </link>
-        <updated>2020-08-05T09:45:37.000Z</updated>
-        <summary type="html"><![CDATA[<p>位于闵行区浦江镇的召稼楼古镇，源起于元朝初期，横跨元明清三个朝代，现面积达150亩之广。该镇现散落着不少清代建筑，目前规模较大、保存较完整的有“礼耕堂&quot;、“梅园”等。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>位于闵行区浦江镇的召稼楼古镇，源起于元朝初期，横跨元明清三个朝代，现面积达150亩之广。该镇现散落着不少清代建筑，目前规模较大、保存较完整的有“礼耕堂&quot;、“梅园”等。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[七宝镇]]></title>
-        <id>https://sh.kgdt.work/post/qi-bao-zhen/</id>
-        <link href="https://sh.kgdt.work/post/qi-bao-zhen/">
-        </link>
-        <updated>2020-08-05T09:41:47.000Z</updated>
-        <summary type="html"><![CDATA[<p>古镇七宝，与周庄、西塘、朱家角一样，是江浙沪城市人节假日休闲的又一选择。地理位置优越，游玩花销低廉，人文景观众多,全国土特产、名优小吃集中,各种特色商品琳琅满目。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>古镇七宝，与周庄、西塘、朱家角一样，是江浙沪城市人节假日休闲的又一选择。地理位置优越，游玩花销低廉，人文景观众多,全国土特产、名优小吃集中,各种特色商品琳琅满目。</p>
-]]></content>
     </entry>
 </feed>
