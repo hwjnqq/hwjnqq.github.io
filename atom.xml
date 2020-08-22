@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sh.kgdt.work</id>
     <title>上海考古地图</title>
-    <updated>2020-08-22T14:06:46.352Z</updated>
+    <updated>2020-08-22T14:24:33.141Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sh.kgdt.work"/>
     <link rel="self" href="https://sh.kgdt.work/atom.xml"/>
@@ -12,6 +12,13 @@
     <logo>https://sh.kgdt.work/images/avatar.png</logo>
     <icon>https://sh.kgdt.work/favicon.ico</icon>
     <rights>All rights reserved 2020, 上海考古地图</rights>
+    <entry>
+        <title type="html"><![CDATA[宝华寺]]></title>
+        <id>https://sh.kgdt.work/post/bao-hua-si/</id>
+        <link href="https://sh.kgdt.work/post/bao-hua-si/">
+        </link>
+        <updated>2020-08-22T14:19:27.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[致和桥]]></title>
         <id>https://sh.kgdt.work/post/zhi-he-qiao/</id>
@@ -94,12 +101,5 @@
         <link href="https://sh.kgdt.work/post/dong-lin-si/">
         </link>
         <updated>2020-08-22T10:05:06.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[冈身[漕泾镇沙积村3组]]]></title>
-        <id>https://sh.kgdt.work/post/gang-shen-cao-jing-zhen-sha-ji-cun-3-zu/</id>
-        <link href="https://sh.kgdt.work/post/gang-shen-cao-jing-zhen-sha-ji-cun-3-zu/">
-        </link>
-        <updated>2020-08-22T08:13:50.000Z</updated>
     </entry>
 </feed>
