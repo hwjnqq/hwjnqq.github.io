@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sh.kgdt.work</id>
     <title>上海考古地图</title>
-    <updated>2020-08-22T14:30:27.220Z</updated>
+    <updated>2020-08-22T19:08:49.538Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sh.kgdt.work"/>
     <link rel="self" href="https://sh.kgdt.work/atom.xml"/>
@@ -13,93 +13,109 @@
     <icon>https://sh.kgdt.work/favicon.ico</icon>
     <rights>All rights reserved 2020, 上海考古地图</rights>
     <entry>
-        <title type="html"><![CDATA[宝华寺]]></title>
-        <id>https://sh.kgdt.work/post/bao-hua-si/</id>
-        <link href="https://sh.kgdt.work/post/bao-hua-si/">
+        <title type="html"><![CDATA[九峰]]></title>
+        <id>https://sh.kgdt.work/post/jiu-feng/</id>
+        <link href="https://sh.kgdt.work/post/jiu-feng/">
         </link>
-        <updated>2020-08-22T14:19:27.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[致和桥]]></title>
-        <id>https://sh.kgdt.work/post/zhi-he-qiao/</id>
-        <link href="https://sh.kgdt.work/post/zhi-he-qiao/">
-        </link>
-        <updated>2020-08-22T14:05:10.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[寿带桥【金山区吕巷镇】]]></title>
-        <id>https://sh.kgdt.work/post/shou-dai-qiao-jin-shan-qu-lu-xiang-zhen/</id>
-        <link href="https://sh.kgdt.work/post/shou-dai-qiao-jin-shan-qu-lu-xiang-zhen/">
-        </link>
-        <updated>2020-08-22T14:04:10.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[性觉寺【金山区枫湾路568号】]]></title>
-        <id>https://sh.kgdt.work/post/xing-jue-si-jin-shan-qu-feng-wan-lu-568-hao/</id>
-        <link href="https://sh.kgdt.work/post/xing-jue-si-jin-shan-qu-feng-wan-lu-568-hao/">
-        </link>
-        <updated>2020-08-22T10:18:18.000Z</updated>
-        <summary type="html"><![CDATA[<p>性觉寺始建于明万历年间(1573- 1620年)，初名月明庵，由法名性本的僧人主持所建。</p>
+        <updated>2020-08-22T19:05:02.000Z</updated>
+        <summary type="html"><![CDATA[<p>九峰是上海地区唯一的自然山林。据考,大约形成于一亿年前。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>性觉寺始建于明万历年间(1573- 1620年)，初名月明庵，由法名性本的僧人主持所建。</p>
+        <content type="html"><![CDATA[<p>九峰是上海地区唯一的自然山林。据考,大约形成于一亿年前。</p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[万寿寺]]></title>
-        <id>https://sh.kgdt.work/post/wan-shou-si/</id>
-        <link href="https://sh.kgdt.work/post/wan-shou-si/">
+        <title type="html"><![CDATA[薛山]]></title>
+        <id>https://sh.kgdt.work/post/xie-shan/</id>
+        <link href="https://sh.kgdt.work/post/xie-shan/">
         </link>
-        <updated>2020-08-22T10:16:05.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[招贤浜遗址]]></title>
-        <id>https://sh.kgdt.work/post/zhao-xian-bang-yi-zhi/</id>
-        <link href="https://sh.kgdt.work/post/zhao-xian-bang-yi-zhi/">
-        </link>
-        <updated>2020-08-22T10:14:45.000Z</updated>
-        <summary type="html"><![CDATA[<p>位于金山区亭林镇，发现于1973年。原名张堰口遗址，确认为新石器时代和商周时期文化遗后因遗址附近新开河招贤浜而更名招贤浜遗址，1984年 被公布为上海市文物保护地点。</p>
+        <updated>2020-08-22T19:04:21.000Z</updated>
+        <summary type="html"><![CDATA[<p>薛山,在佘山东北1.5公里处,与东佘山南北相峙，和凤凰山相遥望。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>位于金山区亭林镇，发现于1973年。原名张堰口遗址，确认为新石器时代和商周时期文化遗后因遗址附近新开河招贤浜而更名招贤浜遗址，1984年 被公布为上海市文物保护地点。</p>
+        <content type="html"><![CDATA[<p>薛山,在佘山东北1.5公里处,与东佘山南北相峙，和凤凰山相遥望。</p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[亭林遗址]]></title>
-        <id>https://sh.kgdt.work/post/ting-lin-yi-zhi/</id>
-        <link href="https://sh.kgdt.work/post/ting-lin-yi-zhi/">
+        <title type="html"><![CDATA[天马山]]></title>
+        <id>https://sh.kgdt.work/post/tian-ma-shan/</id>
+        <link href="https://sh.kgdt.work/post/tian-ma-shan/">
         </link>
-        <updated>2020-08-22T10:14:07.000Z</updated>
-        <summary type="html"><![CDATA[<p>亭林古文化遗址主要以良渚文化为主要遗存，标志碑立于上海市金山区亭林镇西、祝家港东岸的亭林公园内，以标志碑为中心、200米半径为保护范围。</p>
+        <updated>2020-08-22T19:02:47.000Z</updated>
+        <summary type="html"><![CDATA[<p>天马山，位于松江城西北约15公里,山高98. 2米,两峰起伏,状如天马,故得此名。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>亭林古文化遗址主要以良渚文化为主要遗存，标志碑立于上海市金山区亭林镇西、祝家港东岸的亭林公园内，以标志碑为中心、200米半径为保护范围。</p>
+        <content type="html"><![CDATA[<p>天马山，位于松江城西北约15公里,山高98. 2米,两峰起伏,状如天马,故得此名。</p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[戚家墩遗址]]></title>
-        <id>https://sh.kgdt.work/post/qi-jia-dun-yi-zhi/</id>
-        <link href="https://sh.kgdt.work/post/qi-jia-dun-yi-zhi/">
+        <title type="html"><![CDATA[厍公山]]></title>
+        <id>https://sh.kgdt.work/post/she-gong-shan/</id>
+        <link href="https://sh.kgdt.work/post/she-gong-shan/">
         </link>
-        <updated>2020-08-22T10:13:28.000Z</updated>
-        <summary type="html"><![CDATA[<p>1935年发现的戚家墩古文化遗址，位于上海市金山区山阳镇戚家墩村(今石化临潮三村)，是上海地区最早发现的古文化遗址。</p>
+        <updated>2020-08-22T19:01:47.000Z</updated>
+        <summary type="html"><![CDATA[<p>厍公山,位于凤凰山之南,是九峰中最低小的一峰，高仅10米。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>1935年发现的戚家墩古文化遗址，位于上海市金山区山阳镇戚家墩村(今石化临潮三村)，是上海地区最早发现的古文化遗址。</p>
+        <content type="html"><![CDATA[<p>厍公山,位于凤凰山之南,是九峰中最低小的一峰，高仅10米。</p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[查山遗址]]></title>
-        <id>https://sh.kgdt.work/post/cha-shan-yi-zhi/</id>
-        <link href="https://sh.kgdt.work/post/cha-shan-yi-zhi/">
+        <title type="html"><![CDATA[佘山]]></title>
+        <id>https://sh.kgdt.work/post/she-shan/</id>
+        <link href="https://sh.kgdt.work/post/she-shan/">
         </link>
-        <updated>2020-08-22T10:12:42.000Z</updated>
-        <summary type="html"><![CDATA[<p>查山古文化遗址位于金山卫镇查山(松金公路东侧)山脚，是以马家浜文化、早期马桥类型印纹陶文化遗存为主的古文化遗址。保护范围为以标志碑作中心，南北长250米、东西宽60米，包括附近山坡和耕地。</p>
+        <updated>2020-08-22T19:00:50.000Z</updated>
+        <summary type="html"><![CDATA[<p>​    佘山,位于九峰中间,高97. 2米,分东西两峰,称东佘、西佘。佘山又名“西霞山”、“兰笋山”。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>查山古文化遗址位于金山卫镇查山(松金公路东侧)山脚，是以马家浜文化、早期马桥类型印纹陶文化遗存为主的古文化遗址。保护范围为以标志碑作中心，南北长250米、东西宽60米，包括附近山坡和耕地。</p>
+        <content type="html"><![CDATA[<p>​    佘山,位于九峰中间,高97. 2米,分东西两峰,称东佘、西佘。佘山又名“西霞山”、“兰笋山”。</p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[东林寺]]></title>
-        <id>https://sh.kgdt.work/post/dong-lin-si/</id>
-        <link href="https://sh.kgdt.work/post/dong-lin-si/">
+        <title type="html"><![CDATA[机山]]></title>
+        <id>https://sh.kgdt.work/post/ji-shan/</id>
+        <link href="https://sh.kgdt.work/post/ji-shan/">
         </link>
-        <updated>2020-08-22T10:05:06.000Z</updated>
+        <updated>2020-08-22T19:00:06.000Z</updated>
+        <summary type="html"><![CDATA[<p>机山,与天马山东西相邻。因西晋文学家陆机曾住这里而得名。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>机山,与天马山东西相邻。因西晋文学家陆机曾住这里而得名。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[横云山]]></title>
+        <id>https://sh.kgdt.work/post/heng-yun-shan/</id>
+        <link href="https://sh.kgdt.work/post/heng-yun-shan/">
+        </link>
+        <updated>2020-08-22T18:59:08.000Z</updated>
+        <summary type="html"><![CDATA[<p>横云山,位于天马山的南面。<strong>东西横卧于天马山与小昆山之间,故称横山</strong>。南宋《支是志》载:为纪念西晋著名文学家陆云,唐天宝六年易名横云山。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>横云山,位于天马山的南面。<strong>东西横卧于天马山与小昆山之间,故称横山</strong>。南宋《支是志》载:为纪念西晋著名文学家陆云,唐天宝六年易名横云山。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[凤凰山]]></title>
+        <id>https://sh.kgdt.work/post/feng-huang-shan/</id>
+        <link href="https://sh.kgdt.work/post/feng-huang-shan/">
+        </link>
+        <updated>2020-08-22T18:58:14.000Z</updated>
+        <summary type="html"><![CDATA[<p>凤凰山,位于佘山之北，为九峰中最东的一峰,因山势延颈舒翼、宛若凤翥,故名“凤凰山”。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>凤凰山,位于佘山之北，为九峰中最东的一峰,因山势延颈舒翼、宛若凤翥,故名“凤凰山”。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[辰山]]></title>
+        <id>https://sh.kgdt.work/post/chen-shan/</id>
+        <link href="https://sh.kgdt.work/post/chen-shan/">
+        </link>
+        <updated>2020-08-22T18:57:33.000Z</updated>
+        <summary type="html"><![CDATA[<p>辰山,位于天马山东2.5公里许。辰山在**“诸山之东南，次于辰位”**故得名。传说曾有神仙居此,故又称“神山”。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>辰山,位于天马山东2.5公里许。辰山在**“诸山之东南，次于辰位”**故得名。传说曾有神仙居此,故又称“神山”。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[葆素堂【松江中山西路150号】]]></title>
+        <id>https://sh.kgdt.work/post/bao-su-tang-song-jiang-zhong-shan-xi-lu-150-hao/</id>
+        <link href="https://sh.kgdt.work/post/bao-su-tang-song-jiang-zhong-shan-xi-lu-150-hao/">
+        </link>
+        <updated>2020-08-22T18:54:54.000Z</updated>
     </entry>
 </feed>
