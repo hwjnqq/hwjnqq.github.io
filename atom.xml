@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sh.kgdt.work</id>
     <title>上海考古地图</title>
-    <updated>2020-08-21T13:53:35.840Z</updated>
+    <updated>2020-08-22T08:15:15.497Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sh.kgdt.work"/>
     <link rel="self" href="https://sh.kgdt.work/atom.xml"/>
@@ -12,6 +12,13 @@
     <logo>https://sh.kgdt.work/images/avatar.png</logo>
     <icon>https://sh.kgdt.work/favicon.ico</icon>
     <rights>All rights reserved 2020, 上海考古地图</rights>
+    <entry>
+        <title type="html"><![CDATA[冈身[漕泾镇沙积村3组]]]></title>
+        <id>https://sh.kgdt.work/post/gang-shen-cao-jing-zhen-sha-ji-cun-3-zu/</id>
+        <link href="https://sh.kgdt.work/post/gang-shen-cao-jing-zhen-sha-ji-cun-3-zu/">
+        </link>
+        <updated>2020-08-22T08:13:50.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[真如寺]]></title>
         <id>https://sh.kgdt.work/post/zhen-ru-si/</id>
@@ -81,23 +88,6 @@
         <summary type="html"><![CDATA[<p>古镇七宝，与周庄、西塘、朱家角一样，是江浙沪城市人节假日休闲的又一选择。地理位置优越，游玩花销低廉，人文景观众多,全国土特产、名优小吃集中,各种特色商品琳琅满目。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>古镇七宝，与周庄、西塘、朱家角一样，是江浙沪城市人节假日休闲的又一选择。地理位置优越，游玩花销低廉，人文景观众多,全国土特产、名优小吃集中,各种特色商品琳琅满目。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[南翔]]></title>
-        <id>https://sh.kgdt.work/post/nan-xiang/</id>
-        <link href="https://sh.kgdt.work/post/nan-xiang/">
-        </link>
-        <updated>2020-08-05T09:40:20.000Z</updated>
-        <summary type="html"><![CDATA[<p>​    白鹤南翔事已淹，老街双塔证从前。</p>
-<p>​    寺因久远多香客，巷过狭长少画船。</p>
-<p>​    现代生活真很好，中华传统确难堪。</p>
-<p>​    赏梅幸有猗园在，红映亭台绿映轩。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>​    白鹤南翔事已淹，老街双塔证从前。</p>
-<p>​    寺因久远多香客，巷过狭长少画船。</p>
-<p>​    现代生活真很好，中华传统确难堪。</p>
-<p>​    赏梅幸有猗园在，红映亭台绿映轩。</p>
 ]]></content>
     </entry>
 </feed>

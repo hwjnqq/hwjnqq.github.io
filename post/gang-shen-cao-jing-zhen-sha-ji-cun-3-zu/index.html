@@ -10,7 +10,7 @@
 ——上海文旅融合线路优化设计研究
 ">
 <meta name="theme-color" content="#000">
-<title>放生桥【朱家角镇北大街东首】 | 上海考古地图</title>
+<title>冈身[漕泾镇沙积村3组] | 上海考古地图</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1598084108222">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -50,8 +50,8 @@
 </script>
 
 
-  <meta name="description" content="放生桥【朱家角镇北大街东首】" />
-  <meta name="keywords" content="明代" />
+  <meta name="description" content="冈身[漕泾镇沙积村3组]" />
+  <meta name="keywords" content="沧海桑田" />
 </head>
 
 <body>
@@ -215,8 +215,7 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            <div class="post-side-meta" id="post_side_meta">
-              
+            
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -270,196 +269,6 @@
   </div>
 
 </div>
-            </div>
-            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
-              <div class="toc-box right-motion">
-  <div class="toc-wrapper auto-number auto"
-    id="toc_wrapper">
-    <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E9%81%97%E8%BF%B9%E7%AE%80%E4%BB%8B">遗迹简介</a></li>
-<li><a href="#%E5%88%B0%E8%BF%99%E5%8E%BB">到这去！！</a></li>
-</ul>
-</li>
-</ul>
-
-  </div>
-</div>
-
-<script>
-
-  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
-  let active = 'active-show', activeClass = 'active-current';
-  let tocWrapper = document.querySelector('#toc_wrapper');
-  let tocContent = tocWrapper.children[0];
-  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
-
-  function addTocNumber(elem, deep) {
-    if (!elem) {
-      return;
-    }
-    let prop = elem.__proto__;
-
-    if (prop === HTMLUListElement.prototype) {
-      for (let i = 0; i < elem.children.length; i++) {
-        addTocNumber(elem.children[i], deep + (i + 1) + '.');
-      }
-    } else if (prop === HTMLLIElement.prototype) {
-      // 保存li元素
-      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
-        lList.push(elem);
-      }
-      for (let i = 0; i < elem.children.length; i++) {
-        let cur = elem.children[i];
-        if (cur.__proto__ === HTMLAnchorElement.prototype) {
-          if (autoNumber) {
-            cur.text = deep + ' ' + cur.text;
-          }
-        } else if (cur.__proto__ === HTMLUListElement.prototype) {
-          addTocNumber(cur, deep);
-        }
-      }
-    }
-  }
-
-  function removeParentActiveClass() {
-    let parents = tocContent.querySelectorAll('.' + active)
-    parents.forEach(function (elem) {
-      elem.classList.remove(active);
-    });
-  }
-
-  function addActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.add(activeClass);
-    }
-  }
-
-  function removeActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.remove(activeClass);
-    }
-  }
-
-  function addActiveLiElemment(elem, parent) {
-    if (!elem || elem === parent) {
-      return;
-    } else {
-      if (elem.__proto__ === HTMLLIElement.prototype) {
-        elem.classList.add(active);
-      }
-      addActiveLiElemment(elem.parentElement, parent);
-    }
-  }
-
-  function showToc() {
-    if (tocWrapper) {
-      postBody = document.querySelector('#post_body');
-      for (let i = 0; i < postBody.children.length; i++) {
-        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
-          hList.push(postBody.children[i]);
-        }
-      }
-      if (tocWrapper.classList.contains('compress')) {
-        tocContent.classList.add('closed');
-      } else if (tocWrapper.classList.contains('no_compress')) {
-        tocContent.classList.add('expanded');
-      } else {
-        if (hList.length > 10) {
-          active = 'active-hidden'
-          tocContent.classList.add('closed');
-        } else {
-          tocContent.classList.add('expanded');
-        }
-      }
-    }
-  }
-
-  (function () {
-    // 处理不是从#一级标题开始目录
-    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
-      let con = tocContent.children[0].children[0];
-      tocContent.innerHTML = con.innerHTML;
-    }
-    let markdownItTOC = document.querySelector('.markdownIt-TOC');
-    let innerHeight = window.innerHeight;
-    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
-    addTocNumber(tocContent, '');
-  })();
-
-  document.addEventListener('scroll', function (e) {
-    if (lList.length <= 0) {
-      return;
-    }
-    let scrollTop = document.scrollingElement.scrollTop + 10;
-    let dir;
-
-    if (lastTop - scrollTop > 0) {
-      dir = 'up';
-    } else {
-      dir = 'down';
-    }
-
-    lastTop = scrollTop;
-    if (scrollTop <= 0) {
-      if (lastIndex >= 0 && lastIndex < hList.length) {
-        lList[lastIndex].classList.remove(activeClass);
-      }
-      return;
-    }
-
-    let current = 0, hasFind = false;
-    for (let i = 0; i < hList.length; i++) {
-      if (hList[i].offsetTop > scrollTop) {
-        current = i;
-        hasFind = true;
-        break;
-      }
-    }
-    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
-      current = hList.length - 1;
-    } else {
-      current--;
-    }
-    if (dir === 'down') {
-      if (current > lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex)
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    } else {
-      if (current < lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex);
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    }
-  });
-
-
-  window.addEventListener('load', function () {
-    showToc();
-    document.querySelector('#sidebar').style = 'display: block;';
-    tocWrapper.classList.add('toc-active');
-    setTimeout(function () {
-      if ("createEvent" in document) {
-        let evt = document.createEvent("HTMLEvents");
-        evt.initEvent("scroll", false, true);
-        document.dispatchEvent(evt);
-      }
-      else {
-        document.fireEvent("scroll");
-      }
-    }, 500)
-  })
-
-</script>
-            </div>
           
         
       </div>
@@ -547,8 +356,8 @@
           <div class="section bg-color post post-page">
             <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://sh.kgdt.work/post/fang-sheng-qiao-zhu-jia-jiao-zhen-bei-da-jie-dong-shou/">
-      放生桥【朱家角镇北大街东首】
+    <a class="post-title-link" href="https://sh.kgdt.work/post/gang-shen-cao-jing-zhen-sha-ji-cun-3-zu/">
+      冈身[漕泾镇沙积村3组]
     </a>
   </h1>
   <div class="post-meta">
@@ -556,7 +365,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2020-07-25 23:00:48">2020-07-25</span>
+      <span class="publish-time" data-t="2020-08-22 16:13:50">2020-08-22</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -565,8 +374,8 @@
       <span class="pc-show language" data-lan="category-in">分类于</span>
       
       
-      <a href="https://sh.kgdt.work/tag/ikNYuBcJt/">
-        <span>明代</span>
+      <a href="https://sh.kgdt.work/tag/wgshMq0yK/">
+        <span>沧海桑田</span>
       </a>
       
       
@@ -575,17 +384,17 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>2<span class="language" data-lan="minute">分钟</span></span>
+      <span>1<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>398<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>240<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/post/fang-sheng-qiao-zhu-jia-jiao-zhen-bei-da-jie-dong-shou/" data-flag-title="放生桥【朱家角镇北大街东首】" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/gang-shen-cao-jing-zhen-sha-ji-cun-3-zu/" data-flag-title="冈身[漕泾镇沙积村3组]" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -594,25 +403,13 @@
   </div>
 </section>
             <div class="post-body next-md-body" id="post_body">
-              <p>放生桥南北向，跨淀浦河（又名漕港）。明<strong>隆庆五年</strong>（1571）慈门寺僧性潮募建，原南岸有慈门寺，桥下为慈门寺放生之地，故名放生桥。是<strong>沪上现存最大五孔石拱桥</strong>。<br>
-嘉庆十七年（1812年）重建<sub>（由圆津禅院僧觉铭发起重建）</sub>，1998年修缮。</p>
-<!-- more -->
-<h2 id="遗迹简介">遗迹简介</h2>
-<p>放生桥是5孔连墩拱桥<sub>（花岗石材质）</sub>，长69.62米，宽5.34米，高8.65米。中孔拱跨12.3米，两旁依次为7.6米和5.4米，中孔拱高6.64米，两旁依次高4.1米和2.9米。放生桥南堍石阶59级，北堍62级，这么多的级数在江南石拱桥中非常少见。台阶也特别薄。一般不超过8厘米，最短处不过3厘米，<strong>走起来特别省力</strong>。是对路人的一份人文关怀。</p>
-<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2020/07/25/bqrK2L6s9pukWUD.png" alt="image-20200725135655729" loading="lazy"></figure>
-  <img src="https://i.loli.net/2020/07/25/5tMqJa7ZnkFh3ST.png" alt="image-20200725135721280"  />
-<p>拱券分节并列，上下两节拱券石间用通长龙筋石固定。拱间厚度仅0.8米，是典型的<strong>薄墩桥</strong>。桥面有护栏、望柱，柱端雕狮子<sub>（一共四只，仰头张嘴，栩栩如生）</sub>。中央龙门石镌八龙绕珠图案。桥面中央镶嵌雕花石板。</p>
-<img src="https://i.loli.net/2020/07/25/szGbJu4nhZdBAFD.png" alt="image-20200725134549832" style="zoom:67%;" />
-<img src="https://i.loli.net/2020/07/25/9wT8gWOr6DYxXtU.png" alt="image-20200725134759139" style="zoom:50%;" />
-<p>两侧桥柱有桥联，东侧为“引渡资生涸鲋尽依活水；来苏慰望卧龙本异晴霓。”西侧为:&quot;潮声喧走马，平分珠浦浪千重；帆影逐归鸿，锁住玉山云一片。“南堍建廊亭（可供行人休息）。1987年，被公布为市文物保护单位。</p>
-<img src="https://i.loli.net/2020/07/25/KHpjSXDBPJu9T7g.png" alt="image-20200725135551533"  />
-<p>廊亭存碑三通。</p>
-<img src="https://i.loli.net/2020/07/25/gCAL6WPRKmJpT4e.png" alt="image-20200725135509674" style="zoom:50%;" />
-<img src="https://i.loli.net/2020/07/25/V4uA1Kl8EjMNORc.png" alt="image-20200725135850266"  />
-<img src="https://i.loli.net/2020/07/25/aeZXYU5v4di3C9A.png" alt="image-20200725135909143"  />
-<hr>
-<h2 id="到这去"><a href="https://map.baidu.com/poi/%E6%94%BE%E7%94%9F%E6%A1%A5/@13476756.34894606,3626001.7717509493,16.07z?uid=4b22c469034c1e6325e0a051&amp;ugc_type=3&amp;ugc_ver=1&amp;device_ratio=2&amp;compat=1&amp;querytype=detailConInfo&amp;da_src=shareurl">到这去！！</a></h2>
-
+              <p>上海市最早的海岸线是由6000多年前长江南沙嘴逐渐向东南伸展而形成，依次称沙冈、紫冈和竹冈。今金山区漕泾镇东北约1.5公里处沙积村7组尚存沙墩，经碳14测定距今已有6000一7000年，是<strong>上海西部仅存的古海岸线遗迹</strong>。</p>
+<p>20世纪70年代末和80年代初，当地群众大量挖沙建房，海沙地(沙冈)被挖成累累深潭，变成如养鱼塘，唯沙积村高宅基下冈身因上建民房得以保存。</p>
+<img src="https://i.loli.net/2020/08/22/ukVC8rXKYRiBTyq.png" alt="image-20200822154850917" style="zoom:67%;" />
+<center> 高宅基 </center>
+<p>经鉴定，沙冈为南北走向断续沙带遗存，由海浪作用下的死亡海生贝类生物壳体和沙积聚而成。冈身遗址高约2米，面积约3万余平方米，是研究上海乃至长江三角洲海陆变迁的佐证“化石”，是上海地区沧海变桑田的历史见证。</p>
+<img src="https://i.loli.net/2020/08/22/R3jVJyvBWFpTLK6.png" alt="image-20200822154819512"  />
+<img src="https://i.loli.net/2020/08/22/nMxlcepyq63vVID.png" alt="image-20200822155026284" style="zoom:67%;" />
             </div>
             
               <div class="reward-btn">
@@ -628,7 +425,7 @@
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://sh.kgdt.work/post/fang-sheng-qiao-zhu-jia-jiao-zhen-bei-da-jie-dong-shou/" title="放生桥【朱家角镇北大街东首】">https://sh.kgdt.work/post/fang-sheng-qiao-zhu-jia-jiao-zhen-bei-da-jie-dong-shou/</a>
+      <a href="https://sh.kgdt.work/post/gang-shen-cao-jing-zhen-sha-ji-cun-3-zu/" title="冈身[漕泾镇沙积村3组]">https://sh.kgdt.work/post/gang-shen-cao-jing-zhen-sha-ji-cun-3-zu/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -637,21 +434,17 @@
   </ul>
   <div class="tags">
     
-      <a href="https://sh.kgdt.work/tag/ikNYuBcJt/"># 明代</a>
+      <a href="https://sh.kgdt.work/tag/wgshMq0yK/"># 沧海桑田</a>
     
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="古猗园【嘉定区南翔镇沪宜公路218号】" href="https://sh.kgdt.work/post/gu-yi-yuan/">古猗园【嘉定区南翔镇沪宜公路218号】</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="古猗园【嘉定区南翔镇沪宜公路218号】" href="https://sh.kgdt.work/post/gu-yi-yuan/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="南翔寺砖塔【嘉定南翔解放街香花桥北堍】" href="https://sh.kgdt.work/post/nan-xiang-si-zhuan-ta-jia-ding-nan-xiang-jie-fang-jie-xiang-hua-qiao-bei-tu/">南翔寺砖塔【嘉定南翔解放街香花桥北堍】</a>
-        <a class="nav-mobile-next" title="南翔寺砖塔【嘉定南翔解放街香花桥北堍】" href="https://sh.kgdt.work/post/nan-xiang-si-zhuan-ta-jia-ding-nan-xiang-jie-fang-jie-xiang-hua-qiao-bei-tu/">下一篇</a>
+        <a class="nav-pc-next" title="真如寺" href="https://sh.kgdt.work/post/zhen-ru-si/">真如寺</a>
+        <a class="nav-mobile-next" title="真如寺" href="https://sh.kgdt.work/post/zhen-ru-si/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
