@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sh.kgdt.work</id>
     <title>上海考古地图</title>
-    <updated>2021-02-22T12:12:17.325Z</updated>
+    <updated>2021-02-22T12:52:44.329Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sh.kgdt.work"/>
     <link rel="self" href="https://sh.kgdt.work/atom.xml"/>
@@ -12,6 +12,20 @@
     <logo>https://sh.kgdt.work/images/avatar.png</logo>
     <icon>https://sh.kgdt.work/favicon.ico</icon>
     <rights>All rights reserved 2021, 上海考古地图</rights>
+    <entry>
+        <title type="html"><![CDATA[【记忆】建筑可阅读：80多岁的钟楼式建筑，这个图书馆独具美感]]></title>
+        <id>https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-80-duo-sui-de-zhong-lou-shi-jian-zhu-zhe-ge-tu-shu-guan-du-ju-mei-gan/</id>
+        <link href="https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-80-duo-sui-de-zhong-lou-shi-jian-zhu-zhe-ge-tu-shu-guan-du-ju-mei-gan/">
+        </link>
+        <updated>2021-02-22T12:44:46.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【记忆】建筑可阅读：科学会堂1号楼——百年建筑中的科技之光]]></title>
+        <id>https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-ke-xue-hui-tang-1-hao-lou-bai-nian-jian-zhu-zhong-de-ke-ji-zhi-guang/</id>
+        <link href="https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-ke-xue-hui-tang-1-hao-lou-bai-nian-jian-zhu-zhong-de-ke-ji-zhi-guang/">
+        </link>
+        <updated>2021-02-22T12:25:10.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【记忆】建筑可阅读：上海占地面积最大的孔庙在这里→]]></title>
         <id>https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-shang-hai-zhan-di-mian-ji-zui-da-de-kong-miao-zai-zhe-li-/</id>
@@ -94,28 +108,6 @@
         <summary type="html"><![CDATA[<p>机山,与天马山东西相邻。因西晋文学家陆机曾住这里而得名。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>机山,与天马山东西相邻。因西晋文学家陆机曾住这里而得名。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[横云山]]></title>
-        <id>https://sh.kgdt.work/post/heng-yun-shan/</id>
-        <link href="https://sh.kgdt.work/post/heng-yun-shan/">
-        </link>
-        <updated>2020-08-22T18:59:08.000Z</updated>
-        <summary type="html"><![CDATA[<p>横云山,位于天马山的南面。<strong>东西横卧于天马山与小昆山之间,故称横山</strong>。南宋《支是志》载:为纪念西晋著名文学家陆云,唐天宝六年易名横云山。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>横云山,位于天马山的南面。<strong>东西横卧于天马山与小昆山之间,故称横山</strong>。南宋《支是志》载:为纪念西晋著名文学家陆云,唐天宝六年易名横云山。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[凤凰山]]></title>
-        <id>https://sh.kgdt.work/post/feng-huang-shan/</id>
-        <link href="https://sh.kgdt.work/post/feng-huang-shan/">
-        </link>
-        <updated>2020-08-22T18:58:14.000Z</updated>
-        <summary type="html"><![CDATA[<p>凤凰山,位于佘山之北，为九峰中最东的一峰,因山势延颈舒翼、宛若凤翥,故名“凤凰山”。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>凤凰山,位于佘山之北，为九峰中最东的一峰,因山势延颈舒翼、宛若凤翥,故名“凤凰山”。</p>
 ]]></content>
     </entry>
 </feed>
