@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sh.kgdt.work</id>
     <title>上海考古地图</title>
-    <updated>2021-02-23T09:58:22.381Z</updated>
+    <updated>2021-02-23T11:48:46.116Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sh.kgdt.work"/>
     <link rel="self" href="https://sh.kgdt.work/atom.xml"/>
@@ -12,6 +12,55 @@
     <logo>https://sh.kgdt.work/images/avatar.png</logo>
     <icon>https://sh.kgdt.work/favicon.ico</icon>
     <rights>All rights reserved 2021, 上海考古地图</rights>
+    <entry>
+        <title type="html"><![CDATA[【记忆】建筑可阅读：让远古村落焕发时代活力！广富林的故事久远迷人]]></title>
+        <id>https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-rang-yuan-gu-cun-luo-huan-fa-shi-dai-huo-li-guang-fu-lin-de-gu-shi-jiu-yuan-mi-ren/</id>
+        <link href="https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-rang-yuan-gu-cun-luo-huan-fa-shi-dai-huo-li-guang-fu-lin-de-gu-shi-jiu-yuan-mi-ren/">
+        </link>
+        <updated>2021-02-23T11:40:09.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【记忆】建筑可阅读：上海西北部规模最大的古建筑群——嘉定孔庙]]></title>
+        <id>https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-shang-hai-xi-bei-bu-gui-mo-zui-da-de-gu-jian-zhu-qun-jia-ding-kong-miao/</id>
+        <link href="https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-shang-hai-xi-bei-bu-gui-mo-zui-da-de-gu-jian-zhu-qun-jia-ding-kong-miao/">
+        </link>
+        <updated>2021-02-23T11:34:23.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【记忆】建筑可阅读：川沙这栋180多年历史的建筑，留下许多名人足迹]]></title>
+        <id>https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-chuan-sha-zhe-dong-180-duo-nian-li-shi-de-jian-zhu-liu-xia-xu-duo-ming-ren-zu-ji/</id>
+        <link href="https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-chuan-sha-zhe-dong-180-duo-nian-li-shi-de-jian-zhu-liu-xia-xu-duo-ming-ren-zu-ji/">
+        </link>
+        <updated>2021-02-23T11:29:03.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【记忆】建筑可阅读：“车马很远、书信很慢”的岁月，镌刻在这栋大楼里]]></title>
+        <id>https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-che-ma-hen-yuan-shu-xin-hen-man-de-sui-yue-juan-ke-zai-zhe-dong-da-lou-li/</id>
+        <link href="https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-che-ma-hen-yuan-shu-xin-hen-man-de-sui-yue-juan-ke-zai-zhe-dong-da-lou-li/">
+        </link>
+        <updated>2021-02-23T11:21:40.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【记忆】建筑可阅读： 从“黑石”到“黑胶”，这座百年公寓缭绕着岁月余音]]></title>
+        <id>https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-cong-hei-shi-dao-hei-xiao-zhe-zuo-bai-nian-gong-yu-liao-rao-zhao-sui-yue-yu-yin/</id>
+        <link href="https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-cong-hei-shi-dao-hei-xiao-zhe-zuo-bai-nian-gong-yu-liao-rao-zhao-sui-yue-yu-yin/">
+        </link>
+        <updated>2021-02-23T11:15:33.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【记忆】建筑可阅读：岁月静好，走进金山老宅的“大咖”故事！]]></title>
+        <id>https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-sui-yue-jing-hao-zou-jin-jin-shan-lao-zhai-de-da-ka-gu-shi/</id>
+        <link href="https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-sui-yue-jing-hao-zou-jin-jin-shan-lao-zhai-de-da-ka-gu-shi/">
+        </link>
+        <updated>2021-02-23T11:06:37.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【记忆】建筑可阅读：一座明代古典园林，一颗隐藏在老城厢内的明珠]]></title>
+        <id>https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-yi-zuo-ming-dai-gu-dian-yuan-lin-yi-ke-yin-cang-zai-lao-cheng-xiang-nei-de-ming-zhu/</id>
+        <link href="https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-yi-zuo-ming-dai-gu-dian-yuan-lin-yi-ke-yin-cang-zai-lao-cheng-xiang-nei-de-ming-zhu/">
+        </link>
+        <updated>2021-02-23T10:49:07.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【记忆】建筑可阅读：百年纱厂的时尚新生]]></title>
         <id>https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-bai-nian-sha-han-de-shi-shang-xin-sheng/</id>
@@ -32,74 +81,5 @@
         <link href="https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-80-duo-sui-de-zhong-lou-shi-jian-zhu-zhe-ge-tu-shu-guan-du-ju-mei-gan/">
         </link>
         <updated>2021-02-22T12:44:46.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【记忆】建筑可阅读：科学会堂1号楼——百年建筑中的科技之光]]></title>
-        <id>https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-ke-xue-hui-tang-1-hao-lou-bai-nian-jian-zhu-zhong-de-ke-ji-zhi-guang/</id>
-        <link href="https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-ke-xue-hui-tang-1-hao-lou-bai-nian-jian-zhu-zhong-de-ke-ji-zhi-guang/">
-        </link>
-        <updated>2021-02-22T12:25:10.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【记忆】建筑可阅读：上海占地面积最大的孔庙在这里→]]></title>
-        <id>https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-shang-hai-zhan-di-mian-ji-zui-da-de-kong-miao-zai-zhe-li-/</id>
-        <link href="https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-shang-hai-zhan-di-mian-ji-zui-da-de-kong-miao-zai-zhe-li-/">
-        </link>
-        <updated>2021-02-22T11:24:13.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[上海文庙]]></title>
-        <id>https://sh.kgdt.work/post/shang-hai-wen-miao/</id>
-        <link href="https://sh.kgdt.work/post/shang-hai-wen-miao/">
-        </link>
-        <updated>2020-08-22T19:11:12.000Z</updated>
-        <summary type="html"><![CDATA[<p>元至正二十八年（1291年）上海设县，3年后建文庙，是古代上海的最高学府。元代始建的上海文庙，位于学宫街( 今大东门聚奎街附近)，后四经迁徒。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>元至正二十八年（1291年）上海设县，3年后建文庙，是古代上海的最高学府。元代始建的上海文庙，位于学宫街( 今大东门聚奎街附近)，后四经迁徒。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[九峰]]></title>
-        <id>https://sh.kgdt.work/post/jiu-feng/</id>
-        <link href="https://sh.kgdt.work/post/jiu-feng/">
-        </link>
-        <updated>2020-08-22T19:05:02.000Z</updated>
-        <summary type="html"><![CDATA[<p>九峰是上海地区唯一的自然山林。据考,大约形成于一亿年前。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>九峰是上海地区唯一的自然山林。据考,大约形成于一亿年前。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[薛山]]></title>
-        <id>https://sh.kgdt.work/post/xie-shan/</id>
-        <link href="https://sh.kgdt.work/post/xie-shan/">
-        </link>
-        <updated>2020-08-22T19:04:21.000Z</updated>
-        <summary type="html"><![CDATA[<p>薛山,在佘山东北1.5公里处,与东佘山南北相峙，和凤凰山相遥望。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>薛山,在佘山东北1.5公里处,与东佘山南北相峙，和凤凰山相遥望。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[天马山]]></title>
-        <id>https://sh.kgdt.work/post/tian-ma-shan/</id>
-        <link href="https://sh.kgdt.work/post/tian-ma-shan/">
-        </link>
-        <updated>2020-08-22T19:02:47.000Z</updated>
-        <summary type="html"><![CDATA[<p>天马山，位于松江城西北约15公里,山高98. 2米,两峰起伏,状如天马,故得此名。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>天马山，位于松江城西北约15公里,山高98. 2米,两峰起伏,状如天马,故得此名。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[厍公山]]></title>
-        <id>https://sh.kgdt.work/post/she-gong-shan/</id>
-        <link href="https://sh.kgdt.work/post/she-gong-shan/">
-        </link>
-        <updated>2020-08-22T19:01:47.000Z</updated>
-        <summary type="html"><![CDATA[<p>厍公山,位于凤凰山之南,是九峰中最低小的一峰，高仅10米。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>厍公山,位于凤凰山之南,是九峰中最低小的一峰，高仅10米。</p>
-]]></content>
     </entry>
 </feed>
