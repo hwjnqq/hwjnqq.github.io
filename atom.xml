@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sh.kgdt.work</id>
     <title>上海考古地图</title>
-    <updated>2021-02-22T12:57:08.442Z</updated>
+    <updated>2021-02-23T09:58:22.381Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sh.kgdt.work"/>
     <link rel="self" href="https://sh.kgdt.work/atom.xml"/>
@@ -12,6 +12,20 @@
     <logo>https://sh.kgdt.work/images/avatar.png</logo>
     <icon>https://sh.kgdt.work/favicon.ico</icon>
     <rights>All rights reserved 2021, 上海考古地图</rights>
+    <entry>
+        <title type="html"><![CDATA[【记忆】建筑可阅读：百年纱厂的时尚新生]]></title>
+        <id>https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-bai-nian-sha-han-de-shi-shang-xin-sheng/</id>
+        <link href="https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-bai-nian-sha-han-de-shi-shang-xin-sheng/">
+        </link>
+        <updated>2021-02-23T09:26:53.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【记忆】建筑可阅读： 上海城区第一个被发掘出土的大型遗址]]></title>
+        <id>https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-shang-hai-cheng-qu-di-yi-ge-bei-fa-jue-chu-tu-de-da-xing-yi-zhi/</id>
+        <link href="https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-shang-hai-cheng-qu-di-yi-ge-bei-fa-jue-chu-tu-de-da-xing-yi-zhi/">
+        </link>
+        <updated>2021-02-23T09:21:19.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【记忆】建筑可阅读：80多岁的钟楼式建筑，这个图书馆独具美感]]></title>
         <id>https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-80-duo-sui-de-zhong-lou-shi-jian-zhu-zhe-ge-tu-shu-guan-du-ju-mei-gan/</id>
@@ -86,28 +100,6 @@
         <summary type="html"><![CDATA[<p>厍公山,位于凤凰山之南,是九峰中最低小的一峰，高仅10米。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>厍公山,位于凤凰山之南,是九峰中最低小的一峰，高仅10米。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[佘山]]></title>
-        <id>https://sh.kgdt.work/post/she-shan/</id>
-        <link href="https://sh.kgdt.work/post/she-shan/">
-        </link>
-        <updated>2020-08-22T19:00:50.000Z</updated>
-        <summary type="html"><![CDATA[<p>​    佘山,位于九峰中间,高97. 2米,分东西两峰,称东佘、西佘。佘山又名“西霞山”、“兰笋山”。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>​    佘山,位于九峰中间,高97. 2米,分东西两峰,称东佘、西佘。佘山又名“西霞山”、“兰笋山”。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[机山]]></title>
-        <id>https://sh.kgdt.work/post/ji-shan/</id>
-        <link href="https://sh.kgdt.work/post/ji-shan/">
-        </link>
-        <updated>2020-08-22T19:00:06.000Z</updated>
-        <summary type="html"><![CDATA[<p>机山,与天马山东西相邻。因西晋文学家陆机曾住这里而得名。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>机山,与天马山东西相邻。因西晋文学家陆机曾住这里而得名。</p>
 ]]></content>
     </entry>
 </feed>
