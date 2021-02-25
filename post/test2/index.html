@@ -10,7 +10,7 @@
 ——上海文旅融合线路优化设计研究
 ">
 <meta name="theme-color" content="#000">
-<title>青龙镇 | 上海考古地图</title>
+<title>test2 | 上海考古地图</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1614264543264">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -50,8 +50,8 @@
 </script>
 
 
-  <meta name="description" content="青龙镇" />
-  <meta name="keywords" content="上海古镇,唐代" />
+  <meta name="description" content="test2" />
+  <meta name="keywords" content="" />
 </head>
 
 <body>
@@ -215,8 +215,7 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            <div class="post-side-meta" id="post_side_meta">
-              
+            
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -270,219 +269,6 @@
   </div>
 
 </div>
-            </div>
-            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
-              <div class="toc-box right-motion">
-  <div class="toc-wrapper auto-number auto"
-    id="toc_wrapper">
-    <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E9%81%97%E8%BF%B9%E6%A6%82%E5%86%B5">遗迹概况</a>
-<ul>
-<li><a href="#%E9%9D%92%E9%BE%99%E9%95%87%E7%9A%84%E8%AF%9E%E7%94%9F">青龙镇的诞生</a></li>
-<li><a href="#%E4%B8%9C%E5%8D%97%E5%B7%A8%E9%95%87">东南巨镇</a></li>
-<li><a href="#%E5%8F%A4%E9%95%87%E9%9D%A2%E4%B8%96">古镇面世</a></li>
-</ul>
-</li>
-<li><a href="#%E9%81%97%E5%9D%80%E5%9C%B0%E7%82%B9%E4%B8%8E%E8%8C%83%E5%9B%B4">遗址地点与范围</a></li>
-<li><a href="#%E9%81%97%E8%BF%B9%E7%9C%8B%E7%82%B9">遗迹看点</a>
-<ul>
-<li><a href="#%E9%9D%92%E9%BE%99%E5%AF%BA">青龙寺</a></li>
-<li><a href="#%E9%9D%92%E9%BE%99%E5%A1%94%E5%90%89%E4%BA%91%E7%A6%85%E5%AF%BA%E5%A1%94">青龙塔（吉云禅寺塔）</a></li>
-<li><a href="#%E9%9A%86%E5%B9%B3%E5%AF%BA%E5%A1%94%E5%9F%BA">隆平寺塔基</a></li>
-<li><a href="#%E4%B8%87%E5%AE%89%E6%A1%A5">万安桥</a></li>
-</ul>
-</li>
-<li><a href="#%E5%AE%8B%E4%BB%A3%E7%A0%96%E4%BA%95">宋代砖井</a></li>
-<li><a href="#%E5%8F%A4%E8%BF%B9%E7%88%B1%E5%A5%BD%E8%80%85">古迹爱好者</a>
-<ul>
-<li><a href="#%E9%9D%92%E9%BE%99%E9%95%87%E7%9B%B8%E5%85%B3%E6%96%87%E5%8D%9A%E5%B1%95%E8%A7%88">青龙镇相关文博展览</a></li>
-<li><a href="#%E9%9D%92%E9%BE%99%E9%95%87%E9%81%97%E8%BF%B9%E5%8F%8A%E6%96%87%E7%89%A9">青龙镇遗迹及文物</a></li>
-<li><a href="#%E8%80%83%E5%8F%A4%E9%9D%92%E9%BE%99%E9%95%87app">考古青龙镇app</a></li>
-<li><a href="#%E9%9D%92%E9%BE%99%E9%95%87%E5%90%8D%E4%BA%BA%E8%B6%B3%E8%BF%B9">青龙镇名人足迹</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-  </div>
-</div>
-
-<script>
-
-  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
-  let active = 'active-show', activeClass = 'active-current';
-  let tocWrapper = document.querySelector('#toc_wrapper');
-  let tocContent = tocWrapper.children[0];
-  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
-
-  function addTocNumber(elem, deep) {
-    if (!elem) {
-      return;
-    }
-    let prop = elem.__proto__;
-
-    if (prop === HTMLUListElement.prototype) {
-      for (let i = 0; i < elem.children.length; i++) {
-        addTocNumber(elem.children[i], deep + (i + 1) + '.');
-      }
-    } else if (prop === HTMLLIElement.prototype) {
-      // 保存li元素
-      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
-        lList.push(elem);
-      }
-      for (let i = 0; i < elem.children.length; i++) {
-        let cur = elem.children[i];
-        if (cur.__proto__ === HTMLAnchorElement.prototype) {
-          if (autoNumber) {
-            cur.text = deep + ' ' + cur.text;
-          }
-        } else if (cur.__proto__ === HTMLUListElement.prototype) {
-          addTocNumber(cur, deep);
-        }
-      }
-    }
-  }
-
-  function removeParentActiveClass() {
-    let parents = tocContent.querySelectorAll('.' + active)
-    parents.forEach(function (elem) {
-      elem.classList.remove(active);
-    });
-  }
-
-  function addActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.add(activeClass);
-    }
-  }
-
-  function removeActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.remove(activeClass);
-    }
-  }
-
-  function addActiveLiElemment(elem, parent) {
-    if (!elem || elem === parent) {
-      return;
-    } else {
-      if (elem.__proto__ === HTMLLIElement.prototype) {
-        elem.classList.add(active);
-      }
-      addActiveLiElemment(elem.parentElement, parent);
-    }
-  }
-
-  function showToc() {
-    if (tocWrapper) {
-      postBody = document.querySelector('#post_body');
-      for (let i = 0; i < postBody.children.length; i++) {
-        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
-          hList.push(postBody.children[i]);
-        }
-      }
-      if (tocWrapper.classList.contains('compress')) {
-        tocContent.classList.add('closed');
-      } else if (tocWrapper.classList.contains('no_compress')) {
-        tocContent.classList.add('expanded');
-      } else {
-        if (hList.length > 10) {
-          active = 'active-hidden'
-          tocContent.classList.add('closed');
-        } else {
-          tocContent.classList.add('expanded');
-        }
-      }
-    }
-  }
-
-  (function () {
-    // 处理不是从#一级标题开始目录
-    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
-      let con = tocContent.children[0].children[0];
-      tocContent.innerHTML = con.innerHTML;
-    }
-    let markdownItTOC = document.querySelector('.markdownIt-TOC');
-    let innerHeight = window.innerHeight;
-    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
-    addTocNumber(tocContent, '');
-  })();
-
-  document.addEventListener('scroll', function (e) {
-    if (lList.length <= 0) {
-      return;
-    }
-    let scrollTop = document.scrollingElement.scrollTop + 10;
-    let dir;
-
-    if (lastTop - scrollTop > 0) {
-      dir = 'up';
-    } else {
-      dir = 'down';
-    }
-
-    lastTop = scrollTop;
-    if (scrollTop <= 0) {
-      if (lastIndex >= 0 && lastIndex < hList.length) {
-        lList[lastIndex].classList.remove(activeClass);
-      }
-      return;
-    }
-
-    let current = 0, hasFind = false;
-    for (let i = 0; i < hList.length; i++) {
-      if (hList[i].offsetTop > scrollTop) {
-        current = i;
-        hasFind = true;
-        break;
-      }
-    }
-    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
-      current = hList.length - 1;
-    } else {
-      current--;
-    }
-    if (dir === 'down') {
-      if (current > lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex)
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    } else {
-      if (current < lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex);
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    }
-  });
-
-
-  window.addEventListener('load', function () {
-    showToc();
-    document.querySelector('#sidebar').style = 'display: block;';
-    tocWrapper.classList.add('toc-active');
-    setTimeout(function () {
-      if ("createEvent" in document) {
-        let evt = document.createEvent("HTMLEvents");
-        evt.initEvent("scroll", false, true);
-        document.dispatchEvent(evt);
-      }
-      else {
-        document.fireEvent("scroll");
-      }
-    }, 500)
-  })
-
-</script>
-            </div>
           
         
       </div>
@@ -570,8 +356,8 @@
           <div class="section bg-color post post-page">
             <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://sh.kgdt.work/post/qing-long-zhen/">
-      青龙镇
+    <a class="post-title-link" href="https://sh.kgdt.work/post/test2/">
+      test2
     </a>
   </h1>
   <div class="post-meta">
@@ -579,42 +365,23 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2020-07-15 17:20:56">2020-07-15</span>
+      <span class="publish-time" data-t="2021-02-25 22:48:55">2021-02-25</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://sh.kgdt.work/tag/kGN39XXIi/">
-        <span>上海古镇</span>
-      </a>、
-      
-      
-      
-      <a href="https://sh.kgdt.work/tag/3Vr5fwDzh/">
-        <span>唐代</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>16<span class="language" data-lan="minute">分钟</span></span>
+      <span>1<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>4528<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>10<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/post/qing-long-zhen/" data-flag-title="青龙镇" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/test2/" data-flag-title="test2" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -623,111 +390,8 @@
   </div>
 </section>
             <div class="post-body next-md-body" id="post_body">
-              <p>青龙镇是上海第一镇。它兴起于唐代，鼎盛于宋代，比今天依然兴盛的朱家角、七宝老街、南翔、枫泾等古镇都要古老。唐宋时期，青龙镇因占据得天独厚的地理优势而成为上海地区最早的对外贸易港口，同时市镇规模迅速发展。</p>
-<!-- more -->
-<img src="https://kgmap.coding.net/p/pics/d/pics/git/raw/master/18195184-dad411447a7bf7d2.png" alt="img" style="zoom: 67%;" />
-<h2 id="遗迹概况">遗迹概况</h2>
-<p>青龙镇位于上海市境西部青浦区白鹤镇，如今，伫立着的青龙塔是为数不多的现存遗迹之一。上世纪八十年代，青龙村双浜生产队在开挖窑河时，在一口唐代水井中发现了两件带有深刻异域风格的长沙窑执壶，从而，进入上海地下尘封千年的丝路重镇获得了上海考古人的关注，并在此后长年的考古工作中逐步展露在世人面前。青龙镇本身不是陶瓷产地，但从出土来看应该是个重要的陶瓷中转站。</p>
-<center> 
-</center>
-<img src="https://kgmap.coding.net/p/pics/d/pics/git/raw/master/18195184-eee3571cd00284b8.png" alt="img" style="zoom:50%;" />
- <center> 鉴于青龙镇遗址的重要性，青浦区博物馆于2001年将其列为重要的不可移动文物点，予以登录在册。</center>
-<h3 id="青龙镇的诞生">青龙镇的诞生</h3>
-<p>唐天宝五年（746），在今天的青浦区白鹤镇青龙村设置了上海境内的第一个名镇——青龙镇。当时的青龙镇还属于以军事防御为主的海防城镇。</p>
-<figure data-type="image" tabindex="1"><img src="https://kgmap.coding.net/p/pics/d/pics/git/raw/master/18195184-862393ab3aec0521.png" alt="img" loading="lazy"></figure>
-<center>“唐因其控江连海，置镇防御”</center>
-<p>青龙镇的发展与青龙江密不可分。三国时期孙权欲攻曹操，大造青龙战舰。命周瑜、程普各领万人与刘备军会于赤壁，大破曹军。青龙江于是得名。【元丰七年(1084 年)苏州人朱长文(字伯原)所撰的《吴郡图经续记》其日:“昔东吴孙权造青龙战舰，置于此地，因以名之。”】</p>
-<p>青龙江是吴淞江的一条主支流。吴淞江源出太湖瓜泾口。经吴江、吴县、昆山、青龙镇东流入海。<strong>是上海明代以前最主要的河道。</strong></p>
-<img src="https://kgmap.coding.net/p/pics/d/pics/git/raw/master/18195184-e7cd6bfb965793e2.png" alt="img" style="zoom: 67%;" />
-<figure data-type="image" tabindex="2"><img src="https://kgmap.coding.net/p/pics/d/pics/git/raw/master/18195184-9a42d280f23ec750.png" alt="img" loading="lazy"></figure>
-<center>今日青龙江</center>
-<h3 id="东南巨镇">东南巨镇</h3>
-<p>宋代是青龙镇的鼎盛时期，熙宁十年（1077）青龙镇的税收为15879贯400文，几乎占华亭县商业收入的一半。商业贸易繁盛，逐渐成为东南地区最大的贸易港口，出现了“人乐斯土，地无空闲”的繁华景象。</p>
-<p>青龙镇海内外贸易往来至少在晚唐就已开始。1988 年在今青龙村双浜队(原青龙镇南部)开挖窑河时发现了多口大小不一的砖井，井中分别发现了<strong>唐代晚期至南宋时期</strong>的各类陶瓷器，有翠绿精巧的五代莲花形口越窑青瓷盏、碗，更为重要的是出土了远销今阿拉伯地区的两件外销瓷即唐代晚期长沙铜官窑贴花褐彩执壶，为研究青龙镇海内外贸易史提供了有力的实物佐证。至北宋，青龙镇海内外贸易已经相当发达，</p>
-<p>据嘉祐七年(1062年)《灵鉴宝塔铭》载“自杭、苏、湖、常等州月月而至，福建、漳、泉、明、越、温、台等州岁二三至，广南、日本、新罗岁或一至.....”详细记载了当时青龙镇贸易盛况，清楚地描述了该镇内外贸易的地区和国家。至北宋前期，青龙镇不仅依靠发达的水陆路与其附近太湖地区有着频繁的贸易往来，而且依靠海路和东南沿海众多港口有着密切的联系，尤其是与今越南、日本、朝鲜等海外国<br>
-家和地区建立了直接的贸易关系，从而成为海上丝绸之路的重要口岸。至元丰五年(1082年)，青龙镇更出现了“风樯浪舶，朝夕上下”的兴盛局面，成为“海商辏集”之地。</p>
-<p>海内外贸易的兴盛吸引了众多海内外客商来此进行商品交易，带动了青龙镇工商业的繁荣。据元丰五年陈林所撰的《隆平寺藏经记》载:“富商巨贾，豪宗右族之所会&quot;，出现了“人乐斯土，地无空闲”这样市井繁华的景象。仅<strong>酿酒业</strong>就为朝廷上缴了可观的税收。《宋会要辑稿》记载熙宁十年(1077 年)在秀州地区设置的17个酒务中上缴的酒税青龙镇位居第2位，超过了所属的华亭县城，仅次于州城。同年上缴的商税就达15879贯400文，而华亭县城只有10618贯，远远超过了县城，是<strong>全国为数不多超万贯的创利税大镇</strong>。</p>
-<p>为加强镇务管理，官署、酒务、监狱、官仓、镇学等一批机构陆续建立完善。景祐年间(1034- 1037 年)始设文官理镇务:大观元年(1107年)， 又设置镇监，负责财政、水利等镇务，并兼领市舶。至<strong>政和四年(1114年)， 青龙镇改名通惠镇</strong>，取“通商互惠”之意,表明了当时该镇的贸易盛况和朝廷对其的关注度。南宋建炎元年(1127年) 朝廷南渡时，通惠镇复名青龙镇。绍兴元年(1131 年)，政府就在青龙镇正式设置了市舶务，“ 掌蕃货海舶征榷贸易之事，以来远人，通远物”，专门负责进出口贸易的管理。</p>
-<p>随着市场的繁荣和人口的增加，青龙镇规模也在不断扩大，形成了商贸区、码头区、居民区、政务区等区域。明弘治《上海志》记载了青龙镇鼎盛时期的概况，有“三亭、七塔、十三寺，二十二桥、三十六坊”，人称“小杭州”。“三十六坊”，即先登坊、云津坊、通惠坊、平理坊、便民坊、皇华坊、兴贤坊、连魁坊、振文坊、阜民坊、仙坛坊、迎仙坊、仰高坊、攀龙坊、崧高坊、万柳堤坊、熙春坊、恩波坊、上达坊、中和坊、桂枝坊、同福坊，福寿坊、登云坊、至喜坊、崇义坊、太平坊、还珠坊、来远坊、招鹤坊、龙江胜地坊、安流坊、亨衢坊、合浦坊、见山坊。</p>
-<p>沧海变桑田。随着长江泥沙的不断淤积，古上海的海岸线日渐东移;太湖的主要泻水通道吴淞江及其支流日益淤浅，导致海舶不能回溯驶入青龙港，部分海舶被迫停泊于离海更近的.上海浦一带，至南宋晚期，控江连海的青龙镇赖于生存和发展的港口条件逐渐丧失，使之日趋衰落。元至元十四年(1277 年)，上海镇市舶务的设置大大减弱了青龙镇的贸易地位。长江畔刘家港的兴起也加速了青龙港的衰落。</p>
-<figure data-type="image" tabindex="3"><img src="https://kgmap.coding.net/p/pics/d/pics/git/raw/master/k97nADWwvOmQFdq.png" alt="image-20200820000317589" loading="lazy"></figure>
-<p>据至元二十五年(1288 年)《嘉禾志》记载，当时青龙镇虽然“今镇治延袤，有学有狱”，犹如落日余晖，保持了一定的市镇规模，但是“无复海商之往来矣”，到至正十六年(1356 年)朝廷遂撤废青龙市舶务。失去海外贸易这一支柱产业后，盛极一时的青龙镇从此一蹶不振。明嘉靖年间，该镇又遭倭寇侵掠，街市被毁，破坏严重。明嘉靖二十一年(1542年)，青浦县设置，青龙镇一度作为县治。但县花一现，至三十二年撤青浦县建置。万历元年(1573年) 复县时，县治迁至唐行镇(今青浦镇)，从此青龙镇更趋衰败，沦落为一小集镇，俗称旧青浦。</p>
-<p><strong>如今，青龙寺旁的青龙塔是青龙镇“七塔”中仅存的一座。</strong> 村里的一座小学校，就是昔日青龙镇“十三寺”之一的隆福寺遗址；20世纪50年代初期，这里尚有石牌坊等多种文物，可惜后来都消失了。不过，现在村里还流传着不少关于青龙镇的动人故事。</p>
-<img src="https://kgmap.coding.net/p/pics/d/pics/git/raw/master/18195184-79b34ea65e0cc649.png" alt="img" style="zoom:67%;" />
-<h3 id="古镇面世">古镇面世</h3>
-<p>1988年8月，在老通波塘西岸的青龙村双浜生产队开挖窑时，出土一些唐宋时期的瓷碗、引起青浦博物馆和上海博物馆考古部关注。</p>
-<p>2010年，上海博物馆考古部将青龙镇遗址列入“上海大遗址考古计划”</p>
-<figure data-type="image" tabindex="4"><img src="https://kgmap.coding.net/p/pics/d/pics/git/raw/master/18195184-55f5e394524cf2c7.png" alt="img" loading="lazy"></figure>
-<hr>
-<h2 id="遗址地点与范围">遗址地点与范围</h2>
-<p>青龙镇发掘面积近 1500 平方米，勘探面积近 1 万平米。结合文献资料及实地走访调查，初步确定了青龙镇遗址面积约 25 平方公里，西北到白鹤镇胜新村，东南到重固镇新丰高家台，西至 A30 公路西侧，南至秀横路北侧。</p>
-<p>青龙镇遗址核心部位，即今青浦区白鹤镇塘湾村<a href="https://www.jianshu.com/p/b022ae056918">陈岳自然村</a></p>
-<p><a href="https://map.baidu.com/poi/%E9%9D%92%E9%BE%99%E5%8F%A4%E5%AF%BA-%E5%94%AE%E7%A5%A8%E5%A4%84/@13489957.004052322,3642235.5219499078,19.52z?uid=be6463facc46331b6c20b914&amp;ugc_type=3&amp;ugc_ver=1&amp;device_ratio=2&amp;compat=1&amp;querytype=detailConInfo&amp;da_src=shareurl">导航前往</a></p>
-<hr>
-<h2 id="遗迹看点">遗迹看点</h2>
-<h3 id="青龙寺">青龙寺</h3>
-<p>唐天宝二年（743）在青龙镇建报德寺</p>
-<p>唐长庆元年（821）改名隆福寺并建塔</p>
-<p>​    历代青龙寺曾多次修缮。宋康定二年(1041 年)、庆历八年(1048年)两度重修，建炎年间高僧妙普、法华曾住寺讲经，法华讲《法华经》三十年而不间断,人称“畅法华”</p>
-<p>元大德三年(1299年)、致和元年(1328年)、 至正三年(1343 年)，青龙镇人、著名水利专家任仁发及其子贤德、孙士质三代相继捐资修葺;</p>
-<p>明天启四年(1624年) 至崇祯十七年(1644年)， 邑人朱明镜.席端樊和席本桢等捐资修缮宝塔。</p>
-<p>清顺治元年(1644年) 始，历经数十年，百愚、寒松操两位大师率众重建了大雄宝殿、地藏殿、方丈殿、韦驮殿、玉树轩、普同塔、揖秀堂、且歇堂等建筑，传有大小房屋5 048间，为“一藏”之数,可见其规模之大。当时青龙寺占地60余亩,建筑宏伟，寺田450亩。从此,“朱甍碧瓦，辉映南翔，圣像镕金，舆梁跨水”，重现了昔日的荣光。</p>
-<p>康熙七年(1668 年)“重兴青龙隆福寺碑记”记载了当时的修建情况。康熙五十四年(1715 年)康熙皇帝南巡，途经青龙时亲书“精严寿相”额，并赐名“吉云禅寺”，又赐水晶观音一尊、紫衣袈裟一袭等，成为镇寺之宝。</p>
-<p>嘉庆三年(1798年) 又不幸失火，崇阁大殿均成废墟。至道光八年(1828年) 开始，由住持光公、监院澄参募资逐渐修复护法殿、尊天殿、大悲阁、下院庵、西水庵、报本堂、澄怀堂、文觉堂等，大雄宝殿也于道光十一年(1831 年)得以重建。</p>
-<p>咸丰十年(1860年)在战火中，寺屋废损大半，<sub>邑人俞玉海在《游青龙寺》诗中如此写道:“古寺门前芳草薰，荒凉犹忆驻前军。铁衣埋没袈裟在，金镞沉消钟磬闻。万事早知皆梦幻，百年何自缚尘纷。清凉居士我先觉，欲共残僧看白云。”</sub>仅存大雄宝殿、观音殿及“重兴青龙隆福寺碑记”、“敕赐吉云禅寺重建大殿碑铭”二块石碑，长期未能修复。</p>
-<p>旧时，除举行佛诞等重大活动外，每年农历三月十五，青龙寺都要举行盛大的庙会，远近的香客信徒接踵而至，前来烧香赶集，成为一大风景。</p>
-<p>现在的青龙寺，系当年青龙镇“十三寺”中唯一保存下来的寺院。1959年3月，青龙寺被公布为青浦县文物保护单位; 1962年9月，塔被公布为上海市文物保护单位。1993 年6月起青龙寺恢复开放。1997 年开始修复，在监院光云法师等努力下，大雄宝殿、斋堂、山门、观音殿、天王殿等陆续重建，光云又善书，寺内额、联多出其手。寺内供奉着一尊身高5.6米、重达120吨的缅甸玉卧佛和三尊高3.6米、重24吨的缅甸玉释迦牟尼、和药师、阿弥陀诸佛以及其他众神。目前香火旺盛，梵音不绝，金辉玉粲，古刹重光，又成为名闻遐迩的寺院。</p>
-<img src="https://kgmap.coding.net/p/pics/d/pics/git/raw/master/18195184-df4e21b5f9e75453.png" alt="img" style="zoom:67%;" />
-<h3 id="青龙塔吉云禅寺塔">青龙塔（吉云禅寺塔）</h3>
-<p>​    唐长庆年间在青龙镇建七级宝塔（青龙塔）。 建塔前，入港船只常常失势，漂入深波。建塔后，望塔进止，怵心顿减，得安全入泊。</p>
-<p>唐大中年间（847-859），日本僧人圆仁写的《入唐求法巡礼行记》中日本的船只已到达青龙镇。</p>
-<p>如今的青龙塔虽然木质廊檐尽无，但其饱经风霜的宋代砖身仍十分壮观。 身残塔，成为青龙镇的唯一-见证者。该塔为砖木结构，七级八面，原有腰檐，平座栏杆，顶上有塔刹，外呈八角形，内有方室。原高达41.5米，现高为29.9米，直径6.6米。塔顶因过度倾斜，1954年7月铸于明崇祯十七年(1644 年)的塔刹铜葫芦被台风吹倒，现珍藏于<strong>青浦博物馆</strong>。1992 年，市文物管理部门邀请建筑纠偏专家曹时中成功地对塔进行了纠偏和加固。</p>
-<figure data-type="image" tabindex="5"><img src="https://kgmap.coding.net/p/pics/d/pics/git/raw/master/18195184-2d2a08c91f655911.png" alt="img" loading="lazy"></figure>
-<h3 id="隆平寺塔基">隆平寺塔基</h3>
-<p>隆平寺塔建于北宋天圣年间，塌毁于明万历年间，是青龙镇北部的一个关键性地标。2015 年 10 月——2016 年 10 月的考古发掘发现了保存较为完整的塔基，现存塔基平面呈八边形。在塔基地宫内出土了钱币、阿育王塔、木贴金释迦牟尼涅槃像、舍利及各种佛教法器。</p>
-<img src="https://kgmap.coding.net/p/pics/d/pics/git/raw/master/AbBW2Xxj7DPO6VF.png" alt="img" style="zoom:67%;" />
-<h3 id="万安桥">万安桥</h3>
-<p>位于隆平寺塔基周边水系通坡塘上的万安桥，修于南宋景定年间。是<strong>青龙镇唯一保留至今的古桥</strong>。坡度平缓，跨拱较大，为宋代石桥的典型结构。</p>
-<img src="https://kgmap.coding.net/p/pics/d/pics/git/raw/master/0bfd1309f1e141bdbe145c2bd82d4841_th.jpeg" alt="img" style="zoom:67%;" />
-<h2 id="宋代砖井">宋代砖井</h2>
-<p>以顺砖侧立错缝垒砌，井底出土铜镜，铁鼎，铁釜，瓷器等。此井为上海已考古发现的数百口井中深度最深，做工最为精致的一口，采用了磨砖对缝及榫卯结构的砌筑工艺，做工非常考究。</p>
-<figure data-type="image" tabindex="6"><img src="https://kgmap.coding.net/p/pics/d/pics/git/raw/master/WjnJ9wBThEdHNSO.png" alt="img" loading="lazy"></figure>
-<figure data-type="image" tabindex="7"><img src="https://kgmap.coding.net/p/pics/d/pics/git/raw/master/3dkI6BCeyYUTz4w.png" alt="img" loading="lazy"></figure>
-<hr>
-<h2 id="古迹爱好者">古迹爱好者</h2>
-<h3 id="青龙镇相关文博展览">青龙镇相关文博展览</h3>
-<p>（一）上海博物馆</p>
-<p>2010-2016年，上海博物馆考古部对位于上海市青浦区白鹤镇的青龙镇遗址进行了长期的勘探与发掘，发现了大量的考古遗迹与遗存，向世人逐步揭开了青龙镇的面纱。</p>
-<p>展览**“千年古港——上海青龙镇遗址考古展”**汇集青龙镇历年考古出土的文物精品，以东南巨镇、盛世佛光、丝路遗珍三个板块呈现这批来之不易的考古成果，诉说青龙镇的兴衰历史，同时带领观众穿越回这座繁荣一时的贸易港口，一睹青龙镇佛寺林立、人口繁盛、商贸聚集的旧时风貌。</p>
-<img src="https://kgmap.coding.net/p/pics/d/pics/git/raw/master/18195184-863c34a6a88a3a96.png" alt="img" style="zoom:67%;" />
-<p><a href="https://mp.weixin.qq.com/s/S3zFDTX-oQrn8iK94GSQ-w">展览概况</a></p>
-<p>虽然特展已经结束，但是上海博物馆精心制作的展区导览仍然能为大家带来良好的沉浸体验。</p>
-<p><a href="https://mp.weixin.qq.com/mp/homepage?__biz=MzIyNjA4NDYyNQ==&amp;hid=11&amp;sn=9e859648e217b87c48f1d5e0b5eb0cf2&amp;devicetype=android-29&amp;version=27000c34&amp;lang=zh_CN&amp;ascene=4&amp;wx_header=1&amp;nettype=WIFI&amp;scene=1">展区导览</a></p>
-<h3 id="青龙镇遗迹及文物">青龙镇遗迹及文物</h3>
-<p>1980年代开挖窑河时地下出土的1件精湛的带有强烈异域特色的长沙窑胡人乐妓执壶，青黄色釉，在口沿、颈、腹部有褐彩，釉色莹润光洁。流和双系下粘贴身着胡服，隆目高鼻的胡人乐妓模印贴片</p>
-<figure data-type="image" tabindex="8"><img src="https://kgmap.coding.net/p/pics/d/pics/git/raw/master/18195184-4d62b46ad64eb31b.png" alt="img" loading="lazy"></figure>
-<p>清理出了4座排列有序的火炉，周围堆积最厚达80厘米的大量的红烧土铸造炉渣和陶范残块等，存在一处范围较大、使用时间较长的唐代铸造作坊遗迹。也是上海第一次发现的铸造作坊。</p>
-<figure data-type="image" tabindex="9"><img src="https://kgmap.coding.net/p/pics/d/pics/git/raw/master/18195184-042f42c6a7d27669.png" alt="img" loading="lazy"></figure>
-<p>一口4.5米的水井是上海已考古发现的数百口井中最深、做工最为精致的唐代砖井</p>
-<p>出土了在唐代金属器中比较少见的铁釜、铁提梁鼎</p>
-<figure data-type="image" tabindex="10"><img src="https://kgmap.coding.net/p/pics/d/pics/git/raw/master/18195184-a1e5cce2265668d8.png" alt="img" loading="lazy"></figure>
-<p>一处面积近50平方米的唐代房屋基址。屋内有一处火塘，屋外1座青砖椭圆形砖灶，炉膛、烟道、火门等保存基本完整。</p>
-<img src="https://kgmap.coding.net/p/pics/d/pics/git/raw/master/18195184-7300532b0f2ade6c.png" alt="img" style="zoom:67%;" />
-<center>在全国范围内发现的唐代建筑遗存并不多，普通的民居则更少</center>
-<p>目前全国考古出土的较完整的唐代腰鼓仅有数件，而在青龙镇一次就发现了3件。</p>
-<figure data-type="image" tabindex="11"><img src="https://kgmap.coding.net/p/pics/d/pics/git/raw/master/18195184-1f6dadda5c6e78e8.png" alt="img" loading="lazy"></figure>
-<p>一些瓷器（如长沙窑莲瓣纹碗）构图有鲜明的域外色彩。1998年在印度尼西亚海域打捞的“黑石号”沉船中发现的长沙窑瓷器中有不少类似纹饰。</p>
-<figure data-type="image" tabindex="12"><img src="https://kgmap.coding.net/p/pics/d/pics/git/raw/master/18195184-865eda4744d5b7dc.png" alt="img" loading="lazy"></figure>
-<h3 id="考古青龙镇app">考古青龙镇app</h3>
-<p>考古青龙镇app由上海博物馆推出，可以让观众在无法亲临现场的情况下重温青龙镇的风采与当年遗址考古发掘时的珍贵影像资料。</p>
-<p>目前仅适用于ipad</p>
-<figure data-type="image" tabindex="13"><img src="https://kgmap.coding.net/p/pics/d/pics/git/raw/master/18195184-3bec4fbc57062fb6.png" alt="img" loading="lazy"></figure>
-<h3 id="青龙镇名人足迹">青龙镇名人足迹</h3>
-<p>宋代书画家米芾曾任青龙镇镇监（即镇长），有一次来到镇北的隆平寺，偶然看见陈林撰的《隆平寺经藏记》，也许是被文中对青龙镇的生动描述所感染，立刻挥毫书录之。</p>
-<p>宋代诗人梅尧臣在青龙镇住过一段时间，对这里的概貌作过考察，所著的《青龙杂志》可算第一部青龙镇志--“百川倒蹙水欲立，不久却回如鼻吸。老鱼无守随上下，阁向沧州空怨泣。””</p>
-<p>苏东坡与章粢那：“章庄敏公名粢……元丰时官华亭，曾浚青龙江，筑思堂，苏东坡作有《思堂记》。”——《青浦地名小志》</p>
-<p>相传青龙镇还有一处苏东坡与隐士李行中的醉眠亭：“已向闲中作地仙，更于酒里得天全；从教世路风波恶，贺监偏工水底眠。”</p>
-
+              <p>嘉定孔庙旅游线路推荐</p>
+<iframe src="http://www.ldmap.net/map.html?id=fe40bca8-2ab6-4514-a474-b2bb264b97c7&iframe=true&left_menu_vis=true"  height="742"   width="1403"></iframe>
             </div>
             
               <div class="reward-btn">
@@ -743,7 +407,7 @@
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://sh.kgdt.work/post/qing-long-zhen/" title="青龙镇">https://sh.kgdt.work/post/qing-long-zhen/</a>
+      <a href="https://sh.kgdt.work/post/test2/" title="test2">https://sh.kgdt.work/post/test2/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -752,20 +416,16 @@
   </ul>
   <div class="tags">
     
-      <a href="https://sh.kgdt.work/tag/kGN39XXIi/"># 上海古镇</a>
-    
-      <a href="https://sh.kgdt.work/tag/3Vr5fwDzh/"># 唐代</a>
-    
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title=" 古迹逸闻|松江唐经幢" href="https://sh.kgdt.work/post/gu-ji-yi-wen-orsong-jiang-tang-jing-chuang/"> 古迹逸闻|松江唐经幢</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title=" 古迹逸闻|松江唐经幢" href="https://sh.kgdt.work/post/gu-ji-yi-wen-orsong-jiang-tang-jing-chuang/">上一篇</a>
-      
     </div>
     <div class="nav-next">
+      
+        <a class="nav-pc-next" title="【记忆】建筑可阅读：让远古村落焕发时代活力！广富林的故事久远迷人" href="https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-rang-yuan-gu-cun-luo-huan-fa-shi-dai-huo-li-guang-fu-lin-de-gu-shi-jiu-yuan-mi-ren/">【记忆】建筑可阅读：让远古村落焕发时代活力！广富林的故事久远迷人</a>
+        <a class="nav-mobile-next" title="【记忆】建筑可阅读：让远古村落焕发时代活力！广富林的故事久远迷人" href="https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-rang-yuan-gu-cun-luo-huan-fa-shi-dai-huo-li-guang-fu-lin-de-gu-shi-jiu-yuan-mi-ren/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
       
     </div>
   </div>
