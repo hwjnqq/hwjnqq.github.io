@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sh.kgdt.work</id>
     <title>上海考古地图</title>
-    <updated>2021-02-23T11:48:46.116Z</updated>
+    <updated>2021-02-25T14:26:06.515Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sh.kgdt.work"/>
     <link rel="self" href="https://sh.kgdt.work/atom.xml"/>
@@ -12,6 +12,13 @@
     <logo>https://sh.kgdt.work/images/avatar.png</logo>
     <icon>https://sh.kgdt.work/favicon.ico</icon>
     <rights>All rights reserved 2021, 上海考古地图</rights>
+    <entry>
+        <title type="html"><![CDATA[线路地图嵌入网站test1]]></title>
+        <id>https://sh.kgdt.work/post/xian-lu/</id>
+        <link href="https://sh.kgdt.work/post/xian-lu/">
+        </link>
+        <updated>2021-02-25T14:23:03.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【记忆】建筑可阅读：让远古村落焕发时代活力！广富林的故事久远迷人]]></title>
         <id>https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-rang-yuan-gu-cun-luo-huan-fa-shi-dai-huo-li-guang-fu-lin-de-gu-shi-jiu-yuan-mi-ren/</id>
@@ -74,12 +81,5 @@
         <link href="https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-shang-hai-cheng-qu-di-yi-ge-bei-fa-jue-chu-tu-de-da-xing-yi-zhi/">
         </link>
         <updated>2021-02-23T09:21:19.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【记忆】建筑可阅读：80多岁的钟楼式建筑，这个图书馆独具美感]]></title>
-        <id>https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-80-duo-sui-de-zhong-lou-shi-jian-zhu-zhe-ge-tu-shu-guan-du-ju-mei-gan/</id>
-        <link href="https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-80-duo-sui-de-zhong-lou-shi-jian-zhu-zhe-ge-tu-shu-guan-du-ju-mei-gan/">
-        </link>
-        <updated>2021-02-22T12:44:46.000Z</updated>
     </entry>
 </feed>
