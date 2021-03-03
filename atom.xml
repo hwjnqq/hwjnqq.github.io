@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sh.kgdt.work</id>
     <title>上海考古地图</title>
-    <updated>2021-03-03T08:24:49.162Z</updated>
+    <updated>2021-03-03T10:53:51.370Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sh.kgdt.work"/>
     <link rel="self" href="https://sh.kgdt.work/atom.xml"/>
@@ -12,6 +12,20 @@
     <logo>https://sh.kgdt.work/images/avatar.png</logo>
     <icon>https://sh.kgdt.work/favicon.ico</icon>
     <rights>All rights reserved 2021, 上海考古地图</rights>
+    <entry>
+        <title type="html"><![CDATA[【线路】上海体育大厦周边微游线路推荐]]></title>
+        <id>https://sh.kgdt.work/post/shang-hai-ti-yu-da-sha-wei-lu-you-xian-lu-tui-jian/</id>
+        <link href="https://sh.kgdt.work/post/shang-hai-ti-yu-da-sha-wei-lu-you-xian-lu-tui-jian/">
+        </link>
+        <updated>2021-03-03T08:11:51.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【线路】圣约翰大学历史建筑群周边微游]]></title>
+        <id>https://sh.kgdt.work/post/sheng-yue-han-da-xue-li-shi-jian-zhu-qun-zhou-bian-wei-you/</id>
+        <link href="https://sh.kgdt.work/post/sheng-yue-han-da-xue-li-shi-jian-zhu-qun-zhou-bian-wei-you/">
+        </link>
+        <updated>2021-03-03T08:10:04.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【线路】红色足迹]]></title>
         <id>https://sh.kgdt.work/post/hong-se-zu-ji/</id>
@@ -67,19 +81,5 @@
         <link href="https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-che-ma-hen-yuan-shu-xin-hen-man-de-sui-yue-juan-ke-zai-zhe-dong-da-lou-li/">
         </link>
         <updated>2021-02-23T11:21:40.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[从“黑石”到“黑胶”，这座百年公寓缭绕着岁月余音]]></title>
-        <id>https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-cong-hei-shi-dao-hei-xiao-zhe-zuo-bai-nian-gong-yu-liao-rao-zhao-sui-yue-yu-yin/</id>
-        <link href="https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-cong-hei-shi-dao-hei-xiao-zhe-zuo-bai-nian-gong-yu-liao-rao-zhao-sui-yue-yu-yin/">
-        </link>
-        <updated>2021-02-23T11:15:33.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[岁月静好，走进金山老宅的“大咖”故事！]]></title>
-        <id>https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-sui-yue-jing-hao-zou-jin-jin-shan-lao-zhai-de-da-ka-gu-shi/</id>
-        <link href="https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-sui-yue-jing-hao-zou-jin-jin-shan-lao-zhai-de-da-ka-gu-shi/">
-        </link>
-        <updated>2021-02-23T11:06:37.000Z</updated>
     </entry>
 </feed>
