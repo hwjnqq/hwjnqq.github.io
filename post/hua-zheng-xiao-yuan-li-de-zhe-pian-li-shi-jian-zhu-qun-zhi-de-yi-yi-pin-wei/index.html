@@ -10,7 +10,7 @@
 ——上海文旅融合线路优化设计研究
 ">
 <meta name="theme-color" content="#000">
-<title>性觉寺【金山区枫湾路568号】 | 上海考古地图</title>
+<title>华政校园里的这片历史建筑群，值得一一品味！ | 上海考古地图</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1614816582723">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -50,8 +50,8 @@
 </script>
 
 
-  <meta name="description" content="性觉寺【金山区枫湾路568号】" />
-  <meta name="keywords" content="明代" />
+  <meta name="description" content="华政校园里的这片历史建筑群，值得一一品味！" />
+  <meta name="keywords" content="建筑可阅读" />
 </head>
 
 <body>
@@ -215,7 +215,8 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            
+            <div class="post-side-meta" id="post_side_meta">
+              
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -269,6 +270,195 @@
   </div>
 
 </div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto"
+    id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li><a href="#%E5%9C%A3%E7%BA%A6%E7%BF%B0%E5%A4%A7%E5%AD%A6%E5%8E%86%E5%8F%B2%E5%BB%BA%E7%AD%91%E7%BE%A4">圣约翰大学历史建筑群</a></li>
+<li><a href="#%E5%BB%BA%E7%AD%91%E4%BF%AE%E7%BC%AE%E7%BB%B4%E6%8A%A4">建筑修缮维护</a></li>
+<li><a href="#%E6%89%93%E5%8D%A1%E7%82%B9">打卡点</a></li>
+<li><a href="#%E5%BE%AE%E6%B8%B8%E7%BA%BF%E8%B7%AF%E6%8E%A8%E8%8D%90">微游线路推荐</a></li>
+<li><a href="#%E5%91%A8%E8%BE%B9%E6%B8%B8%E7%8E%A9%E6%8E%A8%E8%8D%90">周边游玩推荐</a></li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
+  let active = 'active-show', activeClass = 'active-current';
+  let tocWrapper = document.querySelector('#toc_wrapper');
+  let tocContent = tocWrapper.children[0];
+  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
+
+  function addTocNumber(elem, deep) {
+    if (!elem) {
+      return;
+    }
+    let prop = elem.__proto__;
+
+    if (prop === HTMLUListElement.prototype) {
+      for (let i = 0; i < elem.children.length; i++) {
+        addTocNumber(elem.children[i], deep + (i + 1) + '.');
+      }
+    } else if (prop === HTMLLIElement.prototype) {
+      // 保存li元素
+      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+        lList.push(elem);
+      }
+      for (let i = 0; i < elem.children.length; i++) {
+        let cur = elem.children[i];
+        if (cur.__proto__ === HTMLAnchorElement.prototype) {
+          if (autoNumber) {
+            cur.text = deep + ' ' + cur.text;
+          }
+        } else if (cur.__proto__ === HTMLUListElement.prototype) {
+          addTocNumber(cur, deep);
+        }
+      }
+    }
+  }
+
+  function removeParentActiveClass() {
+    let parents = tocContent.querySelectorAll('.' + active)
+    parents.forEach(function (elem) {
+      elem.classList.remove(active);
+    });
+  }
+
+  function addActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.add(activeClass);
+    }
+  }
+
+  function removeActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.remove(activeClass);
+    }
+  }
+
+  function addActiveLiElemment(elem, parent) {
+    if (!elem || elem === parent) {
+      return;
+    } else {
+      if (elem.__proto__ === HTMLLIElement.prototype) {
+        elem.classList.add(active);
+      }
+      addActiveLiElemment(elem.parentElement, parent);
+    }
+  }
+
+  function showToc() {
+    if (tocWrapper) {
+      postBody = document.querySelector('#post_body');
+      for (let i = 0; i < postBody.children.length; i++) {
+        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+          hList.push(postBody.children[i]);
+        }
+      }
+      if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+      } else if (tocWrapper.classList.contains('no_compress')) {
+        tocContent.classList.add('expanded');
+      } else {
+        if (hList.length > 10) {
+          active = 'active-hidden'
+          tocContent.classList.add('closed');
+        } else {
+          tocContent.classList.add('expanded');
+        }
+      }
+    }
+  }
+
+  (function () {
+    // 处理不是从#一级标题开始目录
+    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+      let con = tocContent.children[0].children[0];
+      tocContent.innerHTML = con.innerHTML;
+    }
+    let markdownItTOC = document.querySelector('.markdownIt-TOC');
+    let innerHeight = window.innerHeight;
+    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
+    addTocNumber(tocContent, '');
+  })();
+
+  document.addEventListener('scroll', function (e) {
+    if (lList.length <= 0) {
+      return;
+    }
+    let scrollTop = document.scrollingElement.scrollTop + 10;
+    let dir;
+
+    if (lastTop - scrollTop > 0) {
+      dir = 'up';
+    } else {
+      dir = 'down';
+    }
+
+    lastTop = scrollTop;
+    if (scrollTop <= 0) {
+      if (lastIndex >= 0 && lastIndex < hList.length) {
+        lList[lastIndex].classList.remove(activeClass);
+      }
+      return;
+    }
+
+    let current = 0, hasFind = false;
+    for (let i = 0; i < hList.length; i++) {
+      if (hList[i].offsetTop > scrollTop) {
+        current = i;
+        hasFind = true;
+        break;
+      }
+    }
+    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+      current = hList.length - 1;
+    } else {
+      current--;
+    }
+    if (dir === 'down') {
+      if (current > lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex)
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    } else {
+      if (current < lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex);
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    }
+  });
+
+
+  window.addEventListener('load', function () {
+    showToc();
+    document.querySelector('#sidebar').style = 'display: block;';
+    tocWrapper.classList.add('toc-active');
+    setTimeout(function () {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
+  })
+
+</script>
+            </div>
           
         
       </div>
@@ -356,8 +546,8 @@
           <div class="section bg-color post post-page">
             <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://sh.kgdt.work/post/xing-jue-si-jin-shan-qu-feng-wan-lu-568-hao/">
-      性觉寺【金山区枫湾路568号】
+    <a class="post-title-link" href="https://sh.kgdt.work/post/hua-zheng-xiao-yuan-li-de-zhe-pian-li-shi-jian-zhu-qun-zhi-de-yi-yi-pin-wei/">
+      华政校园里的这片历史建筑群，值得一一品味！
     </a>
   </h1>
   <div class="post-meta">
@@ -365,7 +555,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2020-08-22 18:18:18">2020-08-22</span>
+      <span class="publish-time" data-t="2021-02-25 07:44:35">2021-02-25</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -374,8 +564,8 @@
       <span class="pc-show language" data-lan="category-in">分类于</span>
       
       
-      <a href="https://sh.kgdt.work/tag/ikNYuBcJt/">
-        <span>明代</span>
+      <a href="https://sh.kgdt.work/tag/JcKn5zS6W/">
+        <span>建筑可阅读</span>
       </a>
       
       
@@ -384,17 +574,17 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>1<span class="language" data-lan="minute">分钟</span></span>
+      <span>10<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>284<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>2634<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/post/xing-jue-si-jin-shan-qu-feng-wan-lu-568-hao/" data-flag-title="性觉寺【金山区枫湾路568号】" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/hua-zheng-xiao-yuan-li-de-zhe-pian-li-shi-jian-zhu-qun-zhi-de-yi-yi-pin-wei/" data-flag-title="华政校园里的这片历史建筑群，值得一一品味！" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -403,12 +593,101 @@
   </div>
 </section>
             <div class="post-body next-md-body" id="post_body">
-              <p>性觉寺始建于明万历年间(1573- 1620年)，初名月明庵，由法名性本的僧人主持所建。</p>
-<!-- more -->
-<p>清康熙四十四年(1705年) ，康熙皇帝南巡，住持僧人本冲得悉皇上到了松江地带，就连夜赶去，跪求赐名，康熙为他题写“性觉寺”寺名。从此，御书匾额高悬正殿大门之上，月明庵被称作性觉寺。</p>
-<p>“性觉”本是佛家语言，即“性觉妙明”，意思是“修佛至一定境界的人对世界认知不需要依靠他人甚至自己耳目，只需依靠本性就能洞察和彻悟一切”。可惜咸丰十年(1860年)，因战乱被焚烧一空。 光绪四年(1878年) ，僧人永激又募资重建。20世纪60年代，性觉寺被停止宗教活动，僧人遭遭散，房屋改作他用。</p>
-<p>1994年，金山县人民政府在枫泾镇易地重建性觉寺，1995年8月正式对外开放。寺内的九品莲花塔高30米，全部由晋云石砌成，是新中国成立后金山唯一建成的石塔。</p>
-<img src="https://i.loli.net/2020/08/22/L2nRABGXQYgWODJ.jpg" alt="img" style="zoom:67%;" />
+              <p>圣约翰大学，这所19世纪末于在上海诞生的高等学府，在上海的历史中，写就过浓墨重彩的一笔。今天让我们走进圣约翰大学历史建筑群，在百岁多的砖墙前阅读TA的故事。</p>
+<h1 id="圣约翰大学历史建筑群">圣约翰大学历史建筑群</h1>
+<figure data-type="image" tabindex="1"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_e6c1568d.png" alt="ThirdPartyImage_e6c1568d.png" loading="lazy"></figure>
+<p>圣约翰大学旧址位于长宁区万航渡路1575号。1879年圣约翰书院创建，1896年改称圣约翰学校，1906年改称圣约翰大学。1911年，学校买下了梵皇渡路（今万航渡路）以北、原属于兆丰公园（今中山公园）的一块土地，也正是这项土地购入计划，使得如今的华东政法大学（华东政法大学是在圣约翰大学旧址上建立起来的），成了全上海唯一有苏州河流经的学校。</p>
+<figure data-type="image" tabindex="2"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_33668bb9.png" alt="ThirdPartyImage_33668bb9.png" loading="lazy"></figure>
+<p>圣约翰大学古朴典雅、中西合璧的校园建筑群中，常为人称道的建筑有怀施堂、思颜堂、思孟堂、科学馆和西门堂。</p>
+<p>原来被称为格致楼的科学馆，最早是创建者的起居室，其后成了医学系的课室，同时也有物理化学实验室的功能，在大学里建造科学馆，在当时的上海是首创。</p>
+<p>另外，1885年创立的圣玛利亚书院，是沪上最早的女校之一，可以算是圣约翰大学的分部，如今，位于学校内的西门堂，便是当时女学生们学习的一方天地。</p>
+<figure data-type="image" tabindex="3"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_87d1ac1e.png" alt="ThirdPartyImage_87d1ac1e.png" loading="lazy"></figure>
+<p>圣约翰大学历史建筑群是上海市优秀历史建筑、上海市级文物保护单位、长宁区登记不可移动文物，2019年10月成为第八批全国重点文物保护单位。</p>
+<figure data-type="image" tabindex="4"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_bef2cf0a.png" alt="ThirdPartyImage_bef2cf0a.png" loading="lazy"></figure>
+<h1 id="建筑修缮维护">建筑修缮维护</h1>
+<p>华东政法大学于2017年开始对格致楼进行历时10个月的修缮工程，这是圣约翰大学历史建筑群里首例完全按照文物保护法“不改变文物原状”原则进行修缮复原的工程。</p>
+<p>传统工艺修复清水墙，让墙面可以“呼吸”</p>
+<p>历史上，格致楼传统的清水砖墙被红色和灰色涂料覆盖。这是一种对外立面墙“描画”的维修处理手法，即对老墙表面粉刷和涂料后，以涂料画缝做出砖缝效果，由于涂料本身透气性较差，阻碍了原有砖体的“呼吸”，在长期自然侵蚀下，容易导致表面粉刷起壳、涂料脱落，局部修补痕迹明显，外立面感官失真。对此，在修复小样得到文物专家认可后，通过一系列脱漆、清洗、打磨、修补、划缝、勾缝、增强、憎水等传统工序进行修复。</p>
+<figure data-type="image" tabindex="5"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_1684819b.png" alt="ThirdPartyImage_1684819b.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_90defbde.png" alt="ThirdPartyImage_90defbde.png" loading="lazy"></figure>
+<p>恢复木窗，增设纱窗，兼顾原貌和保温节能</p>
+<p>历史上对格致楼进行修缮时，从使用功能考虑出发，格致楼的原有木门窗被铝合金窗所代替，原始的圆弧窗头也被改为平窗头。在本次修缮中，恢复了圆弧实木木窗和仿古造型五金，并进行了做旧工艺处理。安装过程中采用原始墙体开槽，嵌入垫木后窗框与垫木连接，砂浆、结构胶、砖粉三重填充防渗水的综合工艺。此外，考虑到华政校区绿化面积广，夏季蚊虫较多等，实施了加大窗框截面，玻璃窗内侧增加木质纱窗的方案。</p>
+<figure data-type="image" tabindex="7"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_64c2a3e6.png" alt="ThirdPartyImage_64c2a3e6.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="8"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_909e09f0.png" alt="ThirdPartyImage_909e09f0.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="9"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_144009ce.png" alt="ThirdPartyImage_144009ce.png" loading="lazy"></figure>
+<p>数次1:1实物打样，确认屋脊飞檐翘角</p>
+<p>同校园内其他建筑一样，格致楼具有“中西结合式”的特点。格致楼外廊、庭院等建筑格局是西式的，屋檐飞檐等建筑风格是中式，这种建筑被称为“中国装”建筑。格致楼外观屋角飞檐翘起，具有典型的中国古建筑特点。</p>
+<p>由于历史上多次改造，格致楼原有屋面和极具特色的高翘屋角均已失去，同时因历史资料缺失，仅凭借历史照片无法明确屋面翘角，因此在修缮过程中，以书籍、照片和校园内建筑作参考，制作了多款不同形式的屋脊翘脚，并按照1:1样板制作实物，最终恢复了屋脊飞檐翘角。</p>
+<figure data-type="image" tabindex="10"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_d00a4a20.png" alt="ThirdPartyImage_d00a4a20.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="11"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_3b4eadd0.png" alt="ThirdPartyImage_3b4eadd0.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="12"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_d7b470ab.png" alt="ThirdPartyImage_d7b470ab.png" loading="lazy"></figure>
+<p>重现外廊，恢复中庭，呼应建筑群整体风貌</p>
+<p>本次修缮中率先恢复了一层外廊原貌，作为通廊；二三层外廊区域恢复历史效果。同时，恢复原有中庭，并对楼梯间、大厅等重点保护部位进行了修旧如旧的保护处理。</p>
+<p>韬奋楼成为格致楼修缮过程中的重要参照标准。在初始设计中，格致楼的外廊窗下护栏原本采用墙体砌筑，经市文物局指导，参照“韬奋楼”木质护栏样式，恢复实木外置护栏。外廊木门的设计，亦参考“韬奋楼”的外墙窗做法——同框一体，内侧玻璃木门和外侧百叶门。</p>
+<figure data-type="image" tabindex="13"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_d09b0413.png" alt="ThirdPartyImage_d09b0413.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="14"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_ab23d4a3.png" alt="ThirdPartyImage_ab23d4a3.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="15"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_7b20cefe.png" alt="ThirdPartyImage_7b20cefe.png" loading="lazy"></figure>
+<h1 id="打卡点">打卡点</h1>
+<p>1  怀施堂-韬奋楼41号楼</p>
+<figure data-type="image" tabindex="16"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_495b9c7f.png" alt="ThirdPartyImage_495b9c7f.png" loading="lazy"></figure>
+<p>怀施堂是学校里最老的建筑之一，这座建于1894年的四合院建筑，面积达5061平方米。</p>
+<p>该堂的建筑设计保存中国传统建筑特点，两层砖木结构，墙体以青砖为主，配以局部红砖线条和拱券，歇山屋顶上配以传统的蝴蝶瓦，口字形或四合院平面布局，墙身则是连续的西式圆拱外廊国土，屋顶四角皆为曲线形（1959年大修时改为直线型）。正面有一塔楼，后安置了一口大钟，成为钟楼。</p>
+<figure data-type="image" tabindex="17"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_10ed088f.png" alt="ThirdPartyImage_10ed088f.png" loading="lazy"></figure>
+<p>尽管在设计上中西两种建筑风格的结合还相当生硬，但怀施堂是中西建筑文化交融的一次开创性尝试。建筑面积5061平方米，61个房间，落成之初楼下设课室、膳堂和图书馆，楼上为学生宿舍，可容学生250人。图书馆在1904年思颜堂建成后迁往该处。</p>
+<p>1951年改名为韬奋楼，纪念1921年从这里毕业的邹韬奋。因该楼在圣约翰河西校舍中排列在第41位，故又称41号楼。</p>
+<p>1952年华东政法学院成立后，该楼一层为教室，二层为学生宿舍。</p>
+<p>1979年华东政法学院复校，该楼二层亦逐步改成教室。为纪念邹韬奋百年诞辰，1995年11月15日，华东政法学院在韬奋楼内中央空地举行了邹韬奋半身铜像揭幕典礼。</p>
+<figure data-type="image" tabindex="18"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_ac4e5259.png" alt="ThirdPartyImage_ac4e5259.png" loading="lazy"></figure>
+<p>2 格致楼-42号楼</p>
+<figure data-type="image" tabindex="19"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_85b3b394.png" alt="ThirdPartyImage_85b3b394.png" loading="lazy"></figure>
+<p>格致楼曾称格致室，又用名科学馆、办公楼，1898年11月20日奠基，1899年7月19日举行落成典礼。格致室为砖木结构的三层房屋，基地面积930平方米，建筑面积2331平方米，计60个房间。</p>
+<p>该楼西侧墙面与怀施堂南侧墙相仿，南侧墙面为城堡式。格致室屋顶外形仿效怀施堂的屋檐，飞扬七巧，但墙面处理则明显增添了西方建筑的色调，以半圆形拱代替了弧形拱，二层楼以上用玻璃窗全封闭。一、二两层为物理、化学试验及课室和博物院；三层为学生宿舍，后改为医科课室等。</p>
+<p>格致室是当时中国所有院校中第一座专门教授自然科学的校舍。1952年华东政法学院成立时，院长办公室、教务处及有关教研组、总务处及所属科室均设在该楼，故改名为办公楼。</p>
+<p>1998年暑期，华东政法学院将办公楼改作学生宿舍并重新取名格致楼。格致楼又称42号楼。</p>
+<p>3 思颜堂-学生宿舍40号楼</p>
+<figure data-type="image" tabindex="20"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_f290c914.png" alt="ThirdPartyImage_f290c914.png" loading="lazy"></figure>
+<p>思颜堂于1904年10月1日举行落成典礼。思颜堂呈U字形，砖木结构，建筑式样亦中西结合，楼顶四角皆为曲线型，东侧南侧以阳台护栏装饰。基地面积为2414平方米，建筑面积4052平方米，计114个房间。</p>
+<p>建成时西侧三层均为学生宿舍，可容150人。从怀施堂迁移来的图书馆置于一楼西南隅。东侧二楼设大会堂，可容600人。</p>
+<p>华东政法学院成立后，将思颜堂改为学生宿舍一号楼。1979年复校后，改为学生宿舍四号楼。因该楼在圣约翰河西校舍中排列在第40位，故又称40号楼。</p>
+<p>4 思孟堂-学生宿舍43号楼</p>
+<figure data-type="image" tabindex="21"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_3da71932.png" alt="ThirdPartyImage_3da71932.png" loading="lazy"></figure>
+<p>5 科学馆-办公楼42号楼</p>
+<figure data-type="image" tabindex="22"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_4d1860f2.png" alt="ThirdPartyImage_4d1860f2.png" loading="lazy"></figure>
+<p>6 西门堂-东风楼22号楼</p>
+<figure data-type="image" tabindex="23"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_4a9b6721.png" alt="ThirdPartyImage_4a9b6721.png" loading="lazy"></figure>
+<h1 id="微游线路推荐">微游线路推荐</h1>
+<p>圣约翰大学历史建筑群 → 上海凝聚力工程博物馆 → 长宁区革命文物陈列馆暨《布尔塞维克》编辑部旧址 → 愚园路历史名人墙 → 钱学森旧居</p>
+<figure data-type="image" tabindex="24"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_a1018ec9.png" alt="ThirdPartyImage_a1018ec9.png" loading="lazy"></figure>
+<p>上海凝聚力工程博物馆</p>
+<p>地址：长宁区长宁路878号（中山公园内）</p>
+<p>开放时间：免费开放 周二至周日（周一闭馆）</p>
+<p>9:00-11:30（11:00停止入馆） 13:00-16:30（16:00停止入馆）</p>
+<figure data-type="image" tabindex="25"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_1bbe622b.png" alt="ThirdPartyImage_1bbe622b.png" loading="lazy"></figure>
+<p>长宁区革命文物陈列馆暨《布尔塞维克》编辑部旧址</p>
+<p>地址：长宁区愚园路1376弄34号</p>
+<p>开放时间：免费开放 周一至周六（周日馆休）9:00-16:00</p>
+<figure data-type="image" tabindex="26"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_198dc119.png" alt="ThirdPartyImage_198dc119.png" loading="lazy"></figure>
+<p>愚园路历史名人墙</p>
+<p>地址：长宁区愚园路1065号</p>
+<p>开放时间：免费开放 周一至周日8:30-20:00</p>
+<figure data-type="image" tabindex="27"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_c28c4413.png" alt="ThirdPartyImage_c28c4413.png" loading="lazy"></figure>
+<p>钱学森旧居</p>
+<p>地址：愚园路1032弄111号</p>
+<p>开放时间：免费开放 每周四15:30-17:30</p>
+<h1 id="周边游玩推荐">周边游玩推荐</h1>
+<p>中山公园</p>
+<p>地址：上海市长宁区长宁路780号 开放时间：全天免费开放 交通：轨道交通2/3/4号线中山公园站</p>
+<figure data-type="image" tabindex="28"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_c3d3b9e8.png" alt="ThirdPartyImage_c3d3b9e8.png" loading="lazy"></figure>
+<p>长宁区愚园路艺术生活街区</p>
+<p>（首批上海市全域旅游特色示范区域） 地址：上海市长宁区愚园路 开放时间：全天免费开放 交通：轨道交通2/3/4号线中山公园站、 2/11号线江苏路站</p>
+<figure data-type="image" tabindex="29"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_827de8e5.png" alt="ThirdPartyImage_827de8e5.png" loading="lazy"></figure>
+<p>粟上海社区美术馆</p>
+<p>地址：愚园路1088弄48号（愚园公共市集二层）</p>
+<p>开放时间：周二至周日10:00–18:00，周一闭馆</p>
+<figure data-type="image" tabindex="30"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_42db2e9f.png" alt="ThirdPartyImage_42db2e9f.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="31"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_953a60f9.png" alt="ThirdPartyImage_953a60f9.png" loading="lazy"></figure>
+<p>愚巷</p>
+<p>地址：愚园路1381号 开放时间：全天开放</p>
 
             </div>
             
@@ -425,7 +704,7 @@
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://sh.kgdt.work/post/xing-jue-si-jin-shan-qu-feng-wan-lu-568-hao/" title="性觉寺【金山区枫湾路568号】">https://sh.kgdt.work/post/xing-jue-si-jin-shan-qu-feng-wan-lu-568-hao/</a>
+      <a href="https://sh.kgdt.work/post/hua-zheng-xiao-yuan-li-de-zhe-pian-li-shi-jian-zhu-qun-zhi-de-yi-yi-pin-wei/" title="华政校园里的这片历史建筑群，值得一一品味！">https://sh.kgdt.work/post/hua-zheng-xiao-yuan-li-de-zhe-pian-li-shi-jian-zhu-qun-zhi-de-yi-yi-pin-wei/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -434,21 +713,21 @@
   </ul>
   <div class="tags">
     
-      <a href="https://sh.kgdt.work/tag/ikNYuBcJt/"># 明代</a>
+      <a href="https://sh.kgdt.work/tag/JcKn5zS6W/"># 建筑可阅读</a>
     
   </div>
   <div class="nav">
     <div class="nav-prev">
       
         <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="寿带桥【金山区吕巷镇】" href="https://sh.kgdt.work/post/shou-dai-qiao-jin-shan-qu-lu-xiang-zhen/">寿带桥【金山区吕巷镇】</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="寿带桥【金山区吕巷镇】" href="https://sh.kgdt.work/post/shou-dai-qiao-jin-shan-qu-lu-xiang-zhen/">上一篇</a>
+        <a class="nav-pc-next" title="市中心这栋马蹄形的历史建筑，因体育而生！" href="https://sh.kgdt.work/post/shi-zhong-xin-zhe-dong-ma-ti-xing-de-li-shi-jian-zhu-yin-ti-yu-er-sheng/">市中心这栋马蹄形的历史建筑，因体育而生！</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="市中心这栋马蹄形的历史建筑，因体育而生！" href="https://sh.kgdt.work/post/shi-zhong-xin-zhe-dong-ma-ti-xing-de-li-shi-jian-zhu-yin-ti-yu-er-sheng/">上一篇</a>
       
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="万寿寺" href="https://sh.kgdt.work/post/wan-shou-si/">万寿寺</a>
-        <a class="nav-mobile-next" title="万寿寺" href="https://sh.kgdt.work/post/wan-shou-si/">下一篇</a>
+        <a class="nav-pc-next" title="让远古村落焕发时代活力！广富林的故事久远迷人" href="https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-rang-yuan-gu-cun-luo-huan-fa-shi-dai-huo-li-guang-fu-lin-de-gu-shi-jiu-yuan-mi-ren/">让远古村落焕发时代活力！广富林的故事久远迷人</a>
+        <a class="nav-mobile-next" title="让远古村落焕发时代活力！广富林的故事久远迷人" href="https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-rang-yuan-gu-cun-luo-huan-fa-shi-dai-huo-li-guang-fu-lin-de-gu-shi-jiu-yuan-mi-ren/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>

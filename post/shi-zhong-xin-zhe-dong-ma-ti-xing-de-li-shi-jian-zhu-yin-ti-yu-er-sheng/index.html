@@ -10,7 +10,7 @@
 ——上海文旅融合线路优化设计研究
 ">
 <meta name="theme-color" content="#000">
-<title>性觉寺【金山区枫湾路568号】 | 上海考古地图</title>
+<title>市中心这栋马蹄形的历史建筑，因体育而生！ | 上海考古地图</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1614816582723">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -50,8 +50,8 @@
 </script>
 
 
-  <meta name="description" content="性觉寺【金山区枫湾路568号】" />
-  <meta name="keywords" content="明代" />
+  <meta name="description" content="市中心这栋马蹄形的历史建筑，因体育而生！" />
+  <meta name="keywords" content="建筑可阅读" />
 </head>
 
 <body>
@@ -215,7 +215,8 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            
+            <div class="post-side-meta" id="post_side_meta">
+              
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -269,6 +270,195 @@
   </div>
 
 </div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto"
+    id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li><a href="#%E4%BD%93%E8%82%B2%E5%A4%A7%E5%8E%A6">体育大厦</a></li>
+<li><a href="#%E5%BB%BA%E7%AD%91%E7%9A%84%E6%95%85%E4%BA%8B">建筑的故事</a></li>
+<li><a href="#%E5%BB%BA%E7%AD%91%E7%9A%84%E7%BB%B4%E4%BF%AE">建筑的维修</a></li>
+<li><a href="#%E5%91%A8%E8%BE%B9%E6%89%93%E5%8D%A1%E7%82%B9">周边打卡点</a></li>
+<li><a href="#%E5%BE%AE%E6%97%85%E6%B8%B8%E7%BA%BF%E8%B7%AF%E6%8E%A8%E8%8D%90">微旅游线路推荐</a></li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
+  let active = 'active-show', activeClass = 'active-current';
+  let tocWrapper = document.querySelector('#toc_wrapper');
+  let tocContent = tocWrapper.children[0];
+  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
+
+  function addTocNumber(elem, deep) {
+    if (!elem) {
+      return;
+    }
+    let prop = elem.__proto__;
+
+    if (prop === HTMLUListElement.prototype) {
+      for (let i = 0; i < elem.children.length; i++) {
+        addTocNumber(elem.children[i], deep + (i + 1) + '.');
+      }
+    } else if (prop === HTMLLIElement.prototype) {
+      // 保存li元素
+      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+        lList.push(elem);
+      }
+      for (let i = 0; i < elem.children.length; i++) {
+        let cur = elem.children[i];
+        if (cur.__proto__ === HTMLAnchorElement.prototype) {
+          if (autoNumber) {
+            cur.text = deep + ' ' + cur.text;
+          }
+        } else if (cur.__proto__ === HTMLUListElement.prototype) {
+          addTocNumber(cur, deep);
+        }
+      }
+    }
+  }
+
+  function removeParentActiveClass() {
+    let parents = tocContent.querySelectorAll('.' + active)
+    parents.forEach(function (elem) {
+      elem.classList.remove(active);
+    });
+  }
+
+  function addActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.add(activeClass);
+    }
+  }
+
+  function removeActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.remove(activeClass);
+    }
+  }
+
+  function addActiveLiElemment(elem, parent) {
+    if (!elem || elem === parent) {
+      return;
+    } else {
+      if (elem.__proto__ === HTMLLIElement.prototype) {
+        elem.classList.add(active);
+      }
+      addActiveLiElemment(elem.parentElement, parent);
+    }
+  }
+
+  function showToc() {
+    if (tocWrapper) {
+      postBody = document.querySelector('#post_body');
+      for (let i = 0; i < postBody.children.length; i++) {
+        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+          hList.push(postBody.children[i]);
+        }
+      }
+      if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+      } else if (tocWrapper.classList.contains('no_compress')) {
+        tocContent.classList.add('expanded');
+      } else {
+        if (hList.length > 10) {
+          active = 'active-hidden'
+          tocContent.classList.add('closed');
+        } else {
+          tocContent.classList.add('expanded');
+        }
+      }
+    }
+  }
+
+  (function () {
+    // 处理不是从#一级标题开始目录
+    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+      let con = tocContent.children[0].children[0];
+      tocContent.innerHTML = con.innerHTML;
+    }
+    let markdownItTOC = document.querySelector('.markdownIt-TOC');
+    let innerHeight = window.innerHeight;
+    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
+    addTocNumber(tocContent, '');
+  })();
+
+  document.addEventListener('scroll', function (e) {
+    if (lList.length <= 0) {
+      return;
+    }
+    let scrollTop = document.scrollingElement.scrollTop + 10;
+    let dir;
+
+    if (lastTop - scrollTop > 0) {
+      dir = 'up';
+    } else {
+      dir = 'down';
+    }
+
+    lastTop = scrollTop;
+    if (scrollTop <= 0) {
+      if (lastIndex >= 0 && lastIndex < hList.length) {
+        lList[lastIndex].classList.remove(activeClass);
+      }
+      return;
+    }
+
+    let current = 0, hasFind = false;
+    for (let i = 0; i < hList.length; i++) {
+      if (hList[i].offsetTop > scrollTop) {
+        current = i;
+        hasFind = true;
+        break;
+      }
+    }
+    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+      current = hList.length - 1;
+    } else {
+      current--;
+    }
+    if (dir === 'down') {
+      if (current > lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex)
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    } else {
+      if (current < lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex);
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    }
+  });
+
+
+  window.addEventListener('load', function () {
+    showToc();
+    document.querySelector('#sidebar').style = 'display: block;';
+    tocWrapper.classList.add('toc-active');
+    setTimeout(function () {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
+  })
+
+</script>
+            </div>
           
         
       </div>
@@ -356,8 +546,8 @@
           <div class="section bg-color post post-page">
             <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://sh.kgdt.work/post/xing-jue-si-jin-shan-qu-feng-wan-lu-568-hao/">
-      性觉寺【金山区枫湾路568号】
+    <a class="post-title-link" href="https://sh.kgdt.work/post/shi-zhong-xin-zhe-dong-ma-ti-xing-de-li-shi-jian-zhu-yin-ti-yu-er-sheng/">
+      市中心这栋马蹄形的历史建筑，因体育而生！
     </a>
   </h1>
   <div class="post-meta">
@@ -365,7 +555,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2020-08-22 18:18:18">2020-08-22</span>
+      <span class="publish-time" data-t="2021-02-25 07:45:49">2021-02-25</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -374,8 +564,8 @@
       <span class="pc-show language" data-lan="category-in">分类于</span>
       
       
-      <a href="https://sh.kgdt.work/tag/ikNYuBcJt/">
-        <span>明代</span>
+      <a href="https://sh.kgdt.work/tag/JcKn5zS6W/">
+        <span>建筑可阅读</span>
       </a>
       
       
@@ -384,17 +574,17 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>1<span class="language" data-lan="minute">分钟</span></span>
+      <span>6<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>284<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>1559<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/post/xing-jue-si-jin-shan-qu-feng-wan-lu-568-hao/" data-flag-title="性觉寺【金山区枫湾路568号】" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/shi-zhong-xin-zhe-dong-ma-ti-xing-de-li-shi-jian-zhu-yin-ti-yu-er-sheng/" data-flag-title="市中心这栋马蹄形的历史建筑，因体育而生！" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -403,12 +593,49 @@
   </div>
 </section>
             <div class="post-body next-md-body" id="post_body">
-              <p>性觉寺始建于明万历年间(1573- 1620年)，初名月明庵，由法名性本的僧人主持所建。</p>
-<!-- more -->
-<p>清康熙四十四年(1705年) ，康熙皇帝南巡，住持僧人本冲得悉皇上到了松江地带，就连夜赶去，跪求赐名，康熙为他题写“性觉寺”寺名。从此，御书匾额高悬正殿大门之上，月明庵被称作性觉寺。</p>
-<p>“性觉”本是佛家语言，即“性觉妙明”，意思是“修佛至一定境界的人对世界认知不需要依靠他人甚至自己耳目，只需依靠本性就能洞察和彻悟一切”。可惜咸丰十年(1860年)，因战乱被焚烧一空。 光绪四年(1878年) ，僧人永激又募资重建。20世纪60年代，性觉寺被停止宗教活动，僧人遭遭散，房屋改作他用。</p>
-<p>1994年，金山县人民政府在枫泾镇易地重建性觉寺，1995年8月正式对外开放。寺内的九品莲花塔高30米，全部由晋云石砌成，是新中国成立后金山唯一建成的石塔。</p>
-<img src="https://i.loli.net/2020/08/22/L2nRABGXQYgWODJ.jpg" alt="img" style="zoom:67%;" />
+              <p>19世纪中叶，近代竞技体育运动开始进入中国。1928年，在南京西路上，建造起了一幢为青年们提供休闲、娱乐、体育、联谊的棕色马蹄形大楼，取名“西侨青年会”，它的落成时间比一旁的国际饭店早了6年，这便是如今体育大厦的前身。</p>
+<figure data-type="image" tabindex="1"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_20e19218.png" alt="ThirdPartyImage_20e19218.png" loading="lazy"></figure>
+<h1 id="体育大厦">体育大厦</h1>
+<figure data-type="image" tabindex="2"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_a761f7e7.png" alt="ThirdPartyImage_a761f7e7.png" loading="lazy"></figure>
+<p>上海体育大厦位于南京西路150号，近黄河路。占地1933平方米，建筑面积11306平方米。1989年9月25日公布为上海市文物保护单位。</p>
+<p>大厦的造型亮眼别致，采用美国工艺美术派风格，仿芝加哥瑞莱斯大厦，外形及装饰略带古典式样，凹凸感的设计使大厦呈现出马蹄形状，还有骨牌式的凹陷设计和铺满深棕色面砖的墙面。</p>
+<figure data-type="image" tabindex="3"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_3c4c12f6.png" alt="ThirdPartyImage_3c4c12f6.png" loading="lazy"></figure>
+<p>大厦门口竖立着两米多高的金属灯柱，柱面和柱基上雕刻着植物图案的精致浮雕，灯柱下有4个小狮头，栩栩如生。一条穹形长窗直贯于二、三层间，宛如一道彩虹。</p>
+<figure data-type="image" tabindex="4"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_99cf3a86.png" alt="ThirdPartyImage_99cf3a86.png" loading="lazy"></figure>
+<p>大厦的二、三层装修精美，墙面是大理石，上面镌刻着精致的图案和花饰，明亮的砖墙内饰让步入其中的人们感到强烈的华丽之气。四层以上，墙面呈直线凸凹状，左右各凸出四柱，凹进窗户，窗下的花饰用色淡雅，给大厦注入一股清风。</p>
+<figure data-type="image" tabindex="5"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_89630c7e.png" alt="ThirdPartyImage_89630c7e.png" loading="lazy"></figure>
+<p>移步楼内，位于底层的室内游泳池是上海最早建造的温水池之一。池内原有两个沙滤设备，循环打水，后来改用泡沫籽过滤，保持池水清澈见底。</p>
+<p>二楼有篮球房，球场铺以木质地板，四周有一圈看台，许多高水平的篮球比赛都在此留下过足迹。由于篮球房的设施比较先进，20世纪30年代这里更成为了上海篮球比赛的中心场地。</p>
+<p>四楼的体操房由4间壁球房拆除隔墙改建而成，是进行体操和技巧训练的场所。</p>
+<p>西侨青年会建成后，每年都会在这里举办篮球、排球的邀请赛或公开赛。</p>
+<figure data-type="image" tabindex="6"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_ec9fe337.png" alt="ThirdPartyImage_ec9fe337.png" loading="lazy"></figure>
+<p>这座融合现代体育和文娱生活的建筑，在上海体育事业发展历程中占有独特的地位。</p>
+<h1 id="建筑的故事">建筑的故事</h1>
+<p>解放后，这幢具有现代化综合体育设施的大楼开始作为办公场所使用。 <img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_fabcec9c.png" alt="ThirdPartyImage_fabcec9c.png" loading="lazy"></p>
+<p>1954年2月18日，“西侨青年会”正式更名为“上海市体育俱乐部”。从此，这座建筑全部划归上海市体委使用。这座大厦在“以体育为名”之时，也要承担起上海体育人才培养的重任。</p>
+<figure data-type="image" tabindex="7"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_c53d2154.png" alt="ThirdPartyImage_c53d2154.png" loading="lazy"></figure>
+<p>当时的体育俱乐部，从温水泳池到功能齐备的会议厅，拥有先进的室内体育设施。1957年12月28日，上海市体育俱乐部正式对外挂牌。</p>
+<figure data-type="image" tabindex="8"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_5f522a01.png" alt="ThirdPartyImage_5f522a01.png" loading="lazy"></figure>
+<p>利用大厦内原有的设施，俱乐部开设了游泳、体操、排球、围棋等项目的体育训练班，培养出了华以刚、于烈峰、周泳淇、常昊等一大批体育人才，为中国体育事业输送了宝贵的新鲜血液，在中国体育走向世界的历史进程中，让世界体坛看到了中国健儿的精彩。 <img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_adda1a90.png" alt="ThirdPartyImage_adda1a90.png" loading="lazy"></p>
+<p>与此同时，在体育大厦那个长22.5米、宽7.2米小小非标泳池的一片碧波中还托起了奥运冠军杨文意、乐靖宜、庄泳，亚运冠军蒋丞稷等中国泳坛的骄傲。</p>
+<p>如今这座拥有着近百年历史的体育大厦内，一砖一瓦都早已刻上了体育的印记。市民在这里健身休闲、参观体育博物馆；小运动员们在这里为了明天的梦想挥洒汗水。  <img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_d7fdfbbd.png" alt="ThirdPartyImage_d7fdfbbd.png" loading="lazy"></p>
+<h1 id="建筑的维修">建筑的维修</h1>
+<p>今年，体育大厦内的上海体育博物馆将以崭新的面貌与大家见面，展示传统优雅与时尚摩登的双面“魔”都体育文化形象。</p>
+<p>上海体育博物馆（筹）展陈项目自2019年2月立项，2020年8月开始工程建设，至2021年1月已完成装饰装修工程，进入布展阶段。预计2021年上半年将会向市民免费开放。 <img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_8ab3d55b.png" alt="ThirdPartyImage_8ab3d55b.png" loading="lazy"></p>
+<figure data-type="image" tabindex="9"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_9992bec0.png" alt="ThirdPartyImage_9992bec0.png" loading="lazy"></figure>
+<h1 id="周边打卡点">周边打卡点</h1>
+<p>上海市历史博物馆</p>
+<figure data-type="image" tabindex="10"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_a3148d11.png" alt="ThirdPartyImage_a3148d11.png" loading="lazy"></figure>
+<p>大楼建筑整体属于折衷主义风格，在立面构图上受到新古典主义风格的影响。由东、西两幢大楼组成。西北转角处有八层钟楼，上部镶嵌直径约三米的四面报时钟，时钟上方装饰巴洛克风格的弧形檐口，钟楼顶部为尖顶。1989年9月25日公布为上海市文物保护单位。 地址： 上海市黄浦区南京西路325号 开放时间： 周二至周日（周一闭馆）9:00-17:00(16:00停止检票)(国定假日除外)，疫情期间需预约参观 电话：  63232504 门票： 免费</p>
+<p>国际饭店</p>
+<figure data-type="image" tabindex="11"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_b92cbf17.png" alt="ThirdPartyImage_b92cbf17.png" loading="lazy"></figure>
+<p>大楼坐北朝南，地上22层，地下2层，标高83.8米，钢架结构，装饰艺术派风格。1950年，大楼顶中心旗杆被确定为上海城市坐标原点。2006年5月25日公布为全国重点文物保护单位。 地址： 上海市黄浦区南京西路170号 开放时间： 全天（仅限公共区域） 门票： 免费</p>
+<p>金门大酒店</p>
+<figure data-type="image" tabindex="12"><img src="http://markdown.liangtengyu.com:9998/images/ThirdPartyImage_cc0670a5.png" alt="ThirdPartyImage_cc0670a5.png" loading="lazy"></figure>
+<p>大楼整体属于新古典主义风格，也受到文艺复兴风格和装饰艺术风格的影响，建筑平面呈“凹”字形，立面左右对称。1989年9月25日公布为上海市文物保护单位。 地址： 上海市黄浦区南京西路104号 开放时间： 全天（仅限公共区域） 门票： 免费</p>
+<h1 id="微旅游线路推荐">微旅游线路推荐</h1>
+<p>线路一：国际饭店——体育大厦——金门大酒店——人民公园——上海市历史博物馆——上海大剧院——人民广场——上海博物馆</p>
+<p>线路二：国际饭店——体育大厦——金门大酒店——南京路步行街——外滩</p>
 
             </div>
             
@@ -425,7 +652,7 @@
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://sh.kgdt.work/post/xing-jue-si-jin-shan-qu-feng-wan-lu-568-hao/" title="性觉寺【金山区枫湾路568号】">https://sh.kgdt.work/post/xing-jue-si-jin-shan-qu-feng-wan-lu-568-hao/</a>
+      <a href="https://sh.kgdt.work/post/shi-zhong-xin-zhe-dong-ma-ti-xing-de-li-shi-jian-zhu-yin-ti-yu-er-sheng/" title="市中心这栋马蹄形的历史建筑，因体育而生！">https://sh.kgdt.work/post/shi-zhong-xin-zhe-dong-ma-ti-xing-de-li-shi-jian-zhu-yin-ti-yu-er-sheng/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -434,21 +661,21 @@
   </ul>
   <div class="tags">
     
-      <a href="https://sh.kgdt.work/tag/ikNYuBcJt/"># 明代</a>
+      <a href="https://sh.kgdt.work/tag/JcKn5zS6W/"># 建筑可阅读</a>
     
   </div>
   <div class="nav">
     <div class="nav-prev">
       
         <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="寿带桥【金山区吕巷镇】" href="https://sh.kgdt.work/post/shou-dai-qiao-jin-shan-qu-lu-xiang-zhen/">寿带桥【金山区吕巷镇】</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="寿带桥【金山区吕巷镇】" href="https://sh.kgdt.work/post/shou-dai-qiao-jin-shan-qu-lu-xiang-zhen/">上一篇</a>
+        <a class="nav-pc-next" title="【线路】嘉定孔庙旅游线路推荐" href="https://sh.kgdt.work/post/jia-ding-kong-miao-lv-you-xian-lu/">【线路】嘉定孔庙旅游线路推荐</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="【线路】嘉定孔庙旅游线路推荐" href="https://sh.kgdt.work/post/jia-ding-kong-miao-lv-you-xian-lu/">上一篇</a>
       
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="万寿寺" href="https://sh.kgdt.work/post/wan-shou-si/">万寿寺</a>
-        <a class="nav-mobile-next" title="万寿寺" href="https://sh.kgdt.work/post/wan-shou-si/">下一篇</a>
+        <a class="nav-pc-next" title="华政校园里的这片历史建筑群，值得一一品味！" href="https://sh.kgdt.work/post/hua-zheng-xiao-yuan-li-de-zhe-pian-li-shi-jian-zhu-qun-zhi-de-yi-yi-pin-wei/">华政校园里的这片历史建筑群，值得一一品味！</a>
+        <a class="nav-mobile-next" title="华政校园里的这片历史建筑群，值得一一品味！" href="https://sh.kgdt.work/post/hua-zheng-xiao-yuan-li-de-zhe-pian-li-shi-jian-zhu-qun-zhi-de-yi-yi-pin-wei/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
