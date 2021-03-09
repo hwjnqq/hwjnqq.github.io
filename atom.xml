@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sh.kgdt.work</id>
     <title>上海考古地图</title>
-    <updated>2021-03-04T00:10:00.150Z</updated>
+    <updated>2021-03-09T12:11:25.981Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sh.kgdt.work"/>
     <link rel="self" href="https://sh.kgdt.work/atom.xml"/>
@@ -12,6 +12,13 @@
     <logo>https://sh.kgdt.work/images/avatar.png</logo>
     <icon>https://sh.kgdt.work/favicon.ico</icon>
     <rights>All rights reserved 2021, 上海考古地图</rights>
+    <entry>
+        <title type="html"><![CDATA[App1.3上线！]]></title>
+        <id>https://sh.kgdt.work/post/app13-shang-xian/</id>
+        <link href="https://sh.kgdt.work/post/app13-shang-xian/">
+        </link>
+        <updated>2021-03-09T11:57:21.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【线路】上海体育大厦周边微游线路推荐]]></title>
         <id>https://sh.kgdt.work/post/shang-hai-ti-yu-da-sha-wei-lu-you-xian-lu-tui-jian/</id>
@@ -74,12 +81,5 @@
         <link href="https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-rang-yuan-gu-cun-luo-huan-fa-shi-dai-huo-li-guang-fu-lin-de-gu-shi-jiu-yuan-mi-ren/">
         </link>
         <updated>2021-02-23T11:40:09.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[上海西北部规模最大的古建筑群——嘉定孔庙]]></title>
-        <id>https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-shang-hai-xi-bei-bu-gui-mo-zui-da-de-gu-jian-zhu-qun-jia-ding-kong-miao/</id>
-        <link href="https://sh.kgdt.work/post/ji-yi-jian-zhu-ke-yue-du-shang-hai-xi-bei-bu-gui-mo-zui-da-de-gu-jian-zhu-qun-jia-ding-kong-miao/">
-        </link>
-        <updated>2021-02-23T11:34:23.000Z</updated>
     </entry>
 </feed>
