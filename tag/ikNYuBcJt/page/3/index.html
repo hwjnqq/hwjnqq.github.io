@@ -11,7 +11,7 @@
 ">
 <meta name="theme-color" content="#000">
 <title>上海考古地图</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1615291867501">
+<link rel="shortcut icon" href="/favicon.ico?v=1615698158961">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -206,7 +206,7 @@
     
     <div class="site-description right-motion">
       
-        <p id="binft">人文学院大学生创新项目\n beta 2.4</p>
+        <p id="binft">人文学院大学生创新项目\n beta 2.9</p>
       
     </div>
     
@@ -1214,6 +1214,26 @@
     });
   }
 
+</script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+<script>
+  let images = document.querySelectorAll('.section img');
+  console.log(images);
+  images.forEach(image => {
+    var parent = image.parentElement;
+    var next = image.nextElementSibling;
+    parent.removeChild(image);
+    var aelem = document.createElement('a');
+    aelem.href = image.src;
+    aelem.dataset['fancybox'] = 'images';
+    aelem.dataset['rel'] = 'fancybox-button';
+    aelem.classList.add('fancybox');
+    aelem.appendChild(image);
+    parent.insertBefore(aelem, next);
+  })
 </script>
   </div>
 </body>
@@ -5126,6 +5146,7 @@ PS:本文基于&lt;a href=&#34;https://www.jiyiblog.com/archives/0407140.html&#3
 
 </script>
 <script src="/media/js/motion.js"></script>
+
 
 <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 <script>
