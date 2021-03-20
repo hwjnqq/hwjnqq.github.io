@@ -10,7 +10,7 @@
 ——上海文旅融合线路优化设计研究
 ">
 <meta name="theme-color" content="#000">
-<title>大仓桥【松江中山西路玉树路东】 | 上海考古地图</title>
+<title>test11 | 上海考古地图</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1616248712788">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -50,8 +50,8 @@
 </script>
 
 
-  <meta name="description" content="大仓桥【松江中山西路玉树路东】" />
-  <meta name="keywords" content="明代" />
+  <meta name="description" content="test11" />
+  <meta name="keywords" content="" />
 </head>
 
 <body>
@@ -215,8 +215,7 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            <div class="post-side-meta" id="post_side_meta">
-              
+            
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -270,196 +269,6 @@
   </div>
 
 </div>
-            </div>
-            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
-              <div class="toc-box right-motion">
-  <div class="toc-wrapper auto-number auto"
-    id="toc_wrapper">
-    <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E9%81%97%E8%BF%B9%E7%AE%80%E4%BB%8B">遗迹简介</a></li>
-<li><a href="#%E5%88%B0%E8%BF%99%E5%8E%BB">到这去！！</a></li>
-</ul>
-</li>
-</ul>
-
-  </div>
-</div>
-
-<script>
-
-  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
-  let active = 'active-show', activeClass = 'active-current';
-  let tocWrapper = document.querySelector('#toc_wrapper');
-  let tocContent = tocWrapper.children[0];
-  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
-
-  function addTocNumber(elem, deep) {
-    if (!elem) {
-      return;
-    }
-    let prop = elem.__proto__;
-
-    if (prop === HTMLUListElement.prototype) {
-      for (let i = 0; i < elem.children.length; i++) {
-        addTocNumber(elem.children[i], deep + (i + 1) + '.');
-      }
-    } else if (prop === HTMLLIElement.prototype) {
-      // 保存li元素
-      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
-        lList.push(elem);
-      }
-      for (let i = 0; i < elem.children.length; i++) {
-        let cur = elem.children[i];
-        if (cur.__proto__ === HTMLAnchorElement.prototype) {
-          if (autoNumber) {
-            cur.text = deep + ' ' + cur.text;
-          }
-        } else if (cur.__proto__ === HTMLUListElement.prototype) {
-          addTocNumber(cur, deep);
-        }
-      }
-    }
-  }
-
-  function removeParentActiveClass() {
-    let parents = tocContent.querySelectorAll('.' + active)
-    parents.forEach(function (elem) {
-      elem.classList.remove(active);
-    });
-  }
-
-  function addActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.add(activeClass);
-    }
-  }
-
-  function removeActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.remove(activeClass);
-    }
-  }
-
-  function addActiveLiElemment(elem, parent) {
-    if (!elem || elem === parent) {
-      return;
-    } else {
-      if (elem.__proto__ === HTMLLIElement.prototype) {
-        elem.classList.add(active);
-      }
-      addActiveLiElemment(elem.parentElement, parent);
-    }
-  }
-
-  function showToc() {
-    if (tocWrapper) {
-      postBody = document.querySelector('#post_body');
-      for (let i = 0; i < postBody.children.length; i++) {
-        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
-          hList.push(postBody.children[i]);
-        }
-      }
-      if (tocWrapper.classList.contains('compress')) {
-        tocContent.classList.add('closed');
-      } else if (tocWrapper.classList.contains('no_compress')) {
-        tocContent.classList.add('expanded');
-      } else {
-        if (hList.length > 10) {
-          active = 'active-hidden'
-          tocContent.classList.add('closed');
-        } else {
-          tocContent.classList.add('expanded');
-        }
-      }
-    }
-  }
-
-  (function () {
-    // 处理不是从#一级标题开始目录
-    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
-      let con = tocContent.children[0].children[0];
-      tocContent.innerHTML = con.innerHTML;
-    }
-    let markdownItTOC = document.querySelector('.markdownIt-TOC');
-    let innerHeight = window.innerHeight;
-    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
-    addTocNumber(tocContent, '');
-  })();
-
-  document.addEventListener('scroll', function (e) {
-    if (lList.length <= 0) {
-      return;
-    }
-    let scrollTop = document.scrollingElement.scrollTop + 10;
-    let dir;
-
-    if (lastTop - scrollTop > 0) {
-      dir = 'up';
-    } else {
-      dir = 'down';
-    }
-
-    lastTop = scrollTop;
-    if (scrollTop <= 0) {
-      if (lastIndex >= 0 && lastIndex < hList.length) {
-        lList[lastIndex].classList.remove(activeClass);
-      }
-      return;
-    }
-
-    let current = 0, hasFind = false;
-    for (let i = 0; i < hList.length; i++) {
-      if (hList[i].offsetTop > scrollTop) {
-        current = i;
-        hasFind = true;
-        break;
-      }
-    }
-    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
-      current = hList.length - 1;
-    } else {
-      current--;
-    }
-    if (dir === 'down') {
-      if (current > lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex)
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    } else {
-      if (current < lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex);
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    }
-  });
-
-
-  window.addEventListener('load', function () {
-    showToc();
-    document.querySelector('#sidebar').style = 'display: block;';
-    tocWrapper.classList.add('toc-active');
-    setTimeout(function () {
-      if ("createEvent" in document) {
-        let evt = document.createEvent("HTMLEvents");
-        evt.initEvent("scroll", false, true);
-        document.dispatchEvent(evt);
-      }
-      else {
-        document.fireEvent("scroll");
-      }
-    }, 500)
-  })
-
-</script>
-            </div>
           
         
       </div>
@@ -547,8 +356,8 @@
           <div class="section bg-color post post-page">
             <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://sh.kgdt.work/post/da-cang-qiao-song-jiang-zhong-shan-xi-lu-yu-shu-lu-dong/">
-      大仓桥【松江中山西路玉树路东】
+    <a class="post-title-link" href="https://sh.kgdt.work/post/test11/">
+      test11
     </a>
   </h1>
   <div class="post-meta">
@@ -556,36 +365,23 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2020-07-24 23:34:32">2020-07-24</span>
+      <span class="publish-time" data-t="2021-03-20 21:58:02">2021-03-20</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="https://sh.kgdt.work/tag/ikNYuBcJt/">
-        <span>明代</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>2<span class="language" data-lan="minute">分钟</span></span>
+      <span>1<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>426<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>4<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/post/da-cang-qiao-song-jiang-zhong-shan-xi-lu-yu-shu-lu-dong/" data-flag-title="大仓桥【松江中山西路玉树路东】" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/test11/" data-flag-title="test11" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -594,19 +390,8 @@
   </div>
 </section>
             <div class="post-body next-md-body" id="post_body">
-              <p>​    大仓桥于明天启年间（1621-1627年）重建，原名永丰桥，桥额刻“<strong>重建永丰</strong>”四字。因桥南有松江府粮仓水次西仓，故俗称大仓桥、西仓桥。</p>
-<!-- more -->
-<h2 id="遗迹简介">遗迹简介</h2>
-<p>大仓桥南北走向，跨老市河。全长50米，宽5米，高8米。五拱不等跨，中拱最高，依次递减，纵连分节并列起券。</p>
-<p>桥身用青石砌成，青石护栏，花岗岩石级。范濂《云间据目抄》称：“西仓桥，旧以木为之，自万历癸酉，同知岳维华放粮，饥民站立桥顶，坠水死者六十二人，故文贞公（徐阶）命家人汤显一力建造。”</p>
-<p>董其昌撰文并书写的《西仓桥记》中称：“自隆庆时，甃石易木，开广五环，延画三十余丈。”“未逾五十而圮。”天启年间，华亭知县章允儒又着手修建大仓桥。在他的精心擘画下，新建的石桥“水门施具，石道亦平，高敞坚实，视昔有加。”董其昌认为大仓桥“蓄风气，壮瞻视，莫此为伟。”对其推崇备至。</p>
-<p>2002年，松江区人民政府和永丰街道共同出资修缮大仓桥。施工中，在北堍桥拱内发现《华亭仓桥碑记》石刻。该石刻倭角，长169厘米，宽83厘米，厚22厘米，用篆文写成。但碑文大部分已被腐蚀。</p>
-<img src="https://i.loli.net/2020/07/24/X6IfmtvLdVNrOZ8.png" alt="image-20200724205210349" style="zoom:67%;" />
-  <img src="https://i.loli.net/2020/07/24/loFtiWDvyj2EZ6s.png" alt="image-20200724205117771" style="zoom: 80%;" />
-<hr>
-<h2 id="到这去"><a href="https://map.baidu.com/poi/%E5%A4%A7%E4%BB%93%E6%A1%A5/@13491784.655,3612823.16,19z?uid=9f88132f35fc6477a8f0cd55&amp;ugc_type=3&amp;ugc_ver=1&amp;device_ratio=2&amp;compat=1&amp;querytype=detailConInfo&amp;da_src=shareurl">到这去！！</a></h2>
-<p>大仓桥南堍西侧有座方亭“孟姜亭”。孟姜亭南面石柱上的对联是：青石有情怜弱女，寒衣无处觅离魂。民间传说孟姜女是华亭人氏，孟姜女千里寻夫，就是从这里乘船北上的。</p>
-<img src="https://i.loli.net/2020/07/24/j743ziMmx2fEVOo.png" alt="image-20200724205902174" style="zoom:67%;" />
+              <p>this is a test</p>
+
             </div>
             
               <div class="reward-btn">
@@ -622,7 +407,7 @@
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://sh.kgdt.work/post/da-cang-qiao-song-jiang-zhong-shan-xi-lu-yu-shu-lu-dong/" title="大仓桥【松江中山西路玉树路东】">https://sh.kgdt.work/post/da-cang-qiao-song-jiang-zhong-shan-xi-lu-yu-shu-lu-dong/</a>
+      <a href="https://sh.kgdt.work/post/test11/" title="test11">https://sh.kgdt.work/post/test11/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -631,21 +416,15 @@
   </ul>
   <div class="tags">
     
-      <a href="https://sh.kgdt.work/tag/ikNYuBcJt/"># 明代</a>
-    
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="青浦城隍庙【青浦区城东北隅公园路650号】" href="https://sh.kgdt.work/post/qing-pu-cheng-huang-miao-qing-pu-qu-cheng-dong-bei-yu-gong-yuan-lu-650-hao/">青浦城隍庙【青浦区城东北隅公园路650号】</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="青浦城隍庙【青浦区城东北隅公园路650号】" href="https://sh.kgdt.work/post/qing-pu-cheng-huang-miao-qing-pu-qu-cheng-dong-bei-yu-gong-yuan-lu-650-hao/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="豫园" href="https://sh.kgdt.work/post/yu-yuan/">豫园</a>
-        <a class="nav-mobile-next" title="豫园" href="https://sh.kgdt.work/post/yu-yuan/">下一篇</a>
+        <a class="nav-pc-next" title="APP1.3.1发布！" href="https://sh.kgdt.work/post/app131-fa-bu/">APP1.3.1发布！</a>
+        <a class="nav-mobile-next" title="APP1.3.1发布！" href="https://sh.kgdt.work/post/app131-fa-bu/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
